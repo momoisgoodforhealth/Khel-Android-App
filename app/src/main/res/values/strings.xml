@@ -1,13 +1,17 @@
 <resources>
     <string name="app_name">ROMP</string>
     <string name="home">Home</string>
-    <string name="explore">explore</string>
+    <string name="explore">ACTIVITIES</string>
     <string name="settings">settings</string>
     <string name="my_team">my team</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="explorejhg">explorejhg</string>
     <string name="homee">home</string>
     <string name="my_team_ynwa">my team YNWA</string>
     <string name="dick">dick</string>
+    <string name="explore_frag_button1">Explore Tournaments</string>
+    <string name="explore_frag_button2"> VS Mode </string>
+    <string name="explore_frag_button3">Looking to Play</string>
+    <string name="explore_frag_button4"><![CDATA[Futsal Info & Bookings]]></string>
+    <string name="explore_frag_button5">Virtual League</string>
 </resources>
