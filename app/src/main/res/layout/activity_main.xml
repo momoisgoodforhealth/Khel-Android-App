@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#212333"
+    android:background="@drawable/background_gradient"
     tools:context=".MainActivity">
     <!--container for the fragment -->
     <FrameLayout
@@ -12,14 +12,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/bottom_navigation"
-        android:background="#212333" />
+        android:background="#212121" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#FF7700"
+        android:alwaysDrawnWithCache="false"
+        android:background="#212121"
+        app:itemIconTint="@android:color/holo_orange_light"
+        app:itemTextColor="@android:color/holo_orange_light"
         app:menu="@menu/bottom_navigation" />
 
 
