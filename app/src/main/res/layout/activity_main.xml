@@ -21,8 +21,8 @@
         android:layout_alignParentBottom="true"
         android:alwaysDrawnWithCache="false"
         android:background="#212121"
-        app:itemIconTint="@android:color/holo_orange_light"
-        app:itemTextColor="@android:color/holo_orange_light"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
         app:menu="@menu/bottom_navigation" />
 
 
