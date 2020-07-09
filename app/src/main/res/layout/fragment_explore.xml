@@ -2,12 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#212121"
     tools:context=".ExploreFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
+
     <TextView
         android:id="@+id/explore_frag_title"
         android:layout_width="wrap_content"
@@ -15,85 +17,103 @@
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
         android:fontFamily="@font/comfortaa_bold"
         android:text="@string/explore"
         android:textColor="#FF9800"
         android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/explore_frag_tourbutton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <Button
         android:id="@+id/explore_frag_tourbutton"
-        android:layout_width="319dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="56dp"
+        android:layout_width="281dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
         android:background="@drawable/button_shape"
         android:fontFamily="@font/chivo"
         android:text="@string/explore_frag_button1"
         android:textColor="#121A45"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/explore_frag_title" />
 
     <Button
         android:id="@+id/explore_frag_ctvmbutton"
-        android:layout_width="319dp"
-        android:layout_height="93dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="281dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
         android:background="@drawable/button_shape"
         android:fontFamily="@font/chivo"
         android:text="@string/explore_frag_button2"
         android:textColor="#121A45"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.235"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/explore_frag_tourbutton" />
 
     <Button
         android:id="@+id/explore_frag_ltpbutton"
-        android:layout_width="319dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="281dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
         android:background="@drawable/button_shape"
         android:fontFamily="@font/chivo"
         android:text="@string/explore_frag_button3"
         android:textColor="#121A45"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.235"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/explore_frag_ctvmbutton" />
 
     <Button
         android:id="@+id/explore_frag_fibbutton"
-        android:layout_width="319dp"
-        android:layout_height="74dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="281dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
         android:background="@drawable/button_shape"
         android:fontFamily="@font/chivo"
         android:text="@string/explore_frag_button4"
         android:textColor="#121A45"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.233"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/explore_frag_ltpbutton" />
 
     <Button
         android:id="@+id/explore_frag_vleaguebutton"
-        android:layout_width="319dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="281dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/button_shape"
         android:fontFamily="@font/chivo"
         android:text="@string/explore_frag_button5"
         android:textColor="#121A45"
         android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.216"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/explore_frag_fibbutton" />
 
@@ -145,11 +165,15 @@
         android:layout_width="70dp"
         android:layout_height="62dp"
         android:paddingRight="5dp"
+
+
         android:src="@drawable/ic_baseline_emoji_events_24"
         app:layout_constraintBottom_toBottomOf="@+id/explore_frag_tourbutton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/explore_frag_tourbutton"
-        app:layout_constraintTop_toTopOf="@+id/explore_frag_tourbutton" />
+        app:layout_constraintTop_toTopOf="@+id/explore_frag_tourbutton"
+        app:layout_constraintVertical_bias="0.388" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
