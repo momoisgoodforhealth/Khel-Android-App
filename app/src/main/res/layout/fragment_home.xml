@@ -10,26 +10,30 @@
     <!-- TODO: Update blank fragment layout -->
 
     <TextView
-        android:id="@+id/explore_frag_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/homee"
-        android:textColor="#FFFFFF"
+        android:id="@+id/tour_heading"
+        android:layout_width="350dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/tournament_fragment_value"
+        android:textColor="#FF5722"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="251dp"
-        android:layout_height="346dp"
-        android:contentDescription="@string/dick"
-        android:src="@drawable/home"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.262"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/create_tournament_button"
+        android:textAllCaps="false"
+        android:layout_width="224dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/create_tournament_button_value"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tour_heading" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

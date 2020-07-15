@@ -14,4 +14,6 @@
     <string name="explore_frag_button3">Looking to Play</string>
     <string name="explore_frag_button4"><![CDATA[Futsal Info & Bookings]]></string>
     <string name="explore_frag_button5">Virtual League</string>
+    <string name="tournament_fragment_value">Explore Tournaments</string>
+    <string name="create_tournament_button_value">Create Tournament</string>
 </resources>
