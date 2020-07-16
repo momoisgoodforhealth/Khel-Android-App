@@ -10,8 +10,8 @@
         android:label="fragment_explore"
         tools:layout="@layout/fragment_explore" >
         <action
-            android:id="@+id/action_exploreFragment_to_tournament"
-            app:destination="@id/tournament" />
+            android:id="@+id/action_exploreFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -33,9 +33,4 @@
         android:name="com.example.romp.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
-    <fragment
-        android:id="@+id/tournament"
-        android:name="com.example.romp.tournament"
-        android:label="fragment_tournament"
-        tools:layout="@layout/fragment_tournament" />
 </navigation>
