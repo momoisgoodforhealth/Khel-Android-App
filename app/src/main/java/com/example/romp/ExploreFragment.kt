@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.navigation.Navigation
 
 class ExploreFragment : Fragment() {
-    lateinit var homeFragment: ExploreFragment
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,9 +22,7 @@ class ExploreFragment : Fragment() {
 
         val button: Button =view.findViewById(R.id.explore_frag_tourbutton)
         button.setOnClickListener {
-            var fr= fragmentManager!!.beginTransaction()
-            fr.replace((R.id.fragment_container),homeFragment)
-
+            Navigation.findNavController(view).navigate(R.id.action_exploreFragment_to_tournament)
         }
     }
 }
