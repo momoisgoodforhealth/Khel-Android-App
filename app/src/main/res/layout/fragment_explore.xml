@@ -39,6 +39,8 @@
 
 
     <Button
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
         android:id="@+id/explore_frag_tourbutton"
         android:layout_width="281dp"
         android:layout_height="68dp"
@@ -59,6 +61,8 @@
         app:layout_constraintTop_toBottomOf="@+id/explore_frag_title" />
 
     <Button
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
         android:id="@+id/explore_frag_ctvmbutton"
         android:layout_width="281dp"
         android:layout_height="68dp"
@@ -79,6 +83,8 @@
         app:layout_constraintTop_toBottomOf="@+id/explore_frag_tourbutton" />
 
     <Button
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
         android:id="@+id/explore_frag_ltpbutton"
         android:layout_width="281dp"
         android:layout_height="68dp"
@@ -99,6 +105,8 @@
         app:layout_constraintTop_toBottomOf="@+id/explore_frag_ctvmbutton" />
 
     <Button
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
         android:id="@+id/explore_frag_fibbutton"
         android:layout_width="281dp"
         android:layout_height="68dp"
@@ -119,6 +127,8 @@
         app:layout_constraintTop_toBottomOf="@+id/explore_frag_ltpbutton" />
 
     <Button
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
         android:id="@+id/explore_frag_vleaguebutton"
         android:layout_width="281dp"
         android:layout_height="68dp"
