@@ -32,8 +32,8 @@
         android:layout_alignParentBottom="true"
         android:alwaysDrawnWithCache="false"
         android:background="#212121"
-        app:itemIconTint="#FFB019"
-        app:itemTextColor="#FFB019"
+        app:itemIconTint="#FFFFFF"
+        app:itemTextColor="#FFFFFF"
         app:menu="@menu/bottom_navigation" />
 
 
