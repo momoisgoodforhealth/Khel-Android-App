@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212121"
+    tools:context=".ExploreFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <ImageView
+        android:id="@+id/boys_playing"
+        android:layout_width="match_parent"
+        android:layout_height="286dp"
+        android:src="@drawable/boys_playing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/explore_frag_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:gravity="center"
+        android:text="@string/explore"
+        android:textColor="#FF9800"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/explore_frag_tourbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/explore_frag_tourbutton"
+        android:layout_width="241dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/button_shape"
+        android:clickable="true"
+        android:fontFamily="@font/chivo"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:text="@string/explore_frag_button1"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/explore_frag_title" />
+
+    <Button
+        android:id="@+id/explore_frag_ctvmbutton"
+        android:layout_width="241dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/button_shape2"
+        android:clickable="true"
+        android:fontFamily="@font/chivo"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:text="@string/explore_frag_button2"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/explore_frag_tourbutton" />
+
+    <Button
+        android:id="@+id/explore_frag_ltpbutton"
+        android:layout_width="241dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/button_shape3"
+        android:clickable="true"
+        android:fontFamily="@font/chivo"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:text="@string/explore_frag_button3"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/explore_frag_ctvmbutton" />
+
+    <Button
+        android:id="@+id/explore_frag_fibbutton"
+        android:layout_width="241dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/button_shape4"
+        android:clickable="true"
+        android:fontFamily="@font/chivo"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:text="@string/explore_frag_button4"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/explore_frag_ltpbutton" />
+
+    <Button
+        android:id="@+id/explore_frag_vleaguebutton"
+        android:layout_width="241dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_shape5"
+        android:clickable="true"
+        android:fontFamily="@font/chivo"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:text="@string/explore_frag_button5"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/explore_frag_fibbutton"
+        app:layout_constraintVertical_bias="0.006" />
+
+    <ImageView
+        android:id="@+id/vsmode_icon"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:background="#4E1C14"
+        android:paddingRight="5dp"
+        android:src="@drawable/ic_baseline_whatshot_24"
+        app:layout_constraintBottom_toBottomOf="@+id/explore_frag_ctvmbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/explore_frag_ctvmbutton"
+        app:layout_constraintTop_toTopOf="@+id/explore_frag_ctvmbutton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/leaguemode_icon"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:background="#3C2003 "
+        android:src="@drawable/ic_baseline_sports_soccer_24"
+        app:layout_constraintBottom_toBottomOf="@+id/explore_frag_vleaguebutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/explore_frag_vleaguebutton"
+        app:layout_constraintTop_toTopOf="@+id/explore_frag_vleaguebutton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/ltp_icon"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:background="#004343"
+        android:paddingRight="5dp"
+        android:src="@drawable/ic_baseline_search_24"
+        app:layout_constraintBottom_toBottomOf="@+id/explore_frag_ltpbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/explore_frag_ltpbutton"
+        app:layout_constraintTop_toTopOf="@+id/explore_frag_ltpbutton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/infobooking_icon"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:background="#023C0C "
+        android:paddingRight="5dp"
+        android:src="@drawable/ic_baseline_info_24"
+        app:layout_constraintBottom_toBottomOf="@+id/explore_frag_fibbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/explore_frag_fibbutton"
+        app:layout_constraintTop_toTopOf="@+id/explore_frag_fibbutton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/tournaments_icon"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:background="#4E3408"
+
+
+        android:paddingRight="5dp"
+        android:src="@drawable/ic_baseline_emoji_events_24"
+        app:layout_constraintBottom_toBottomOf="@+id/explore_frag_tourbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/explore_frag_tourbutton"
+        app:layout_constraintTop_toTopOf="@+id/explore_frag_tourbutton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55722326" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
