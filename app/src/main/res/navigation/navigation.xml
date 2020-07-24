@@ -17,7 +17,14 @@
         android:id="@+id/homeFragment"
         android:name="com.example.romp.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_formFragment"
+            app:destination="@id/formFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_formFragment2"
+            app:destination="@id/formFragment" />
+    </fragment>
     <fragment
         android:id="@+id/myteam"
         android:name="com.example.romp.Myteam"
@@ -28,6 +35,12 @@
         android:name="com.example.romp.SettingFragment"
         android:label="fragment_setting"
         tools:layout="@layout/fragment_setting" />
+
+    <fragment
+        android:id="@+id/formFragment"
+        android:name="com.example.romp.FormFragment"
+        android:label="form_fragment"
+        tools:layout="@layout/fragment_form"/>
     <activity
         android:id="@+id/mainActivity2"
         android:name="com.example.romp.MainActivity"

@@ -13,6 +13,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var exploreFragment: ExploreFragment
     lateinit var settingFragment: SettingFragment
     lateinit var myteam: Myteam
+    lateinit var formFragment: FormFragment
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
