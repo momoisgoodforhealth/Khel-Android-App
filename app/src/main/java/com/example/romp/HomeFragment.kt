@@ -34,25 +34,22 @@ class HomeFragment : Fragment() {
             Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_formFragment)
         }
 
-        override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-            super.onViewCreated(view, savedInstanceState)
-            val testdata: TextView = view.findViewById(R.id.textView2)
-            conditionref.addValueEventListener(object : ValueEventListener {
-                override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    // This method is called once with the initial value and again
-                    // whenever data at this location is updated.
-                    val value = dataSnapshot.getValue<String>()
-                    testdata.text = value
-                }
+        val testdata: TextView = view.findViewById(R.id.textView2)
+        conditionref.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                val value = dataSnapshot.getValue<String>()
+                testdata.text = value
+            }
 
-                override fun onCancelled(error: DatabaseError) {
-                    // Failed to read value
-                    testdata.text = "ERROR SORRY M8"
-                }
-            })
+            override fun onCancelled(error: DatabaseError) {
+                // Failed to read value
+                testdata.text = "ERROR SORRY M8"
+            }
+        })
 
 
-        }
 
 
     }
