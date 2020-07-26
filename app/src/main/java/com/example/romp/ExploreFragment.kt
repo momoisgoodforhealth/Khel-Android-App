@@ -10,10 +10,7 @@ import androidx.navigation.Navigation
 
 class ExploreFragment : Fragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_explore, container, false)
     }
@@ -23,6 +20,26 @@ class ExploreFragment : Fragment() {
         val button: Button =view.findViewById(R.id.explore_frag_tourbutton)
         button.setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_exploreFragment_to_homeFragment)
+        }
+
+        val button2:Button=view.findViewById(R.id.explore_frag_ctvmbutton)
+        button2.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_exploreFragment_to_comingsoon)
+        }
+
+        val button3:Button=view.findViewById(R.id.explore_frag_fibbutton)
+        button3.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_exploreFragment_to_comingsoon)
+        }
+
+        val button4:Button=view.findViewById(R.id.explore_frag_ltpbutton)
+        button4.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_exploreFragment_to_comingsoon)
+        }
+
+        val button5:Button=view.findViewById(R.id.explore_frag_vleaguebutton)
+        button5.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_exploreFragment_to_comingsoon)
         }
     }
 }
