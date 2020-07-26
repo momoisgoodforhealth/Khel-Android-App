@@ -10,14 +10,6 @@
     <!-- TODO: Update blank fragment layout -->
 
 
-    <ImageView
-        android:id="@+id/boys_playing"
-        android:layout_width="411dp"
-        android:layout_height="286dp"
-        android:src="@drawable/boys_playing"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
         android:id="@+id/explore_frag_title"
         android:layout_width="wrap_content"
@@ -29,7 +21,7 @@
         android:layout_marginRight="24dp"
         android:fontFamily="@font/comfortaa_bold"
         android:text="@string/explore"
-        android:textColor="#FF9800"
+        android:textColor="#FFFFFF"
         android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/explore_frag_tourbutton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,7 +63,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
-        android:background="@drawable/button_shape2"
+        android:background="@drawable/button_shape"
         android:fontFamily="@font/chivo"
         android:text="@string/explore_frag_button2"
         android:textAllCaps="false"
@@ -93,7 +85,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
-        android:background="@drawable/button_shape3"
+        android:background="@drawable/button_shape"
         android:fontFamily="@font/chivo"
         android:text="@string/explore_frag_button3"
         android:textAllCaps="false"
@@ -115,7 +107,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
-        android:background="@drawable/button_shape4"
+        android:background="@drawable/button_shape"
         android:fontFamily="@font/chivo"
         android:text="@string/explore_frag_button4"
         android:textAllCaps="false"
@@ -138,7 +130,7 @@
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
         android:layout_marginBottom="24dp"
-        android:background="@drawable/button_shape5"
+        android:background="@drawable/button_shape"
         android:fontFamily="@font/chivo"
         android:text="@string/explore_frag_button5"
         android:textAllCaps="false"
