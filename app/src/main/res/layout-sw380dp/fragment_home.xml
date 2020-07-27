@@ -41,6 +41,12 @@
         app:layout_constraintTop_toBottomOf="@+id/home_page_heading"
         app:layout_constraintVertical_bias="1.0">
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/tour_heading"
             android:layout_width="match_parent"
@@ -62,6 +68,7 @@
             android:background="#774CCA"
             android:text="@string/create_tournament_button_value"
             android:textAllCaps="false"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tour_heading" />

@@ -17,4 +17,7 @@
     <string name="tournament_fragment_value">Explore Tournaments</string>
     <string name="create_tournament_button_value">Create Tournament</string>
     <string name="home_page_heading_value">What\'s Hot</string>
+    <string name="form_title_value">Create Tournament</string>
+    <string name="ct_entertname">Tournament Name</string>
+    <string name="ct_enterphone">Contact Number</string>
 </resources>
