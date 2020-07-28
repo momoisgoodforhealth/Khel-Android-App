@@ -20,4 +20,8 @@
     <string name="form_title_value">Create Tournament</string>
     <string name="ct_entertname">Tournament Name</string>
     <string name="ct_enterphone">Contact Number</string>
+    <string name="ct_frag_locationval">Location/Venue</string>
+    <string name="ct_frag_awards"><![CDATA[Awards & Prizes]]></string>
+    <string name="ctfrag_rd"><![CDATA[Rules & Description]]></string>
+    <string name="ctfrag_add">Additional Info</string>
 </resources>
