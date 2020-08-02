@@ -15,8 +15,7 @@ import com.google.firebase.database.ktx.getValue
 
 class HomeFragment : Fragment() {
     var database = FirebaseDatabase.getInstance().getReference()
-    var conditionref: DatabaseReference = database.child("testdata1")
-
+    var conditionref: DatabaseReference = database.child("tournaments")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -48,6 +47,8 @@ class HomeFragment : Fragment() {
                 testdata.text = "ERROR SORRY M8"
             }
         })
+
+
 
 
 

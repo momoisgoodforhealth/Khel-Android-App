@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.IgnoreExtraProperties
 import java.text.Normalizer
 
 
@@ -41,34 +42,72 @@ class FormFragment : Fragment() {
         val add: EditText = view.findViewById(R.id.editTextTextMultiLine4)
         val butt: Button = view.findViewById(R.id.button)
 
-        var tnamev = tname.text.toString().trim()
-        var locv = loc.text.toString().trim()
-        var contactv = contact.text.toString().trim()
-        var awardv = award.text.toString().trim()
-        var rdv = rd.text.toString().trim()
-        var addv = add.text.toString().trim()
+        @IgnoreExtraProperties
+        data class User(
+            var username: String? = "",
+            var email: String? = ""
+        )
 
 
-        var td = TournamentDetails()
-        td.tname = tnamev
-        td.loc = locv
-        td.conc = contactv
-        td.awar = awardv
-        td.rud = rdv
-        td.addi = addv
+        fun writeNewUser(userId: String, name: String, email: String?) {
+            val user = User(name, email)
+            database.child("help").child(userId).setValue(user)
+        }
 
 
-            butt.setOnClickListener {
+        @IgnoreExtraProperties
+        data class TournamentDetails(
+            var TournamentName: String? = "",
+            var Location: String? = "",
+            var Contact: String? = "",
+            var Award: String? = "",
+            var Rules: String? = "",
+            var Additional: String? = ""
+        )
 
-                if (td.tname.isNullOrBlank() || td.loc.isNullOrBlank() || td.conc.isNullOrBlank() || td.awar.isNullOrBlank() || td.rud.isNullOrBlank() || td.addi.isNullOrBlank()) {
-                    Toast.makeText(activity, "Field Empty", Toast.LENGTH_SHORT).show()
 
+        fun writeNewTournament(
+            nn: String,
+            ll: String,
+            cc: String,
+            aww: String,
+            rr: String,
+            aa: String
+        ) {
+            val tour = TournamentDetails(nn, ll, cc, aww, rr, aa)
+            database.child("tournaments").push().setValue(tour)
+                .addOnSuccessListener {
+                    Toast.makeText(activity,"The Tournament Has Been Added Successfully", Toast.LENGTH_LONG).show()
                 }
-                conditionref.push().setValue(td)
+                .addOnFailureListener {
+                    Toast.makeText(activity,"ERROR: $it", Toast.LENGTH_LONG).show()
+                }
+        }
 
+
+
+        butt.setOnClickListener {
+
+            if (tname.text.toString().trim().isBlank() || loc.text.toString().trim()
+                    .isBlank() || contact.text.toString().trim().isBlank() || award.text.toString()
+                    .trim().isBlank() || rd.text.toString().trim().isBlank() || add.text.toString()
+                    .trim().isBlank()
+            ) {
+                Toast.makeText(activity, "Complete All The Fields", Toast.LENGTH_LONG).show()
+            } else {
+
+                writeNewTournament(
+                    tname.text.toString().trim(),
+                    loc.text.toString().trim(),
+                    contact.text.toString().trim(),
+                    award.text.toString().trim(),
+                    rd.text.toString().trim(),
+                    add.text.toString().trim()
+                )
+
+            }
         }
     }
 }
-
 
 
