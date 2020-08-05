@@ -24,4 +24,5 @@
     <string name="ct_frag_awards"><![CDATA[Awards & Prizes]]></string>
     <string name="ctfrag_rd"><![CDATA[Rules & Description]]></string>
     <string name="ctfrag_add">Additional Info</string>
+    <string name="formfrag_date_value">Date</string>
 </resources>

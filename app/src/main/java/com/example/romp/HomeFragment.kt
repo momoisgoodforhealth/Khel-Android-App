@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.google.firebase.database.*
@@ -33,25 +34,29 @@ class HomeFragment : Fragment() {
             Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_formFragment)
         }
 
-        val testdata: TextView = view.findViewById(R.id.textView2)
+        var testdata:List<TextView> = mutableListOf(view.findViewById(R.id.textView2),view.findViewById(R.id.test),view.findViewById(R.id.test2),view.findViewById(R.id.test3),view.findViewById(R.id.test4))
+        var details:List<TournamentDetails> = mutableListOf()
+        var num=0
+
+
         conditionref.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                val value = dataSnapshot.getValue<String>()
-                testdata.text = value
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(activity,"onCancelled called",Toast.LENGTH_LONG).show()
             }
 
-            override fun onCancelled(error: DatabaseError) {
-                // Failed to read value
-                testdata.text = "ERROR SORRY M8"
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                num = 0
+                for (postSnapshot in dataSnapshot.children) {
+                    testdata[num].text = postSnapshot.child("tournamentName").getValue<String>()
+                    num++
+                }
+
             }
+
         })
 
 
 
 
-
-
     }
-}
+    }

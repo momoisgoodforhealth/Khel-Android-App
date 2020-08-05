@@ -35,6 +35,7 @@ class FormFragment : Fragment() {
 
 
         val tname: EditText = view.findViewById(R.id.editTextTextPersonName3)
+        val date:EditText=view.findViewById(R.id.editdatetext)
         val loc: EditText = view.findViewById(R.id.editTextTextPersonName8)
         val contact: EditText = view.findViewById(R.id.editTextPhone2)
         val award: EditText = view.findViewById(R.id.editTextTextMultiLine3)
@@ -42,22 +43,11 @@ class FormFragment : Fragment() {
         val add: EditText = view.findViewById(R.id.editTextTextMultiLine4)
         val butt: Button = view.findViewById(R.id.button)
 
-        @IgnoreExtraProperties
-        data class User(
-            var username: String? = "",
-            var email: String? = ""
-        )
-
-
-        fun writeNewUser(userId: String, name: String, email: String?) {
-            val user = User(name, email)
-            database.child("help").child(userId).setValue(user)
-        }
-
 
         @IgnoreExtraProperties
         data class TournamentDetails(
             var TournamentName: String? = "",
+            var datev:String?="",
             var Location: String? = "",
             var Contact: String? = "",
             var Award: String? = "",
@@ -68,13 +58,14 @@ class FormFragment : Fragment() {
 
         fun writeNewTournament(
             nn: String,
+            dd:String,
             ll: String,
             cc: String,
             aww: String,
             rr: String,
             aa: String
         ) {
-            val tour = TournamentDetails(nn, ll, cc, aww, rr, aa)
+            val tour = TournamentDetails(nn,dd, ll, cc, aww, rr, aa)
             database.child("tournaments").push().setValue(tour)
                 .addOnSuccessListener {
                     Toast.makeText(activity,"The Tournament Has Been Added Successfully", Toast.LENGTH_LONG).show()
@@ -91,13 +82,14 @@ class FormFragment : Fragment() {
             if (tname.text.toString().trim().isBlank() || loc.text.toString().trim()
                     .isBlank() || contact.text.toString().trim().isBlank() || award.text.toString()
                     .trim().isBlank() || rd.text.toString().trim().isBlank() || add.text.toString()
-                    .trim().isBlank()
+                    .trim().isBlank() || date.text.toString().trim().isBlank()
             ) {
                 Toast.makeText(activity, "Complete All The Fields", Toast.LENGTH_LONG).show()
             } else {
 
                 writeNewTournament(
                     tname.text.toString().trim(),
+                    date.text.toString().trim(),
                     loc.text.toString().trim(),
                     contact.text.toString().trim(),
                     award.text.toString().trim(),
