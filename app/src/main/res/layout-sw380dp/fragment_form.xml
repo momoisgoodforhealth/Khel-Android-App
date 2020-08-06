@@ -135,7 +135,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.504"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+                app:layout_constraintTop_toBottomOf="@+id/editdatetext" />
 
             <TextView
                 android:id="@+id/textView17"
@@ -228,7 +228,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/editdatetext"
                 style="@style/edittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -26,7 +26,8 @@ android {
 }
 
 dependencies {
-    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation "androidx.cardview:cardview:1.0.0"
+
 
     //for navigation component
     def nav_version = "2.3.0"
@@ -43,7 +44,8 @@ dependencies {
     implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
 
     // Testing Navigation
-    implementation 'com.google.firebase:firebase-database:16.0.4'
+    implementation 'com.google.firebase:firebase-database:19.2.0'
+    implementation 'com.firebaseui:firebase-ui-database:6.2.0'
     androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
 
 
