@@ -25,6 +25,9 @@ class adapter: RecyclerView.Adapter<MyViewHolder>() {
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val item=data[position]
         holder.text.text=item.TournamentName
+        holder.text2.text=item.Award
+        holder.text3.text=item.datev
+        holder.text4.text=item.Location
     }
 
 }

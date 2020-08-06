@@ -43,9 +43,9 @@ class HomeFragment : Fragment() {
             Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_formFragment)
         }
 
-        var testdata:MutableList<TextView> = mutableListOf(view.findViewById(R.id.textView2),view.findViewById(R.id.test),view.findViewById(R.id.test2),view.findViewById(R.id.test3),view.findViewById(R.id.test4))
+     //   var testdata:MutableList<TextView> = mutableListOf(view.findViewById(R.id.textView2),view.findViewById(R.id.test),view.findViewById(R.id.test2),view.findViewById(R.id.test3),view.findViewById(R.id.test4))
         var details:MutableList<TournamentDetails> = mutableListOf()
-        var num:Int
+     //   var num:Int
 
 
 
@@ -56,13 +56,13 @@ class HomeFragment : Fragment() {
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                num = 0
+          //      num = 0
                 for (postSnapshot in dataSnapshot.children) {
-                    testdata[num].text = postSnapshot.child("tournamentName").getValue<String>()
+         //           testdata[num].text = postSnapshot.child("tournamentName").getValue<String>()
                     details.add(postSnapshot.getValue<TournamentDetails>()!!)
-                    num++
+          //          num++
                 }
-                Toast.makeText(activity,"size: ${details.size}", Toast.LENGTH_LONG).show()
+              //  Toast.makeText(activity,"size: ${details.size}", Toast.LENGTH_LONG).show()
                 radapter.data=details
 
             }
