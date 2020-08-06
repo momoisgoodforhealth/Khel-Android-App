@@ -1,5 +1,6 @@
 package com.example.romp
 
+import adapter
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.getValue
 
@@ -17,6 +19,7 @@ import com.google.firebase.database.ktx.getValue
 class HomeFragment : Fragment() {
     var database = FirebaseDatabase.getInstance().getReference()
     var conditionref: DatabaseReference = database.child("tournaments")
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -29,6 +32,12 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+
+        val radapter=adapter()
+        view.findViewById<RecyclerView>(R.id.recycle).adapter=radapter
+
+
         val button: Button = view.findViewById(R.id.create_tournament_button)
         button.setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_formFragment)
@@ -36,7 +45,7 @@ class HomeFragment : Fragment() {
 
         var testdata:List<TextView> = mutableListOf(view.findViewById(R.id.textView2),view.findViewById(R.id.test),view.findViewById(R.id.test2),view.findViewById(R.id.test3),view.findViewById(R.id.test4))
         var details:List<TournamentDetails> = mutableListOf()
-        var num=0
+        var num:Int
 
 
         conditionref.addValueEventListener(object : ValueEventListener {
