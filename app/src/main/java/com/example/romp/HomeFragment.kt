@@ -7,8 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
@@ -37,6 +39,10 @@ class HomeFragment : Fragment() {
         val radapter=adapter()
          view.findViewById<RecyclerView>(R.id.recycle).adapter=radapter
 
+        val progressbar:ProgressBar=view.findViewById(R.id.progressBar)
+        progressbar.isIndeterminate
+            progressbar.setVisibility(View.VISIBLE);
+
 
         val button: Button = view.findViewById(R.id.create_tournament_button)
         button.setOnClickListener {
@@ -64,6 +70,7 @@ class HomeFragment : Fragment() {
                 }
               //  Toast.makeText(activity,"size: ${details.size}", Toast.LENGTH_LONG).show()
                 radapter.data=details
+                progressbar.setVisibility(View.INVISIBLE)
 
             }
 
