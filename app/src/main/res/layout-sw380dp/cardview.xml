@@ -9,7 +9,7 @@
     android:clickable="true"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardBackgroundColor="#EACD93"
+    app:cardBackgroundColor="#193C59"
     app:cardCornerRadius="5dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,7 +19,7 @@
         <TextView
             android:id="@+id/cvTitle"
             style="@style/heading"
-            android:textColor="#491700"
+            android:textColor="#FFAE22"
             android:textSize="30sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,7 +35,7 @@
             android:layout_width="198dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:textColor="#2F2A1E"
+            android:textColor="#FFFFFF"
             android:gravity="left"
             android:text="TextView"
             app:fontFamily="@font/cabin_medium"
@@ -51,7 +51,7 @@
             android:gravity="right"
             android:text="TextView"
             app:fontFamily="@font/oxygen_bold"
-            android:textColor="#2F2A1E"
+            android:textColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cvTitle" />
 
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_width="198dp"
             android:textSize="18sp"
-            android:textColor="#2F2A1E"
+            android:textColor="#FFFFFF"
             android:gravity="right"
             android:text="TextView"
             app:fontFamily="@font/cabin_italic"
