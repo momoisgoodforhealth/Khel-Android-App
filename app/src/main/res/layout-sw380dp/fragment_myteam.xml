@@ -5,31 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#212121"
-    tools:context=".Myteam">
+    tools:context=".comingsoon">
 
     <!-- TODO: Update blank fragment layout -->
 
     <TextView
-        android:id="@+id/explore_frag_title"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/my_team_ynwa"
-        android:textColor="#FFFFFF"
-        android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="202dp"
-        android:layout_height="289dp"
-        android:contentDescription="@string/dick"
-        android:src="@drawable/my_team"
+        android:fontFamily="@font/comfortaa_bold"
+        android:shadowColor="#401F1F"
+        android:text="@string/comingsoon"
+        android:textColor="#3599E8"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.226" />
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="517dp"
+        android:layout_height="535dp"
+        android:src="@drawable/coming_soon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

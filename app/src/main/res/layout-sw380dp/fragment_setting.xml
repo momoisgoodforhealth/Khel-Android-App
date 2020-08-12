@@ -13,22 +13,109 @@
         android:id="@+id/explore_frag_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
         android:text="@string/settings"
+        android:textColor="#37B8C8"
+        android:textSize="50sp"
+        app:fontFamily="@font/comfortaa_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.449"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/versiontext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="5dp"
+        android:text="@string/version_value"
         android:textColor="#FFFFFF"
-        android:textSize="36sp"
+        android:textSize="24sp"
+        app:fontFamily="@font/chivo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/explore_frag_title"
+        app:textAllCaps="false" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="180dp"
-        android:layout_height="211dp"
-        android:contentDescription="@string/dick"
-        android:src="@drawable/settings"
+    <TextView
+        android:id="@+id/credits_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/credits_title"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:fontFamily="@font/chivo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/versiontext" />
+
+    <TextView
+        android:id="@+id/credits1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/credits_value"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:fontFamily="@font/chivo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/credits_title" />
+
+    <TextView
+        android:id="@+id/credits2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/credits_value2"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:fontFamily="@font/chivo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/credits1" />
+
+    <TextView
+        android:id="@+id/credits3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/credits_value3"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:fontFamily="@font/chivo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/credits2" />
+
+    <TextView
+        android:id="@+id/settings_contacthelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_contact"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:textSize="22sp"
+        app:fontFamily="@font/chivo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/credits3" />
+
+    <TextView
+        android:id="@+id/contact_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/contact_email_value"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        app:fontFamily="@font/chivo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_contacthelp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,6 +27,9 @@
         <action
             android:id="@+id/action_homeFragment_to_formFragment2"
             app:destination="@id/formFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_fragment_tournamentdetails"
+            app:destination="@id/fragment_tournamentdetails" />
     </fragment>
     <fragment
         android:id="@+id/myteam"
@@ -54,4 +57,9 @@
         android:name="com.example.romp.comingsoon"
         android:label="fragment_comingsoon"
         tools:layout="@layout/fragment_comingsoon" />
+    <fragment
+        android:id="@+id/fragment_tournamentdetails"
+        android:name="com.example.romp.fragment_tournamentdetails"
+        android:label="fragment_tournamentdetails"
+        tools:layout="@layout/fragment_tournamentdetails" />
 </navigation>

@@ -1,6 +1,8 @@
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.cardview.widget.CardView
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.romp.MyViewHolder
 import com.example.romp.R
@@ -28,7 +30,14 @@ class adapter: RecyclerView.Adapter<MyViewHolder>() {
         holder.text2.text=item.Award
         holder.text3.text=item.datev
         holder.text4.text=item.Location
+
+    /*    holder.itemView.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_fragment_tournamentdetails)
+            val text: TextView =it.findViewById(R.id.tdtext)
+            text.text=item.TournamentName
+        } */
     }
+
 
 }
 
