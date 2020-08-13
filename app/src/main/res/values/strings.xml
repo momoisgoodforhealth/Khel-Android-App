@@ -31,9 +31,10 @@
     <string name="about_button_value">About Khel</string>
     <string name="version_value">Version: 1.0.0</string>
     <string name="credits_title">Credits</string>
-    <string name="credits_value">Shovan</string>
+    <string name="credits_value">Shovan Shakya</string>
     <string name="credits_value2">Soren Basnet</string>
     <string name="credits_value3">Sayaka Shakya (Artworks)</string>
     <string name="settings_contact">If there is some mistake in your tournament listing, please contact</string>
-    <string name="contact_email_value">rompapp@gmail.com</string>
+    <string name="contact_email_value">romppapp@gmail.com</string>
+    <string name="credits4_value">Nistha Rajbhandari (Research)</string>
 </resources>
