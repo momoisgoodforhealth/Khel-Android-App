@@ -22,19 +22,16 @@
         android:id="@+id/explore_frag_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
         android:fontFamily="@font/comfortaa_bold"
         android:gravity="center"
         android:text="@string/explore"
         android:textColor="#FF9800"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/explore_frag_tourbutton"
-        app:layout_constraintEnd_toEndOf="parent"
 
+        app:layout_constraintBottom_toTopOf="@+id/explore_frag_tourbutton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
