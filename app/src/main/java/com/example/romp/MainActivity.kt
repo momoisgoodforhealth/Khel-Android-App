@@ -7,6 +7,15 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
+var tname:String? = null
+var tdes:String? = null
+var tdate:String? = null
+var trules:String? = null
+var taward:String? = null
+var tconc:String? = null
+var tloc:String? = null
+
+
 class MainActivity : AppCompatActivity() {
 
     lateinit var homeFragment:HomeFragment

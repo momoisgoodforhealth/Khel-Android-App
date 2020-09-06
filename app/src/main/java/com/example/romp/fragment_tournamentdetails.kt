@@ -19,6 +19,19 @@ class fragment_tournamentdetails : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-     //   val text:TextView=view.findViewById(R.id.tdtext)
+        val title:TextView=view.findViewById(R.id.tdtext)
+        val des:TextView=view.findViewById(R.id.tddes)
+        val award:TextView=view.findViewById(R.id.tdaward)
+        val date:TextView=view.findViewById(R.id.tddate)
+        val rule:TextView=view.findViewById(R.id.tdrules)
+        val conc:TextView=view.findViewById(R.id.tdconc)
+        val loc:TextView=view.findViewById(R.id.tdloc)
+        title.text= tname
+        des.text= tdes
+        award.text= taward
+        date.text= tdate
+        rule.text= trules
+        conc.text= tconc
+        loc.text= tloc
     }
 }
