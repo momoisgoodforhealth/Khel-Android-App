@@ -8,6 +8,7 @@
     tools:context=".fragment_tournamentdetails">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:id="@+id/td_title"
         android:layout_width="wrap_content"
@@ -22,93 +23,214 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tdtext"
-        tools:text="King Kong Tournament"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:textSize="20dp"
-        android:text="TextView"
-        android:textColor="#FFFFFF"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/tournament_holder_shape"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/td_title"
-        app:layout_constraintVertical_bias="0.045" />
+        app:layout_constraintTop_toBottomOf="@+id/td_title">
 
-    <TextView
-        android:id="@+id/tddes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:text="TextView"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tdtext" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tdloc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textColor="#FFFFFF"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tddes" />
+            <TextView
+                android:id="@+id/tdtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:textColor="#3A3838"
+                android:textSize="22sp"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="41dp"
+                tools:text="King Kong Tournament" />
 
-    <TextView
-        android:id="@+id/tdrules"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textColor="#FFFFFF"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tdloc" />
+            <TextView
+                android:id="@+id/tdloc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                android:fontFamily="sans-serif-thin"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="#3A3838"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tdtext" />
 
-    <TextView
-        android:id="@+id/tddate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textColor="#FFFFFF"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tdrules" />
+            <TextView
+                android:id="@+id/tddate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                android:fontFamily="sans-serif-thin"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="#3A3838"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tdloc" />
 
-    <TextView
-        android:id="@+id/tdaward"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textColor="#FFFFFF"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tddate" />
+            <TextView
+                android:id="@+id/tddes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                android:fontFamily="sans-serif-thin"
+                android:text="TextView"
+                android:textColor="#3A3838"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/destitle" />
 
-    <TextView
-        android:id="@+id/tdconc"
+            <TextView
+                android:id="@+id/destitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/desttitle"
+                android:textColor="#3A3838"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tddate" />
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textColor="#FFFFFF"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tdaward" /><![CDATA[
+            <TextView
+                android:id="@+id/rulestitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/rulestitle"
+                android:textColor="#3A3838"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tddes" />
+
+            <TextView
+                android:id="@+id/tdrules"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                android:fontFamily="sans-serif-thin"
+                android:text="TextView"
+                android:textColor="#3A3838"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rulestitle" />
+
+            <TextView
+                android:id="@+id/awardtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/awardtitle"
+                android:textColor="#3A3838"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tdrules" />
+
+            <TextView
+                android:id="@+id/tdaward"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                android:fontFamily="sans-serif-thin"
+                android:text="TextView"
+                android:textColor="#3A3838"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/awardtitle" />
+
+            <TextView
+                android:id="@+id/conctitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/conctitle"
+                android:textColor="#3A3838"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tdaward" />
+
+            <TextView
+                android:id="@+id/tdconc"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="sans-serif-thin"
+                android:text="TextView"
+                android:textColor="#3A3838"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/conctitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <![CDATA[
+
+
 
     tools:layout_editor_absoluteX="46dp"
         tools:layout_editor_absoluteY="58dp" />
+
 
 ]]>
 </androidx.constraintlayout.widget.ConstraintLayout>
