@@ -68,7 +68,7 @@ class FormFragment : Fragment() {
             val tour = TournamentDetails(nn,dd, ll, cc, aww, rr, aa)
             database.child("tournaments").push().setValue(tour)
                 .addOnSuccessListener {
-                    Toast.makeText(activity,"The Tournament Has Been Added Successfully", Toast.LENGTH_LONG).show()
+                    Navigation.findNavController(view).navigate(R.id.action_formFragment_to_tournamentSuccess)
                 }
                 .addOnFailureListener {
                     Toast.makeText(activity,"ERROR: $it", Toast.LENGTH_LONG).show()

@@ -11,10 +11,18 @@
         tools:layout="@layout/fragment_explore" >
         <action
             android:id="@+id/action_exploreFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
         <action
             android:id="@+id/action_exploreFragment_to_comingsoon"
-            app:destination="@id/comingsoon" />
+            app:destination="@id/comingsoon"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -23,13 +31,25 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_formFragment"
-            app:destination="@id/formFragment" />
+            app:destination="@id/formFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
         <action
             android:id="@+id/action_homeFragment_to_formFragment2"
-            app:destination="@id/formFragment" />
+            app:destination="@id/formFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
         <action
             android:id="@+id/action_homeFragment_to_fragment_tournamentdetails"
-            app:destination="@id/fragment_tournamentdetails" />
+            app:destination="@id/fragment_tournamentdetails"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
     </fragment>
     <fragment
         android:id="@+id/myteam"
@@ -46,7 +66,15 @@
         android:id="@+id/formFragment"
         android:name="com.example.romp.FormFragment"
         android:label="form_fragment"
-        tools:layout="@layout/fragment_form"/>
+        tools:layout="@layout/fragment_form">
+        <action
+            android:id="@+id/action_formFragment_to_tournamentSuccess"
+            app:destination="@id/tournamentSuccess"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit" />
+    </fragment>
     <activity
         android:id="@+id/mainActivity2"
         android:name="com.example.romp.MainActivity"
@@ -62,4 +90,8 @@
         android:name="com.example.romp.fragment_tournamentdetails"
         android:label="fragment_tournamentdetails"
         tools:layout="@layout/fragment_tournamentdetails" />
+    <fragment
+        android:id="@+id/tournamentSuccess"
+        android:name="com.example.romp.TournamentSuccess"
+        android:label="TournamentSuccess" />
 </navigation>

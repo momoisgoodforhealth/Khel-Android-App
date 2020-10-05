@@ -41,4 +41,5 @@
     <string name="rulestitle">Rules</string>
     <string name="awardtitle">Awards</string>
     <string name="conctitle">Contact</string>
+    <string name="tournament_add_success">Tournament Added Successfully</string>
 </resources>
