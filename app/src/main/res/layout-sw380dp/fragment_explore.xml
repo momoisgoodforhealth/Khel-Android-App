@@ -27,9 +27,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:fontFamily="@font/comfortaa_bold"
+        android:fontFamily="@font/chivo"
         android:text="@string/explore"
-        android:textColor="#FF9800"
+        android:textColor="#FFFFFF"
         android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/explore_frag_tourbutton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,7 +80,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/explore_frag_tourbutton" />
+        app:layout_constraintTop_toBottomOf="@+id/explore_frag_tourbutton"
+        />
 
     <Button
         android:foreground="?attr/selectableItemBackgroundBorderless"
@@ -149,7 +150,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/explore_frag_fibbutton"
-        app:layout_constraintVertical_bias="0.006" />
+        app:layout_constraintVertical_bias="0.006"
+        />
 
     <ImageView
         android:id="@+id/vsmode_icon"
