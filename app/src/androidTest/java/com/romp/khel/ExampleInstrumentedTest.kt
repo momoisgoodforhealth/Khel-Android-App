@@ -1,4 +1,4 @@
-package com.example.romp
+package com.romp.khel
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

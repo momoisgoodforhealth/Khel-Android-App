@@ -1,4 +1,4 @@
-package com.example.romp;
+package com.romp.khel;
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,7 +12,6 @@ import androidx.navigation.Navigation
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.IgnoreExtraProperties
-import java.text.Normalizer
 
 
 class FormFragment : Fragment() {

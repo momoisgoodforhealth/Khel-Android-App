@@ -1,4 +1,4 @@
-package com.example.romp
+package com.romp.khel
 
 data class TournamentDetails (
     var TournamentName: String? = "",

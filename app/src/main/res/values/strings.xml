@@ -42,4 +42,5 @@
     <string name="awardtitle">Awards</string>
     <string name="conctitle">Contact</string>
     <string name="tournament_add_success">Tournament Added Successfully</string>
+    <string name="booking_title"><![CDATA[Futsal Info & Bookings]]></string>
 </resources>

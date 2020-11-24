@@ -1,4 +1,4 @@
-package com.example.romp
+package com.romp.khel
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -29,7 +29,7 @@ class ExploreFragment : Fragment() {
 
         val button3:Button=view.findViewById(R.id.explore_frag_fibbutton)
         button3.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_exploreFragment_to_comingsoon)
+            Navigation.findNavController(view).navigate(R.id.action_exploreFragment_to_booking)
         }
 
         val button4:Button=view.findViewById(R.id.explore_frag_ltpbutton)

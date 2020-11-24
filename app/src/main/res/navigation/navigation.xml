@@ -6,7 +6,7 @@
     app:startDestination="@id/exploreFragment">
     <fragment
         android:id="@+id/exploreFragment"
-        android:name="com.example.romp.ExploreFragment"
+        android:name="com.romp.khel.ExploreFragment"
         android:label="fragment_explore"
         tools:layout="@layout/fragment_explore" >
         <action
@@ -23,10 +23,13 @@
             app:exitAnim="@anim/fragment_fade_exit"
             app:popEnterAnim="@anim/fragment_close_enter"
             app:popExitAnim="@anim/fragment_close_exit" />
+        <action
+            android:id="@+id/action_exploreFragment_to_booking"
+            app:destination="@id/booking" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.romp.HomeFragment"
+        android:name="com.romp.khel.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -53,18 +56,18 @@
     </fragment>
     <fragment
         android:id="@+id/myteam"
-        android:name="com.example.romp.Myteam"
+        android:name="com.romp.khel.Myteam"
         android:label="fragment_myteam"
         tools:layout="@layout/fragment_myteam" />
     <fragment
         android:id="@+id/settingFragment"
-        android:name="com.example.romp.SettingFragment"
+        android:name="com.romp.khel.SettingFragment"
         android:label="fragment_setting"
         tools:layout="@layout/fragment_setting" />
 
     <fragment
         android:id="@+id/formFragment"
-        android:name="com.example.romp.FormFragment"
+        android:name="com.romp.khel.FormFragment"
         android:label="form_fragment"
         tools:layout="@layout/fragment_form">
         <action
@@ -77,21 +80,26 @@
     </fragment>
     <activity
         android:id="@+id/mainActivity2"
-        android:name="com.example.romp.MainActivity"
+        android:name="com.romp.khel.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
     <fragment
         android:id="@+id/comingsoon"
-        android:name="com.example.romp.comingsoon"
+        android:name="com.romp.khel.comingsoon"
         android:label="fragment_comingsoon"
         tools:layout="@layout/fragment_comingsoon" />
     <fragment
         android:id="@+id/fragment_tournamentdetails"
-        android:name="com.example.romp.fragment_tournamentdetails"
+        android:name="com.romp.khel.fragment_tournamentdetails"
         android:label="fragment_tournamentdetails"
         tools:layout="@layout/fragment_tournamentdetails" />
     <fragment
         android:id="@+id/tournamentSuccess"
-        android:name="com.example.romp.TournamentSuccess"
+        android:name="com.romp.khel.TournamentSuccess"
         android:label="TournamentSuccess" />
+    <fragment
+        android:id="@+id/booking"
+        android:name="com.romp.khel.Booking"
+        android:label="fragment_booking"
+        tools:layout="@layout/fragment_booking" />
 </navigation>
