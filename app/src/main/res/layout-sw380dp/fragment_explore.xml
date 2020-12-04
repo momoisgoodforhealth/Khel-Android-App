@@ -4,19 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#212121"
+    android:background="@drawable/dudu"
     tools:context=".ExploreFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
-
-    <ImageView
-        android:id="@+id/boys_playing"
-        android:layout_width="411dp"
-        android:layout_height="286dp"
-        android:src="@drawable/boys_playing"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/explore_frag_title"
@@ -39,8 +31,6 @@
 
 
     <Button
-        android:foreground="?attr/selectableItemBackgroundBorderless"
-        android:clickable="true"
         android:id="@+id/explore_frag_tourbutton"
         android:layout_width="281dp"
         android:layout_height="68dp"
@@ -50,7 +40,9 @@
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
         android:background="@drawable/button_shape"
+        android:clickable="true"
         android:fontFamily="@font/chivo"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
         android:text="@string/explore_frag_button1"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
@@ -61,8 +53,6 @@
         app:layout_constraintTop_toBottomOf="@+id/explore_frag_title" />
 
     <Button
-        android:foreground="?attr/selectableItemBackgroundBorderless"
-        android:clickable="true"
         android:id="@+id/explore_frag_ctvmbutton"
         android:layout_width="281dp"
         android:layout_height="68dp"
@@ -72,7 +62,9 @@
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
         android:background="@drawable/button_shape2"
+        android:clickable="true"
         android:fontFamily="@font/chivo"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
         android:text="@string/explore_frag_button2"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
@@ -80,12 +72,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/explore_frag_tourbutton"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/explore_frag_tourbutton" />
 
     <Button
-        android:foreground="?attr/selectableItemBackgroundBorderless"
-        android:clickable="true"
         android:id="@+id/explore_frag_ltpbutton"
         android:layout_width="281dp"
         android:layout_height="68dp"
@@ -95,7 +84,9 @@
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
         android:background="@drawable/button_shape3"
+        android:clickable="true"
         android:fontFamily="@font/chivo"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
         android:text="@string/explore_frag_button3"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
@@ -106,8 +97,6 @@
         app:layout_constraintTop_toBottomOf="@+id/explore_frag_ctvmbutton" />
 
     <Button
-        android:foreground="?attr/selectableItemBackgroundBorderless"
-        android:clickable="true"
         android:id="@+id/explore_frag_fibbutton"
         android:layout_width="281dp"
         android:layout_height="68dp"
@@ -117,7 +106,9 @@
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
         android:background="@drawable/button_shape4"
+        android:clickable="true"
         android:fontFamily="@font/chivo"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
         android:text="@string/explore_frag_button4"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
@@ -128,8 +119,6 @@
         app:layout_constraintTop_toBottomOf="@+id/explore_frag_ltpbutton" />
 
     <Button
-        android:foreground="?attr/selectableItemBackgroundBorderless"
-        android:clickable="true"
         android:id="@+id/explore_frag_vleaguebutton"
         android:layout_width="281dp"
         android:layout_height="68dp"
@@ -140,7 +129,9 @@
         android:layout_marginRight="35dp"
         android:layout_marginBottom="24dp"
         android:background="@drawable/button_shape5"
+        android:clickable="true"
         android:fontFamily="@font/chivo"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
         android:text="@string/explore_frag_button5"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
@@ -150,8 +141,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/explore_frag_fibbutton"
-        app:layout_constraintVertical_bias="0.006"
-        />
+        app:layout_constraintVertical_bias="0.006" />
 
     <ImageView
         android:id="@+id/vsmode_icon"

@@ -4,19 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#212121"
+    android:background="@drawable/dudu"
     tools:context=".ExploreFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
-
-    <ImageView
-        android:id="@+id/boys_playing"
-        android:layout_width="match_parent"
-        android:layout_height="286dp"
-        android:src="@drawable/boys_playing"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <TextView
         android:id="@+id/explore_frag_title"
