@@ -101,5 +101,14 @@
         android:id="@+id/booking"
         android:name="com.romp.khel.Booking"
         android:label="fragment_booking"
-        tools:layout="@layout/fragment_booking" />
+        tools:layout="@layout/fragment_booking" >
+        <action
+            android:id="@+id/action_booking_to_venueDetails"
+            app:destination="@id/venueDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/venueDetails"
+        android:name="com.romp.khel.VenueDetails"
+        android:label="fragment_venue_details"
+        tools:layout="@layout/fragment_venue_details" />
 </navigation>

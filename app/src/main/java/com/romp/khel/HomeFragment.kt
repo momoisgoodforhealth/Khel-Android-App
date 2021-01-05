@@ -36,6 +36,7 @@ class HomeFragment : Fragment() {
         val radapter=adapter()
          view.findViewById<RecyclerView>(R.id.recycle).adapter=radapter
 
+
         val progressbar:ProgressBar=view.findViewById(R.id.progressBar)
         progressbar.isIndeterminate
             progressbar.setVisibility(View.VISIBLE);
@@ -48,6 +49,9 @@ class HomeFragment : Fragment() {
 
      //   var testdata:MutableList<TextView> = mutableListOf(view.findViewById(R.id.textView2),view.findViewById(R.id.test),view.findViewById(R.id.test2),view.findViewById(R.id.test3),view.findViewById(R.id.test4))
         var details:MutableList<TournamentDetails> = mutableListOf()
+
+
+
      //   var num:Int
 
 

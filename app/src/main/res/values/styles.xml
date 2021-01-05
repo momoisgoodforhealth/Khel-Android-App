@@ -20,4 +20,13 @@
         <item name="android:fontFamily">sans-serif-thin</item>
     </style>
 
+    <style name="time" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">#3A3838</item>
+        <item name="android:fontFamily">sans-serif-thin</item>
+        <item name="android:layout_marginLeft">4dp</item>
+    </style>
+
+
+
 </resources>

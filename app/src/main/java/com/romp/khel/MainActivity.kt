@@ -13,6 +13,7 @@ var trules:String? = null
 var taward:String? = null
 var tconc:String? = null
 var tloc:String? = null
+var vname:String?=null
 
 
 class MainActivity : AppCompatActivity() {

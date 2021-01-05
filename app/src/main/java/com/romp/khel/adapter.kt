@@ -17,7 +17,6 @@ class adapter: RecyclerView.Adapter<MyViewHolder>() {
         val layoutInflater=LayoutInflater.from(parent.context)
         val view= layoutInflater.inflate(R.layout.cardview, parent, false) as CardView
         return MyViewHolder(view)
-
     }
 
     override fun getItemCount()=data.size
