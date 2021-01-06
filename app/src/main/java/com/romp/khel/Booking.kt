@@ -28,8 +28,8 @@ class Booking : Fragment() {
     var venuename7= Venue("Maa Banglamukhi Futsal", "","Dathulan Road, Sankhamul", "01-5260611")
 
 
-    lateinit var timing1:TextView
-    lateinit var timing2:TextView
+ //   lateinit var timing1:TextView
+   // lateinit var timing2:TextView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
