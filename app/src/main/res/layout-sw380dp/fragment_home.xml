@@ -67,7 +67,7 @@
             android:paddingBottom="5dp"
             android:text="@string/create_tournament_button_value"
             android:textAllCaps="false"
-            android:textSize="25sp"
+            android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tour_heading" />
