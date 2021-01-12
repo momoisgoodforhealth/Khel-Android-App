@@ -26,6 +26,9 @@
         <action
             android:id="@+id/action_exploreFragment_to_booking"
             app:destination="@id/booking" />
+        <action
+            android:id="@+id/action_exploreFragment_to_tournaments"
+            app:destination="@id/tournaments" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -111,4 +114,16 @@
         android:name="com.romp.khel.VenueDetails"
         android:label="fragment_venue_details"
         tools:layout="@layout/fragment_venue_details" />
+    <fragment
+        android:id="@+id/tournaments"
+        android:name="com.romp.khel.tournaments"
+        android:label="fragment_tournaments"
+        tools:layout="@layout/fragment_tournaments" >
+        <action
+            android:id="@+id/action_tournaments_to_fragment_tournamentdetails"
+            app:destination="@id/fragment_tournamentdetails" />
+        <action
+            android:id="@+id/action_tournaments_to_formFragment"
+            app:destination="@id/formFragment" />
+    </fragment>
 </navigation>

@@ -19,7 +19,7 @@ class ExploreFragment : Fragment() {
 
         val button: Button =view.findViewById(R.id.explore_frag_tourbutton)
         button.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_exploreFragment_to_homeFragment)
+            Navigation.findNavController(view).navigate(R.id.action_exploreFragment_to_tournaments)
         }
 
         val button2:Button=view.findViewById(R.id.explore_frag_ctvmbutton)

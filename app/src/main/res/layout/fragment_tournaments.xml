@@ -5,26 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#212121"
-    tools:context=".HomeFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-
+    android:scrollbarSize="36dp"
+    tools:context=".tournaments">
 
     <TextView
-        android:id="@+id/home_page_heading"
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/comfortaa_bold"
-        android:text="@string/home_page_heading_value"
-        android:textColor="#FF5722"
+        android:text="@string/tournament_fragment_value"
+        android:textColor="#E8953C"
         android:textSize="36sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/add_tour_button"
+        android:layout_width="71dp"
+        android:layout_height="55dp"
+        android:background="@drawable/add_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
@@ -36,24 +43,8 @@
         android:background="@drawable/tournament_holder_shape"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/home_page_heading"
-        app:layout_constraintVertical_bias="1.0">
-
-        <TextView
-            android:id="@+id/tour_heading"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="#193C59"
-            android:fontFamily="@font/chelsea_market"
-            android:gravity="center"
-            android:text="@string/tournament_fragment_value"
-            android:textColor="#FFAE22"
-            android:textSize="25sp"
-            app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycle"
@@ -62,7 +53,8 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tour_heading" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -70,11 +62,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="@+id/recycle"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/recycle" />
+            app:layout_constraintStart_toStartOf="@+id/recycle"
+            app:layout_constraintTop_toTopOf="@+id/recycle" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

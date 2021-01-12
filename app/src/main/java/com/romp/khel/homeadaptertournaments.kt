@@ -1,12 +1,12 @@
+package com.romp.khel
+
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.cardview.widget.CardView
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
-import com.romp.khel.*
 
-
-class adapter: RecyclerView.Adapter<MyViewHolder>() {
+class homeadaptertournaments: RecyclerView.Adapter<MyViewHolder>() {
     var data= listOf<TournamentDetails>()
         set(value) {
             field=value
@@ -14,7 +14,7 @@ class adapter: RecyclerView.Adapter<MyViewHolder>() {
         }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val layoutInflater=LayoutInflater.from(parent.context)
+        val layoutInflater= LayoutInflater.from(parent.context)
         val view= layoutInflater.inflate(R.layout.cardview, parent, false) as CardView
         return MyViewHolder(view)
     }
@@ -28,20 +28,18 @@ class adapter: RecyclerView.Adapter<MyViewHolder>() {
         holder.text3.text=item.datev
         holder.text4.text=item.Location
 
-      holder.itemView.setOnClickListener {
-          Navigation.findNavController(it).navigate(R.id.action_tournaments_to_fragment_tournamentdetails)
+        holder.itemView.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_fragment_tournamentdetails)
+            tname=item.TournamentName
+            tdes=item.Additional
+            tloc=item.Location
+            taward=item.Award
+            tconc=item.Contact
+            tdate=item.datev
+            trules=item.Rules
 
-        tname=item.TournamentName
-          tdes=item.Additional
-          tloc=item.Location
-          taward=item.Award
-          tconc=item.Contact
-          tdate=item.datev
-          trules=item.Rules
-
-      }
         }
     }
 
 
-
+}

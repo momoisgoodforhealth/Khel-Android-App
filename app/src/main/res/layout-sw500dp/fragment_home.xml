@@ -54,24 +54,6 @@
             android:textSize="40sp"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/create_tournament_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:background="#774CCA"
-            android:padding="5dp"
-            android:paddingLeft="5dp"
-            android:paddingTop="5dp"
-            android:paddingRight="5dp"
-            android:paddingBottom="5dp"
-            android:text="@string/create_tournament_button_value"
-            android:textAllCaps="false"
-            android:textSize="28sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tour_heading" />
-
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycle"
@@ -80,7 +62,7 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/create_tournament_button" />
+            app:layout_constraintTop_toBottomOf="@+id/tour_heading" />
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -90,8 +72,7 @@
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="@+id/recycle"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/recycle"
-            app:layout_constraintTop_toBottomOf="@+id/create_tournament_button" />
+            app:layout_constraintStart_toStartOf="@+id/recycle" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
