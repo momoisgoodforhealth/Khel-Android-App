@@ -1,17 +1,15 @@
-package com.romp.khel
+package com.romp.khel.Fragments
 
-import adapter
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
-import com.google.firebase.database.ktx.getValue
+import com.romp.khel.R
+import com.romp.khel.dataclass.Venue
+import com.romp.khel.adapters.VenueRecycleViewAdapter
 
 
 class Booking : Fragment() {
@@ -20,7 +18,7 @@ class Booking : Fragment() {
     var conditionref: DatabaseReference = database.child("check")
    // var ref : DatabaseReference = database.child("tournaments")
     var venuename1= Venue("Kick Futsal Lalitpur", "", "Dauthulan Road", "9808151351")
-    var venuename2=Venue("Shankhamul Futsal", "","Shankhamul Marg",  "01-4782088")
+    var venuename2= Venue("Shankhamul Futsal", "","Shankhamul Marg",  "01-4782088")
     var venuename3= Venue("Royal Futsal", "","Pushpa Nagar Marga", "01-5244436")
     var venuename4= Venue("Shantinagar Futsal", "","Shantinagar", "9851188182")
     var venuename5= Venue("Prismatic Futsal and Recreation Center", "","Milap Road", "01-5521587")
@@ -64,7 +62,7 @@ class Booking : Fragment() {
         val time_seventeen=view.findViewById<TextView>(R.id.time_seventeen)
         val time_eightteen=view.findViewById<TextView>(R.id.time_eighteen)  */
 
-        val vadapter=VenueRecycleViewAdapter()
+        val vadapter= VenueRecycleViewAdapter()
         view.findViewById<RecyclerView>(R.id.venue_recycle).adapter=vadapter
 
 

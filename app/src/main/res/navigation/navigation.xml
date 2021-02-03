@@ -6,7 +6,7 @@
     app:startDestination="@id/exploreFragment">
     <fragment
         android:id="@+id/exploreFragment"
-        android:name="com.romp.khel.ExploreFragment"
+        android:name="com.romp.khel.Fragments.ExploreFragment"
         android:label="fragment_explore"
         tools:layout="@layout/fragment_explore" >
         <action
@@ -29,10 +29,13 @@
         <action
             android:id="@+id/action_exploreFragment_to_tournaments"
             app:destination="@id/tournaments" />
+        <action
+            android:id="@+id/action_exploreFragment_to_signUp_Login_Fragment"
+            app:destination="@id/signUp_Login_Fragment" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.romp.khel.HomeFragment"
+        android:name="com.romp.khel.Fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -56,21 +59,24 @@
             app:exitAnim="@anim/fragment_fade_exit"
             app:popEnterAnim="@anim/fragment_close_enter"
             app:popExitAnim="@anim/fragment_close_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_tournaments"
+            app:destination="@id/tournaments" />
     </fragment>
     <fragment
         android:id="@+id/myteam"
-        android:name="com.romp.khel.Myteam"
+        android:name="com.romp.khel.Fragments.Myteam"
         android:label="fragment_myteam"
         tools:layout="@layout/fragment_myteam" />
     <fragment
         android:id="@+id/settingFragment"
-        android:name="com.romp.khel.SettingFragment"
+        android:name="com.romp.khel.Fragments.SettingFragment"
         android:label="fragment_setting"
         tools:layout="@layout/fragment_setting" />
 
     <fragment
         android:id="@+id/formFragment"
-        android:name="com.romp.khel.FormFragment"
+        android:name="com.romp.khel.Fragments.FormFragment"
         android:label="form_fragment"
         tools:layout="@layout/fragment_form">
         <action
@@ -88,21 +94,21 @@
         tools:layout="@layout/activity_main" />
     <fragment
         android:id="@+id/comingsoon"
-        android:name="com.romp.khel.comingsoon"
+        android:name="com.romp.khel.Fragments.comingsoon"
         android:label="fragment_comingsoon"
         tools:layout="@layout/fragment_comingsoon" />
     <fragment
         android:id="@+id/fragment_tournamentdetails"
-        android:name="com.romp.khel.fragment_tournamentdetails"
+        android:name="com.romp.khel.Fragments.fragment_tournamentdetails"
         android:label="fragment_tournamentdetails"
         tools:layout="@layout/fragment_tournamentdetails" />
     <fragment
         android:id="@+id/tournamentSuccess"
-        android:name="com.romp.khel.TournamentSuccess"
+        android:name="com.romp.khel.Fragments.TournamentSuccess"
         android:label="TournamentSuccess" />
     <fragment
         android:id="@+id/booking"
-        android:name="com.romp.khel.Booking"
+        android:name="com.romp.khel.Fragments.Booking"
         android:label="fragment_booking"
         tools:layout="@layout/fragment_booking" >
         <action
@@ -111,12 +117,12 @@
     </fragment>
     <fragment
         android:id="@+id/venueDetails"
-        android:name="com.romp.khel.VenueDetails"
+        android:name="com.romp.khel.Fragments.VenueDetails"
         android:label="fragment_venue_details"
         tools:layout="@layout/fragment_venue_details" />
     <fragment
         android:id="@+id/tournaments"
-        android:name="com.romp.khel.tournaments"
+        android:name="com.romp.khel.Fragments.tournaments"
         android:label="fragment_tournaments"
         tools:layout="@layout/fragment_tournaments" >
         <action
@@ -125,5 +131,23 @@
         <action
             android:id="@+id/action_tournaments_to_formFragment"
             app:destination="@id/formFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lookingtoPlay_AfterLogin"
+        android:name="com.romp.khel.Fragments.LookingtoPlay_AfterLogin"
+        android:label="fragment_lookingto_play__after_login"
+        tools:layout="@layout/fragment_lookingto_play__after_login" >
+        <action
+            android:id="@+id/action_lookingtoPlay_AfterLogin_to_signUp_Login_Fragment2"
+            app:destination="@id/signUp_Login_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUp_Login_Fragment"
+        android:name="com.romp.khel.Fragments.SignUp_Login_Fragment"
+        android:label="fragment_sign_up__login_"
+        tools:layout="@layout/fragment_sign_up__login_" >
+        <action
+            android:id="@+id/action_signUp_Login_Fragment_to_lookingtoPlay_AfterLogin"
+            app:destination="@id/lookingtoPlay_AfterLogin" />
     </fragment>
 </navigation>

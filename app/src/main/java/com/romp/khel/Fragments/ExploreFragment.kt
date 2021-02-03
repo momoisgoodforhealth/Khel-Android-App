@@ -1,4 +1,4 @@
-package com.romp.khel
+package com.romp.khel.Fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.Navigation
+import com.romp.khel.R
 
 class ExploreFragment : Fragment() {
 
@@ -34,7 +35,7 @@ class ExploreFragment : Fragment() {
 
         val button4:Button=view.findViewById(R.id.explore_frag_ltpbutton)
         button4.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_exploreFragment_to_comingsoon)
+            Navigation.findNavController(view).navigate(R.id.action_exploreFragment_to_signUp_Login_Fragment)
         }
 
         val button5:Button=view.findViewById(R.id.explore_frag_vleaguebutton)

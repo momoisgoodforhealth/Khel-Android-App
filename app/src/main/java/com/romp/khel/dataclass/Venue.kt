@@ -1,4 +1,4 @@
-package com.romp.khel
+package com.romp.khel.dataclass
 
 data class Venue(
     var VenueName:String?="",

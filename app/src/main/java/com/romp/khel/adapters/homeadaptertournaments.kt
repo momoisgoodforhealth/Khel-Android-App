@@ -1,13 +1,15 @@
-package com.romp.khel
+package com.romp.khel.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.cardview.widget.CardView
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
+import com.romp.khel.*
+import com.romp.khel.dataclass.TournamentDetails
 
-class VenueRecycleViewAdapter: RecyclerView.Adapter<MyViewHolder>()  {
-    var data= listOf<Venue>()
+class homeadaptertournaments: RecyclerView.Adapter<MyViewHolder>() {
+    var data= listOf<TournamentDetails>()
         set(value) {
             field=value
             notifyDataSetChanged()
@@ -23,18 +25,23 @@ class VenueRecycleViewAdapter: RecyclerView.Adapter<MyViewHolder>()  {
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val item=data[position]
-        holder.text.text=item.VenueName.toString()
-        holder.text2.text=item.Contact.toString()
-        holder.text3.text=item.Location.toString()
-        holder.text4.text=item.datev.toString()
+        holder.text.text=item.TournamentName
+        holder.text2.text=item.Award
+        holder.text3.text=item.datev
+        holder.text4.text=item.Location
 
         holder.itemView.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_booking_to_venueDetails)
-            vname=item.VenueName
+            Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_fragment_tournamentdetails)
+            tname =item.TournamentName
+            tdes =item.Additional
+            tloc =item.Location
+            taward =item.Award
+            tconc =item.Contact
+            tdate =item.datev
+            trules =item.Rules
 
         }
     }
-
 
 
 }

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#212121"
-    tools:context=".VenueDetails">
+    tools:context=".Fragments.VenueDetails">
 
     <TextView
         android:id="@+id/venue_details_title"
@@ -27,6 +27,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:background="@drawable/tournament_holder_shape"

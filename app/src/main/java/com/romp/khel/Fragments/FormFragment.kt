@@ -1,4 +1,4 @@
-package com.romp.khel;
+package com.romp.khel.Fragments;
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,6 +12,7 @@ import androidx.navigation.Navigation
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.IgnoreExtraProperties
+import com.romp.khel.R
 
 
 class FormFragment : Fragment() {

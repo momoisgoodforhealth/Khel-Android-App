@@ -1,9 +1,12 @@
+package com.romp.khel.adapters
+
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.cardview.widget.CardView
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.romp.khel.*
+import com.romp.khel.dataclass.TournamentDetails
 
 
 class adapter: RecyclerView.Adapter<MyViewHolder>() {

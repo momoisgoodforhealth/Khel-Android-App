@@ -1,4 +1,4 @@
-package com.romp.khel
+package com.romp.khel.Fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import com.romp.khel.*
 
 class fragment_tournamentdetails : Fragment() {
 

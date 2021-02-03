@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#212121"
     android:scrollbarSize="36dp"
-    tools:context=".tournaments">
+    tools:context=".Fragments.tournaments">
 
     <TextView
         android:id="@+id/textView4"

@@ -1,4 +1,4 @@
-package com.romp.khel
+package com.romp.khel.Fragments
 
 import android.graphics.Color
 import android.os.Bundle
@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.google.firebase.database.*
+import com.romp.khel.R
+import com.romp.khel.vname
 
 class VenueDetails : Fragment() {
 
@@ -28,13 +30,13 @@ class VenueDetails : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val venue_name=view.findViewById<TextView>(R.id.venue_name)
         venue_name.text= vname
-        if (vname=="Kick Futsal Lalitpur") { conditionref=database.child("timings").child("KFL") }
-        if (vname=="Shankhamul Futsal") {conditionref=database.child("timings").child("ShankamulF")}
-        if (vname=="Royal Futsal") {conditionref=database.child("timings").child("RF")}
-        if (vname=="Shantinagar Futsal") {conditionref=database.child("timings").child("Shanti")}
-        if (vname=="Prismatic Futsal and Recreation Center") {conditionref=database.child("timings").child("Prismatic")}
-        if (vname=="Dhobighat Futsal") {conditionref=database.child("timings").child("Dhobighat")}
-        if (vname=="Maa Banglamukhi Futsal") {conditionref=database.child("timings").child("MaBangla")}
+        if (vname =="Kick Futsal Lalitpur") { conditionref=database.child("timings").child("KFL") }
+        if (vname =="Shankhamul Futsal") {conditionref=database.child("timings").child("ShankamulF")}
+        if (vname =="Royal Futsal") {conditionref=database.child("timings").child("RF")}
+        if (vname =="Shantinagar Futsal") {conditionref=database.child("timings").child("Shanti")}
+        if (vname =="Prismatic Futsal and Recreation Center") {conditionref=database.child("timings").child("Prismatic")}
+        if (vname =="Dhobighat Futsal") {conditionref=database.child("timings").child("Dhobighat")}
+        if (vname =="Maa Banglamukhi Futsal") {conditionref=database.child("timings").child("MaBangla")}
 
         val time_six=view.findViewById<TextView>(R.id.time_six)
         val time_seven=view.findViewById<TextView>(R.id.time_seven)

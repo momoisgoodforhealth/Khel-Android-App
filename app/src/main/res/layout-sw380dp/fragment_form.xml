@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#212121"
-    tools:context=".FormFragment">
+    tools:context=".Fragments.FormFragment">
 
     <ScrollView
         android:id="@+id/scrollView2"

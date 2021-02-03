@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#212121"
-    tools:context=".HomeFragment">
+    tools:context=".Fragments.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -40,6 +40,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/home_page_heading"
         app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/home_explore_tournament"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tour_heading"

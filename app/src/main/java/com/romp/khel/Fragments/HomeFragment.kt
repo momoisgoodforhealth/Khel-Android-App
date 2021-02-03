@@ -1,6 +1,5 @@
-package com.romp.khel
+package com.romp.khel.Fragments
 
-import adapter
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +12,9 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.getValue
+import com.romp.khel.R
+import com.romp.khel.dataclass.TournamentDetails
+import com.romp.khel.adapters.homeadaptertournaments
 
 
 class HomeFragment : Fragment() {
@@ -32,8 +34,11 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-
-        val radapter=homeadaptertournaments()
+        val buto:Button=view.findViewById(R.id.home_explore_tournament)
+        buto.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_tournaments)
+        }
+        val radapter= homeadaptertournaments()
          view.findViewById<RecyclerView>(R.id.recycle).adapter=radapter
 
 
@@ -44,7 +49,7 @@ class HomeFragment : Fragment() {
 
      //   var testdata:MutableList<TextView> = mutableListOf(view.findViewById(R.id.textView2),view.findViewById(R.id.test),view.findViewById(R.id.test2),view.findViewById(R.id.test3),view.findViewById(R.id.test4))
         var details:MutableList<TournamentDetails> = mutableListOf()
-
+        
 
 
      //   var num:Int

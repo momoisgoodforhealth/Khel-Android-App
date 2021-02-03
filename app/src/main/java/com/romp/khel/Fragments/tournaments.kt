@@ -1,6 +1,6 @@
-package com.romp.khel
+package com.romp.khel.Fragments
 
-import adapter
+import com.romp.khel.adapters.adapter
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,6 +13,8 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.getValue
+import com.romp.khel.R
+import com.romp.khel.dataclass.TournamentDetails
 
 
 class tournaments : Fragment() {
@@ -26,7 +28,7 @@ class tournaments : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val radapter=adapter()
+        val radapter= adapter()
         view.findViewById<RecyclerView>(R.id.recycle).adapter=radapter
 
 

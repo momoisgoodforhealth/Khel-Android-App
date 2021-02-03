@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.romp.khel.Fragments.*
 
 var tname:String? = null
 var tdes:String? = null
@@ -18,7 +19,7 @@ var vname:String?=null
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var homeFragment:HomeFragment
+    lateinit var homeFragment: HomeFragment
     lateinit var exploreFragment: ExploreFragment
     lateinit var settingFragment: SettingFragment
     lateinit var myteam: Myteam
