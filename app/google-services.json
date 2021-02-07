@@ -45,12 +45,94 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:296035937309:android:5b308659e242135e3e2af4",
+        "android_client_info": {
+          "package_name": "com.firebase.ui.auth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296035937309-k22b4e5i9v8juba4hoi8infp93d23imt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJ0ZdHyY6KWYWWgnBMkD6mh3y2-d5_FHs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "296035937309-k22b4e5i9v8juba4hoi8infp93d23imt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296035937309:android:2c555d3052bddb3d3e2af4",
+        "android_client_info": {
+          "package_name": "com.romp.bookingstracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296035937309-loro5jnh8sn08ra2ntajf0479i6broi6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.romp.bookingstracker",
+            "certificate_hash": "1b53e4c67945e2c146fa49ee38f31b9e2b4a651c"
+          }
+        },
+        {
+          "client_id": "296035937309-k22b4e5i9v8juba4hoi8infp93d23imt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJ0ZdHyY6KWYWWgnBMkD6mh3y2-d5_FHs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "296035937309-k22b4e5i9v8juba4hoi8infp93d23imt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:296035937309:android:787860c83240a7c43e2af4",
         "android_client_info": {
           "package_name": "com.romp.khel"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "296035937309-c21m1kit8vguundjqu0jrnvion89vfb3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.romp.khel",
+            "certificate_hash": "6c47b45c667d5e2643cce22fe8e66f4789339c19"
+          }
+        },
+        {
+          "client_id": "296035937309-u8jt54ge5a20jfe6bd508r3i5kpuh78n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.romp.khel",
+            "certificate_hash": "f988902ddb73b9806bb864ff0bfbc0db8bd850b5"
+          }
+        },
         {
           "client_id": "296035937309-k22b4e5i9v8juba4hoi8infp93d23imt.apps.googleusercontent.com",
           "client_type": 3

@@ -11,8 +11,8 @@ android {
         applicationId "com.romp.khel"
         minSdkVersion 16
         targetSdkVersion 29
-        versionCode 8
-        versionName "1.5"
+        versionCode 12
+        versionName "2.0.3"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -38,9 +38,10 @@ dependencies {
 
     // Also declare the dependency for the Google Play services library and specify its version
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
+  //  implementation 'com.google.firebase:firebase-auth:20.0.2'
 
 
- //   implementation 'com.firebaseui:firebase-ui-auth:7.1.1'
+    //   implementation 'com.firebaseui:firebase-ui-auth:7.1.1'
  //   implementation 'com.google.firebase:firebase-core:16.0.6'
  //   implementation 'com.firebaseui:firebase-ui-auth:4.3.1'
   //  implementation 'com.google.firebase:firebase-auth:20.0.1'

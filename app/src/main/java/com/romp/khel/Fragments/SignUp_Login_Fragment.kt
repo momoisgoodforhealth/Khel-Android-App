@@ -15,6 +15,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.SignInButton
 import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.tasks.Task
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
@@ -32,10 +33,10 @@ class SignUp_Login_Fragment : Fragment() {
 
     fun updateUI(account: GoogleSignInAccount?) {
         if (account != null) {
-
             Toast.makeText(activity, "You Signed In Successfully", Toast.LENGTH_LONG).show()
+            view?.let { Navigation.findNavController(it).navigate(R.id.action_signUp_Login_Fragment_to_lookingtoPlay_AfterLogin) }
         } else {
-            Toast.makeText(activity, "You Didnt Sign In", Toast.LENGTH_LONG).show()
+            Toast.makeText(activity, "Sign In Unsuccessful", Toast.LENGTH_LONG).show()
         }
     }
 
@@ -64,9 +65,6 @@ class SignUp_Login_Fragment : Fragment() {
         super.onStart()
         val account = GoogleSignIn.getLastSignedInAccount(activity)
         updateUI(account)
-        if (account != null) {
-            view?.let { Navigation.findNavController(it).navigate(R.id.action_signUp_Login_Fragment_to_lookingtoPlay_AfterLogin) }
-        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) { super.onActivityResult(requestCode, resultCode, data)
@@ -79,7 +77,7 @@ class SignUp_Login_Fragment : Fragment() {
                 val account = task.getResult(ApiException::class.java)!!
                 Timber.i("firebaseAuthWithGoogle:" + account.id)
                 firebaseAuthWithGoogle(account.idToken!!)
-                view?.let { Navigation.findNavController(it).navigate(R.id.action_signUp_Login_Fragment_to_lookingtoPlay_AfterLogin) }
+                handleSignInResult(task)
             } catch (e: ApiException) {
                 // Google Sign In failed, update UI appropriately
                 Log.w(ContentValues.TAG, "Google sign in failed", e)
@@ -108,6 +106,19 @@ class SignUp_Login_Fragment : Fragment() {
 
                     // ...
                 }
+        }
+
+    }
+
+    fun handleSignInResult(completedTask : Task<GoogleSignInAccount>) {
+        try {
+            var account : GoogleSignInAccount= completedTask.result!!
+            // Signed in successfully, show authenticated UI.
+            updateUI(account)
+        } catch (e:ApiException) {
+            // The ApiException status code indicates the detailed failure reason.
+            // Please refer to the GoogleSignInStatusCodes class reference for more information.
+            updateUI(null)
         }
     }
 }

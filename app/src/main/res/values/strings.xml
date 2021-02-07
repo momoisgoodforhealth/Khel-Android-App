@@ -29,7 +29,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="frag_td_title">Tournament Details</string>
     <string name="about_button_value">About Khel</string>
-    <string name="version_value">Version: 1.0.0</string>
+    <string name="version_value">Version: 2.0.0</string>
     <string name="credits_title">Credits</string>
     <string name="credits_value">Shovan Shakya</string>
     <string name="credits_value2">Soren Basnet</string>
@@ -60,8 +60,9 @@
     <string name="sixteen">16:00-17:00</string>
     <string name="seventeen">17:00-18:00</string>
     <string name="eighteen">18:00-19:00</string>
-    <string name="myteam_signoutbutton_value">Sign Out</string>
+    <string name="logout">Log Out</string>
     <string name="signoutbutton">Sign Out</string>
     <string name="hello">Hello</string>
     <string name="signup_login_text">Sign Up/Login</string>
+    <string name="testt">Pre Registration : This is just a test</string>
 </resources>
