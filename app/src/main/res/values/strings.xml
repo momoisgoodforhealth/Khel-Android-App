@@ -64,5 +64,5 @@
     <string name="signoutbutton">Sign Out</string>
     <string name="hello">Hello</string>
     <string name="signup_login_text">Sign Up/Login</string>
-    <string name="testt">Pre Registration : This is just a test</string>
+    <string name="LTP_title">Looking to Play</string>
 </resources>

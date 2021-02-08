@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ltp_cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    app:cardBackgroundColor="#CDCFD1"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/ltp_futsalname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:textColor="#9C1D1D"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Dhobighat Futsal" />
+
+        <TextView
+            android:id="@+id/ltp_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#D5650F"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/ltp_futsalname"
+            app:layout_constraintStart_toStartOf="@+id/ltp_futsalname"
+            app:layout_constraintTop_toBottomOf="@+id/ltp_futsalname"
+            tools:text="Dhobighat" />
+
+        <TextView
+            android:id="@+id/ltp_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#52A848"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toStartOf="@+id/ltp_playercount"
+            app:layout_constraintStart_toEndOf="@+id/ltp_futsalname"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="7:00-8:00" />
+
+        <TextView
+            android:id="@+id/ltp_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#23674C"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/ltp_time"
+            app:layout_constraintStart_toStartOf="@+id/ltp_time"
+            app:layout_constraintTop_toBottomOf="@+id/ltp_time"
+            tools:text="Rs.200" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="35dp"
+            android:layout_height="22dp"
+            android:paddingRight="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/ltp_playercount"
+            app:layout_constraintStart_toStartOf="@+id/ltp_playercount"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/playericon" />
+
+        <TextView
+            android:id="@+id/ltp_playercount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dp"
+            android:textColor="#773C8E"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6"
+            tools:text="9/10" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
