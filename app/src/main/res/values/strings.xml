@@ -29,7 +29,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="frag_td_title">Tournament Details</string>
     <string name="about_button_value">About Khel</string>
-    <string name="version_value">Version: 2.0.0</string>
+    <string name="version_value">Version: 2.0.4</string>
     <string name="credits_title">Credits</string>
     <string name="credits_value">Shovan Shakya</string>
     <string name="credits_value2">Soren Basnet</string>
@@ -65,4 +65,6 @@
     <string name="hello">Hello</string>
     <string name="signup_login_text">Sign Up/Login</string>
     <string name="LTP_title">Looking to Play</string>
+    <string name="myaccount_button">My Account</string>
+    <string name="aboutbutton_text">About Khel</string>
 </resources>

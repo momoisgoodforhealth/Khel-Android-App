@@ -24,8 +24,8 @@
 
     <Button
         android:id="@+id/add_tour_button"
-        android:layout_width="100dp"
-        android:layout_height="94dp"
+        android:layout_width="103dp"
+        android:layout_height="80dp"
         android:background="@drawable/add_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

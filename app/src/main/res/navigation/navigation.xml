@@ -72,7 +72,11 @@
         android:id="@+id/settingFragment"
         android:name="com.romp.khel.Fragments.SettingFragment"
         android:label="fragment_setting"
-        tools:layout="@layout/fragment_setting" />
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_settingFragment_AboutKhel"
+            app:destination="@id/settingFragment_AboutKhel" />
+    </fragment>
 
     <fragment
         android:id="@+id/formFragment"
@@ -150,4 +154,9 @@
             android:id="@+id/action_signUp_Login_Fragment_to_lookingtoPlay_AfterLogin"
             app:destination="@id/lookingtoPlay_AfterLogin" />
     </fragment>
+    <fragment
+        android:id="@+id/settingFragment_AboutKhel"
+        android:name="com.romp.khel.Fragments.SettingFragment_AboutKhel"
+        android:label="fragment_setting__about_khel"
+        tools:layout="@layout/fragment_setting__about_khel" />
 </navigation>

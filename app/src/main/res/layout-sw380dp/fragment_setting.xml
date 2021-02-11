@@ -9,13 +9,44 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/explore_frag_title">
+
+        <Button
+            android:id="@+id/myaccount_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/settingsbutton"
+            android:text="@string/myaccount_button"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/aboutbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/settingsbutton"
+            android:text="@string/aboutbutton_text"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
     <TextView
         android:id="@+id/explore_frag_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:text="@string/settings"
@@ -27,107 +58,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/versiontext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:paddingLeft="5dp"
-        android:text="@string/version_value"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:fontFamily="@font/chivo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/explore_frag_title"
-        app:textAllCaps="false" />
-
-    <TextView
-        android:id="@+id/credits_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/credits_title"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:fontFamily="@font/chivo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/versiontext" />
-
-    <TextView
-        android:id="@+id/credits1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/credits_value"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:fontFamily="@font/chivo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/credits_title" />
-
-    <TextView
-        android:id="@+id/credits2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/credits_value2"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:fontFamily="@font/chivo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/credits1" />
-
-    <TextView
-        android:id="@+id/credits3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/credits_value3"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:fontFamily="@font/chivo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/credits2" />
-
-    <TextView
-        android:id="@+id/settings_contacthelp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/settings_contact"
-        android:textColor="#FFFFFF"
-        android:gravity="center"
-        android:textSize="22sp"
-        app:fontFamily="@font/chivo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/credits3" />
-
-    <TextView
-        android:id="@+id/contact_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/contact_email_value"
-        android:textColor="#FFFFFF"
-        android:textSize="22sp"
-        app:fontFamily="@font/chivo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/settings_contacthelp" />
-
-    <TextView
-        android:id="@+id/credits4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/credits4_value"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:fontFamily="@font/chivo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/credits3" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+   </androidx.constraintlayout.widget.ConstraintLayout>
