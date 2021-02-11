@@ -76,6 +76,9 @@
         <action
             android:id="@+id/action_settingFragment_to_settingFragment_AboutKhel"
             app:destination="@id/settingFragment_AboutKhel" />
+        <action
+            android:id="@+id/action_settingFragment_to_signUp_Login_Fragment"
+            app:destination="@id/signUp_Login_Fragment" />
     </fragment>
 
     <fragment

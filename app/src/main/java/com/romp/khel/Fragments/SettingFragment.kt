@@ -12,6 +12,7 @@ import com.romp.khel.R
 
 class SettingFragment : Fragment() {
     lateinit var aboutbutton:Button
+    lateinit var myaccountbutton:Button
     override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanceState) }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -22,8 +23,12 @@ class SettingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         aboutbutton=view.findViewById(R.id.aboutbutton)
+        myaccountbutton=view.findViewById(R.id.myaccount_button)
         aboutbutton.setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_settingFragment_to_settingFragment_AboutKhel)
+        }
+        myaccountbutton.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_settingFragment_to_signUp_Login_Fragment)
         }
     }
 }
