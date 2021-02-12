@@ -27,6 +27,33 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <DatePicker
+                android:id="@+id/datepiku"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#212121"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:fontFamily="sans-serif-thin"
+                android:textColor="#DC9835"
+                android:textColorHint="#DC9835"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/datetext" />
+
+            <TextView
+                android:id="@+id/editdatetext"
+                style="@style/edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:focusable="false"
+                android:textColor="#DC9835"
+                android:textColorHint="#DCA555"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/datepiku" />
+
             <EditText
                 android:id="@+id/editTextTextPersonName3"
                 style="@style/edittext"
@@ -228,20 +255,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
 
-            <EditText
-                android:id="@+id/editdatetext"
-                style="@style/edittext"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:ems="10"
-                android:hint="e.g August 20"
-                android:inputType="textPersonName"
-                android:textColor="#DC9835"
-                android:textColorHint="#DCA555"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/datetext" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

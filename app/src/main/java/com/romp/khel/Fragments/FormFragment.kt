@@ -4,15 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
+import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.IgnoreExtraProperties
 import com.romp.khel.R
+import java.util.*
 
 
 class FormFragment : Fragment() {
@@ -35,13 +34,15 @@ class FormFragment : Fragment() {
 
 
         val tname: EditText = view.findViewById(R.id.editTextTextPersonName3)
-        val date:EditText=view.findViewById(R.id.editdatetext)
+        val date:TextView=view.findViewById(R.id.editdatetext)
         val loc: EditText = view.findViewById(R.id.editTextTextPersonName8)
         val contact: EditText = view.findViewById(R.id.editTextPhone2)
         val award: EditText = view.findViewById(R.id.editTextTextMultiLine3)
         val rd: EditText = view.findViewById(R.id.editTextTextMultiLine2)
         val add: EditText = view.findViewById(R.id.editTextTextMultiLine4)
         val butt: Button = view.findViewById(R.id.button)
+        val datepiku:DatePicker=view.findViewById(R.id.datepiku)
+        val today = Calendar.getInstance()
 
 
         @IgnoreExtraProperties
@@ -54,6 +55,12 @@ class FormFragment : Fragment() {
             var Rules: String? = "",
             var Additional: String? = ""
         )
+
+        datepiku.init(today.get(Calendar.YEAR), today.get(Calendar.MONTH),
+            today.get(Calendar.DAY_OF_MONTH)) {v,i,i2,i3 ->
+            date.text="$i3/$i2/$i"
+        }
+
 
 
         fun writeNewTournament(
