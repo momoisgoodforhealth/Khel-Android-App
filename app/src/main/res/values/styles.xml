@@ -27,6 +27,12 @@
         <item name="android:layout_marginLeft">4dp</item>
     </style>
 
+    <style name="MyDatePicker" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">#FFFFFF</item>
+        <item name="colorControlActivated">#FFFFFF</item>
+        <item name="android:textColorPrimary">#DC9835</item>
+    </style>
+
 
 
 </resources>
