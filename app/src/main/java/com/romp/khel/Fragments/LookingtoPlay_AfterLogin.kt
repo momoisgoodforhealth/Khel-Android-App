@@ -27,7 +27,6 @@ class LookingtoPlay_AfterLogin : Fragment() {
     lateinit var id:TextView
     lateinit var auth: FirebaseAuth
     lateinit var signin:GoogleSignInAccount
-
     lateinit var signoutbutton:Button
     override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanceState) }
 
