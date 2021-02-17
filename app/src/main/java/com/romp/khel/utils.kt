@@ -9,6 +9,12 @@ class MyViewHolder(val textView: CardView): RecyclerView.ViewHolder(textView) {
     var text2:TextView=textView.findViewById(R.id.cvAwards)
     var text3:TextView=textView.findViewById(R.id.cvDate)
     var text4:TextView=textView.findViewById(R.id.cvLocation)
+}
 
-
+class LTPViewHolder(val textView: CardView): RecyclerView.ViewHolder(textView) {
+    var Lfutsalname:TextView=textView.findViewById(R.id.ltp_futsalname)
+    var Llocation:TextView=textView.findViewById(R.id.ltp_location)
+    var Ltime:TextView=textView.findViewById(R.id.ltp_time)
+    var Lprice:TextView=textView.findViewById(R.id.ltp_price)
+    var Lpcount:TextView=textView.findViewById(R.id.ltp_playercount)
 }

@@ -35,7 +35,7 @@ class ExploreFragment : Fragment() {
 
         val button4:Button=view.findViewById(R.id.explore_frag_ltpbutton)
         button4.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_exploreFragment_to_signUp_Login_Fragment)
+            Navigation.findNavController(view).navigate(R.id.action_exploreFragment_to_lookingtoPlay)
         }
 
         val button5:Button=view.findViewById(R.id.explore_frag_vleaguebutton)

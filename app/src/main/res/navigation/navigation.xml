@@ -30,8 +30,8 @@
             android:id="@+id/action_exploreFragment_to_tournaments"
             app:destination="@id/tournaments" />
         <action
-            android:id="@+id/action_exploreFragment_to_signUp_Login_Fragment"
-            app:destination="@id/signUp_Login_Fragment" />
+            android:id="@+id/action_exploreFragment_to_lookingtoPlay"
+            app:destination="@id/lookingtoPlay" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -140,26 +140,44 @@
             app:destination="@id/formFragment" />
     </fragment>
     <fragment
-        android:id="@+id/lookingtoPlay_AfterLogin"
-        android:name="com.romp.khel.Fragments.LookingtoPlay_AfterLogin"
-        android:label="fragment_lookingto_play__after_login"
-        tools:layout="@layout/fragment_lookingto_play__after_login" >
-        <action
-            android:id="@+id/action_lookingtoPlay_AfterLogin_to_signUp_Login_Fragment2"
-            app:destination="@id/signUp_Login_Fragment" />
-    </fragment>
-    <fragment
         android:id="@+id/signUp_Login_Fragment"
         android:name="com.romp.khel.Fragments.SignUp_Login_Fragment"
         android:label="fragment_sign_up__login_"
         tools:layout="@layout/fragment_sign_up__login_" >
         <action
-            android:id="@+id/action_signUp_Login_Fragment_to_lookingtoPlay_AfterLogin"
-            app:destination="@id/lookingtoPlay_AfterLogin" />
+            android:id="@+id/action_signUp_Login_Fragment_to_after_Login"
+            app:destination="@id/after_Login" />
     </fragment>
     <fragment
         android:id="@+id/settingFragment_AboutKhel"
         android:name="com.romp.khel.Fragments.SettingFragment_AboutKhel"
         android:label="fragment_setting__about_khel"
         tools:layout="@layout/fragment_setting__about_khel" />
+    <fragment
+        android:id="@+id/after_Login"
+        android:name="com.romp.khel.Fragments.After_Login"
+        android:label="fragment_after__login"
+        tools:layout="@layout/fragment_after__login" >
+        <action
+            android:id="@+id/action_after_Login_to_signUp_Login_Fragment"
+            app:destination="@id/signUp_Login_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lookingtoPlay"
+        android:name="com.romp.khel.Fragments.LookingtoPlay"
+        android:label="fragment_lookingto_play"
+        tools:layout="@layout/fragment_lookingto_play" >
+        <action
+            android:id="@+id/action_lookingtoPlay_to_formFragment_LTP"
+            app:destination="@id/formFragment_LTP" />
+    </fragment>
+    <fragment
+        android:id="@+id/formFragment_LTP"
+        android:name="com.romp.khel.Fragments.FormFragment_LTP"
+        android:label="fragment_form_ltp"
+        tools:layout="@layout/fragment_form_ltp" >
+        <action
+            android:id="@+id/action_formFragment_LTP_to_tournamentSuccess"
+            app:destination="@id/tournamentSuccess" />
+    </fragment>
 </navigation>

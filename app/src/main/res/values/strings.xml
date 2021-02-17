@@ -67,4 +67,18 @@
     <string name="LTP_title">Looking to Play</string>
     <string name="myaccount_button">My Account</string>
     <string name="aboutbutton_text">About Khel</string>
+    <string name="stealthedeal">Steal the Deal!</string>
+    <string name="ltp_create_text">Play With Others</string>
+    <string name="khel">Khel</string>
+    <string name="futsal_venue">Futsal Venue</string>
+    <string name="futsal_location">Venue Location</string>
+    <string name="LTP_starttime">Start Time</string>
+    <string name="LTP_endtime">End Time</string>
+    <string name="LTP_Date">Date</string>
+    <string name="LTP_Contact">How to Contact</string>
+    <string name="ltpform_totalplayers">Total Number of Players</string>
+    <string name="ltpform_joinednumberplayers">Number of Players Joined So Far</string>
+    <string name="locationhint">Dhapakhel</string>
+    <string name="LTP_pricepp">Price Per Person</string>
+    <string name="LTP_pricepp_hint">E.g: 200</string>
 </resources>

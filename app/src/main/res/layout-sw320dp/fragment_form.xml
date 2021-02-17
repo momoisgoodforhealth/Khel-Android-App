@@ -11,12 +11,12 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="306dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:background="@drawable/tournament_holder_shape"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,10 +37,10 @@
                 android:fontFamily="sans-serif-thin"
                 android:textColor="#DC9835"
                 android:textColorHint="#DC9835"
+                android:theme="@style/MyDatePicker"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/datetext"
-                android:theme="@style/MyDatePicker"/>
+                app:layout_constraintTop_toBottomOf="@+id/datetext" />
 
             <TextView
                 android:id="@+id/editdatetext"
@@ -71,8 +71,7 @@
                 android:textColorHint="#DCA555"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ctfrag_tname"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/ctfrag_tname" />
 
             <EditText
                 android:id="@+id/editTextTextPersonName8"
@@ -185,15 +184,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/ct_entertname"
                 android:fontFamily="sans-serif-light"
+                android:text="@string/ct_entertname"
                 android:textColor="#3A3838"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.447"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
 
 
             <TextView
@@ -242,8 +240,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:background="#3647A5"
-                android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:text="Submit"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
