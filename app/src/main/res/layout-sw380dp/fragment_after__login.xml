@@ -7,18 +7,6 @@
     android:background="#212121"
     tools:context=".Fragments.After_Login">
 
-    <TimePicker
-        android:id="@+id/ltpform_timepicker"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bye"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/MyDatePicker"
-        android:timePickerMode="spinner"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="204dp" />
-
     <TextView
         android:id="@+id/lookingtoplay_title"
         android:layout_width="wrap_content"
@@ -30,7 +18,7 @@
         android:gravity="center"
         android:text="@string/hello"
         android:textColor="#22FFDE"
-        android:textSize="50sp"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,7 +29,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/comfortaa_bold"
         android:textColor="#FFFFFF"
-        android:textSize="36sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/lookingtoplay_title"
         app:layout_constraintTop_toTopOf="parent"
@@ -60,52 +48,15 @@
         app:layout_constraintTop_toBottomOf="@+id/hello"
         tools:text="BITCH LASANGNA" />
 
-    <TextView
-        android:id="@+id/bye"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/comfortaa_bold"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="128dp"
-        tools:layout_editor_absoluteY="212dp"
-        tools:text="08" />
-
     <Button
         android:id="@+id/signout_button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/logout"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ltpform_timepicker" />
-
-    <TextView
-        android:id="@+id/bitch_lasagna"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signout_button2" />
-
-    <TextView
-        android:id="@+id/bush"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bitch_lasagna" />
+        app:layout_constraintTop_toBottomOf="@+id/hi" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

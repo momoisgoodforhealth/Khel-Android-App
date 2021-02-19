@@ -67,7 +67,11 @@
         android:id="@+id/myteam"
         android:name="com.romp.khel.Fragments.Myteam"
         android:label="fragment_myteam"
-        tools:layout="@layout/fragment_myteam" />
+        tools:layout="@layout/fragment_myteam" >
+        <action
+            android:id="@+id/action_myteam_to_myCreated_LTP_Details"
+            app:destination="@id/myCreated_LTP_Details" />
+    </fragment>
     <fragment
         android:id="@+id/settingFragment"
         android:name="com.romp.khel.Fragments.SettingFragment"
@@ -180,4 +184,9 @@
             android:id="@+id/action_formFragment_LTP_to_tournamentSuccess"
             app:destination="@id/tournamentSuccess" />
     </fragment>
+    <fragment
+        android:id="@+id/myCreated_LTP_Details"
+        android:name="com.romp.khel.Fragments.MyCreated_LTP_Details"
+        android:label="my_created_ltp_details"
+        tools:layout="@layout/my_created_ltp_details" />
 </navigation>

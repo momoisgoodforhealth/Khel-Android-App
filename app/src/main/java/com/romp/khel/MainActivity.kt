@@ -16,6 +16,10 @@ var tconc:String? = null
 var tloc:String? = null
 var vname:String?=null
 
+var timeeeee1:Int?=0
+var timeeeee2:Int?=0
+var keyy:String?=null
+
 
 class MainActivity : AppCompatActivity() {
 

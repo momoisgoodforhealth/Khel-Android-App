@@ -81,4 +81,6 @@
     <string name="locationhint">Dhapakhel</string>
     <string name="LTP_pricepp">Price Per Person</string>
     <string name="LTP_pricepp_hint">E.g: 200</string>
+    <string name="track">Track</string>
+    <string name="mycreatedLTPs">My Created Looking to Play</string>
 </resources>

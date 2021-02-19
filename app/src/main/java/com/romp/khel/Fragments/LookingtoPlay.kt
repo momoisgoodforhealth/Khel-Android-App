@@ -11,8 +11,11 @@ import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.getValue
+import com.google.firebase.ktx.Firebase
 import com.romp.khel.R
 import com.romp.khel.adapters.LookingtoPlayAdapter
 import com.romp.khel.adapters.adapter
@@ -32,6 +35,7 @@ class LookingtoPlay : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         buto=view.findViewById(R.id.ltp_add_button)
         buto.setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_lookingtoPlay_to_formFragment_LTP)

@@ -83,9 +83,9 @@ class FormFragment_LTP : Fragment() {
             endtimepickerval.text="$i:$i2"
         }
 
-        fun createroom(venuname:String, venuloc:String, time1:String, time2:String, date:String, pricepp:String, contact:String, tp:String, jp:String) {
+        fun createroom(venuname:String, venuloc:String, time1:String, time2:String, date:String, pricepp:String, contact:String, tp:String, jp:String, uid:String) {
             var totime="$time1-$time2"
-            val room=LookingtoPlayRoom(venuname,venuloc,totime,date,pricepp,tp.toInt(),jp.toInt())
+            val room=LookingtoPlayRoom(venuname,venuloc,totime,date,pricepp,tp.toInt(),jp.toInt(),contact,uid)
             database.child("lookingtoplay").push().setValue(room)
                 .addOnSuccessListener {
                     Navigation.findNavController(view).navigate(R.id.action_formFragment_LTP_to_tournamentSuccess)
@@ -113,7 +113,8 @@ class FormFragment_LTP : Fragment() {
                     pricepp.text.toString().trim(),
                     contacttext.text.toString().trim(),
                     totalplayers.text.toString().trim(),
-                    joinedplayers.text.toString().trim()
+                    joinedplayers.text.toString().trim(),
+                    currentUser?.uid.toString()
                 )
            // }
         }
