@@ -16,7 +16,6 @@ import com.romp.khel.keyy
 var num:Int = 0
 lateinit var buto:Button
 lateinit var butoo:Button
-lateinit var urgae:TextView
 lateinit var numbo:TextView
 
 var database = FirebaseDatabase.getInstance().getReference()
@@ -40,17 +39,15 @@ class MyCreated_LTP_Details : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        urgae=view.findViewById(R.id.urgae)
         numbo=view.findViewById(R.id.mcltpdetails_num)
         buto=view.findViewById(R.id.mcltpdetails_up)
         butoo=view.findViewById(R.id.mcltpdetails_down)
 
-        urgae.text= keyy
         var dum:String?
         var dumdum=0
 
         conditionref.addValueEventListener(object : ValueEventListener {
-            
+
             override fun onCancelled(error: DatabaseError) {
                 Toast.makeText(activity,"onCancelled called", Toast.LENGTH_LONG).show()
             }

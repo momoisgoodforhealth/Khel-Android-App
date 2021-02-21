@@ -17,35 +17,9 @@
         android:fontFamily="@font/comfortaa_bold"
         android:text="@string/ltp_create_text"
         android:textColor="#F15DC8"
-        android:textSize="30sp"
+        android:textSize="36sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/pwo1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        tools:text="TextView"
-        android:textColor="#EFD576"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ltpform_title" />
-
-    <TextView
-        android:id="@+id/pwo22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        tools:text="TextView"
-        android:textColor="#EFD576"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pwo1" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -57,8 +31,10 @@
         android:background="@drawable/tournament_holder_shape"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pwo22">
+        app:layout_constraintTop_toBottomOf="@+id/ltpform_title"
+        app:layout_constraintVertical_bias="1.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -106,10 +82,10 @@
                 style="@style/edittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColorHint="#DCA555"
                 android:ems="10"
-                android:inputType="textPersonName"
                 android:hint="@string/locationhint"
+                android:inputType="textPersonName"
+                android:textColorHint="#DCA555"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ltpform_location" />
@@ -171,10 +147,10 @@
                 style="@style/edittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="5:00"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ltpform_endtimepicker" />
+                app:layout_constraintTop_toBottomOf="@+id/ltpform_endtimepicker"
+                tools:text="5:00" />
 
             <TextView
                 android:id="@+id/ltpform_date"
@@ -301,11 +277,35 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="@string/LTP_pricepp_hint"
-                android:textColorHint="#DCA555"
                 android:inputType="number"
+                android:textColorHint="#DCA555"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ltpform_pricepp" />
+
+            <TextView
+                android:id="@+id/ltpform_addinfo"
+                style="@style/heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ctfrag_add"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ltpform_editpricepp" />
+
+            <EditText
+                android:id="@+id/ltpform_editaddinfo"
+                style="@style/edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="center|top"
+                android:hint="@string/LTP_addinfo_hint"
+                android:inputType="textMultiLine"
+                android:textColorHint="#DCA555"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ltpform_addinfo" />
 
             <Button
                 android:id="@+id/button2"
@@ -317,7 +317,7 @@
                 android:text="Submit"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ltpform_editpricepp" />
+                app:layout_constraintTop_toBottomOf="@+id/ltpform_editaddinfo" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

@@ -17,7 +17,7 @@ import java.util.*
 class FormFragment : Fragment() {
 
     var database = FirebaseDatabase.getInstance().getReference()
-    var conditionref: DatabaseReference = database.child("oi")
+
 
 
     override fun onCreateView(
@@ -43,8 +43,9 @@ class FormFragment : Fragment() {
         val butt: Button = view.findViewById(R.id.button)
         val datepiku:DatePicker=view.findViewById(R.id.datepiku)
         val today = Calendar.getInstance()
-        var tempdate:String
 
+        var day:String?=null
+        var month:String?=null
 
         @IgnoreExtraProperties
         data class TournamentDetails(
@@ -59,7 +60,7 @@ class FormFragment : Fragment() {
 
         datepiku.init(today.get(Calendar.YEAR), today.get(Calendar.MONTH),
             today.get(Calendar.DAY_OF_MONTH)) {v,i,i2,i3 ->
-            tempdate="$i3/$i2/$i"
+
             date.text="$i3/$i2/$i"
         }
 

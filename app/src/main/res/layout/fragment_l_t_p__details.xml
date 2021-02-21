@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212121"
+    tools:context=".Fragments.LTP_Details">
+
+
+    <TextView
+        android:id="@+id/ltp_details_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="@string/ltd_details_title"
+        android:textColor="#F32C1D"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/tournament_holder_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ltp_details_title"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ltpdetails_venuename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="UN Park Futsal" />
+
+            <TextView
+                android:id="@+id/ltpdetails_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ltpdetails_venuename"
+                tools:text="Kathmandu" />
+
+            <TextView
+                android:id="@+id/ltpdetails_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ltpdetails_location"
+                tools:text="1/1/2021" />
+
+            <TextView
+                android:id="@+id/ltpdetails_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#212121"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:textColor="#65F35B"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ltpdetails_date"
+                tools:text="19:11-20:11" />
+
+            <TextView
+                android:id="@+id/ltpdetails_pirce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/ltpdetails_price"
+                android:textColor="#1A344A"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ltpdetails_price"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ltpdetails_price" />
+
+            <TextView
+                android:id="@+id/ltpdetails_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#1A344A"
+                android:textSize="22sp"
+                app:layout_constraintStart_toEndOf="@+id/ltpdetails_pirce"
+                app:layout_constraintTop_toBottomOf="@+id/ltpdetails_time"
+                tools:text="500" />
+
+            <TextView
+                android:id="@+id/plaayyeeercounte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/ltpdetails_playercount"
+                android:textColor="#4A4A12"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ltpdetails_playercount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ltpdetails_playercount" />
+
+            <TextView
+                android:id="@+id/ltpdetails_playercount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#4A4A12"
+                android:textSize="22sp"
+                app:layout_constraintStart_toEndOf="@+id/plaayyeeercounte"
+                app:layout_constraintTop_toBottomOf="@+id/ltpdetails_price"
+                tools:text="9" />
+
+            <TextView
+                android:id="@+id/dash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/dash"
+                android:textColor="#4A4A12"
+                android:textSize="22sp"
+                app:layout_constraintStart_toEndOf="@+id/ltpdetails_playercount"
+                app:layout_constraintTop_toTopOf="@+id/ltpdetails_playercount" />
+
+            <TextView
+                android:id="@+id/ltpdetails_playerlimit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#4A4A12"
+                android:textSize="22sp"
+                app:layout_constraintStart_toEndOf="@+id/dash"
+                app:layout_constraintTop_toTopOf="@+id/ltpdetails_playercount"
+                tools:text="10" />
+
+            <TextView
+                android:id="@+id/contacte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/ltpdetails_contact"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ltpdetails_playercount" />
+
+            <TextView
+                android:id="@+id/ltpdetails_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#212121"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contacte"
+                tools:text="9812121212" />
+
+            <TextView
+                android:id="@+id/additiionale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/ctfrag_add"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ltpdetails_contact" />
+
+            <TextView
+                android:id="@+id/ltpdetails_addinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#212121"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/additiionale"
+                tools:text="Bring Momo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

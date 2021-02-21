@@ -18,9 +18,6 @@ import java.util.*
 
 class FormFragment_LTP : Fragment() {
     var database = FirebaseDatabase.getInstance().getReference()
-
-    lateinit var boom: TextView
-    lateinit var boom2: TextView
     lateinit var auth: FirebaseAuth
 
     lateinit var venuename:EditText
@@ -35,6 +32,7 @@ class FormFragment_LTP : Fragment() {
     lateinit var totalplayers:EditText
     lateinit var joinedplayers:EditText
     lateinit var pricepp:EditText
+    lateinit var addinfo:EditText
     lateinit var submit:Button
 
     override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanceState) }
@@ -49,12 +47,8 @@ class FormFragment_LTP : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        boom=view.findViewById(R.id.pwo1)
-        boom2=view.findViewById(R.id.pwo22)
         auth = Firebase.auth
         val currentUser = auth.currentUser
-        boom.text=currentUser?.uid
-        boom2.text=currentUser?.email
 
         venuename=view.findViewById(R.id.ltpform_editvenue)
         venuelocation=view.findViewById(R.id.ltpform_editlocation)
@@ -68,6 +62,7 @@ class FormFragment_LTP : Fragment() {
         totalplayers=view.findViewById(R.id.ltpform_edittotalplayers)
         joinedplayers=view.findViewById(R.id.ltpform_editjoinedplayers)
         pricepp=view.findViewById(R.id.ltpform_editpricepp)
+        addinfo=view.findViewById(R.id.ltpform_editaddinfo)
         submit=view.findViewById(R.id.button2)
         val today = Calendar.getInstance()
 
@@ -83,9 +78,9 @@ class FormFragment_LTP : Fragment() {
             endtimepickerval.text="$i:$i2"
         }
 
-        fun createroom(venuname:String, venuloc:String, time1:String, time2:String, date:String, pricepp:String, contact:String, tp:String, jp:String, uid:String) {
+        fun createroom(venuname:String, venuloc:String, time1:String, time2:String, date:String, pricepp:String, contact:String, tp:String, jp:String, uid:String, adinfo:String) {
             var totime="$time1-$time2"
-            val room=LookingtoPlayRoom(venuname,venuloc,totime,date,pricepp,tp.toInt(),jp.toInt(),contact,uid)
+            val room=LookingtoPlayRoom(venuname,venuloc,totime,date,pricepp,tp.toInt(),jp.toInt(),contact,uid, adinfo)
             database.child("lookingtoplay").push().setValue(room)
                 .addOnSuccessListener {
                     Navigation.findNavController(view).navigate(R.id.action_formFragment_LTP_to_tournamentSuccess)
@@ -114,7 +109,8 @@ class FormFragment_LTP : Fragment() {
                     contacttext.text.toString().trim(),
                     totalplayers.text.toString().trim(),
                     joinedplayers.text.toString().trim(),
-                    currentUser?.uid.toString()
+                    currentUser?.uid.toString(),
+                    addinfo.text.toString()
                 )
            // }
         }

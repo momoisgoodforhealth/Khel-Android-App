@@ -21,9 +21,9 @@
 
     <Button
         android:id="@+id/mcltpdetails_up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:drawable/arrow_up_float"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@drawable/arrowup"
         app:layout_constraintBottom_toBottomOf="@+id/mcltpdetails_num"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/mcltpdetails_num"
@@ -31,9 +31,9 @@
 
     <Button
         android:id="@+id/mcltpdetails_down"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:drawable/arrow_down_float"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@drawable/arrowdown"
         app:layout_constraintBottom_toBottomOf="@+id/mcltpdetails_num"
         app:layout_constraintEnd_toStartOf="@+id/mcltpdetails_num"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,7 +43,11 @@
         android:id="@+id/urgae"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/mycreatedLTPdetails_urgae"
         android:textColor="#F8F5F5"
         app:layout_constraintBottom_toTopOf="@+id/mcltpdetails_num"
         app:layout_constraintEnd_toEndOf="parent"

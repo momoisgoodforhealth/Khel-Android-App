@@ -174,6 +174,9 @@
         <action
             android:id="@+id/action_lookingtoPlay_to_formFragment_LTP"
             app:destination="@id/formFragment_LTP" />
+        <action
+            android:id="@+id/action_lookingtoPlay_to_LTP_Details"
+            app:destination="@id/LTP_Details" />
     </fragment>
     <fragment
         android:id="@+id/formFragment_LTP"
@@ -189,4 +192,9 @@
         android:name="com.romp.khel.Fragments.MyCreated_LTP_Details"
         android:label="my_created_ltp_details"
         tools:layout="@layout/my_created_ltp_details" />
+    <fragment
+        android:id="@+id/LTP_Details"
+        android:name="com.romp.khel.Fragments.LTP_Details"
+        android:label="fragment_l_t_p__details"
+        tools:layout="@layout/fragment_l_t_p__details" />
 </navigation>

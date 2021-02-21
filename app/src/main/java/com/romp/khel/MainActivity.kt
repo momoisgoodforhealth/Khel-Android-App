@@ -16,21 +16,22 @@ var tconc:String? = null
 var tloc:String? = null
 var vname:String?=null
 
+var ltpfutsalname:String?=null
+var ltplocation:String?=null
+var ltptime:String?=null
+var ltpdate:String?=null
+var ltppricepp:String?=null
+var ltpplayerlimit:Int?=null
+var ltpplayercount:Int?=null
+var ltpcontact:String?=null
+var ltpaddinfo:String?=null
+
 var timeeeee1:Int?=0
 var timeeeee2:Int?=0
 var keyy:String?=null
 
 
 class MainActivity : AppCompatActivity() {
-
-    lateinit var homeFragment: HomeFragment
-    lateinit var exploreFragment: ExploreFragment
-    lateinit var settingFragment: SettingFragment
-    lateinit var myteam: Myteam
-    lateinit var formFragment: FormFragment
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -40,10 +41,6 @@ class MainActivity : AppCompatActivity() {
 
 
         bottomNavigation.setupWithNavController(navController)
-
-
-        // this the default frag that will open
-
             }
 
         }

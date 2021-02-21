@@ -12,5 +12,6 @@ data class LookingtoPlayRoom (
     var playerlimit:Int?=0,
     var playercount:Int?=0,
     var contact:String?="",
-    var uid:String?=""
+    var uid:String?="",
+    var additionalinfo:String?=""
 )

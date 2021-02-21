@@ -41,7 +41,7 @@
     <string name="rulestitle">Rules</string>
     <string name="awardtitle">Awards</string>
     <string name="conctitle">Contact</string>
-    <string name="tournament_add_success">Tournament Added Successfully</string>
+    <string name="tournament_add_success">Added Successfully</string>
     <string name="booking_title"><![CDATA[Futsal Info & Bookings]]></string>
     <string name="test_booking_name">Alu Palu Futsal</string>
     <string name="test_booking_timing">6 - 7</string>
@@ -81,6 +81,13 @@
     <string name="locationhint">Dhapakhel</string>
     <string name="LTP_pricepp">Price Per Person</string>
     <string name="LTP_pricepp_hint">E.g: 200</string>
+    <string name="LTP_addinfo_hint">E.g: Wear White or Black jersey.</string>
     <string name="track">Track</string>
     <string name="mycreatedLTPs">My Created Looking to Play</string>
+    <string name="mycreatedLTPdetails_urgae">Change the number of players who joined.</string>
+    <string name="ltd_details_title">Room Details</string>
+    <string name="ltpdetails_price">Price Per Player:</string>
+    <string name="ltpdetails_playercount">Player Count:</string>
+    <string name="dash">/</string>
+    <string name="ltpdetails_contact">How to Contact</string>
 </resources>
