@@ -1,9 +1,11 @@
 package com.romp.khel.Fragments
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
@@ -15,8 +17,7 @@ import com.romp.khel.adapters.VenueRecycleViewAdapter
 class Booking : Fragment() {
 
     var database = FirebaseDatabase.getInstance().getReference()
-    var conditionref: DatabaseReference = database.child("check")
-   // var ref : DatabaseReference = database.child("tournaments")
+
     var venuename1= Venue("Kick Futsal Lalitpur", "", "Dauthulan Road", "9808151351")
     var venuename2= Venue("Shankhamul Futsal", "","Shankhamul Marg",  "01-4782088")
     var venuename3= Venue("Royal Futsal", "","Pushpa Nagar Marga", "01-5244436")
@@ -25,10 +26,7 @@ class Booking : Fragment() {
     var venuename6= Venue("Dhobighat Futsal", "","Dhobighat", "9843129121")
     var venuename7= Venue("Maa Banglamukhi Futsal", "","Dathulan Road, Sankhamul", "01-5260611")
 
-
- //   lateinit var timing1:TextView
-   // lateinit var timing2:TextView
-
+    lateinit var alertbutton:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,20 +45,10 @@ class Booking : Fragment() {
         super.onViewCreated(view, savedInstanceState)
   //      timing1=view.findViewById(R.id.time1)
   //      timing2=view.findViewById(R.id.time2)
+        val builder = AlertDialog.Builder(context)
+        builder.setTitle("Sort By District")
 
-   /*     val time_six=view.findViewById<TextView>(R.id.time_six)
-        val time_seven=view.findViewById<TextView>(R.id.time_seven)
-        val time_eight=view.findViewById<TextView>(R.id.time_eight)
-        val time_nine=view.findViewById<TextView>(R.id.time_nine)
-        val time_ten=view.findViewById<TextView>(R.id.time_ten)
-        val time_eleven=view.findViewById<TextView>(R.id.time_eleven)
-        val time_twelve=view.findViewById<TextView>(R.id.time_twelve)
-        val time_thirteen=view.findViewById<TextView>(R.id.time_thirteen)
-        val time_fourteen=view.findViewById<TextView>(R.id.time_fourteen)
-        val time_fifteen=view.findViewById<TextView>(R.id.time_fifteen)
-        val time_sixteen=view.findViewById<TextView>(R.id.time_sixteen)
-        val time_seventeen=view.findViewById<TextView>(R.id.time_seventeen)
-        val time_eightteen=view.findViewById<TextView>(R.id.time_eighteen)  */
+        alertbutton=view.findViewById(R.id.alert)
 
         val vadapter= VenueRecycleViewAdapter()
         view.findViewById<RecyclerView>(R.id.venue_recycle).adapter=vadapter
@@ -70,25 +58,21 @@ class Booking : Fragment() {
         vadapter.data=venuenames
 
 
-  /* conditionref.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                for (postSnapshot in dataSnapshot.children) {
-                    if (postSnapshot.key=="check1" && postSnapshot.getValue().toString()=="1") { time_six.setTextColor(Color.parseColor("#46EC2F")) }
-                    if (postSnapshot.key=="check1" && postSnapshot.getValue().toString()=="0") { time_six.setTextColor(Color.parseColor("#EC2F2F")) }
-                    if (postSnapshot.key=="check2" && postSnapshot.getValue().toString()=="1") { time_seven.setTextColor(Color.parseColor("#46EC2F")) }
-                    if (postSnapshot.key=="check2" && postSnapshot.getValue().toString()=="0") { time_seven.setTextColor(Color.parseColor("#EC2F2F")) }
-                    if (postSnapshot.key=="check3" && postSnapshot.getValue().toString()=="1") { time_eight.setTextColor(Color.parseColor("#46EC2F")) }
-                    if (postSnapshot.key=="check3" && postSnapshot.getValue().toString()=="0") { time_eight.setTextColor(Color.parseColor("#EC2F2F")) }
-                    if (postSnapshot.key=="check4" && postSnapshot.getValue().toString()=="1") { time_nine.setTextColor(Color.parseColor("#46EC2F")) }
-                    if (postSnapshot.key=="check4" && postSnapshot.getValue().toString()=="0") { time_nine.setTextColor(Color.parseColor("#EC2F2F")) }
-                }
-
+        val loc = arrayOf("Kathmandu","Pokhara", "Lalitpur","Bhaktapur", "All")
+        builder.setItems(loc) { dialog, which ->
+            when (which) {
+                0 -> {venuenames= mutableListOf(venuename3, venuename4,venuename7) ;   vadapter.data=venuenames}
+                1 -> { venuenames= mutableListOf() ;   vadapter.data=venuenames }
+                2 -> {venuenames= mutableListOf(venuename1,venuename2,venuename5, venuename6) ;   vadapter.data=venuenames}
+                3 -> { venuenames= mutableListOf() ;   vadapter.data=venuenames}
+                4 -> {venuenames=mutableListOf(venuename1,venuename2,venuename3,venuename4,venuename5,venuename6,venuename7) ;  vadapter.data=venuenames}
             }
+        }
 
-            override fun onCancelled(error: DatabaseError) {
-
-            }
-        })  */
+        alertbutton.setOnClickListener {
+            val dialog = builder.create()
+            dialog.show()
+        }
 
 
     }
