@@ -1,11 +1,13 @@
 package com.romp.khel.Fragments
 
+import android.app.AlertDialog
 import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import com.google.firebase.database.*
 import com.romp.khel.R
@@ -15,6 +17,8 @@ class VenueDetails : Fragment() {
 
     var database = FirebaseDatabase.getInstance().getReference()
     var conditionref: DatabaseReference = database.child("check")
+
+    lateinit var datepicker:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +33,7 @@ class VenueDetails : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val venue_name=view.findViewById<TextView>(R.id.venue_name)
+         datepicker=view.findViewById(R.id.venuedetails_datepicker)
         venue_name.text= vname
         if (vname =="Kick Futsal Lalitpur") { conditionref=database.child("timings").child("KFL") }
         if (vname =="Shankhamul Futsal") {conditionref=database.child("timings").child("ShankamulF")}
@@ -52,6 +57,27 @@ class VenueDetails : Fragment() {
         val time_seventeen=view.findViewById<TextView>(R.id.time_seventeen)
         val time_eightteen=view.findViewById<TextView>(R.id.time_eighteen)
 
+
+        val builder = AlertDialog.Builder(activity)
+        builder.setTitle("Select Date")
+        val day = arrayOf("Today","Tommorrow", "2 Days Later","3 Days Later", "4 Days Later", "5 Days Later", "6 Days Later", "7 Days Later")
+        builder.setItems(day) { dialog, which ->
+            when (which) {
+                0 -> {}
+                1 -> {}
+                2 -> {}
+                3 -> {}
+                4 -> {}
+                5 -> {}
+                6 -> {}
+                7 -> {}
+                8 -> {}
+            }
+        }
+        datepicker.setOnClickListener {
+            val dialog = builder.create()
+            dialog.show()
+        }
 
 
         conditionref.addValueEventListener(object : ValueEventListener {

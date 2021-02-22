@@ -1,5 +1,6 @@
 package com.romp.khel.Fragments
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -25,6 +26,7 @@ import com.romp.khel.dataclass.TournamentDetails
 
 class LookingtoPlay : Fragment() {
     lateinit var buto:ImageButton
+    lateinit var datepicker:Button
     var database = FirebaseDatabase.getInstance().getReference()
     var conditionref: DatabaseReference = database.child("lookingtoplay")
 
@@ -35,6 +37,21 @@ class LookingtoPlay : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val builder = AlertDialog.Builder(activity)
+        builder.setTitle("Select Date")
+        val day = arrayOf("Today","Tommorrow", "2 Days Later","3 Days Later", "4 Days Later", "5 Days Later", "6 Days Later", "7 Days Later")
+        builder.setItems(day) { dialog, which ->
+            when (which) {
+                0 -> {}
+            }
+        }
+
+        datepicker.setOnClickListener {
+            val dialog = builder.create()
+            dialog.show()
+        }
+
 
         buto=view.findViewById(R.id.ltp_add_button)
         buto.setOnClickListener {

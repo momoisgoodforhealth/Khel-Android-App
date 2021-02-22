@@ -22,14 +22,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
+    <Button
         android:id="@+id/ltp_add_button"
-        android:layout_width="55dp"
-        android:layout_height="54dp"
-        android:src="@drawable/addblue"
+        android:layout_width="71dp"
+        android:layout_height="57dp"
+        android:background="@drawable/addblue"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="TODO" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ltp_datepicker"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:drawable/ic_menu_today"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ltp_add_button" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
