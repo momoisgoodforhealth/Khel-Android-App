@@ -22,3 +22,7 @@ class LTPViewHolder(val textView: CardView): RecyclerView.ViewHolder(textView) {
 class datecardview(textView: CardView): RecyclerView.ViewHolder(textView) {
     var dateval:TextView=textView.findViewById(R.id.dateval)
 }
+
+class stealthedeal(textView: CardView): RecyclerView.ViewHolder(textView)  {
+    var venuename:TextView=textView.findViewById(R.id.stdcv_loc)
+}

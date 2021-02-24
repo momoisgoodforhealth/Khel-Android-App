@@ -9,10 +9,13 @@ import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.getValue
 import com.romp.khel.R
+import com.romp.khel.adapters.StealTheDealAdapter
+import com.romp.khel.adapters.dateLTPadapter
 import com.romp.khel.dataclass.TournamentDetails
 import com.romp.khel.adapters.homeadaptertournaments
 
@@ -46,16 +49,7 @@ class HomeFragment : Fragment() {
         progressbar.isIndeterminate
             progressbar.setVisibility(View.VISIBLE);
 
-
-     //   var testdata:MutableList<TextView> = mutableListOf(view.findViewById(R.id.textView2),view.findViewById(R.id.test),view.findViewById(R.id.test2),view.findViewById(R.id.test3),view.findViewById(R.id.test4))
         var details:MutableList<TournamentDetails> = mutableListOf()
-        
-
-
-     //   var num:Int
-
-
-
 
         conditionref.addValueEventListener(object : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
@@ -79,6 +73,14 @@ class HomeFragment : Fragment() {
 
 
 
+        val stdrecyclerview:RecyclerView=view.findViewById(R.id.stealthedeal_recycleview)
+        stdrecyclerview.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL ,false)
+
+        val stdadapter= StealTheDealAdapter()
+        view.findViewById<RecyclerView>(R.id.stealthedeal_recycleview).adapter=stdadapter
+
+        val teststd= mutableListOf<String>("UN Park Futsal", "Boom Futsal", "Good Futsal", "Lood Futsal", "OK Futsal", "NotOK Futsal", "Bad Bad Futsal", "AHAHAH Futsal")
+        stdadapter.data=teststd
 
     }
     }
