@@ -2,6 +2,7 @@ package com.romp.khel
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.lifecycle.MutableLiveData
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -28,6 +29,7 @@ var ltpaddinfo:String?=null
 
 var timeeeee1:Int?=0
 var timeeeee2:Int?=0
+var daateeee=MutableLiveData<String>()
 var keyy:String?=null
 
 

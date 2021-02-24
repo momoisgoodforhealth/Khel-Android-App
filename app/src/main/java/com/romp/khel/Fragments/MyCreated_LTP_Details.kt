@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.navigation.Navigation
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.romp.khel.R
@@ -15,12 +16,12 @@ import com.romp.khel.keyy
 
 var num:Int = 0
 lateinit var buto:Button
+lateinit var delete:Button
 lateinit var butoo:Button
 lateinit var numbo:TextView
 
 var database = FirebaseDatabase.getInstance().getReference()
 var conditionref: DatabaseReference = database.child("lookingtoplay").child(keyy.toString())
-lateinit var auth: FirebaseAuth
 
 
 class MyCreated_LTP_Details : Fragment() {
@@ -35,6 +36,7 @@ class MyCreated_LTP_Details : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.my_created_ltp_details, container, false)
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -42,6 +44,7 @@ class MyCreated_LTP_Details : Fragment() {
         numbo=view.findViewById(R.id.mcltpdetails_num)
         buto=view.findViewById(R.id.mcltpdetails_up)
         butoo=view.findViewById(R.id.mcltpdetails_down)
+        delete=view.findViewById(R.id.deleteroom)
 
         var dum:String?
         var dumdum=0
@@ -61,7 +64,6 @@ class MyCreated_LTP_Details : Fragment() {
         })
 
 
-
         buto.setOnClickListener {
             dumdum= dumdum!!.toInt()+1
             conditionref.child("playercount").setValue(dumdum)
@@ -69,6 +71,11 @@ class MyCreated_LTP_Details : Fragment() {
         butoo.setOnClickListener {
             dumdum= dumdum!!.toInt()-1
             conditionref.child("playercount").setValue(dumdum)
+        }
+
+        delete.setOnClickListener {
+            conditionref.removeValue()
+            Navigation.findNavController(it).navigate(R.id.action_myCreated_LTP_Details_to_myteam)
         }
     }
 }

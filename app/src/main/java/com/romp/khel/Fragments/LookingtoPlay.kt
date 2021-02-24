@@ -11,6 +11,7 @@ import android.widget.ImageButton
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.navigation.Navigation
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -20,15 +21,17 @@ import com.google.firebase.ktx.Firebase
 import com.romp.khel.R
 import com.romp.khel.adapters.LookingtoPlayAdapter
 import com.romp.khel.adapters.adapter
+import com.romp.khel.adapters.dateLTPadapter
+import com.romp.khel.daateeee
 import com.romp.khel.dataclass.LookingtoPlayRoom
 import com.romp.khel.dataclass.TournamentDetails
 
 
 class LookingtoPlay : Fragment() {
-    lateinit var buto:ImageButton
-    lateinit var datepicker:Button
+    lateinit var buto:Button
     var database = FirebaseDatabase.getInstance().getReference()
     var conditionref: DatabaseReference = database.child("lookingtoplay")
+    var date: DatabaseReference = database.child("lookingtoplay")
 
     override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanceState) }
 
@@ -38,25 +41,6 @@ class LookingtoPlay : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val builder = AlertDialog.Builder(activity)
-        builder.setTitle("Select Date")
-        val day = arrayOf("Today","Tommorrow", "2 Days Later","3 Days Later", "4 Days Later", "5 Days Later", "6 Days Later", "7 Days Later")
-        builder.setItems(day) { dialog, which ->
-            when (which) {
-                0 -> {}
-            }
-        }
-
-        datepicker.setOnClickListener {
-            val dialog = builder.create()
-            dialog.show()
-        }
-
-
-        buto=view.findViewById(R.id.ltp_add_button)
-        buto.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_lookingtoPlay_to_formFragment_LTP)
-        }
         val radapter= LookingtoPlayAdapter()
         view.findViewById<RecyclerView>(R.id.ltp_recycleview).adapter=radapter
         val progressbar: ProgressBar =view.findViewById(R.id.ltp_progressbar)
@@ -65,24 +49,65 @@ class LookingtoPlay : Fragment() {
 
         var details:MutableList<LookingtoPlayRoom> = mutableListOf()
 
-        conditionref.addValueEventListener(object : ValueEventListener {
+        fun execute() {
+            conditionref.addValueEventListener(object : ValueEventListener {
+                override fun onCancelled(error: DatabaseError) {
+                    Toast.makeText(activity, "onCancelled called", Toast.LENGTH_LONG).show()
+                }
+
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    for (postSnapshot in dataSnapshot.children) {
+                        if (daateeee.value == "All" || daateeee.value == null) {
+                            details.add(postSnapshot.getValue<LookingtoPlayRoom>()!!)
+                        } else {
+                            if (daateeee.value == postSnapshot.child("date").getValue<String>().toString()) {
+                                details.add(postSnapshot.getValue<LookingtoPlayRoom>()!!)
+                            }
+                        }
+                    }
+                    radapter.data = details
+                    progressbar.setVisibility(View.INVISIBLE)
+
+                }
+
+            })
+        }
+        execute()
+
+        val daterecycleview:RecyclerView=view.findViewById(R.id.date_recycleview)
+        daterecycleview.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL ,false)
+
+
+        val dateadapter=dateLTPadapter()
+        view.findViewById<RecyclerView>(R.id.date_recycleview).adapter=dateadapter
+
+        daateeee.observeForever {
+            details.clear()
+            dateadapter.notifyDataSetChanged()
+            execute()
+        }
+
+        val testdate= mutableListOf<String>("All")
+
+        date.addValueEventListener(object : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
                 Toast.makeText(activity,"onCancelled called", Toast.LENGTH_LONG).show()
             }
-
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                //      num = 0
                 for (postSnapshot in dataSnapshot.children) {
-                    //           testdata[num].text = postSnapshot.child("tournamentName").getValue<String>()
-                    details.add(postSnapshot.getValue<LookingtoPlayRoom>()!!)
-                    //          num++
+                        testdate.add(postSnapshot.child("date").getValue<String>().toString())
                 }
-                //  Toast.makeText(activity,"size: ${details.size}", Toast.LENGTH_LONG).show()
-                radapter.data=details
-                progressbar.setVisibility(View.INVISIBLE)
+                dateadapter.data=testdate
 
             }
 
         })
+
+
+        buto=view.findViewById(R.id.ltp_add_button)
+        buto.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_lookingtoPlay_to_formFragment_LTP)
+        }
+
     }
 }

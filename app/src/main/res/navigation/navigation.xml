@@ -191,7 +191,11 @@
         android:id="@+id/myCreated_LTP_Details"
         android:name="com.romp.khel.Fragments.MyCreated_LTP_Details"
         android:label="my_created_ltp_details"
-        tools:layout="@layout/my_created_ltp_details" />
+        tools:layout="@layout/my_created_ltp_details" >
+        <action
+            android:id="@+id/action_myCreated_LTP_Details_to_myteam"
+            app:destination="@id/myteam" />
+    </fragment>
     <fragment
         android:id="@+id/LTP_Details"
         android:name="com.romp.khel.Fragments.LTP_Details"

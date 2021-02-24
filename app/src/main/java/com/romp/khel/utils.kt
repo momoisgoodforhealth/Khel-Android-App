@@ -18,3 +18,7 @@ class LTPViewHolder(val textView: CardView): RecyclerView.ViewHolder(textView) {
     var Lprice:TextView=textView.findViewById(R.id.ltp_price)
     var Lpcount:TextView=textView.findViewById(R.id.ltp_playercount)
 }
+
+class datecardview(textView: CardView): RecyclerView.ViewHolder(textView) {
+    var dateval:TextView=textView.findViewById(R.id.dateval)
+}

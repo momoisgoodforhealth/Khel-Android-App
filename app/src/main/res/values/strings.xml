@@ -29,7 +29,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="frag_td_title">Tournament Details</string>
     <string name="about_button_value">About Khel</string>
-    <string name="version_value">Version: 2.0.6</string>
+    <string name="version_value">Version: 2.1.2</string>
     <string name="credits_title">Credits</string>
     <string name="credits_value">Shovan Shakya</string>
     <string name="credits_value2">Soren Basnet</string>
@@ -90,5 +90,8 @@
     <string name="ltpdetails_playercount">Player Count:</string>
     <string name="dash">/</string>
     <string name="ltpdetails_contact">How to Contact</string>
-    <string name="underdev">THIS APP IS UNDER DEVELOPMENT. SOME INFORMATION IS FOR TESTING PURPOSE</string>
+    <string name="underdev">THIS APP IS UNDER DEVELOPMENT. SOME INFORMATION MAY NOT BE ACCURATE</string>
+    <string name="deleteroom">Cancel This Room</string>
+    <string name="selectdate">Select Date</string>
+    <string name="selectroom">Select Room</string>
 </resources>
