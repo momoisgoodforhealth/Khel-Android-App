@@ -68,24 +68,22 @@
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="28dp"
+            android:layout_width="35dp"
             android:layout_height="22dp"
             android:paddingRight="5dp"
-            app:layout_constraintBottom_toTopOf="@+id/ltp_playercount"
             app:layout_constraintEnd_toEndOf="@+id/ltp_playercount"
             app:layout_constraintStart_toStartOf="@+id/ltp_playercount"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/playericon" />
 
         <TextView
             android:id="@+id/ltp_playercount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:paddingRight="5dp"
             android:textColor="#773C8E"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6"
             tools:text="9/10" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
