@@ -1,5 +1,6 @@
 package com.romp.khel.Fragments
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -20,8 +21,9 @@ class FormFragment_LTP : Fragment() {
     var database = FirebaseDatabase.getInstance().getReference()
     lateinit var auth: FirebaseAuth
 
-    lateinit var venuename:EditText
-    lateinit var venuelocation:EditText
+    lateinit var selectvenuebutton:Button
+    lateinit var venuename:TextView
+    lateinit var venuelocation:TextView
     lateinit var timepicker:TimePicker
     lateinit var timepickerval:TextView
     lateinit var endtimepicker:TimePicker
@@ -50,6 +52,7 @@ class FormFragment_LTP : Fragment() {
         auth = Firebase.auth
         val currentUser = auth.currentUser
 
+        selectvenuebutton=view.findViewById(R.id.ltpform_selectvenuebutton)
         venuename=view.findViewById(R.id.ltpform_editvenue)
         venuelocation=view.findViewById(R.id.ltpform_editlocation)
         timepicker=view.findViewById(R.id.ltpform_timepicker)
@@ -66,9 +69,34 @@ class FormFragment_LTP : Fragment() {
         submit=view.findViewById(R.id.button2)
         val today = Calendar.getInstance()
 
+
+        val builder = AlertDialog.Builder(activity)
+        builder.setTitle("Select Venue")
+        val day = arrayOf("Kick Futsal Lalitpur","Shankhamul Futsal", "Royal Futsal","Shantinagar Futsal", "Prismatic Futsal and Recreation Center", "Dhobighat Futsal", "Maa Banglamukhi Futsal")
+        builder.setItems(day) { dialog, which ->
+            when (which) {
+                0 -> {venuename.text="Kick Futsal Lalitpur" ; venuelocation.text="Bangalamukhi-Sankhamul Road"}
+                1 -> {venuename.text="Shankhamul Futsal" ; venuelocation.text="Sankhamul Marga"}
+                2 -> {venuename.text="Royal Futsal" ; venuelocation.text="Psuhpa Nagar Marg Marga"}
+                3 -> {venuename.text="Shantinagar Futsal" ; venuelocation.text="Thulo Kharibot Marga"}
+                4 -> {venuename.text="Prismatic Futsal and Recreation Center" ; venuelocation.text="Milap Road"}
+                5 -> {venuename.text="Dhobighat Futsal" ; venuelocation.text="Jhamsikhel Marg"}
+                6 -> {venuename.text="Maa Banglamukhi Futsal"; venuelocation.text="Chakupat" }
+            }
+        }
+        selectvenuebutton.setOnClickListener {
+            val dialog = builder.create()
+            dialog.show()
+        }
+
         datepick.init(today.get(Calendar.YEAR), today.get(Calendar.MONTH),
             today.get(Calendar.DAY_OF_MONTH)) { v, i, i2, i3 ->
-            datepickval.text="$i3/$i2/$i"
+            var ii3=i3.toString()
+            var ie2=i2+1
+            var ii2=ie2.toString()
+            if (i3<10) { ii3="0"+i3 }
+            if (i2<10) { ii2="0"+ie2}
+            datepickval.text="$ii3/$ii2/$i"
         }
 
         timepicker.setOnTimeChangedListener { timePicker, i, i2 ->

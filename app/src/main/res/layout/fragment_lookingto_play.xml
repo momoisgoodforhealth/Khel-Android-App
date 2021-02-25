@@ -10,7 +10,7 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
@@ -19,6 +19,7 @@
         android:text="@string/LTP_title"
         android:textColor="#3CE6D9"
         android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/ltp_add_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

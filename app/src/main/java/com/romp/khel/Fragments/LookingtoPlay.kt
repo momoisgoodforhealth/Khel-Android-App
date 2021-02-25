@@ -13,6 +13,7 @@ import android.widget.Toast
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
@@ -40,6 +41,9 @@ class LookingtoPlay : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        var auth: FirebaseAuth
+        auth = Firebase.auth
 
         val radapter= LookingtoPlayAdapter()
         view.findViewById<RecyclerView>(R.id.ltp_recycleview).adapter=radapter
@@ -97,6 +101,23 @@ class LookingtoPlay : Fragment() {
                 for (postSnapshot in dataSnapshot.children) {
                         testdate.add(postSnapshot.child("date").getValue<String>().toString())
                 }
+                        var bi=testdate.count()-1
+                        for (ci in 1..testdate.count()-1) {
+                            for (j in 1..bi-1) {
+                                if (testdate[j].substring(4,6)>testdate[j+1].substring(4,6)) {
+                                    var temp=testdate[j]
+                                    testdate[j]=testdate[j+1]
+                                    testdate[j+1]=temp
+                                }
+                                if (testdate[j].substring(4,6)==testdate[j+1].substring(4,6) && testdate[j].substring(1,3)>testdate[j+1].substring(1,3)) {
+                                    var temp=testdate[j]
+                                    testdate[j]=testdate[j+1]
+                                    testdate[j+1]=temp
+                                }
+                            }
+                            bi=bi-1
+                        }
+
                 dateadapter.data=testdate
 
             }
@@ -106,7 +127,11 @@ class LookingtoPlay : Fragment() {
 
         buto=view.findViewById(R.id.ltp_add_button)
         buto.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_lookingtoPlay_to_formFragment_LTP)
+            if (auth.currentUser!=null) {
+                Navigation.findNavController(view)
+                    .navigate(R.id.action_lookingtoPlay_to_formFragment_LTP)
+            }
+            else { Toast.makeText(activity,"SIGN IN From Settings",Toast.LENGTH_LONG).show()}
         }
 
     }

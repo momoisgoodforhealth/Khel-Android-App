@@ -53,38 +53,47 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <EditText
+            <Button
+                android:id="@+id/ltpform_selectvenuebutton"
+                style="@style/edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/select_venue"
+                android:textColor="#DCA555"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ltpform_venue" />
+
+            <TextView
                 android:id="@+id/ltpform_editvenue"
                 style="@style/edittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:gravity="center"
-                android:hint="UN Park Futsal"
-                android:inputType="textMultiLine"
+                tools:text="UN Park Futsal"
                 android:textColorHint="#DCA555"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ltpform_venue" />
+                app:layout_constraintTop_toBottomOf="@+id/ltpform_selectvenuebutton" />
 
             <TextView
                 android:id="@+id/ltpform_location"
                 style="@style/heading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/futsal_venue"
+                android:text="@string/futsal_location"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ltpform_editvenue" />
 
-            <EditText
+            <TextView
                 android:id="@+id/ltpform_editlocation"
                 style="@style/edittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="@string/locationhint"
-                android:inputType="textPersonName"
+                tools:text="@string/locationhint"
                 android:textColorHint="#DCA555"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

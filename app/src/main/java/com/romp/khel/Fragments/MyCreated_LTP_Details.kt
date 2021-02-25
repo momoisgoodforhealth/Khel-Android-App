@@ -74,8 +74,8 @@ class MyCreated_LTP_Details : Fragment() {
         }
 
         delete.setOnClickListener {
-            conditionref.removeValue()
             Navigation.findNavController(it).navigate(R.id.action_myCreated_LTP_Details_to_myteam)
+            conditionref.removeValue()
         }
     }
 }
