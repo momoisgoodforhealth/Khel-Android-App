@@ -95,7 +95,7 @@ class FormFragment_LTP : Fragment() {
             var ie2=i2+1
             var ii2=ie2.toString()
             if (i3<10) { ii3="0"+i3 }
-            if (i2<10) { ii2="0"+ie2}
+            if (ie2<10) { ii2="0"+ie2}
             datepickval.text="$ii3/$ii2/$i"
         }
 
