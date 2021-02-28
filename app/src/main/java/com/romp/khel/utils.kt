@@ -26,3 +26,7 @@ class datecardview(textView: CardView): RecyclerView.ViewHolder(textView) {
 class stealthedeal(textView: CardView): RecyclerView.ViewHolder(textView)  {
     var venuename:TextView=textView.findViewById(R.id.stdcv_loc)
 }
+
+class news(textView: CardView): RecyclerView.ViewHolder(textView) {
+    var newstitle:TextView=textView.findViewById(R.id.news_title)
+}

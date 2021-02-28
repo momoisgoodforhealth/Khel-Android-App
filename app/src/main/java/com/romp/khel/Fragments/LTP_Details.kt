@@ -39,7 +39,7 @@ class LTP_Details : Fragment() {
         location.text= ltplocation
         date.text= ltpdate
         time.text= ltptime
-        price.text= "Rs."+ltppricepp
+        price.text= ltppricepp
         pcount.text= ltpplayercount.toString()
         plimit.text= ltpplayerlimit.toString()
         contact.text= ltpcontact.toString()

@@ -7,7 +7,7 @@
     android:clickable="true"
     android:focusable="true"
     android:foreground="?attr/selectableItemBackgroundBorderless"
-    app:cardBackgroundColor="#EABF53"
+    app:cardBackgroundColor="#FAC950"
     app:cardCornerRadius="5dp"
     app:cardElevation="5dp"
     app:cardPreventCornerOverlap="false"
@@ -52,7 +52,7 @@
             android:id="@+id/stdcv_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1200"
+            android:text="Rs.1200"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView10" />

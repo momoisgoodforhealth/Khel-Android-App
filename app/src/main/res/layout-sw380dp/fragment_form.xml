@@ -21,8 +21,10 @@
         android:theme="@style/MyDatePicker"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/form_title">
+        app:layout_constraintTop_toBottomOf="@+id/form_title"
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -73,22 +75,19 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ctfrag_tname" />
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextTextPersonName8"
                 style="@style/edittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:background="#212121"
                 android:ems="10"
                 android:fontFamily="sans-serif-thin"
-                android:hint="e.g Near Bhatbhateni, Patan"
-                android:inputType="textPersonName"
                 android:textColor="#DC9835"
                 android:textColorHint="#DCA555"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ctfrag_location" />
+                app:layout_constraintTop_toBottomOf="@+id/tourform_selectvenue" />
 
             <EditText
                 android:id="@+id/editTextPhone2"
@@ -164,6 +163,17 @@
                 app:layout_constraintHorizontal_bias="0.504"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editdatetext" />
+
+            <Button
+                android:id="@+id/tourform_selectvenue"
+                style="@style/edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/select_venue"
+                android:textColor="#DCA555"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ctfrag_location" />
 
             <TextView
                 android:id="@+id/textView17"

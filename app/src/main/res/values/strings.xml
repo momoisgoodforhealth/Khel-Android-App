@@ -96,4 +96,6 @@
     <string name="selectroom">Select Room</string>
     <string name="aderat">\@</string>
     <string name="select_venue">Select Venue</string>
+    <string name="test">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</string>
+    <string name="test2">Futsals Finally Reopen!</string>
 </resources>

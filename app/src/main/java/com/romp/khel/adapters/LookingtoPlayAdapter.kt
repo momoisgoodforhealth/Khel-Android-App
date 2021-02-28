@@ -29,7 +29,7 @@ class LookingtoPlayAdapter: RecyclerView.Adapter<LTPViewHolder>() {
         holder.Lfutsalname.text=item.futsalname
         holder.Llocation.text=item.location
         holder.Ltime.text=item.time.toString()
-        holder.Lprice.text=item.pricepp
+        holder.Lprice.text="Rs."+item.pricepp
         holder.Lpcount.text= item.playercount.toString()+"/"+item.playerlimit.toString()
 
         holder.itemView.setOnClickListener {

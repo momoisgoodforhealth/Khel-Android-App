@@ -84,7 +84,8 @@
             android:textColor="#773C8E"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView6"
-            tools:text="9/10" />
+            tools:text="9/10"
+            android:paddingEnd="5dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

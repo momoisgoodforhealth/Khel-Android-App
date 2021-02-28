@@ -14,24 +14,36 @@
             app:destination="@id/homeFragment"
             app:enterAnim="@anim/fragment_fade_enter"
             app:exitAnim="@anim/fragment_fade_exit"
-            app:popEnterAnim="@anim/fragment_close_enter"
-            app:popExitAnim="@anim/fragment_close_exit" />
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
         <action
             android:id="@+id/action_exploreFragment_to_comingsoon"
             app:destination="@id/comingsoon"
             app:enterAnim="@anim/fragment_fade_enter"
             app:exitAnim="@anim/fragment_fade_exit"
-            app:popEnterAnim="@anim/fragment_close_enter"
-            app:popExitAnim="@anim/fragment_close_exit" />
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
         <action
             android:id="@+id/action_exploreFragment_to_booking"
-            app:destination="@id/booking" />
+            app:destination="@id/booking"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
         <action
             android:id="@+id/action_exploreFragment_to_tournaments"
-            app:destination="@id/tournaments" />
+            app:destination="@id/tournaments"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
         <action
             android:id="@+id/action_exploreFragment_to_lookingtoPlay"
-            app:destination="@id/lookingtoPlay" />
+            app:destination="@id/lookingtoPlay"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -61,7 +73,11 @@
             app:popExitAnim="@anim/fragment_close_exit" />
         <action
             android:id="@+id/action_homeFragment_to_tournaments"
-            app:destination="@id/tournaments" />
+            app:destination="@id/tournaments"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
     </fragment>
     <fragment
         android:id="@+id/myteam"
@@ -70,7 +86,11 @@
         tools:layout="@layout/fragment_myteam" >
         <action
             android:id="@+id/action_myteam_to_myCreated_LTP_Details"
-            app:destination="@id/myCreated_LTP_Details" />
+            app:destination="@id/myCreated_LTP_Details"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit"/>
     </fragment>
     <fragment
         android:id="@+id/settingFragment"
@@ -79,10 +99,18 @@
         tools:layout="@layout/fragment_setting" >
         <action
             android:id="@+id/action_settingFragment_to_settingFragment_AboutKhel"
-            app:destination="@id/settingFragment_AboutKhel" />
+            app:destination="@id/settingFragment_AboutKhel"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit"/>
         <action
             android:id="@+id/action_settingFragment_to_signUp_Login_Fragment"
-            app:destination="@id/signUp_Login_Fragment" />
+            app:destination="@id/signUp_Login_Fragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit"/>
     </fragment>
 
     <fragment
@@ -124,7 +152,11 @@
         tools:layout="@layout/fragment_booking" >
         <action
             android:id="@+id/action_booking_to_venueDetails"
-            app:destination="@id/venueDetails" />
+            app:destination="@id/venueDetails"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
     </fragment>
     <fragment
         android:id="@+id/venueDetails"
@@ -138,10 +170,18 @@
         tools:layout="@layout/fragment_tournaments" >
         <action
             android:id="@+id/action_tournaments_to_fragment_tournamentdetails"
-            app:destination="@id/fragment_tournamentdetails" />
+            app:destination="@id/fragment_tournamentdetails"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit"  />
         <action
             android:id="@+id/action_tournaments_to_formFragment"
-            app:destination="@id/formFragment" />
+            app:destination="@id/formFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit"  />
     </fragment>
     <fragment
         android:id="@+id/signUp_Login_Fragment"
@@ -150,7 +190,11 @@
         tools:layout="@layout/fragment_sign_up__login_" >
         <action
             android:id="@+id/action_signUp_Login_Fragment_to_after_Login"
-            app:destination="@id/after_Login" />
+            app:destination="@id/after_Login"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit"  />
     </fragment>
     <fragment
         android:id="@+id/settingFragment_AboutKhel"
@@ -164,7 +208,11 @@
         tools:layout="@layout/fragment_after__login" >
         <action
             android:id="@+id/action_after_Login_to_signUp_Login_Fragment"
-            app:destination="@id/signUp_Login_Fragment" />
+            app:destination="@id/signUp_Login_Fragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit"  />
     </fragment>
     <fragment
         android:id="@+id/lookingtoPlay"
@@ -173,10 +221,18 @@
         tools:layout="@layout/fragment_lookingto_play" >
         <action
             android:id="@+id/action_lookingtoPlay_to_formFragment_LTP"
-            app:destination="@id/formFragment_LTP" />
+            app:destination="@id/formFragment_LTP"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
         <action
             android:id="@+id/action_lookingtoPlay_to_LTP_Details"
-            app:destination="@id/LTP_Details" />
+            app:destination="@id/LTP_Details"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit"  />
     </fragment>
     <fragment
         android:id="@+id/formFragment_LTP"
@@ -185,7 +241,11 @@
         tools:layout="@layout/fragment_form_ltp" >
         <action
             android:id="@+id/action_formFragment_LTP_to_tournamentSuccess"
-            app:destination="@id/tournamentSuccess" />
+            app:destination="@id/tournamentSuccess"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit"  />
     </fragment>
     <fragment
         android:id="@+id/myCreated_LTP_Details"
@@ -194,7 +254,11 @@
         tools:layout="@layout/my_created_ltp_details" >
         <action
             android:id="@+id/action_myCreated_LTP_Details_to_myteam"
-            app:destination="@id/myteam" />
+            app:destination="@id/myteam"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit"  />
     </fragment>
     <fragment
         android:id="@+id/LTP_Details"

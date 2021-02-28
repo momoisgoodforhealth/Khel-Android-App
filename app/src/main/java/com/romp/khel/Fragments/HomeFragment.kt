@@ -18,6 +18,7 @@ import com.romp.khel.adapters.StealTheDealAdapter
 import com.romp.khel.adapters.dateLTPadapter
 import com.romp.khel.dataclass.TournamentDetails
 import com.romp.khel.adapters.homeadaptertournaments
+import com.romp.khel.adapters.newsadapter
 
 
 class HomeFragment : Fragment() {
@@ -35,6 +36,13 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val newscycle=view.findViewById<RecyclerView>(R.id.newsrecyclerview)
+        newscycle.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL ,false)
+        val newsadap=newsadapter()
+        view.findViewById<RecyclerView>(R.id.newsrecyclerview).adapter=newsadap
+        newsadap.data= mutableListOf("Futsals Finally Reopen!", "Brand New Futsal Opens")
+
 
 
         val buto:Button=view.findViewById(R.id.home_explore_tournament)

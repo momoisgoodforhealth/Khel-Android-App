@@ -1,5 +1,6 @@
 package com.romp.khel.Fragments;
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -35,7 +36,8 @@ class FormFragment : Fragment() {
 
         val tname: EditText = view.findViewById(R.id.editTextTextPersonName3)
         val date:TextView=view.findViewById(R.id.editdatetext)
-        val loc: EditText = view.findViewById(R.id.editTextTextPersonName8)
+        val selloc:Button=view.findViewById(R.id.tourform_selectvenue)
+        val loc: TextView = view.findViewById(R.id.editTextTextPersonName8)
         val contact: EditText = view.findViewById(R.id.editTextPhone2)
         val award: EditText = view.findViewById(R.id.editTextTextMultiLine3)
         val rd: EditText = view.findViewById(R.id.editTextTextMultiLine2)
@@ -46,6 +48,28 @@ class FormFragment : Fragment() {
 
         var day:String?=null
         var month:String?=null
+
+        val builder = AlertDialog.Builder(activity)
+        builder.setTitle("Select Venue")
+        val venues = arrayOf("Kick Futsal Lalitpur","Shankhamul Futsal", "Royal Futsal","Shantinagar Futsal", "Prismatic Futsal and Recreation Center", "Dhobighat Futsal", "Maa Banglamukhi Futsal")
+        builder.setItems(venues) { dialog, which ->
+            when (which) {
+                0 -> {loc.text="Kick Futsal Lalitpur"}
+                1 -> {loc.text="Shankhamul Futsal"}
+                2 -> {loc.text="Royal Futsal" }
+                3 -> {loc.text="Shantinagar Futsal"}
+                4 -> {loc.text="Prismatic Futsal and Recreation Center"}
+                5 -> {loc.text="Dhobighat Futsal" }
+                6 -> {loc.text="Maa Banglamukhi Futsal"}
+            }
+        }
+        selloc.setOnClickListener {
+            val dialog = builder.create()
+            dialog.show()
+        }
+
+
+
 
         @IgnoreExtraProperties
         data class TournamentDetails(
@@ -60,8 +84,12 @@ class FormFragment : Fragment() {
 
         datepiku.init(today.get(Calendar.YEAR), today.get(Calendar.MONTH),
             today.get(Calendar.DAY_OF_MONTH)) {v,i,i2,i3 ->
-
-            date.text="$i3/$i2/$i"
+            var ii3=i3.toString()
+            var ie2=i2+1
+            var ii2=ie2.toString()
+            if (i3<10) { ii3="0"+i3 }
+            if (ie2<10) { ii2="0"+ie2}
+            date.text="$ii3/$ii2/$i"
         }
 
 
