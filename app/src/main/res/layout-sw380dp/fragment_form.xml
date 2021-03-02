@@ -13,10 +13,6 @@
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
         android:background="@drawable/tournament_holder_shape"
         android:theme="@style/MyDatePicker"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,21 +24,28 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/standard_background">
+
+
 
             <DatePicker
                 android:id="@+id/datepiku"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:background="#212121"
+                android:background="@android:color/transparent"
                 android:calendarViewShown="false"
                 android:datePickerMode="spinner"
-                android:fontFamily="sans-serif-thin"
-                android:textColor="#DC9835"
-                android:textColorHint="#DC9835"
+                android:fontFamily="@font/chivo"
+                android:textColor="@color/standard_text"
+                android:textColorHint="@color/standard_text"
+                android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/datetext" />
+                app:layout_constraintTop_toBottomOf="@+id/datetext"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp" />
+
 
             <TextView
                 android:id="@+id/editdatetext"
@@ -51,29 +54,34 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:focusable="false"
-                android:textColor="#DC9835"
-                android:textColorHint="#DCA555"
+                android:textColor="@color/standard_text"
+                android:textColorHint="@color/standard_text"
+                android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/datepiku" />
+                app:layout_constraintTop_toBottomOf="@+id/datepiku"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
 
-            <EditText
-                android:id="@+id/editTextTextPersonName3"
-                style="@style/edittext"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="#212121"
-                android:ems="10"
-                android:fontFamily="sans-serif-thin"
-                android:gravity="center"
-                android:hint="e.g. YNWA Tournament"
-                android:inputType="textPersonName"
-                android:textColor="#DC9835"
-                android:textColorHint="#DC9835"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ctfrag_tname" />
+           <EditText
+               android:id="@+id/editTextTextPersonName3"
+               style="@style/edittext"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="#212121"
+               android:ems="10"
+               android:fontFamily="@font/chivo"
+               android:gravity="center"
+               android:paddingTop="10dp"
+               android:paddingBottom="10dp"
+               android:hint="Eg. KHEL Tournament"
+               android:inputType="textPersonName"
+               android:textColor="@color/standard_text"
+               android:textColorHint="@color/standard_text"
+               android:textSize="24sp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/ctfrag_tname" />
 
             <TextView
                 android:id="@+id/editTextTextPersonName8"
@@ -83,206 +91,256 @@
                 android:background="#212121"
                 android:ems="10"
                 android:fontFamily="sans-serif-thin"
-                android:textColor="#DC9835"
-                android:textColorHint="#DCA555"
+                android:textColor="@color/standard_text"
+                android:textColorHint="@color/standard_text"
+                android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tourform_selectvenue" />
+                app:layout_constraintTop_toBottomOf="@+id/tourform_selectvenue"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
 
             <EditText
-                android:id="@+id/editTextPhone2"
-                style="@style/edittext"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:ems="10"
-                android:fontFamily="sans-serif-thin"
-                android:hint="e.g 980872125"
-                android:inputType="phone"
-                android:textColor="#DC9835"
-                android:textColorHint="#DCA555"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+               android:id="@+id/editTextPhone2"
+               style="@style/edittext"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:ems="10"
+               android:fontFamily="@font/chivo"
+               android:hint="e.g 980872125"
+               android:inputType="phone"
+               android:textColor="@color/standard_text"
+               android:textColorHint="@color/standard_text"
+                android:textSize="24sp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                />
 
-            <EditText
-                android:id="@+id/editTextTextMultiLine2"
-                style="@style/edittext"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:ems="10"
-                android:gravity="center"
-                android:hint="e.g Max Players:7, Entrance Fee:500"
-                android:inputType="textMultiLine"
-                android:textColor="#DC9835"
-                android:textColorHint="#DCA555"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView18" />
+           <EditText
+               android:id="@+id/editTextTextMultiLine2"
+               style="@style/edittext"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:ems="10"
+               android:gravity="center"
+               android:hint="e.g Max Players:7, Entrance Fee:500"
+               android:inputType="textMultiLine"
+               android:textColor="@color/standard_text"
+               android:textColorHint="@color/standard_text"
+               android:textSize="24sp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/textView18"
+               android:paddingTop="10dp"
+               android:paddingBottom="10dp"/>
 
-            <EditText
-                android:id="@+id/editTextTextMultiLine3"
-                style="@style/edittext"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:ems="10"
-                android:gravity="center"
-                android:hint="e.g 1st Place: 10000, 2nd Place: 5000....."
-                android:inputType="textMultiLine"
-                android:textColor="#DC9835"
-                android:textColorHint="#DCA555"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView17" />
+           <EditText
+               android:id="@+id/editTextTextMultiLine3"
+               style="@style/edittext"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:ems="10"
+               android:gravity="center"
+               android:hint="e.g 1st Place: 10000, 2nd Place: 5000....."
+               android:inputType="textMultiLine"
+               android:textColor="@color/standard_text"
+               android:textColorHint="@color/standard_text"
+               android:textSize="24sp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/textView17"
+               android:paddingTop="10dp"
+               android:paddingBottom="10dp"/>
 
             <TextView
                 android:id="@+id/textView14"
                 style="@style/heading"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif-light"
-                android:text="@string/ct_enterphone"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8" />
-
-            <TextView
-                android:id="@+id/ctfrag_location"
-                style="@style/heading"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif-light"
-                android:text="@string/ct_frag_locationval"
-                android:textColor="#3A3838"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.504"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editdatetext" />
-
-            <Button
-                android:id="@+id/tourform_selectvenue"
-                style="@style/edittext"
+                android:background="@color/standard_background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/select_venue"
-                android:textColor="#DCA555"
+                android:fontFamily="@font/chivo"
+                android:gravity="center_horizontal"
+                android:text="@string/ct_enterphone"
+                android:textColor="@color/standard_text"
+                android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ctfrag_location" />
+                app:layout_constraintTop_toBottomOf="@+id/tourform_selectvenue"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
 
             <TextView
-                android:id="@+id/textView17"
-                style="@style/heading"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif-light"
-                android:text="@string/ct_frag_awards"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextPhone2" />
+               android:id="@+id/ctfrag_location"
+               style="@style/heading"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:fontFamily="@font/chivo"
+               android:text="@string/ct_frag_locationval"
+               android:textColor="@color/standard_text"
+               android:textSize="24sp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintHorizontal_bias="0.504"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/editdatetext"
+               android:gravity="center_horizontal"
+               android:paddingTop="10dp"
+               android:paddingBottom="10dp"/>
+
+           <Button
+               android:id="@+id/tourform_selectvenue"
+               style="@style/edittext"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="@string/select_venue"
+               android:textColor="@color/standard_text"
+               android:textSize="24sp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/ctfrag_location"
+               android:paddingTop="10dp"
+               android:paddingBottom="10dp"/>
+
+           <TextView
+               android:id="@+id/textView17"
+               style="@style/heading"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:fontFamily="@font/chivo"
+               android:text="@string/ct_frag_awards"
+               android:textSize="24sp"
+               android:textColor="@color/standard_text"
+
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/editTextPhone2"
+               android:paddingTop="10dp"
+               android:paddingBottom="10dp"
+               android:gravity="center_horizontal"/>
 
             <TextView
                 android:id="@+id/ctfrag_tname"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif-light"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/chivo"
+                android:gravity="center_horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
                 android:text="@string/ct_entertname"
-                android:textColor="#3A3838"
+                android:textAlignment="center"
+                android:textColor="@color/standard_text"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.447"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView18"
-                style="@style/heading"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif-light"
-                android:text="@string/ctfrag_rd"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine3" />
+               android:id="@+id/textView18"
+               style="@style/heading"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:fontFamily="@font/chivo"
+               android:text="@string/ctfrag_rd"
+                android:textSize="24sp"
+                android:textColor="@color/standard_text"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine3"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center_horizontal"/>
 
-            <TextView
-                android:id="@+id/textView19"
-                style="@style/heading"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif-light"
-                android:text="@string/ctfrag_add"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine2" />
+           <TextView
+               android:id="@+id/textView19"
+               style="@style/heading"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:fontFamily="@font/chivo"
+               android:text="@string/ctfrag_add"
+               android:textColor="@color/standard_text"
+               android:textSize="24sp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine2"
+               android:paddingTop="10dp"
+               android:paddingBottom="10dp"/>
 
-            <EditText
-                android:id="@+id/editTextTextMultiLine4"
-                style="@style/edittext"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:ems="10"
-                android:gravity="center"
-                android:hint="e.g Water Available, Other Contact Number:9028323223"
-                android:inputType="textMultiLine"
-                android:textColor="#DC9835"
-                android:textColorHint="#DCA555"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView19" />
+           <EditText
+               android:id="@+id/editTextTextMultiLine4"
+               style="@style/edittext"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:ems="10"
+               android:gravity="center_horizontal"
+               android:inputType="textMultiLine"
+               android:textColor="@color/standard_text"
+               android:textColorHint="@color/standard_text"
+               android:textSize="24sp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/textView19"
+               android:paddingBottom="10dp"
+               android:paddingTop="10dp"
+               />
 
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="#3647A5"
-                android:clickable="true"
-                android:foreground="?attr/selectableItemBackgroundBorderless"
-                android:text="Submit"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine4" />
+           <Button
+               android:id="@+id/button"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:background="#4F4F51"
+               android:clickable="true"
+               android:foreground="?attr/selectableItemBackgroundBorderless"
+               android:text="Submit"
+               android:textSize="24sp"
+               android:textColor="@color/standard_text"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine4"
+               android:paddingTop="10dp"
+               android:paddingBottom="10dp"/>
 
-            <TextView
-                android:id="@+id/datetext"
-                style="@style/heading"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/formfrag_date_value"
-                app:fontFamily="sans-serif-light"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+           <TextView
+               android:id="@+id/datetext"
+               style="@style/heading"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/formfrag_date_value"
+               android:gravity="center_horizontal"
+               android:textAlignment="center"
+               android:textColor="@color/standard_text"
+               android:textSize="24sp"
+               app:fontFamily="@font/chivo"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
+               android:paddingTop="10dp"
+               android:paddingBottom="10dp"/>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+       </androidx.constraintlayout.widget.ConstraintLayout>
+   </ScrollView>
 
-    <TextView
-        android:id="@+id/form_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/comfortaa_bold"
-        android:gravity="left"
-        android:text="@string/form_title_value"
-        android:textColor="#8E44AD"
-        android:textSize="50sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+   <TextView
+       android:id="@+id/form_title"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="16dp"
+       android:layout_marginLeft="10dp"
+       android:layout_marginTop="10dp"
+       android:fontFamily="@font/chivo"
+       android:gravity="center_horizontal"
+       android:text="@string/form_title_value"
+       android:textColor="@color/standard_text"
+       android:textSize="35dp"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
