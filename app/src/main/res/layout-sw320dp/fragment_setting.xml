@@ -23,10 +23,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/settingsbutton"
+            android:layout_marginTop="10dp"
             android:text="@string/myaccount_button"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:backgroundTint="@android:color/transparent"
+            style="?android:attr/borderlessButtonStyle"/>
 
         <Button
             android:id="@+id/aboutbutton"
@@ -36,25 +39,33 @@
             android:text="@string/aboutbutton_text"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:backgroundTint="@android:color/transparent"
+            style="?android:attr/borderlessButtonStyle"/>
     </LinearLayout>
 
     <TextView
         android:id="@+id/explore_frag_title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="15dp"
         android:layout_marginRight="24dp"
+        android:layout_marginBottom="50dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
         android:text="@string/settings"
-        android:textColor="#37B8C8"
-        android:textSize="36sp"
+        android:textColor="@color/standard_text"
+        android:textSize="40sp"
+        android:textAlignment="center"
         app:fontFamily="@font/comfortaa_bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.449"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_horizontal" />
 
   </androidx.constraintlayout.widget.ConstraintLayout>
