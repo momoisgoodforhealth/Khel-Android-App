@@ -10,7 +10,6 @@
     <!-- TODO: Update blank fragment layout -->
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -24,53 +23,39 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/settingsbutton"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
             android:text="@string/myaccount_button"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:backgroundTint="@android:color/transparent"
-            style="?android:attr/borderlessButtonStyle" />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/aboutbutton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/settingsbutton"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
             android:text="@string/aboutbutton_text"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:backgroundTint="@android:color/transparent"
-            style="?android:attr/borderlessButtonStyle" />
+            android:textSize="20sp" />
     </LinearLayout>
 
 
     <TextView
         android:id="@+id/explore_frag_title"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:layout_marginBottom="24dp"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
         android:text="@string/settings"
-        android:textColor="@color/standard_text"
+        android:textColor="#37B8C8"
         android:textSize="50sp"
-        android:textAlignment="center"
         app:fontFamily="@font/comfortaa_bold"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.449"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:gravity="center_horizontal" />
+        app:layout_constraintTop_toTopOf="parent" />
 
    </androidx.constraintlayout.widget.ConstraintLayout>
