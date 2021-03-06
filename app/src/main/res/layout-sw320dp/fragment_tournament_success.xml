@@ -18,7 +18,7 @@
         android:text="@string/tournament_add_success"
         android:textColor="#DC468C"
         android:textSize="36sp"
-        app:fontFamily="@font/comfortaa_bold"
+        app:fontFamily="@font/cafe_francoise"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

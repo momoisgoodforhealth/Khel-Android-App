@@ -29,7 +29,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="frag_td_title">Tournament Details</string>
     <string name="about_button_value">About Khel</string>
-    <string name="version_value">Version: 2.1.5</string>
+    <string name="version_value">Version: 2.2.0</string>
     <string name="credits_title">Credits</string>
     <string name="credits_value">Shovan Shakya</string>
     <string name="credits_value2">Soren Basnet</string>
@@ -98,4 +98,5 @@
     <string name="select_venue">Select Venue</string>
     <string name="test">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</string>
     <string name="test2">Futsals Finally Reopen!</string>
+    <string name="myteam_rooms">My Team and Rooms</string>
 </resources>

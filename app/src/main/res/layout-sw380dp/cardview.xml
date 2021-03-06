@@ -6,13 +6,13 @@
     android:layout_height="wrap_content"
     android:layout_margin="3dp"
     android:clickable="true"
+    android:focusable="true"
     android:foreground="?attr/selectableItemBackgroundBorderless"
-    app:cardBackgroundColor="#CDCFD1"
+    app:cardBackgroundColor="#003656"
     app:cardCornerRadius="5dp"
     app:cardElevation="5dp"
     app:cardPreventCornerOverlap="false"
-    app:cardUseCompatPadding="true"
-    android:focusable="true">
+    app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -25,7 +25,8 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="TextView"
-            android:textColor="#0D2E2B"
+            android:fontFamily="@font/bahnschrift"
+            android:textColor="#FFFFFF"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,9 +40,9 @@
             android:gravity="left"
             android:paddingLeft="5dp"
             android:text="TextView"
-            android:textColor="#374C4A"
+            android:textColor="#FFFFFF"
             android:textSize="20sp"
-            app:fontFamily="@font/cabin_medium"
+            app:fontFamily="@font/yugothic"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cvTitle" />
 
@@ -53,9 +54,9 @@
             android:gravity="right"
             android:paddingRight="5dp"
             android:text="TextView"
-            android:textColor="#374C4A"
+            android:textColor="#FFFFFF"
             android:textSize="18sp"
-            app:fontFamily="@font/oxygen_bold"
+            app:fontFamily="@font/yugothic_medium"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cvTitle" />
 
@@ -66,9 +67,9 @@
             android:gravity="right"
             android:paddingRight="5dp"
             android:text="TextView"
-            android:textColor="#374C4A"
+            android:textColor="#FFFFFF"
             android:textSize="18sp"
-            app:fontFamily="@font/cabin_italic"
+            app:fontFamily="@font/yugothic_light"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cvDate" />
     </androidx.constraintlayout.widget.ConstraintLayout>

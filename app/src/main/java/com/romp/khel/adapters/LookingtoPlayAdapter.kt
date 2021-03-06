@@ -26,8 +26,8 @@ class LookingtoPlayAdapter: RecyclerView.Adapter<LTPViewHolder>() {
 
     override fun onBindViewHolder(holder: LTPViewHolder, position: Int) {
         val item=data[position]
-        holder.Lfutsalname.text=item.futsalname
-        holder.Llocation.text=item.location
+        holder.Lfutsalname.text=item.futsalname+", "+item.location
+      //  holder.Llocation.text=
         holder.Ltime.text=item.time.toString()
         holder.Lprice.text="Rs."+item.pricepp
         holder.Lpcount.text= item.playercount.toString()+"/"+item.playerlimit.toString()

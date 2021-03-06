@@ -9,7 +9,7 @@
     android:clickable="true"
     android:focusable="true"
     android:foreground="?attr/selectableItemBackgroundBorderless"
-    app:cardBackgroundColor="#CDCFD1"
+    app:cardBackgroundColor="#00477f"
     app:cardCornerRadius="5dp"
     app:cardElevation="5dp"
     app:cardPreventCornerOverlap="false"
@@ -22,70 +22,65 @@
 
         <TextView
             android:id="@+id/ltp_futsalname"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="5dp"
-            android:textColor="#9C1D1D"
-            android:textSize="15sp"
+            android:fontFamily="@font/bahnschrift"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Dhobighat Futsal" />
 
         <TextView
-            android:id="@+id/ltp_location"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#D5650F"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/ltp_futsalname"
-            app:layout_constraintStart_toStartOf="@+id/ltp_futsalname"
-            app:layout_constraintTop_toBottomOf="@+id/ltp_futsalname"
-            tools:text="Dhobighat" />
-
-        <TextView
             android:id="@+id/ltp_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#52A848"
-            android:textSize="22sp"
-            app:layout_constraintEnd_toStartOf="@+id/ltp_playercount"
-            app:layout_constraintStart_toEndOf="@+id/ltp_futsalname"
-            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/digital_7"
+            android:textColor="#eea317"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ltp_futsalname"
             tools:text="7:00-8:00" />
 
         <TextView
             android:id="@+id/ltp_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#23674C"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/yugothic_medium"
+            android:textColor="#FFFFFF"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/ltp_time"
-            app:layout_constraintStart_toStartOf="@+id/ltp_time"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ltp_time"
             tools:text="Rs.200" />
 
         <ImageView
             android:id="@+id/imageView6"
             android:layout_width="35dp"
-            android:layout_height="22dp"
-            android:paddingRight="5dp"
-            app:layout_constraintEnd_toEndOf="@+id/ltp_playercount"
-            app:layout_constraintStart_toStartOf="@+id/ltp_playercount"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ltp_playercount"
+            app:layout_constraintEnd_toStartOf="@+id/ltp_playercount"
+            app:layout_constraintTop_toTopOf="@+id/ltp_playercount"
             app:srcCompat="@drawable/playericon" />
 
         <TextView
             android:id="@+id/ltp_playercount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingRight="5dp"
-            android:textColor="#773C8E"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:fontFamily="@font/yugothic_medium"
+            android:paddingEnd="5dp"
+            android:textColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView6"
-            tools:text="9/10"
-            android:paddingEnd="5dp" />
+            app:layout_constraintTop_toBottomOf="@+id/ltp_time"
+            tools:text="9/10" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

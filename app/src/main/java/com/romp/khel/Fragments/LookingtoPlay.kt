@@ -104,12 +104,12 @@ class LookingtoPlay : Fragment() {
                         var bi=testdate.count()-1
                         for (ci in 1..testdate.count()-1) {
                             for (j in 1..bi-1) {
-                                if (testdate[j].substring(4,6)>testdate[j+1].substring(4,6)) {
+                                if (testdate[j].substring(3,5)>testdate[j+1].substring(3,5)) {
                                     var temp=testdate[j]
                                     testdate[j]=testdate[j+1]
                                     testdate[j+1]=temp
                                 }
-                                if (testdate[j].substring(4,6)==testdate[j+1].substring(4,6) && testdate[j].substring(1,3)>testdate[j+1].substring(1,3)) {
+                                if (testdate[j].substring(3,5)==testdate[j+1].substring(3,5) && testdate[j].substring(0,2)>testdate[j+1].substring(0,2)) {
                                     var temp=testdate[j]
                                     testdate[j]=testdate[j+1]
                                     testdate[j+1]=temp

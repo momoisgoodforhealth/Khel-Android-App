@@ -9,6 +9,28 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <TextView
+        android:id="@+id/explore_frag_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/settings"
+        android:textColor="#00518b"
+        android:textSize="50sp"
+        app:fontFamily="@font/cafe_francoise"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#454545"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/explore_frag_title" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,40 +44,29 @@
             android:id="@+id/myaccount_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/settingsbutton"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:background="#212121"
+            android:fontFamily="@font/yugothic"
+            android:gravity="left"
             android:text="@string/myaccount_button"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="20sp" />
+            android:textSize="27sp" />
 
         <Button
             android:id="@+id/aboutbutton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/settingsbutton"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:background="#212121"
+            android:fontFamily="@font/yugothic"
+            android:gravity="left"
             android:text="@string/aboutbutton_text"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="20sp" />
+            android:textSize="27sp" />
     </LinearLayout>
 
-
-    <TextView
-        android:id="@+id/explore_frag_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:text="@string/settings"
-        android:textColor="#37B8C8"
-        android:textSize="50sp"
-        app:fontFamily="@font/comfortaa_bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.449"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-   </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,11 +16,11 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/comfortaa_bold"
+        android:fontFamily="@font/cafe_francoise"
         android:shadowColor="#401F1F"
-        android:text="@string/track"
-        android:textColor="#3599E8"
-        android:textSize="30sp"
+        android:text="@string/myteam_rooms"
+        android:textColor="#f04c38"
+        android:textSize="36sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,7 +32,6 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/tournament_holder_shape"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

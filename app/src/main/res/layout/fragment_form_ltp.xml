@@ -9,15 +9,16 @@
 
     <TextView
         android:id="@+id/ltpform_title"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/comfortaa_bold"
+        android:fontFamily="@font/cafe_francoise"
         android:text="@string/ltp_create_text"
         android:textColor="#F15DC8"
         android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

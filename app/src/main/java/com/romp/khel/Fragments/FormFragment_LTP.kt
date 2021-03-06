@@ -100,10 +100,14 @@ class FormFragment_LTP : Fragment() {
         }
 
         timepicker.setOnTimeChangedListener { timePicker, i, i2 ->
-            timepickerval.text="$i:$i2"
+            var ii2=i2.toString()
+            if (i2<10) { ii2="0"+i2}
+            timepickerval.text="$i:$ii2"
         }
         endtimepicker.setOnTimeChangedListener { timePicker, i, i2 ->
-            endtimepickerval.text="$i:$i2"
+            var ii2=i2.toString()
+            if (i2<10) { ii2="0"+i2}
+            endtimepickerval.text="$i:$ii2"
         }
 
         fun createroom(venuname:String, venuloc:String, time1:String, time2:String, date:String, pricepp:String, contact:String, tp:String, jp:String, uid:String, adinfo:String) {

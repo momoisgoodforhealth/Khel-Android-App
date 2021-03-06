@@ -7,6 +7,9 @@
     android:background="#212121"
     tools:context=".Fragments.HomeFragment">
 
+    <!-- TODO: Update blank fragment layout -->
+
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -29,10 +32,10 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="@font/comfortaa_bold"
+                android:fontFamily="@font/cafe_francoise"
                 android:text="@string/home_page_heading_value"
                 android:textColor="#FF5722"
-                android:textSize="50dp"
+                android:textSize="50sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -56,13 +59,13 @@
                 android:layout_height="250dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
-                android:background="@drawable/tournament_holder_shape"
+                android:background="@drawable/homescreen_tournament"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/newsrecyclerview">
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
 
                 <Button
                     android:id="@+id/home_explore_tournament"
@@ -72,19 +75,21 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+
                 <TextView
                     android:id="@+id/tour_heading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:background="#193C59"
-                    android:fontFamily="@font/chelsea_market"
-                    android:gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/cafe_francoise"
+                    android:gravity="left"
                     android:text="@string/tournament_fragment_value"
-                    android:textColor="#FFAE22"
-                    android:textSize="28dp"
+                    android:textColor="#000000"
+                    android:textSize="35sp"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycle"
@@ -121,36 +126,36 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout5" />
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout5"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:background="#323232"
+                android:background="#ffc8cb"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+                app:layout_constraintTop_toBottomOf="@+id/newsrecyclerview">
 
                 <TextView
                     android:id="@+id/textView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
                     android:layout_marginTop="4dp"
-                    android:fontFamily="@font/chelsea_market"
+                    android:fontFamily="@font/cafe_francoise"
                     android:text="@string/stealthedeal"
-                    android:textColor="#D32828"
-                    android:textSize="28dp"
+                    android:textColor="#000000"
+                    android:textSize="35sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/stealthedeal_recycleview"
                     android:layout_width="0dp"
-                    android:layout_height="60dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
                     android:layout_marginLeft="4dp"
                     android:layout_marginEnd="4dp"
@@ -158,12 +163,15 @@
                     android:layout_marginBottom="4dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView6"
+                    app:layout_constraintVertical_bias="0.0" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

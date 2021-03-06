@@ -276,7 +276,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/comfortaa_bold"
+        android:fontFamily="@font/cafe_francoise"
         android:gravity="left"
         android:text="@string/form_title_value"
         android:textColor="#8E44AD"
