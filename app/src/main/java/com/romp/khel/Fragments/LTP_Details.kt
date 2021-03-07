@@ -1,10 +1,13 @@
 package com.romp.khel.Fragments
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import com.romp.khel.*
 import kotlinx.android.synthetic.main.fragment_l_t_p__details.view.*
@@ -34,6 +37,7 @@ class LTP_Details : Fragment() {
         val plimit:TextView=view.findViewById(R.id.ltpdetails_playerlimit)
         val contact:TextView=view.findViewById(R.id.ltpdetails_contact)
         val addinfo:TextView=view.findViewById(R.id.ltpdetails_addinfo)
+        val whatsapp:Button=view.findViewById(R.id.whatsappbutton)
 
         venue.text= ltpfutsalname
         location.text= ltplocation
@@ -44,6 +48,11 @@ class LTP_Details : Fragment() {
         plimit.text= ltpplayerlimit.toString()
         contact.text= ltpcontact.toString()
         addinfo.text= ltpaddinfo
+        whatsapp.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse("http://api.whatsapp.com/send?phone=+977${contact.text}&text=Hello! I saw your Room listing in Khel for ${venue.text}. I am interested and would like to inquire further.")
+            startActivity(intent)
+        }
 
     }
 }
