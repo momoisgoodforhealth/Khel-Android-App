@@ -6,7 +6,7 @@
     style="@style/edittext"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#212121"
+    android:background="@color/standard_background"
     tools:context=".Fragments.FormFragment">
 
     <ScrollView
@@ -17,7 +17,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="@drawable/tournament_holder_shape"
+        android:background="@color/standard_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +34,7 @@
                 android:background="#212121"
                 android:calendarViewShown="false"
                 android:datePickerMode="spinner"
-                android:fontFamily="sans-serif-thin"
+                android:fontFamily="@font/chivo"
                 android:textColor="#DC9835"
                 android:textColorHint="#DC9835"
                 android:theme="@style/MyDatePicker"
@@ -49,11 +49,13 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:focusable="false"
-                android:textColor="#DC9835"
-                android:textColorHint="#DCA555"
+                android:textColor="@color/standard_text"
+                android:textColorHint="@color/standard_text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/datepiku" />
+                app:layout_constraintTop_toBottomOf="@+id/datepiku"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
 
             <EditText
                 android:id="@+id/editTextTextPersonName3"
@@ -63,15 +65,17 @@
                 android:layout_marginTop="8dp"
                 android:background="#212121"
                 android:ems="10"
-                android:fontFamily="sans-serif-thin"
-                android:gravity="center"
-                android:hint="e.g. YNWA Tournament"
+                android:fontFamily="@font/chivo"
+                android:gravity="center_horizontal"
+                android:hint="e.g. KHEL Tournament"
                 android:inputType="textPersonName"
-                android:textColor="#DC9835"
-                android:textColorHint="#DCA555"
+                android:textColor="@color/standard_text"
+                android:textColorHint="@color/standard_text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ctfrag_tname" />
+                app:layout_constraintTop_toBottomOf="@+id/ctfrag_tname"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
 
             <TextView
                 android:id="@+id/editTextTextPersonName8"
@@ -80,88 +84,95 @@
                 android:layout_height="wrap_content"
                 android:background="#212121"
                 android:ems="10"
-                android:fontFamily="sans-serif-thin"
-                android:textColor="#DC9835"
-                android:textColorHint="#DCA555"
+                android:fontFamily="@font/chivo"
+                android:textColor="@color/standard_text"
+                android:textColorHint="@color/standard_text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tourform_selectvenue" />
+                app:layout_constraintTop_toBottomOf="@+id/tourform_selectvenue"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"/>
 
             <EditText
                 android:id="@+id/editTextPhone2"
                 style="@style/edittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:ems="10"
-                android:fontFamily="sans-serif-thin"
-                android:hint="e.g 980872125"
+                android:fontFamily="@font/chivo"
                 android:inputType="phone"
-                android:textColor="#DC9835"
-                android:textColorHint="#DCA555"
-
+                android:textColor="@color/standard_text"
+                android:textColorHint="@color/standard_text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+                app:layout_constraintTop_toBottomOf="@+id/textView14"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
 
             <EditText
                 android:id="@+id/editTextTextMultiLine2"
                 style="@style/edittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:ems="10"
-                android:gravity="center"
+                android:gravity="center_horizontal"
                 android:hint="e.g Max Players:7, Entrance Fee:500"
                 android:inputType="textMultiLine"
-                android:textColor="#DC9835"
-                android:textColorHint="#DCA555"
+                android:textColor="@color/standard_text"
+                android:textColorHint="@color/standard_text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView18" />
+                app:layout_constraintTop_toBottomOf="@+id/textView18"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
 
             <EditText
                 android:id="@+id/editTextTextMultiLine3"
                 style="@style/edittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:ems="10"
-                android:gravity="center"
+                android:gravity="center_horizontal"
                 android:hint="e.g 1st Place: 10000, 2nd Place: 5000....."
                 android:inputType="textMultiLine"
-                android:textColor="#DC9835"
-                android:textColorHint="#DCA555"
+                android:textColor="@color/standard_text"
+                android:textColorHint="@color/standard_text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView17" />
+                app:layout_constraintTop_toBottomOf="@+id/textView17"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
 
             <TextView
                 android:id="@+id/textView14"
                 style="@style/heading"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif-light"
+                android:fontFamily="@font/chivo"
                 android:text="@string/ct_enterphone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8" />
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center_horizontal"/>
 
             <TextView
                 android:id="@+id/ctfrag_location"
                 style="@style/heading"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif-light"
+                android:fontFamily="@font/chivo"
                 android:text="@string/ct_frag_locationval"
-                android:textColor="#3A3838"
+                android:textColor="@color/standard_text"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.503"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editdatetext" />
+                app:layout_constraintTop_toBottomOf="@+id/editdatetext"
+                android:gravity="center_horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"/>
 
             <Button
                 android:id="@+id/tourform_selectvenue"
@@ -169,85 +180,100 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/select_venue"
-                android:textColor="#DCA555"
+                android:textColor="@color/standard_text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ctfrag_location" />
+                app:layout_constraintTop_toBottomOf="@+id/ctfrag_location"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
 
             <TextView
                 android:id="@+id/textView17"
                 style="@style/heading"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif-light"
+                android:fontFamily="@font/chivo"
                 android:text="@string/ct_frag_awards"
+                android:textColor="@color/standard_text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextPhone2" />
+                app:layout_constraintTop_toBottomOf="@+id/editTextPhone2"
+                android:gravity="center_horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
 
 
             <TextView
                 android:id="@+id/ctfrag_tname"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif-light"
+                android:fontFamily="@font/chivo"
                 android:text="@string/ct_entertname"
-                android:textColor="#3A3838"
+                android:textColor="@color/standard_text"
                 android:textSize="24sp"
+                android:gravity="center_horizontal"
+                android:background="@android:color/transparent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.447"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
 
 
             <TextView
                 android:id="@+id/textView18"
                 style="@style/heading"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif-light"
+                android:fontFamily="@font/chivo"
                 android:text="@string/ctfrag_rd"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine3" />
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine3"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/standard_text"
+                android:gravity="center_horizontal"/>
 
             <TextView
                 android:id="@+id/textView19"
                 style="@style/heading"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif-light"
+                android:fontFamily="@font/chivo"
                 android:text="@string/ctfrag_add"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine2" />
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine2"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/standard_text"
+                android:gravity="center_horizontal"/>
 
             <EditText
                 android:id="@+id/editTextTextMultiLine4"
                 style="@style/edittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:ems="10"
-                android:gravity="center"
-                android:hint="e.g Water Available, Other Contact Number:9028323223"
+                android:gravity="center_horizontal"
+                android:hint="e.g Water Available, Other"
                 android:inputType="textMultiLine"
-                android:textColor="#DC9835"
-                android:textColorHint="#DCA555"
+                android:textColor="@color/standard_text"
+                android:textColorHint="@color/standard_text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView19" />
+                app:layout_constraintTop_toBottomOf="@+id/textView19"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
 
             <Button
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:background="#3647A5"
+                android:background="#4F4F51"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:text="Submit"
@@ -258,30 +284,33 @@
             <TextView
                 android:id="@+id/datetext"
                 style="@style/heading"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:text="@string/formfrag_date_value"
-                app:fontFamily="sans-serif-light"
+                android:textSize="24sp"
+                android:textColor="@color/standard_text"
+                android:background="@color/standard_background"
+                app:fontFamily="@font/chivo"
+                android:gravity="center_horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
     <TextView
         android:id="@+id/form_title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/cafe_francoise"
-        android:gravity="left"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/chivo"
+        android:gravity="center_horizontal"
         android:text="@string/form_title_value"
-        android:textColor="#8E44AD"
-        android:textSize="36sp"
+        android:textColor="@color/standard_text"
+        android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
