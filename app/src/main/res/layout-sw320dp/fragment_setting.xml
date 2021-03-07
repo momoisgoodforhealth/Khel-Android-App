@@ -11,15 +11,16 @@
 
     <TextView
         android:id="@+id/explore_frag_title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
+        android:paddingBottom="12dp"
         android:text="@string/settings"
         android:textColor="#00518b"
         android:textSize="36sp"
-        app:fontFamily="@font/cafe_francoise"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        app:fontFamily="@font/chivo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,7 +36,7 @@
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,29 +46,29 @@
             android:id="@+id/myaccount_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
             android:background="#212121"
-            android:fontFamily="@font/yugothic"
-            android:gravity="left"
+            android:fontFamily="@font/chivo"
+            android:gravity="center_horizontal"
             android:text="@string/myaccount_button"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
 
         <Button
             android:id="@+id/aboutbutton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
             android:background="#212121"
-            android:fontFamily="@font/yugothic"
-            android:gravity="left"
+            android:fontFamily="@font/chivo"
+            android:gravity="center_horizontal"
             android:text="@string/aboutbutton_text"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
     </LinearLayout>
 
 
