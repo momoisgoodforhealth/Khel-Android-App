@@ -27,15 +27,14 @@
 
             <TextView
                 android:id="@+id/home_page_heading"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="@font/cafe_francoise"
+                android:fontFamily="@font/chivo"
                 android:text="@string/home_page_heading_value"
                 android:textColor="#FF5722"
                 android:textSize="36sp"
+                android:gravity="center_horizontal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -115,18 +114,19 @@
 
             <TextView
                 android:id="@+id/textView8"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
-                android:background="#2C2C2C"
-                android:gravity="center"
+                android:background="@android:color/transparent"
+                android:gravity="center_horizontal"
                 android:text="@string/underdev"
-                android:textColor="#BD7E04"
+                android:textColor="#605E5E"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
+                android:textSize="10dp"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout5"
