@@ -5,7 +5,7 @@
     <string name="settings">Settings</string>
     <string name="my_team">My Team</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="comingsoon">Coming Soon :)</string>
+    <string name="comingsoon">Coming Soon ..</string>
     <string name="homee">home</string>
     <string name="my_team_ynwa">my team YNWA</string>
     <string name="dick">dick</string>
@@ -90,7 +90,7 @@
     <string name="ltpdetails_playercount">Player Count:</string>
     <string name="dash">/</string>
     <string name="ltpdetails_contact">How to Contact</string>
-    <string name="underdev">THIS APP IS UNDER DEVELOPMENT. SOME INFORMATION MAY NOT BE ACCURATE</string>
+    <string name="underdev">THIS APP IS UNDER DEVELOPMENT.SOME INFORMATION MAY NOT BE ACCURATE</string>
     <string name="deleteroom">Cancel This Room</string>
     <string name="selectdate">Select Date</string>
     <string name="selectroom">Select Room</string>
