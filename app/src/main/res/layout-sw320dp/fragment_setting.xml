@@ -14,11 +14,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/settings"
-        android:textColor="#00518b"
-        android:textSize="36sp"
+        android:textColor="#FF9800"
+        android:textSize="40sp"
         app:fontFamily="@font/cafe_francoise"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

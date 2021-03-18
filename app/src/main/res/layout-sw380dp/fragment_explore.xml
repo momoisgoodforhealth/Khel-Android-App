@@ -14,29 +14,26 @@
         android:id="@+id/explore_frag_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
         android:fontFamily="@font/cafe_francoise"
+        android:gravity="center"
         android:text="@string/explore"
         android:textColor="#FF9800"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toTopOf="@+id/explore_frag_tourbutton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="36sp"
 
+        app:layout_constraintBottom_toTopOf="@+id/explore_frag_tourbutton"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <Button
         android:id="@+id/explore_frag_tourbutton"
-        android:layout_width="281dp"
-        android:layout_height="68dp"
+        android:layout_width="241dp"
+        android:layout_height="53dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
         android:background="@drawable/button_shape"
@@ -46,7 +43,7 @@
         android:text="@string/explore_frag_button1"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,8 +51,8 @@
 
     <Button
         android:id="@+id/explore_frag_ctvmbutton"
-        android:layout_width="281dp"
-        android:layout_height="68dp"
+        android:layout_width="241dp"
+        android:layout_height="53dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
@@ -68,7 +65,7 @@
         android:text="@string/explore_frag_button2"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,8 +73,8 @@
 
     <Button
         android:id="@+id/explore_frag_ltpbutton"
-        android:layout_width="281dp"
-        android:layout_height="68dp"
+        android:layout_width="241dp"
+        android:layout_height="53dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
@@ -90,7 +87,7 @@
         android:text="@string/explore_frag_button3"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -98,8 +95,8 @@
 
     <Button
         android:id="@+id/explore_frag_fibbutton"
-        android:layout_width="281dp"
-        android:layout_height="68dp"
+        android:layout_width="241dp"
+        android:layout_height="53dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
@@ -112,7 +109,7 @@
         android:text="@string/explore_frag_button4"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -120,8 +117,8 @@
 
     <Button
         android:id="@+id/explore_frag_vleaguebutton"
-        android:layout_width="281dp"
-        android:layout_height="68dp"
+        android:layout_width="241dp"
+        android:layout_height="53dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
@@ -135,7 +132,7 @@
         android:text="@string/explore_frag_button5"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -145,8 +142,8 @@
 
     <ImageView
         android:id="@+id/vsmode_icon"
-        android:layout_width="70dp"
-        android:layout_height="62dp"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
         android:background="#4E1C14"
         android:paddingRight="5dp"
         android:src="@drawable/ic_baseline_whatshot_24"
@@ -159,8 +156,8 @@
 
     <ImageView
         android:id="@+id/leaguemode_icon"
-        android:layout_width="70dp"
-        android:layout_height="62dp"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
         android:background="#3C2003 "
         android:src="@drawable/ic_baseline_sports_soccer_24"
         app:layout_constraintBottom_toBottomOf="@+id/explore_frag_vleaguebutton"
@@ -172,8 +169,8 @@
 
     <ImageView
         android:id="@+id/ltp_icon"
-        android:layout_width="71dp"
-        android:layout_height="62dp"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
         android:background="#004343"
         android:paddingRight="5dp"
         android:src="@drawable/ic_baseline_search_24"
@@ -186,8 +183,8 @@
 
     <ImageView
         android:id="@+id/infobooking_icon"
-        android:layout_width="70dp"
-        android:layout_height="62dp"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
         android:background="#023C0C "
         android:paddingRight="5dp"
         android:src="@drawable/ic_baseline_info_24"
@@ -200,8 +197,8 @@
 
     <ImageView
         android:id="@+id/tournaments_icon"
-        android:layout_width="70dp"
-        android:layout_height="62dp"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
         android:background="#4E3408"
 
 
@@ -213,6 +210,13 @@
         app:layout_constraintStart_toEndOf="@+id/explore_frag_tourbutton"
         app:layout_constraintTop_toTopOf="@+id/explore_frag_tourbutton"
         app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55722326" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

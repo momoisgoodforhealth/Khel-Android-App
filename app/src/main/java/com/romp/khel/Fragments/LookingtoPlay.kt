@@ -53,6 +53,13 @@ class LookingtoPlay : Fragment() {
 
         var details:MutableList<LookingtoPlayRoom> = mutableListOf()
 
+        val daterecycleview:RecyclerView=view.findViewById(R.id.date_recycleview)
+        daterecycleview.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL ,false)
+
+
+        val dateadapter=dateLTPadapter()
+        view.findViewById<RecyclerView>(R.id.date_recycleview).adapter=dateadapter
+
         fun execute() {
             conditionref.addValueEventListener(object : ValueEventListener {
                 override fun onCancelled(error: DatabaseError) {
@@ -60,6 +67,8 @@ class LookingtoPlay : Fragment() {
                 }
 
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    details.clear()
+                    dateadapter.notifyDataSetChanged()
                     for (postSnapshot in dataSnapshot.children) {
                         if (daateeee.value == "All" || daateeee.value == null) {
                             details.add(postSnapshot.getValue<LookingtoPlayRoom>()!!)
@@ -78,12 +87,7 @@ class LookingtoPlay : Fragment() {
         }
         execute()
 
-        val daterecycleview:RecyclerView=view.findViewById(R.id.date_recycleview)
-        daterecycleview.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL ,false)
 
-
-        val dateadapter=dateLTPadapter()
-        view.findViewById<RecyclerView>(R.id.date_recycleview).adapter=dateadapter
 
         daateeee.observeForever {
             details.clear()
@@ -131,7 +135,7 @@ class LookingtoPlay : Fragment() {
                 Navigation.findNavController(view)
                     .navigate(R.id.action_lookingtoPlay_to_formFragment_LTP)
             }
-            else { Toast.makeText(activity,"SIGN IN From Settings",Toast.LENGTH_LONG).show()}
+            else { Navigation.findNavController(view).navigate(R.id.action_lookingtoPlay_to_signUp_Login_Fragment)}
         }
 
     }

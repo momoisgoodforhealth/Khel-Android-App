@@ -30,6 +30,7 @@ class FormFragment_LTP : Fragment() {
     lateinit var endtimepickerval:TextView
     lateinit var datepick:DatePicker
     lateinit var datepickval:TextView
+    lateinit var phone:EditText
     lateinit var contacttext:EditText
     lateinit var totalplayers:EditText
     lateinit var joinedplayers:EditText
@@ -61,6 +62,7 @@ class FormFragment_LTP : Fragment() {
         endtimepickerval=view.findViewById(R.id.ltpform_editendtime)
         datepick=view.findViewById(R.id.ltpform_datepicker)
         datepickval=view.findViewById(R.id.ltpform_editdate)
+        phone=view.findViewById(R.id.ltpform_editPhone)
         contacttext=view.findViewById(R.id.ltpform_editcontact)
         totalplayers=view.findViewById(R.id.ltpform_edittotalplayers)
         joinedplayers=view.findViewById(R.id.ltpform_editjoinedplayers)
@@ -110,9 +112,9 @@ class FormFragment_LTP : Fragment() {
             endtimepickerval.text="$i:$ii2"
         }
 
-        fun createroom(venuname:String, venuloc:String, time1:String, time2:String, date:String, pricepp:String, contact:String, tp:String, jp:String, uid:String, adinfo:String) {
+        fun createroom(venuname:String, venuloc:String, time1:String, time2:String, date:String, pricepp:String, phon:String, contact:String, tp:String, jp:String, uid:String, adinfo:String) {
             var totime="$time1-$time2"
-            val room=LookingtoPlayRoom(venuname,venuloc,totime,date,pricepp,tp.toInt(),jp.toInt(),contact,uid, adinfo)
+            val room=LookingtoPlayRoom(venuname,venuloc,totime,date,pricepp,tp.toInt(),jp.toInt(),phon,contact,uid, adinfo)
             database.child("lookingtoplay").push().setValue(room)
                 .addOnSuccessListener {
                     Navigation.findNavController(view).navigate(R.id.action_formFragment_LTP_to_tournamentSuccess)
@@ -138,6 +140,7 @@ class FormFragment_LTP : Fragment() {
                     endtimepickerval.text.toString().trim(),
                     datepickval.text.toString(),
                     pricepp.text.toString().trim(),
+                    phone.text.toString().trim(),
                     contacttext.text.toString().trim(),
                     totalplayers.text.toString().trim(),
                     joinedplayers.text.toString().trim(),

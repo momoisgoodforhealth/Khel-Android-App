@@ -12,8 +12,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:fontFamily="@font/cafe_francoise"
         android:text="@string/ltp_create_text"
         android:textColor="#F15DC8"
@@ -26,9 +26,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:background="@drawable/tournament_holder_shape"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,11 +71,11 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:gravity="center"
-                tools:text="UN Park Futsal"
                 android:textColorHint="#DCA555"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ltpform_selectvenuebutton" />
+                app:layout_constraintTop_toBottomOf="@+id/ltpform_selectvenuebutton"
+                tools:text="UN Park Futsal" />
 
             <TextView
                 android:id="@+id/ltpform_location"
@@ -94,11 +93,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                tools:text="@string/locationhint"
                 android:textColorHint="#DCA555"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ltpform_location" />
+                app:layout_constraintTop_toBottomOf="@+id/ltpform_location"
+                tools:text="@string/locationhint" />
 
             <TextView
                 android:id="@+id/ltpform_time"
@@ -199,6 +198,30 @@
                 tools:text="12/12/2002" />
 
             <TextView
+                android:id="@+id/ltpform_phonenumber"
+                style="@style/heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/phone_number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ltpform_editdate" />
+
+            <EditText
+                android:id="@+id/ltpform_editPhone"
+                style="@style/edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="9841111111"
+                android:inputType="phone"
+                android:textColorHint="#DCA555"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ltpform_phonenumber" />
+
+            <TextView
                 android:id="@+id/ltpform_contact"
                 style="@style/heading"
                 android:layout_width="wrap_content"
@@ -206,7 +229,7 @@
                 android:text="@string/LTP_Contact"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ltpform_editdate" />
+                app:layout_constraintTop_toBottomOf="@+id/ltpform_editPhone" />
 
             <EditText
                 android:id="@+id/ltpform_editcontact"

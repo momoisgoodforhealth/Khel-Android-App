@@ -10,18 +10,15 @@
 
     <TextView
         android:id="@+id/venue_details_title"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:fontFamily="@font/cafe_francoise"
         android:text="@string/venue_name"
         android:textColor="#306700"
         android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/venuedetails_datepicker"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -54,7 +51,7 @@
                 android:fontFamily="@font/bahnschrift"
                 android:gravity="center"
                 android:textColor="#FFFFFF"
-                android:textSize="32sp"
+                android:textSize="25sp"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:layout_editor_absoluteX="41dp"
                 tools:text="Futsal Name" />
@@ -82,7 +79,7 @@
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
                         android:text="@string/six"
-                        android:textSize="28sp" />
+                        android:textSize="22sp" />
 
                     <TextView
                         android:id="@+id/time_seven"
@@ -94,7 +91,7 @@
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
                         android:text="@string/seven"
-                        android:textSize="28sp" />
+                        android:textSize="22sp" />
 
                     <TextView
                         android:id="@+id/time_eight"
@@ -104,7 +101,7 @@
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
                         android:text="@string/eight"
-                        android:textSize="28sp" />
+                        android:textSize="22sp" />
 
                     <TextView
                         android:id="@+id/time_nine"
@@ -114,7 +111,7 @@
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
                         android:text="@string/nine"
-                        android:textSize="28sp" />
+                        android:textSize="22sp" />
 
                     <TextView
                         android:id="@+id/time_ten"
@@ -124,7 +121,7 @@
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
                         android:text="@string/ten"
-                        android:textSize="28sp" />
+                        android:textSize="22sp" />
 
                     <TextView
                         android:id="@+id/time_eleven"
@@ -134,7 +131,7 @@
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
                         android:text="@string/eleven"
-                        android:textSize="28sp" />
+                        android:textSize="22sp" />
 
                     <TextView
                         android:id="@+id/time_twelve"
@@ -144,7 +141,7 @@
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
                         android:text="@string/twelve"
-                        android:textSize="28sp" />
+                        android:textSize="22sp" />
 
                     <TextView
                         android:id="@+id/time_thirteen"
@@ -154,7 +151,7 @@
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
                         android:text="@string/thirteen"
-                        android:textSize="28sp" />
+                        android:textSize="22sp" />
 
                     <TextView
                         android:id="@+id/time_fourteen"
@@ -164,7 +161,7 @@
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
                         android:text="@string/fourteen"
-                        android:textSize="28sp" />
+                        android:textSize="22sp" />
 
                     <TextView
                         android:id="@+id/time_fifteen"
@@ -174,7 +171,7 @@
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
                         android:text="@string/fifteen"
-                        android:textSize="28sp" />
+                        android:textSize="22sp" />
 
                     <TextView
                         android:id="@+id/time_sixteen"
@@ -186,7 +183,7 @@
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
                         android:text="@string/sixteen"
-                        android:textSize="28sp" />
+                        android:textSize="22sp" />
 
                     <TextView
                         android:id="@+id/time_seventeen"
@@ -196,7 +193,7 @@
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
                         android:text="@string/seventeen"
-                        android:textSize="28sp" />
+                        android:textSize="22sp" />
 
                     <TextView
                         android:id="@+id/time_eighteen"
@@ -206,7 +203,7 @@
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
                         android:text="@string/eighteen"
-                        android:textSize="28sp" />
+                        android:textSize="22sp" />
 
                 </LinearLayout>
             </HorizontalScrollView>
@@ -215,11 +212,10 @@
 
     <Button
         android:id="@+id/venuedetails_datepicker"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
         android:background="@android:drawable/ic_menu_today"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

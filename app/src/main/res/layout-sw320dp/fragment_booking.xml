@@ -12,12 +12,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/cafe_francoise"
         android:text="@string/booking_title"
         android:textColor="#227123"
-        android:textSize="30sp"
+        android:textSize="36sp"
         app:layout_constraintEnd_toStartOf="@+id/alert"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -16,10 +16,19 @@
     app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/venue_cardview_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/futsalinnepalsmol">
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/venueimg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/futsalinnepalsmol" />
 
         <TextView
             android:id="@+id/venue_cardview_name"
@@ -27,7 +36,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:background="#212121"
+            android:background="#80212121"
             android:fontFamily="@font/yugothic_medium"
             android:gravity="center"
             android:text="TextView"
@@ -43,7 +52,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
 
-            android:background="#212121"
+            android:background="#80212121"
             android:gravity="center"
             android:text="TextView"
             android:textColor="#FFFFFF"

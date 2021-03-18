@@ -1,8 +1,10 @@
 package com.romp.khel
 
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import org.w3c.dom.Text
 
 class MyViewHolder(val textView: CardView): RecyclerView.ViewHolder(textView) {
     var text:TextView=textView.findViewById(R.id.cvTitle)
@@ -27,11 +29,14 @@ class stealthedeal(textView: CardView): RecyclerView.ViewHolder(textView)  {
     var venuename:TextView=textView.findViewById(R.id.stdcv_time)
 }
 
-class news(textView: CardView): RecyclerView.ViewHolder(textView) {
+class newsviewholder(textView: CardView): RecyclerView.ViewHolder(textView) {
     var newstitle:TextView=textView.findViewById(R.id.news_title)
+    var newspic:ImageView=textView.findViewById(R.id.iimage)
+    var newstext:TextView=textView.findViewById(R.id.news_text)
 }
 
 class venueviewholderval (textView: CardView): RecyclerView.ViewHolder(textView) {
     var venuename:TextView=textView.findViewById(R.id.venue_cardview_name)
     var venueloc:TextView=textView.findViewById(R.id.venue_cardview_location)
+    var venueimg:ImageView= textView.findViewById(R.id.venueimg)
 }

@@ -233,6 +233,9 @@
             app:exitAnim="@anim/fragment_fade_exit"
             app:popEnterAnim="@anim/fragment_fade_enter"
             app:popExitAnim="@anim/fragment_fade_exit"  />
+        <action
+            android:id="@+id/action_lookingtoPlay_to_signUp_Login_Fragment"
+            app:destination="@id/signUp_Login_Fragment" />
     </fragment>
     <fragment
         android:id="@+id/formFragment_LTP"

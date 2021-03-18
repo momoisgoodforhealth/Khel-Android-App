@@ -29,7 +29,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="frag_td_title">Tournament Details</string>
     <string name="about_button_value">About Khel</string>
-    <string name="version_value">Version: 2.2.0</string>
+    <string name="version_value">Version: 2.2.5</string>
     <string name="credits_title">Credits</string>
     <string name="credits_value">Shovan Shakya</string>
     <string name="credits_value2">Soren Basnet</string>
@@ -75,7 +75,7 @@
     <string name="LTP_starttime">Start Time</string>
     <string name="LTP_endtime">End Time</string>
     <string name="LTP_Date">Date</string>
-    <string name="LTP_Contact">How to Contact</string>
+    <string name="LTP_Contact">Other Ways To Contact</string>
     <string name="ltpform_totalplayers">Total Number of Players</string>
     <string name="ltpform_joinednumberplayers">Number of Players Joined So Far</string>
     <string name="locationhint">Dhapakhel</string>
@@ -100,4 +100,6 @@
     <string name="test2">Futsals Finally Reopen!</string>
     <string name="myteam_rooms">My Team and Rooms</string>
     <string name="whatsapp">Message Via Whatsapp</string>
+    <string name="see_full_article">See Full Article</string>
+    <string name="phone_number">Phone Number ( Preferrably with Whatsapp)</string>
 </resources>

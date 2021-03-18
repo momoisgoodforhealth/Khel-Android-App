@@ -8,9 +8,10 @@
     tools:context=".Fragments.fragment_tournamentdetails">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:id="@+id/td_title"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
@@ -18,7 +19,8 @@
         android:fontFamily="@font/cafe_francoise"
         android:text="@string/frag_td_title"
         android:textColor="#FF5722"
-        android:textSize="50sp"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,9 +29,9 @@
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:background="@drawable/selectdate_shape"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:background="@drawable/selectdate_shape"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +49,7 @@
                 android:fontFamily="@font/bahnschrift"
                 android:gravity="center"
                 android:textColor="#FFFFFF"
-                android:textSize="30sp"
+                android:textSize="22sp"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:layout_editor_absoluteX="41dp"
                 tools:text="King Kong Tournament" />
@@ -64,7 +66,7 @@
                 android:gravity="center"
                 android:text="TextView"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tdtext" />
@@ -81,7 +83,7 @@
                 android:gravity="center"
                 android:text="TextView"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tdloc" />
@@ -97,7 +99,7 @@
                 android:fontFamily="@font/yugothic_light"
                 android:text="TextView"
                 android:textColor="#FFFFFF"
-                android:textSize="26sp"
+                android:textSize="18dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/destitle" />
@@ -114,7 +116,7 @@
                 android:fontFamily="@font/yugothic"
                 android:text="@string/desttitle"
                 android:textColor="#FFFFFF"
-                android:textSize="28sp"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tddate" />
@@ -131,7 +133,7 @@
                 android:fontFamily="@font/yugothic"
                 android:text="@string/rulestitle"
                 android:textColor="#FFFFFF"
-                android:textSize="28sp"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tddes" />
@@ -147,7 +149,7 @@
                 android:fontFamily="@font/yugothic_light"
                 android:text="TextView"
                 android:textColor="#FFFFFF"
-                android:textSize="26sp"
+                android:textSize="18dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/rulestitle" />
@@ -164,7 +166,7 @@
                 android:fontFamily="@font/yugothic"
                 android:text="@string/awardtitle"
                 android:textColor="#FFFFFF"
-                android:textSize="28sp"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tdrules" />
@@ -180,7 +182,7 @@
                 android:fontFamily="@font/yugothic_light"
                 android:text="TextView"
                 android:textColor="#FFFFFF"
-                android:textSize="26sp"
+                android:textSize="18dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/awardtitle" />
@@ -197,7 +199,7 @@
                 android:fontFamily="@font/yugothic"
                 android:text="@string/conctitle"
                 android:textColor="#FFFFFF"
-                android:textSize="28sp"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tdaward" />
@@ -215,17 +217,21 @@
                 android:fontFamily="@font/yugothic_light"
                 android:text="TextView"
                 android:textColor="#FFFFFF"
-                android:textSize="26sp"
+                android:textSize="18dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/conctitle" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView><![CDATA[
+    </ScrollView>
+    <![CDATA[
+
+
 
     tools:layout_editor_absoluteX="46dp"
         tools:layout_editor_absoluteY="58dp" />
+
 
 ]]>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,9 +24,10 @@
         android:fontFamily="@font/cafe_francoise"
         android:text="@string/signup_login_text"
         android:textColor="#FA422A"
-        android:textSize="50sp"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

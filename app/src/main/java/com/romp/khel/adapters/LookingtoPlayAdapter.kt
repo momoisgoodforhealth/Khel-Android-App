@@ -41,6 +41,7 @@ class LookingtoPlayAdapter: RecyclerView.Adapter<LTPViewHolder>() {
             ltppricepp="Rs."+item.pricepp
             ltpplayercount=item.playercount
             ltpplayerlimit=item.playerlimit
+            ltpphone=item.phone
             ltpcontact=item.contact.toString()
             ltpaddinfo=item.additionalinfo
         }

@@ -14,11 +14,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/settings"
-        android:textColor="#00518b"
-        android:textSize="50sp"
+        android:textColor="#FF9800"
+        android:textSize="40sp"
         app:fontFamily="@font/cafe_francoise"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,6 +31,7 @@
         app:layout_constraintTop_toBottomOf="@+id/explore_frag_title" />
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -52,7 +52,7 @@
             android:text="@string/myaccount_button"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="27sp" />
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/aboutbutton"
@@ -66,9 +66,8 @@
             android:text="@string/aboutbutton_text"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="27sp" />
+            android:textSize="20sp" />
     </LinearLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

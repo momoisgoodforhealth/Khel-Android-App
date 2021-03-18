@@ -1,5 +1,6 @@
 package com.romp.khel.Fragments
 
+import android.graphics.Insets.add
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.core.view.OneShotPreDrawListener.add
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,11 +21,13 @@ import com.romp.khel.adapters.dateLTPadapter
 import com.romp.khel.dataclass.TournamentDetails
 import com.romp.khel.adapters.homeadaptertournaments
 import com.romp.khel.adapters.newsadapter
+import com.romp.khel.dataclass.news
 
 
 class HomeFragment : Fragment() {
     var database = FirebaseDatabase.getInstance().getReference()
     var conditionref: DatabaseReference = database.child("tournaments")
+    var newsref:DatabaseReference = database.child("news")
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -37,11 +41,31 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val progressbar2:ProgressBar=view.findViewById(R.id.progressBar4)
+        progressbar2.isIndeterminate
+        progressbar2.setVisibility(View.VISIBLE)
+
         val newscycle=view.findViewById<RecyclerView>(R.id.newsrecyclerview)
         newscycle.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL ,false)
         val newsadap=newsadapter()
         view.findViewById<RecyclerView>(R.id.newsrecyclerview).adapter=newsadap
-        newsadap.data= mutableListOf("Futsals Finally Reopen!", "Brand New Futsal Opens")
+        var newsdetails:MutableList<news> = mutableListOf()
+      //  newsadap.data= mutableListOf("Futsals Finally Reopen!", "Brand New Futsal Opens")
+
+        newsref.addValueEventListener(object : ValueEventListener {
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(activity,"onCancelled called",Toast.LENGTH_LONG).show()
+            }
+
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                for (postSnapshot in dataSnapshot.children) {
+                    newsdetails.add(postSnapshot.getValue<news>()!!)
+                }
+                newsadap.data=newsdetails
+                progressbar2.setVisibility(View.INVISIBLE)
+            }
+
+        })
 
 
 
@@ -58,6 +82,7 @@ class HomeFragment : Fragment() {
             progressbar.setVisibility(View.VISIBLE);
 
         var details:MutableList<TournamentDetails> = mutableListOf()
+
 
         conditionref.addValueEventListener(object : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {

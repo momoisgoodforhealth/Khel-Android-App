@@ -1,5 +1,7 @@
 package com.romp.khel.dataclass
 
+import android.widget.ImageView
+
 data class Venue(
     var VenueName:String?="",
     var datev:String?="",

@@ -31,6 +31,13 @@ class VenueRecycleViewAdapter: RecyclerView.Adapter<venueviewholderval>()  {
         holder.venuename.text=item.VenueName.toString()
      //   holder.text2.text=item.Contact.toString()
         holder.venueloc.text=item.Location.toString()
+        if (holder.venuename.text=="Kick Futsal Lalitpur") {holder.venueimg.setImageResource(R.drawable.kick)}
+        if (holder.venuename.text=="Shankhamul Futsal") {holder.venueimg.setImageResource(R.drawable.sankhamul)}
+        if (holder.venuename.text=="Royal Futsal") {holder.venueimg.setImageResource(R.drawable.royak)}
+        if (holder.venuename.text=="Shantinagar Futsal") {holder.venueimg.setImageResource(R.drawable.shantinaga)}
+        if (holder.venuename.text=="Prismatic Futsal and Recreation Center") {holder.venueimg.setImageResource(R.drawable.prismatic)}
+        if (holder.venuename.text=="Dhobighat Futsal") {holder.venueimg.setImageResource(R.drawable.dhobighat)}
+        if (holder.venuename.text=="Maa Banglamukhi Futsal") {holder.venueimg.setImageResource(R.drawable.ma_bangala)}
      //   holder.text4.text=item.datev.toString()
 
         holder.itemView.setOnClickListener {

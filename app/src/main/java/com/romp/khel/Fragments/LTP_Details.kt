@@ -1,3 +1,4 @@
+
 package com.romp.khel.Fragments
 
 import android.content.Intent
@@ -35,7 +36,8 @@ class LTP_Details : Fragment() {
         val price:TextView=view.findViewById(R.id.ltpdetails_price)
         val pcount:TextView=view.findViewById(R.id.ltpdetails_playercount)
         val plimit:TextView=view.findViewById(R.id.ltpdetails_playerlimit)
-        val contact:TextView=view.findViewById(R.id.ltpdetails_contact)
+        val contact:TextView=view.findViewById(R.id.ltpdetails_othercontact)
+        val phone:TextView=view.findViewById(R.id.ltpdetails_contact)
         val addinfo:TextView=view.findViewById(R.id.ltpdetails_addinfo)
         val whatsapp:Button=view.findViewById(R.id.whatsappbutton)
 
@@ -46,11 +48,12 @@ class LTP_Details : Fragment() {
         price.text= ltppricepp
         pcount.text= ltpplayercount.toString()
         plimit.text= ltpplayerlimit.toString()
+        phone.text= ltpphone
         contact.text= ltpcontact.toString()
         addinfo.text= ltpaddinfo
         whatsapp.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse("http://api.whatsapp.com/send?phone=+977${contact.text}&text=Hello! I saw your Room listing in Khel for ${venue.text}. I am interested and would like to inquire further.")
+            intent.data = Uri.parse("http://api.whatsapp.com/send?phone=+977${phone.text}&text=Hello! I saw your Room listing in Khel for ${venue.text}. I am interested and would like to inquire further.")
             startActivity(intent)
         }
 

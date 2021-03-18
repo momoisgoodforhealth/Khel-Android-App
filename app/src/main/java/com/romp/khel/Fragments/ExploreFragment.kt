@@ -18,6 +18,8 @@ class ExploreFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+        
         val button: Button =view.findViewById(R.id.explore_frag_tourbutton)
         button.setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_exploreFragment_to_tournaments)
