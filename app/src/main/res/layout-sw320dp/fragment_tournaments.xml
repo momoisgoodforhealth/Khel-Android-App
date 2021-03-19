@@ -10,25 +10,23 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/chivo"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/cafe_francoise"
         android:text="@string/tournament_fragment_value"
         android:textColor="#E8953C"
         android:textSize="36sp"
-        android:gravity="left"
-        android:layout_marginLeft="10dp"
         app:layout_constraintEnd_toStartOf="@+id/add_tour_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/add_tour_button"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="5dp"
-        android:gravity="right"
-        android:layout_width="75dp"
-        android:layout_height="60dp"
+        android:layout_width="71dp"
+        android:layout_height="55dp"
         android:background="@drawable/add_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

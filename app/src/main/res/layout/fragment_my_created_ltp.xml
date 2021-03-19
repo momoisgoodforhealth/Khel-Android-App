@@ -4,25 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/coming_soon2"
-    tools:context=".Fragments.comingsoon">
+    android:background="#212121"
+    tools:context=".Fragments.MyCreated_LTP">
 
-    <!-- TODO: Update blank fragment layout -->
 
     <TextView
-        android:id="@+id/comingsoon_text"
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/bahnschrift"
+
+        android:fontFamily="@font/cafe_francoise"
         android:shadowColor="#401F1F"
-        android:text="@string/comingsoon"
-        android:textColor="#3599E8"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/myteam_rooms"
+        android:textColor="#FF9800"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.226" />
-
-
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
