@@ -13,6 +13,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.romp.khel.R
 import com.romp.khel.keyy
+import com.romp.khel.keyyy
+import com.romp.khel.positionn
 
 var num:Int = 0
 lateinit var buto:Button
@@ -21,7 +23,7 @@ lateinit var butoo:Button
 lateinit var numbo:TextView
 
 var database = FirebaseDatabase.getInstance().getReference()
-var conditionref: DatabaseReference = database.child("lookingtoplay").child(keyy.toString())
+var conditionref: DatabaseReference = database.child("lookingtoplay").child(keyyy[positionn!!])
 
 
 class MyCreated_LTP_Details : Fragment() {

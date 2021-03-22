@@ -27,13 +27,14 @@ class MyCreatedLTPadapter:RecyclerView.Adapter<LTPViewHolder>() {
 
     override fun onBindViewHolder(holder: LTPViewHolder, position: Int) {
         val item=data[position]
-        holder.Lfutsalname.text=item.futsalname
+        holder.Lfutsalname.text=item.futsalname+", "+item.location
       //  holder.Llocation.text=item.location
         holder.Ltime.text=item.time.toString()
-        holder.Lprice.text=item.pricepp
+        holder.Lprice.text="Rs."+item.pricepp
         holder.Lpcount.text= item.playercount.toString()+"/"+item.playerlimit.toString()
 
         holder.itemView.setOnClickListener {
+            positionn=holder.adapterPosition
             Navigation.findNavController(it).navigate(R.id.action_myteam_to_myCreated_LTP_Details)
             timeeeee1=item.playercount
             timeeeee2=item.playerlimit

@@ -29,7 +29,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="frag_td_title">Tournament Details</string>
     <string name="about_button_value">About Khel</string>
-    <string name="version_value">Version: 2.2.5</string>
+    <string name="version_value">Version: 2.2.6</string>
     <string name="credits_title">Credits</string>
     <string name="credits_value">Shovan Shakya</string>
     <string name="credits_value2">Soren Basnet</string>
@@ -102,4 +102,12 @@
     <string name="whatsapp">Message Via Whatsapp</string>
     <string name="see_full_article">See Full Article</string>
     <string name="phone_number">Phone Number ( Preferrably with Whatsapp)</string>
+    <string name="player1">Player 1</string>
+    <string name="player2">Player 2</string>
+    <string name="player3">Player 3</string>
+    <string name="player4">Player 4</string>
+    <string name="player5">Player 5</string>
+    <string name="defaultteamname">Team Name</string>
+    <string name="create">Create</string>
+    <string name="join">Join</string>
 </resources>

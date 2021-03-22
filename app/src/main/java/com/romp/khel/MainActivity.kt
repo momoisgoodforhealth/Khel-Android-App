@@ -34,7 +34,9 @@ var ltpaddinfo:String?=null
 var timeeeee1:Int?=0
 var timeeeee2:Int?=0
 var daateeee=MutableLiveData<String>()
+var keyyy= mutableListOf<String>()
 var keyy:String?=null
+var positionn:Int?=null
 
 
 class MainActivity : AppCompatActivity() {

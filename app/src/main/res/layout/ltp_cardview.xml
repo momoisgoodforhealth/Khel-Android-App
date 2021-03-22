@@ -71,7 +71,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/ltp_playercount"
             app:layout_constraintEnd_toStartOf="@+id/ltp_playercount"
             app:layout_constraintTop_toTopOf="@+id/ltp_playercount"
-            app:srcCompat="@drawable/playericon" />
+            app:srcCompat="@drawable/blueplayericon" />
 
         <TextView
             android:id="@+id/ltp_playercount"

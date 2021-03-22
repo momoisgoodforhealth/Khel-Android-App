@@ -18,6 +18,7 @@ import com.romp.khel.R
 import com.romp.khel.adapters.MyCreatedLTPadapter
 import com.romp.khel.dataclass.LookingtoPlayRoom
 import com.romp.khel.keyy
+import com.romp.khel.keyyy
 
 
 class Myteam : Fragment() {
@@ -50,10 +51,11 @@ class Myteam : Fragment() {
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
+                keyyy= mutableListOf()
                 for (postSnapshot in dataSnapshot.children) {
                     if (currentUser?.uid==postSnapshot.child("uid").value) {
                         details.add(postSnapshot.getValue<LookingtoPlayRoom>()!!)
-                        keyy=postSnapshot.key
+                        keyyy.add(postSnapshot.key.toString())
                     }
 
                 }
