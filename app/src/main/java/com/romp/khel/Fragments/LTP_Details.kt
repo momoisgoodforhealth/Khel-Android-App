@@ -40,6 +40,7 @@ class LTP_Details : Fragment() {
         val phone:TextView=view.findViewById(R.id.ltpdetails_contact)
         val addinfo:TextView=view.findViewById(R.id.ltpdetails_addinfo)
         val whatsapp:Button=view.findViewById(R.id.whatsappbutton)
+        val call:Button=view.findViewById(R.id.callbutton)
 
         venue.text= ltpfutsalname
         location.text= ltplocation
@@ -54,6 +55,11 @@ class LTP_Details : Fragment() {
         whatsapp.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse("http://api.whatsapp.com/send?phone=+977${phone.text}&text=Hello! I saw your Room listing in Khel for ${venue.text}. I am interested and would like to inquire further.")
+            startActivity(intent)
+        }
+        call.setOnClickListener {
+            val intent = Intent(Intent.ACTION_CALL);
+            intent.data = Uri.parse("tel:${phone.text}")
             startActivity(intent)
         }
 

@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val MY_REQUEST_CODE=1
+   /*     val MY_REQUEST_CODE=1
         // Creates instance of the manager.
         val appUpdateManager = AppUpdateManagerFactory.create(this)
 
@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
                     // Include a request code to later monitor this update request.
                     MY_REQUEST_CODE)
             }
-        }
+        }   */
 
         val bottomNavigation : BottomNavigationView = findViewById(R.id.bottom_navigation)
         val navController=findNavController(R.id.fragment)

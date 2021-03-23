@@ -42,7 +42,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/field"
                 android:layout_width="match_parent"
                 android:layout_height="330dp"
                 android:layout_marginStart="8dp"
@@ -50,10 +50,9 @@
                 android:layout_marginEnd="8dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/field"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+                app:layout_constraintTop_toBottomOf="@+id/teamname" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout2"
@@ -97,54 +96,157 @@
                 app:layout_constraintTop_toBottomOf="@+id/myteam_text"/>
 
             <ImageView
-                android:id="@+id/imageView7"
+                android:id="@+id/playericon1"
                 android:layout_width="57dp"
                 android:layout_height="38dp"
                 android:layout_marginTop="8dp"
-                android:src="@drawable/playericon"
+                android:src="@drawable/jerseysmol"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/imageView2" />
+                app:layout_constraintTop_toTopOf="@+id/field" />
 
             <ImageView
-                android:id="@+id/imageView8"
+                android:id="@+id/playericon2"
                 android:layout_width="57dp"
                 android:layout_height="38dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="89dp"
-                android:src="@drawable/playericon"
+                android:src="@drawable/jerseysmol"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+                app:layout_constraintTop_toBottomOf="@+id/playericon1" />
 
             <ImageView
-                android:id="@+id/imageView9"
+                android:id="@+id/playericon3"
                 android:layout_width="57dp"
                 android:layout_height="38dp"
                 android:layout_marginTop="89dp"
                 android:layout_marginEnd="24dp"
-                android:src="@drawable/playericon"
+                android:src="@drawable/jerseysmol"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+                app:layout_constraintTop_toBottomOf="@+id/playericon1" />
 
             <ImageView
-                android:id="@+id/imageView10"
+                android:id="@+id/playericon4"
                 android:layout_width="57dp"
                 android:layout_height="38dp"
                 android:layout_marginTop="89dp"
-                android:src="@drawable/playericon"
-                app:layout_constraintEnd_toStartOf="@+id/imageView9"
-                app:layout_constraintStart_toEndOf="@+id/imageView8"
-                app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+                android:src="@drawable/jerseysmol"
+                app:layout_constraintEnd_toStartOf="@+id/playericon3"
+                app:layout_constraintStart_toEndOf="@+id/playericon2"
+                app:layout_constraintTop_toBottomOf="@+id/playericon1" />
 
             <ImageView
-                android:id="@+id/imageView11"
+                android:id="@+id/playericon5"
                 android:layout_width="57dp"
                 android:layout_height="38dp"
                 android:layout_marginTop="89dp"
-                android:src="@drawable/playericon"
-                app:layout_constraintEnd_toStartOf="@+id/imageView9"
-                app:layout_constraintStart_toEndOf="@+id/imageView8"
-                app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+                android:src="@drawable/jerseysmol"
+                app:layout_constraintEnd_toStartOf="@+id/playericon3"
+                app:layout_constraintStart_toEndOf="@+id/playericon2"
+                app:layout_constraintTop_toBottomOf="@+id/playericon4" />
+
+            <TextView
+                android:id="@+id/player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:text="@string/player1"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/playericon1"
+                app:layout_constraintStart_toStartOf="@+id/playericon1"
+                app:layout_constraintTop_toBottomOf="@+id/playericon1" />
+
+            <TextView
+                android:id="@+id/player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:text="@string/player2"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/playericon2"
+                app:layout_constraintStart_toStartOf="@+id/playericon2"
+                app:layout_constraintTop_toBottomOf="@+id/playericon2" />
+
+            <TextView
+                android:id="@+id/player3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:text="@string/player3"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/playericon4"
+                app:layout_constraintStart_toStartOf="@+id/playericon4"
+                app:layout_constraintTop_toBottomOf="@+id/playericon4" />
+
+            <TextView
+                android:id="@+id/player4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:text="@string/player4"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/playericon3"
+                app:layout_constraintStart_toStartOf="@+id/playericon3"
+                app:layout_constraintTop_toBottomOf="@+id/playericon3" />
+
+            <TextView
+                android:id="@+id/player5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:text="@string/player5"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/playericon5"
+                app:layout_constraintStart_toStartOf="@+id/playericon5"
+                app:layout_constraintTop_toBottomOf="@+id/playericon5" />
+
+            <TextView
+                android:id="@+id/teamname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/bahnschrift"
+                android:text="@string/defaultteamname"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+            <Button
+                android:id="@+id/teamnameedit"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="4dp"
+                android:background="@android:drawable/ic_menu_edit"
+                app:layout_constraintBottom_toBottomOf="@+id/teamname"
+                app:layout_constraintStart_toEndOf="@+id/teamname"
+                app:layout_constraintTop_toTopOf="@+id/teamname" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/create"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/field" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/join"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/field" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

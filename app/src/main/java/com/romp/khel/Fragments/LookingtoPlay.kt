@@ -45,6 +45,8 @@ class LookingtoPlay : Fragment() {
         var auth: FirebaseAuth
         auth = Firebase.auth
 
+        var flag:Boolean=false
+
         val radapter= LookingtoPlayAdapter()
         view.findViewById<RecyclerView>(R.id.ltp_recycleview).adapter=radapter
         val progressbar: ProgressBar =view.findViewById(R.id.ltp_progressbar)
@@ -67,17 +69,23 @@ class LookingtoPlay : Fragment() {
                 }
 
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    flag=false
                     details.clear()
                     dateadapter.notifyDataSetChanged()
                     for (postSnapshot in dataSnapshot.children) {
+                        if (auth.currentUser?.uid==postSnapshot.child("uid").value) {
+                            flag=true
+                        }
                         if (daateeee.value == "All" || daateeee.value == null) {
                             details.add(postSnapshot.getValue<LookingtoPlayRoom>()!!)
                         } else {
                             if (daateeee.value == postSnapshot.child("date").getValue<String>().toString()) {
+
                                 details.add(postSnapshot.getValue<LookingtoPlayRoom>()!!)
                             }
                         }
                     }
+
                     radapter.data = details
                     progressbar.setVisibility(View.INVISIBLE)
 
@@ -131,7 +139,8 @@ class LookingtoPlay : Fragment() {
 
         buto=view.findViewById(R.id.ltp_add_button)
         buto.setOnClickListener {
-            if (auth.currentUser!=null) {
+            if (flag==true) { Toast.makeText(activity,"You can only create one room", Toast.LENGTH_SHORT).show()}
+            else if (auth.currentUser!=null) {
                 Navigation.findNavController(view)
                     .navigate(R.id.action_lookingtoPlay_to_formFragment_LTP)
             }

@@ -212,11 +212,20 @@
 
             <Button
                 android:id="@+id/whatsappbutton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/whatsapp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/whatsapp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/ltpdetails_othercontact" />
+
+            <Button
+                android:id="@+id/callbutton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/phonecal"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
                 app:layout_constraintTop_toBottomOf="@+id/ltpdetails_othercontact" />
 
             <TextView
@@ -248,6 +257,13 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/additiionale"
                 tools:text="Bring Momo" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
