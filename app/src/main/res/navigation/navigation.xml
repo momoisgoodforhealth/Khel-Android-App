@@ -91,6 +91,15 @@
             app:exitAnim="@anim/fragment_fade_exit"
             app:popEnterAnim="@anim/fragment_fade_enter"
             app:popExitAnim="@anim/fragment_fade_exit"/>
+        <action
+            android:id="@+id/action_myteam_to_create_team"
+            app:destination="@id/create_team" />
+        <action
+            android:id="@+id/action_myteam_to_signUp_Login_Fragment"
+            app:destination="@id/signUp_Login_Fragment" />
+        <action
+            android:id="@+id/action_myteam_to_join_Team"
+            app:destination="@id/join_Team" />
     </fragment>
     <fragment
         android:id="@+id/settingFragment"
@@ -268,4 +277,18 @@
         android:name="com.romp.khel.Fragments.LTP_Details"
         android:label="fragment_l_t_p__details"
         tools:layout="@layout/fragment_l_t_p__details" />
+    <fragment
+        android:id="@+id/create_team"
+        android:name="com.romp.khel.Fragments.Create_team"
+        android:label="fragment_create_team"
+        tools:layout="@layout/fragment_create_team" >
+        <action
+            android:id="@+id/action_create_team_to_tournamentSuccess"
+            app:destination="@id/tournamentSuccess" />
+    </fragment>
+    <fragment
+        android:id="@+id/join_Team"
+        android:name="com.romp.khel.Fragments.Join_Team"
+        android:label="fragment_join_team"
+        tools:layout="@layout/fragment_join_team" />
 </navigation>

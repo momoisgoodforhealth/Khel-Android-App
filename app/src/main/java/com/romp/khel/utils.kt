@@ -40,3 +40,7 @@ class venueviewholderval (textView: CardView): RecyclerView.ViewHolder(textView)
     var venueloc:TextView=textView.findViewById(R.id.venue_cardview_location)
     var venueimg:ImageView= textView.findViewById(R.id.venueimg)
 }
+
+class teaminvitations  (textView: CardView): RecyclerView.ViewHolder(textView) {
+    var teamname:TextView=textView.findViewById(R.id.ticv_teamname)
+}

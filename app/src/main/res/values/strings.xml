@@ -29,7 +29,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="frag_td_title">Tournament Details</string>
     <string name="about_button_value">About Khel</string>
-    <string name="version_value">Version: 2.2.6</string>
+    <string name="version_value">Version: 2.2.9</string>
     <string name="credits_title">Credits</string>
     <string name="credits_value">Shovan Shakya</string>
     <string name="credits_value2">Soren Basnet</string>
@@ -107,8 +107,24 @@
     <string name="player3">Player 3</string>
     <string name="player4">Player 4</string>
     <string name="player5">Player 5</string>
+    <string name="player6">Player 6</string>
+    <string name="player7">Player 7</string>
     <string name="defaultteamname">Team Name</string>
     <string name="create">Create</string>
     <string name="join">Join</string>
     <string name="availabletimings">Available Timings</string>
+    <string name="numba1">#1</string>
+    <string name="numba2">#2</string>
+    <string name="numba3">#3</string>
+    <string name="numba4">#4</string>
+    <string name="numba5">#5</string>
+    <string name="numba6">#6</string>
+    <string name="numba7">#7</string>
+    <string name="create_team">Create Team</string>
+    <string name="team_name">Team Name</string>
+    <string name="send_invite">Send Invite</string>
+    <string name="example_email">example@gmail.com</string>
+    <string name="submit">Submit</string>
+    <string name="join_team">Join Team</string>
+    <string name="my_invitations">My Invitations</string>
 </resources>

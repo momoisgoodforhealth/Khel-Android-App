@@ -1,10 +1,13 @@
 package com.romp.khel.Fragments
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import com.romp.khel.*
 
@@ -27,6 +30,9 @@ class fragment_tournamentdetails : Fragment() {
         val rule:TextView=view.findViewById(R.id.tdrules)
         val conc:TextView=view.findViewById(R.id.tdconc)
         val loc:TextView=view.findViewById(R.id.tdloc)
+        val whatsapp:Button=view.findViewById(R.id.tour_whatsappbutton)
+        val call:Button=view.findViewById(R.id.tour_callbutton)
+
         title.text= tname
         des.text= tdes
         award.text= taward
@@ -34,5 +40,17 @@ class fragment_tournamentdetails : Fragment() {
         rule.text= trules
         conc.text= tconc
         loc.text= tloc
+
+        whatsapp.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse("http://api.whatsapp.com/send?phone=+977$tconc&text=Hello! I saw your Tournament listing in Khel. I am interested and would like to inquire further.")
+            startActivity(intent)
+        }
+
+        call.setOnClickListener {
+            val intent = Intent(Intent.ACTION_CALL);
+            intent.data = Uri.parse("tel:$tconc")
+            startActivity(intent)
+        }
     }
 }

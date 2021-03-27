@@ -11,6 +11,8 @@ import com.google.android.play.core.appupdate.AppUpdateManagerFactory
 import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.UpdateAvailability
 import com.google.android.play.core.ktx.startUpdateFlowForResult
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.romp.khel.R
 
 class ExploreFragment : Fragment() {
@@ -44,7 +46,6 @@ class ExploreFragment : Fragment() {
                     MY_REQUEST_CODE)
             }
         }
-
 
         val button: Button =view.findViewById(R.id.explore_frag_tourbutton)
         button.setOnClickListener {

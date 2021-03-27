@@ -224,9 +224,11 @@
                 app:layout_constraintTop_toTopOf="@+id/teamname" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/createteam_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#78DBF3"
                 android:text="@string/create"
                 app:layout_constraintEnd_toStartOf="@+id/guideline2"
                 app:layout_constraintStart_toStartOf="parent"
@@ -240,13 +242,129 @@
                 app:layout_constraintGuide_percent="0.5" />
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/jointeam_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#F3DD78"
                 android:text="@string/join"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
                 app:layout_constraintTop_toBottomOf="@+id/field" />
+
+            <TextView
+                android:id="@+id/n1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/yugothic_medium"
+                android:text="@string/numba1"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createteam_button" />
+
+            <TextView
+                android:id="@+id/p1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/yugothic_medium"
+                android:text="@string/player1"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/n1"
+                app:layout_constraintTop_toBottomOf="@+id/createteam_button" />
+
+            <TextView
+                android:id="@+id/n2"
+                style="@style/teammates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/numba2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/n1" />
+
+            <TextView
+                android:id="@+id/p2"
+                style="@style/teammates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/player2"
+                app:layout_constraintStart_toEndOf="@+id/n2"
+                app:layout_constraintTop_toBottomOf="@+id/p1" />
+
+            <TextView
+                android:id="@+id/n3"
+                style="@style/teammates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/numba3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/n2" />
+
+            <TextView
+                android:id="@+id/p3"
+                style="@style/teammates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/player3"
+                app:layout_constraintStart_toEndOf="@+id/n3"
+                app:layout_constraintTop_toBottomOf="@+id/p2" />
+
+            <TextView
+                android:id="@+id/n4"
+                style="@style/teammates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/numba4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/n3" />
+
+            <TextView
+                android:id="@+id/p4"
+                style="@style/teammates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/player4"
+                app:layout_constraintStart_toEndOf="@+id/n4"
+                app:layout_constraintTop_toBottomOf="@+id/p3" />
+
+            <TextView
+                android:id="@+id/n5"
+                style="@style/teammates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/numba5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/n4" />
+
+            <TextView
+                android:id="@+id/p5"
+                style="@style/teammates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/player5"
+                app:layout_constraintStart_toEndOf="@+id/n5"
+                app:layout_constraintTop_toBottomOf="@+id/p4" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

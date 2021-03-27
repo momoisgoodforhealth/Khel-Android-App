@@ -34,6 +34,13 @@
         <item name="android:textColorPrimary">#DC9835</item>
     </style>
 
+    <style name="teammates" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">@font/yugothic_medium</item>
+    </style>
+
+
 
 
 </resources>

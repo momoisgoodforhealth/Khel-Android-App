@@ -125,14 +125,11 @@ class FormFragment_LTP : Fragment() {
         }
 
         submit.setOnClickListener {
-         /*   if (venuename.text.toString().trim().isNotBlank() || venuelocation.text.toString().trim().isNotBlank() || timepickerval.text.toString().trim().isNotBlank() || endtimepickerval.text.toString().trim().isNotBlank() ||
-                    datepickval.text.toString().trim().isNotBlank() || contacttext.text.toString().trim().isNotBlank() || totalplayers.text.toString().trim().isNotBlank() ||
-                    joinedplayers.text.toString().trim().isNotBlank() || pricepp.text.toString().trim().isNotBlank()) {
-                        var vn=venuename.text.toString().trim() ; var vl=venuelocation.text.toString().trim() ; var tpv=timepickerval.text.toString().trim() ; var etpv=endtimepickerval.text.toString().trim()
-                        var dpv=datepickval.text.toString().trim(); var ct=contacttext.text.toString().trim() ; var jp=joinedplayers.text.toString().trim() ; var pp=pricepp.text.toString().trim()
-                        var tt=totalplayers.text.toString().trim()
-                Toast.makeText(activity, "$vn ! $vl ! $tpv ! $etpv ! $dpv ! $ct ! $tt ! $jp ! $pp", Toast.LENGTH_LONG).show()
-            } else {  */
+         if (venuename.text.toString().trim().isBlank() || venuelocation.text.toString().trim().isBlank() || timepickerval.text.toString().trim().isBlank() || endtimepickerval.text.toString().trim().isBlank() ||
+             datepickval.text.toString().trim().isBlank() || pricepp.text.toString().trim().isBlank() || phone.text.toString().trim().isBlank() || contacttext.text.toString().trim().isBlank() || totalplayers.text.toString().trim().isBlank()
+             || joinedplayers.text.toString().trim().isBlank() || addinfo.text.toString().isBlank()) {
+                Toast.makeText(activity, "Complete All Fields", Toast.LENGTH_LONG).show()
+            } else {
                 createroom(
                     venuename.text.toString().trim(),
                     venuelocation.text.toString().trim(),
@@ -147,7 +144,7 @@ class FormFragment_LTP : Fragment() {
                     currentUser?.uid.toString(),
                     addinfo.text.toString()
                 )
-           // }
+            }
         }
     }
 }
