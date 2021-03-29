@@ -42,7 +42,7 @@ class Join_Team : Fragment() {
 
         var details= mutableListOf<String>()
 
-        val progressbar: ProgressBar =view.findViewById(R.id.jointeam_recyclerview)
+        val progressbar: ProgressBar =view.findViewById(R.id.jointeam_progressbar)
         progressbar.isIndeterminate
         progressbar.setVisibility(View.VISIBLE)
         conditionref.addValueEventListener(object : ValueEventListener {
@@ -52,10 +52,10 @@ class Join_Team : Fragment() {
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 for (postSnapshot in dataSnapshot.children) {
-                 //   if (currentUser?.email==postSnapshot.child("iemail2").value || currentUser?.email==postSnapshot.child("iemail3").value
-                //        || currentUser?.email==postSnapshot.child("iemail4").value || currentUser?.email==postSnapshot.child("iemail5").value) {
+                    if (currentUser?.email==postSnapshot.child("iemail2").value || currentUser?.email==postSnapshot.child("iemail3").value
+                        || currentUser?.email==postSnapshot.child("iemail4").value || currentUser?.email==postSnapshot.child("iemail5").value) {
                         details.add(postSnapshot.child("teamname").value.toString())
-                //    }
+                    }
 
                 }
                 adapter.data=details

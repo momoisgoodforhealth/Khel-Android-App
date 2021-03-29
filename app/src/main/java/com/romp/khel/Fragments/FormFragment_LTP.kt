@@ -1,6 +1,7 @@
 package com.romp.khel.Fragments
 
 import android.app.AlertDialog
+import android.content.DialogInterface
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -15,6 +16,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 import com.romp.khel.R
 import com.romp.khel.dataclass.LookingtoPlayRoom
+import kotlinx.coroutines.NonCancellable.cancel
 import java.util.*
 
 class FormFragment_LTP : Fragment() {
@@ -124,13 +126,50 @@ class FormFragment_LTP : Fragment() {
                 }
         }
 
+        val submitalert = AlertDialog.Builder(context)
+
+
+
         submit.setOnClickListener {
          if (venuename.text.toString().trim().isBlank() || venuelocation.text.toString().trim().isBlank() || timepickerval.text.toString().trim().isBlank() || endtimepickerval.text.toString().trim().isBlank() ||
              datepickval.text.toString().trim().isBlank() || pricepp.text.toString().trim().isBlank() || phone.text.toString().trim().isBlank() || contacttext.text.toString().trim().isBlank() || totalplayers.text.toString().trim().isBlank()
              || joinedplayers.text.toString().trim().isBlank() || addinfo.text.toString().isBlank()) {
                 Toast.makeText(activity, "Complete All Fields", Toast.LENGTH_LONG).show()
             } else {
-                createroom(
+             submitalert.setTitle("Is The Information Correct?")
+             submitalert.setMessage("Venue Name : ${venuename.text.toString().trim()}"+ "\n" + "Start Time : " +
+                     "${timepickerval.text.toString().trim()}" + "\n" +
+                    "End Time : ${endtimepickerval.text.toString().trim()}" + "\n" +
+                    "Date : ${datepickval.text.toString()}" + "\n" +
+                    "Price Per Player : ${pricepp.text.toString().trim()}" + "\n" +
+                    "Phone Number : ${phone.text.toString().trim()}" + "\n" +
+                    "Other Contact : ${contacttext.text.toString().trim()}" + "\n" +
+                    "Player Count : ${joinedplayers.text.toString().trim()}/${totalplayers.text.toString().trim()}"  + "\n" +
+                    "Additional Info : ${addinfo.text.toString()}")
+             submitalert.apply {
+                 setPositiveButton("Submit",
+                     DialogInterface.OnClickListener { dialog, id ->
+                         createroom(
+                             venuename.text.toString().trim(),
+                             venuelocation.text.toString().trim(),
+                             timepickerval.text.toString().trim(),
+                             endtimepickerval.text.toString().trim(),
+                             datepickval.text.toString(),
+                             pricepp.text.toString().trim(),
+                             phone.text.toString().trim(),
+                             contacttext.text.toString().trim(),
+                             totalplayers.text.toString().trim(),
+                             joinedplayers.text.toString().trim(),
+                             currentUser?.uid.toString(),
+                             addinfo.text.toString()
+                         )
+                     })
+                 setNegativeButton("Cancel",
+                     DialogInterface.OnClickListener { dialog, id -> })
+             }
+             val alerto=submitalert.create()
+             alerto.show()
+              /*  createroom(
                     venuename.text.toString().trim(),
                     venuelocation.text.toString().trim(),
                     timepickerval.text.toString().trim(),
@@ -143,7 +182,7 @@ class FormFragment_LTP : Fragment() {
                     joinedplayers.text.toString().trim(),
                     currentUser?.uid.toString(),
                     addinfo.text.toString()
-                )
+                )   */
             }
         }
     }

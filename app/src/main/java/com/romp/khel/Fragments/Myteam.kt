@@ -1,4 +1,4 @@
-package com.romp.khel.Fragments
+    package com.romp.khel.Fragments
 
 
 import android.os.Bundle
@@ -39,7 +39,7 @@ class Myteam : Fragment() {
 
         auth = Firebase.auth
         val currentUser = auth.currentUser
-     //   if (currentUser==null) { Navigation.findNavController(view).navigate(R.id.action_myteam_to_signUp_Login_Fragment) }
+        if (currentUser==null) { Navigation.findNavController(view).navigate(R.id.action_myteam_to_signUp_Login_Fragment) }
 
         var player1: TextView =view.findViewById(R.id.p1)
         var player2: TextView =view.findViewById(R.id.p2)
@@ -61,13 +61,13 @@ class Myteam : Fragment() {
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 for (postSnapshot in dataSnapshot.children) {
-                    if (currentUser!!.email==postSnapshot.child("email1").value) {
-                        player1.text=currentUser.displayName
+                    if (currentUser?.email==postSnapshot.child("email1").value) {
+                        player1.text=currentUser!!.displayName
                         player2.text=currentUser.email
                         teamname.text=postSnapshot.child("teamname").value.toString()
+                        playericon1.text=player1.text
                     }
                 }
-                playericon1.text=player1.text
             }
         })
 
@@ -102,7 +102,7 @@ class Myteam : Fragment() {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 keyyy= mutableListOf()
                 for (postSnapshot in dataSnapshot.children) {
-                    if (currentUser?.uid==postSnapshot.child("uid").value) {
+                    if (postSnapshot.exists() && currentUser?.uid==postSnapshot.child("uid").value) {
                         details.add(postSnapshot.getValue<LookingtoPlayRoom>()!!)
                         keyyy.add(postSnapshot.key.toString())
                     }

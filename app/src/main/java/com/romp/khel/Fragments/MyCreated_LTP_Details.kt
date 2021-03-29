@@ -58,9 +58,11 @@ class MyCreated_LTP_Details : Fragment() {
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    dum= dataSnapshot.child("playercount").value.toString()
-                    dumdum= dum!!.toInt()
-                numbo.text= dumdum.toString()
+                if (dataSnapshot.exists()) {
+                    dum = dataSnapshot.child("playercount").value.toString()
+                    dumdum = dum!!.toInt()
+                    numbo.text = dumdum.toString()
+                }
             }
 
         })

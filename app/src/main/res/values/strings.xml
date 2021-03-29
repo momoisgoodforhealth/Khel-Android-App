@@ -91,7 +91,7 @@
     <string name="dash">/</string>
     <string name="ltpdetails_contact">How to Contact</string>
     <string name="underdev">THIS APP IS UNDER DEVELOPMENT.SOME INFORMATION MAY NOT BE ACCURATE</string>
-    <string name="deleteroom">Cancel This Room</string>
+    <string name="deleteroom">End This Room</string>
     <string name="selectdate">Select Date</string>
     <string name="selectroom">Select Room</string>
     <string name="aderat">\@</string>
