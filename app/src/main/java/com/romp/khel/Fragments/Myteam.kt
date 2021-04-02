@@ -20,6 +20,7 @@ import com.google.firebase.ktx.Firebase
 import com.romp.khel.R
 import com.romp.khel.adapters.MyCreatedLTPadapter
 import com.romp.khel.dataclass.LookingtoPlayRoom
+import com.romp.khel.dataclass.team
 import com.romp.khel.keyy
 import com.romp.khel.keyyy
 
@@ -28,6 +29,7 @@ class Myteam : Fragment() {
     var database = FirebaseDatabase.getInstance().getReference()
     var conditionref: DatabaseReference = database.child("lookingtoplay")
     var ref: DatabaseReference = database.child("teams")
+    var userref: DatabaseReference = database.child("users")
     lateinit var auth: FirebaseAuth
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -52,6 +54,9 @@ class Myteam : Fragment() {
         var playericon4: TextView =view.findViewById(R.id.player4)
         var playericon5: TextView =view.findViewById(R.id.player5)
         var teamname:TextView=view.findViewById(R.id.teamname)
+        var myteamkey:String?=null
+        var myteam=team()
+        var flag=false
 
 
         ref.addValueEventListener(object : ValueEventListener {
@@ -62,12 +67,94 @@ class Myteam : Fragment() {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 for (postSnapshot in dataSnapshot.children) {
                     if (currentUser?.email==postSnapshot.child("email1").value) {
-                        player1.text=currentUser!!.displayName
-                        player2.text=currentUser.email
-                        teamname.text=postSnapshot.child("teamname").value.toString()
-                        playericon1.text=player1.text
+                    //    player1.text=currentUser!!.displayName
+                     //   teamname.text=postSnapshot.child("teamname").value.toString()
+                    //    playericon1.text=player1.text
+                        myteamkey=postSnapshot.key
+                        myteam.teamname=postSnapshot.child("teamname").value.toString()
+                        myteam.email1=postSnapshot.child("email1").value.toString()
+                        myteam.email2=postSnapshot.child("email2").value.toString()
+                        myteam.email3=postSnapshot.child("email3").value.toString()
+                        myteam.email4=postSnapshot.child("email4").value.toString()
+                        myteam.email5=postSnapshot.child("email5").value.toString()
                     }
+                    else if (currentUser?.email==postSnapshot.child("email2").value) {
+                        myteamkey=postSnapshot.key
+                        myteam.teamname=postSnapshot.child("teamname").value.toString()
+                        myteam.email1=postSnapshot.child("email1").value.toString()
+                        myteam.email2=postSnapshot.child("email2").value.toString()
+                        myteam.email3=postSnapshot.child("email3").value.toString()
+                        myteam.email4=postSnapshot.child("email4").value.toString()
+                        myteam.email5=postSnapshot.child("email5").value.toString()
+                    }
+                    else if (currentUser?.email==postSnapshot.child("email3").value) {
+                        myteamkey=postSnapshot.key
+                        myteam.teamname=postSnapshot.child("teamname").value.toString()
+                        myteam.email1=postSnapshot.child("email1").value.toString()
+                        myteam.email2=postSnapshot.child("email2").value.toString()
+                        myteam.email3=postSnapshot.child("email3").value.toString()
+                        myteam.email4=postSnapshot.child("email4").value.toString()
+                        myteam.email5=postSnapshot.child("email5").value.toString()
+                    }
+                    else if (currentUser?.email==postSnapshot.child("email4").value) {
+                        myteamkey=postSnapshot.key
+                        myteam.teamname=postSnapshot.child("teamname").value.toString()
+                        myteam.email1=postSnapshot.child("email1").value.toString()
+                        myteam.email2=postSnapshot.child("email2").value.toString()
+                        myteam.email3=postSnapshot.child("email3").value.toString()
+                        myteam.email4=postSnapshot.child("email4").value.toString()
+                        myteam.email5=postSnapshot.child("email5").value.toString()
+                    }
+                    else if (currentUser?.email==postSnapshot.child("email5").value) {
+                        myteamkey=postSnapshot.key
+                        myteam.teamname=postSnapshot.child("teamname").value.toString()
+                        myteam.email1=postSnapshot.child("email1").value.toString()
+                        myteam.email2=postSnapshot.child("email2").value.toString()
+                        myteam.email3=postSnapshot.child("email3").value.toString()
+                        myteam.email4=postSnapshot.child("email4").value.toString()
+                        myteam.email5=postSnapshot.child("email5").value.toString()
+                    }
+
                 }
+                userref.addValueEventListener(object : ValueEventListener {
+
+                    override fun onCancelled(error: DatabaseError) {
+                        Toast.makeText(activity,"onCancelled called", Toast.LENGTH_LONG).show()
+                    }
+
+                    override fun onDataChange(dataSnapshot: DataSnapshot) {
+                        flag=false
+                        for (postSnapshot in dataSnapshot.children) {
+                            if (postSnapshot.child("email").value==myteam.email1) {
+                                flag=true
+                                player1.text=postSnapshot.child("displayname").value.toString()
+                                playericon1.text=postSnapshot.child("displayname").value.toString()
+                            }
+                            if (postSnapshot.child("email").value==myteam.email2) {
+                                flag=true
+                                player2.text=postSnapshot.child("displayname").value.toString()
+                                playericon2.text=postSnapshot.child("displayname").value.toString()
+                            }
+                            if (postSnapshot.child("email").value==myteam.email3) {
+                                flag=true
+                                player3.text=postSnapshot.child("displayname").value.toString()
+                                playericon3.text=postSnapshot.child("displayname").value.toString()
+                            }
+                            if (postSnapshot.child("email").value==myteam.email4) {
+                                flag=true
+                                player4.text=postSnapshot.child("displayname").value.toString()
+                                playericon4.text=postSnapshot.child("displayname").value.toString()
+                            }
+                            if (postSnapshot.child("email").value==myteam.email5) {
+                                flag=true
+                                player5.text=postSnapshot.child("displayname").value.toString()
+                                playericon4.text=postSnapshot.child("displayname").value.toString()
+                            }
+                        }
+                    }
+
+                })
+                teamname.text=myteam.teamname
             }
         })
 
@@ -76,13 +163,27 @@ class Myteam : Fragment() {
 
         var createteambutton:Button=view.findViewById(R.id.createteam_button)
         createteambutton.setOnClickListener {
-            if (auth.currentUser!=null) {Navigation.findNavController(view).navigate(R.id.action_myteam_to_create_team)}
-            else {Navigation.findNavController(view).navigate(R.id.action_myteam_to_signUp_Login_Fragment)}
+            if (flag==false) {
+                if (auth.currentUser != null) {
+                    Navigation.findNavController(view).navigate(R.id.action_myteam_to_create_team)
+                } else {
+                    Navigation.findNavController(view)
+                        .navigate(R.id.action_myteam_to_signUp_Login_Fragment)
+                }
+            }
+            else {
+                Toast.makeText(activity,"You have to leave your current team before making new one.",Toast.LENGTH_LONG).show()
+            }
         }
 
         var jointeambutton:Button=view.findViewById(R.id.jointeam_button)
         jointeambutton.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_myteam_to_join_Team)
+            if (flag==false) {
+                Navigation.findNavController(view).navigate(R.id.action_myteam_to_join_Team)
+            }
+            else {
+                Toast.makeText(activity,"You have to leave your current team before joining new one.", Toast.LENGTH_LONG).show()
+            }
         }
 
         val radapter= MyCreatedLTPadapter()

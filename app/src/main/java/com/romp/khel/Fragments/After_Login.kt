@@ -7,15 +7,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import android.widget.TimePicker
+import android.widget.Toast
 import androidx.navigation.Navigation
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.*
+import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
 import com.romp.khel.R
+import com.romp.khel.dataclass.users
 
 
 class After_Login : Fragment() {
@@ -24,6 +27,9 @@ class After_Login : Fragment() {
     lateinit var id: TextView
     lateinit var signin: GoogleSignInAccount
     lateinit var signoutbutton: Button
+    var database = FirebaseDatabase.getInstance().getReference()
+    var conditionref: DatabaseReference = database.child("users")
+    lateinit var auth: FirebaseAuth
 
 
     override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanceState) }
@@ -38,6 +44,10 @@ class After_Login : Fragment() {
         name= view.findViewById(R.id.hello)
         email=view.findViewById(R.id.hi)
 
+        auth = Firebase.auth
+        val currentUser = auth.currentUser
+        var flag=false
+
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestIdToken(getString(R.string.default_web_client_id)).requestEmail().build()
         var mGoogleSignInClient = GoogleSignIn.getClient(requireContext(), gso)
         signoutbutton=view.findViewById(R.id.signout_button2)
@@ -45,6 +55,32 @@ class After_Login : Fragment() {
         if (signin!=null) {
             name.text=signin.displayName
             email.text=signin.email
+
+            conditionref.addValueEventListener(object : ValueEventListener {
+                override fun onCancelled(error: DatabaseError) {
+                    Toast.makeText(activity,"onCancelled called", Toast.LENGTH_LONG).show()
+                }
+
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    flag=false
+                    for (postSnapshot in dataSnapshot.children) {
+                        if (postSnapshot.exists() && currentUser?.email==postSnapshot.child("email").value) {
+                            flag=true
+                        }
+                    }
+                    if (flag==false) {
+                        if (currentUser!=null) {
+                            var detail = users(
+                                currentUser!!.email,
+                                currentUser!!.displayName,
+                                currentUser!!.uid
+                            )
+                            database.child("users").push().setValue(detail)
+                        }
+                    }
+                }
+            })
+
         }
         signoutbutton.setOnClickListener {
             mGoogleSignInClient.signOut()

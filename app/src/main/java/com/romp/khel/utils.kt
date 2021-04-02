@@ -1,5 +1,6 @@
 package com.romp.khel
 
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
@@ -43,4 +44,6 @@ class venueviewholderval (textView: CardView): RecyclerView.ViewHolder(textView)
 
 class teaminvitations  (textView: CardView): RecyclerView.ViewHolder(textView) {
     var teamname:TextView=textView.findViewById(R.id.ticv_teamname)
+    var joinbutton:Button=textView.findViewById(R.id.ticv_joinbutton)
+    var cancelbutton:Button=textView.findViewById(R.id.ticv_cancelbutton)
 }

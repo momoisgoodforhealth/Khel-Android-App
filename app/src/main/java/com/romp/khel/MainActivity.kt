@@ -10,6 +10,7 @@ import com.google.android.play.core.appupdate.AppUpdateManagerFactory
 import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.UpdateAvailability
 import com.romp.khel.Fragments.*
+import com.romp.khel.dataclass.jteam
 
 var tname:String? = null
 var tdes:String? = null
@@ -37,6 +38,9 @@ var daateeee=MutableLiveData<String>()
 var keyyy= mutableListOf<String>()
 var keyy:String?=null
 var positionn:Int?=null
+
+var jointeamdetails= mutableListOf<jteam>()
+var jtdposition:Int=0
 
 
 class MainActivity : AppCompatActivity() {

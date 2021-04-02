@@ -127,4 +127,5 @@
     <string name="submit">Submit</string>
     <string name="join_team">Join Team</string>
     <string name="my_invitations">My Invitations</string>
+    <string name="dontjoin">Dont Join</string>
 </resources>

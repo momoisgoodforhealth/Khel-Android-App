@@ -23,23 +23,23 @@
             android:orientation="vertical">
 
 
-        <!-- TODO: Update blank fragment layout -->
+            <!-- TODO: Update blank fragment layout -->
 
             <TextView
-        android:id="@+id/myteam_text"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="@font/cafe_francoise"
-        android:shadowColor="#401F1F"
-        android:text="@string/myteam_rooms"
-        android:textColor="#FF9800"
-        android:textSize="40sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                android:id="@+id/myteam_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/cafe_francoise"
+                android:shadowColor="#401F1F"
+                android:text="@string/myteam_rooms"
+                android:textColor="#FF9800"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/field"
@@ -85,15 +85,15 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myteam_text"/>
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myteam_text" />
 
             <ImageView
                 android:id="@+id/playericon1"
@@ -267,14 +267,16 @@
 
             <TextView
                 android:id="@+id/p1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="4dp"
                 android:fontFamily="@font/yugothic_medium"
                 android:text="@string/player1"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/button5"
                 app:layout_constraintStart_toEndOf="@+id/n1"
                 app:layout_constraintTop_toBottomOf="@+id/createteam_button" />
 
@@ -292,11 +294,13 @@
             <TextView
                 android:id="@+id/p2"
                 style="@style/teammates"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
                 android:text="@string/player2"
+                app:layout_constraintEnd_toStartOf="@+id/button7"
                 app:layout_constraintStart_toEndOf="@+id/n2"
                 app:layout_constraintTop_toBottomOf="@+id/p1" />
 
@@ -365,6 +369,46 @@
                 android:text="@string/player5"
                 app:layout_constraintStart_toEndOf="@+id/n5"
                 app:layout_constraintTop_toBottomOf="@+id/p4" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/arrowup"
+                app:layout_constraintBottom_toBottomOf="@+id/p1"
+                app:layout_constraintEnd_toStartOf="@+id/button6"
+                app:layout_constraintTop_toTopOf="@+id/p1" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/arrowdown"
+                app:layout_constraintBottom_toBottomOf="@+id/button5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/button5" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/arrowup"
+                app:layout_constraintBottom_toBottomOf="@+id/p2"
+                app:layout_constraintEnd_toStartOf="@+id/button8"
+                app:layout_constraintTop_toTopOf="@+id/p2" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/arrowdown"
+                app:layout_constraintBottom_toBottomOf="@+id/button7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/button7" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

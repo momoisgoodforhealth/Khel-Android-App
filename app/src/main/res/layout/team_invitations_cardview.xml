@@ -34,7 +34,7 @@
         <Button
             android:id="@+id/ticv_cancelbutton"
             android:layout_width="40dp"
-            android:layout_height="0dp"
+            android:layout_height="40dp"
             android:background="@android:drawable/ic_menu_close_clear_cancel"
             app:layout_constraintBottom_toBottomOf="@+id/ticv_teamname"
             app:layout_constraintEnd_toEndOf="parent"
@@ -45,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_marginEnd="8dp"
-            android:background="#154E5C"
+            android:background="@android:color/transparent"
             android:fontFamily="@font/yugothic_light"
             android:text="@string/join"
             android:textColor="#FFFFFF"

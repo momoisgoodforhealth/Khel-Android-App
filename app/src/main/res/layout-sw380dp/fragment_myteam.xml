@@ -48,7 +48,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:scaleType="fitXY"
+                android:scaleType="centerCrop"
                 android:src="@drawable/field"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -93,7 +93,7 @@
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/myteam_text"/>
+                app:layout_constraintTop_toBottomOf="@+id/myteam_text" />
 
             <ImageView
                 android:id="@+id/playericon1"
@@ -227,6 +227,8 @@
                 android:id="@+id/createteam_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#78DBF3"
                 android:text="@string/create"
                 app:layout_constraintEnd_toStartOf="@+id/guideline2"
                 app:layout_constraintStart_toStartOf="parent"
@@ -243,13 +245,15 @@
                 android:id="@+id/jointeam_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#F3DD78"
                 android:text="@string/join"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
                 app:layout_constraintTop_toBottomOf="@+id/field" />
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/n1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -262,20 +266,22 @@
                 app:layout_constraintTop_toBottomOf="@+id/createteam_button" />
 
             <TextView
-                android:id="@+id/textView12"
-                android:layout_width="wrap_content"
+                android:id="@+id/p1"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="4dp"
                 android:fontFamily="@font/yugothic_medium"
                 android:text="@string/player1"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp"
-                app:layout_constraintStart_toEndOf="@+id/textView11"
+                app:layout_constraintEnd_toStartOf="@+id/button5"
+                app:layout_constraintStart_toEndOf="@+id/n1"
                 app:layout_constraintTop_toBottomOf="@+id/createteam_button" />
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/n2"
                 style="@style/teammates"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -283,21 +289,23 @@
                 android:layout_marginTop="4dp"
                 android:text="@string/numba2"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+                app:layout_constraintTop_toBottomOf="@+id/n1" />
 
             <TextView
-                android:id="@+id/textView15"
+                android:id="@+id/p2"
                 style="@style/teammates"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
                 android:text="@string/player2"
-                app:layout_constraintStart_toEndOf="@+id/textView13"
-                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+                app:layout_constraintEnd_toStartOf="@+id/button7"
+                app:layout_constraintStart_toEndOf="@+id/n2"
+                app:layout_constraintTop_toBottomOf="@+id/p1" />
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/n3"
                 style="@style/teammates"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -305,21 +313,21 @@
                 android:layout_marginTop="4dp"
                 android:text="@string/numba3"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+                app:layout_constraintTop_toBottomOf="@+id/n2" />
 
             <TextView
-                android:id="@+id/textView20"
+                android:id="@+id/p3"
                 style="@style/teammates"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="4dp"
                 android:text="@string/player3"
-                app:layout_constraintStart_toEndOf="@+id/textView16"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+                app:layout_constraintStart_toEndOf="@+id/n3"
+                app:layout_constraintTop_toBottomOf="@+id/p2" />
 
             <TextView
-                android:id="@+id/textView21"
+                android:id="@+id/n4"
                 style="@style/teammates"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -327,21 +335,21 @@
                 android:layout_marginTop="4dp"
                 android:text="@string/numba4"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+                app:layout_constraintTop_toBottomOf="@+id/n3" />
 
             <TextView
-                android:id="@+id/textView22"
+                android:id="@+id/p4"
                 style="@style/teammates"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="4dp"
                 android:text="@string/player4"
-                app:layout_constraintStart_toEndOf="@+id/textView21"
-                app:layout_constraintTop_toBottomOf="@+id/textView20" />
+                app:layout_constraintStart_toEndOf="@+id/n4"
+                app:layout_constraintTop_toBottomOf="@+id/p3" />
 
             <TextView
-                android:id="@+id/textView23"
+                android:id="@+id/n5"
                 style="@style/teammates"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -349,18 +357,58 @@
                 android:layout_marginTop="4dp"
                 android:text="@string/numba5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView21" />
+                app:layout_constraintTop_toBottomOf="@+id/n4" />
 
             <TextView
-                android:id="@+id/textView24"
+                android:id="@+id/p5"
                 style="@style/teammates"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="4dp"
                 android:text="@string/player5"
-                app:layout_constraintStart_toEndOf="@+id/textView23"
-                app:layout_constraintTop_toBottomOf="@+id/textView22" />
+                app:layout_constraintStart_toEndOf="@+id/n5"
+                app:layout_constraintTop_toBottomOf="@+id/p4" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/arrowup"
+                app:layout_constraintBottom_toBottomOf="@+id/p1"
+                app:layout_constraintEnd_toStartOf="@+id/button6"
+                app:layout_constraintTop_toTopOf="@+id/p1" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/arrowdown"
+                app:layout_constraintBottom_toBottomOf="@+id/button5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/button5" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/arrowup"
+                app:layout_constraintBottom_toBottomOf="@+id/p2"
+                app:layout_constraintEnd_toStartOf="@+id/button8"
+                app:layout_constraintTop_toTopOf="@+id/p2" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/arrowdown"
+                app:layout_constraintBottom_toBottomOf="@+id/button7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/button7" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

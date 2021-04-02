@@ -290,5 +290,21 @@
         android:id="@+id/join_Team"
         android:name="com.romp.khel.Fragments.Join_Team"
         android:label="fragment_join_team"
-        tools:layout="@layout/fragment_join_team" />
+        tools:layout="@layout/fragment_join_team" >
+        <action
+            android:id="@+id/action_join_Team_to_join_Team_Detalis"
+            app:destination="@id/join_Team_Detalis" />
+    </fragment>
+    <fragment
+        android:id="@+id/join_Team_Detalis"
+        android:name="com.romp.khel.Fragments.Join_Team_Detalis"
+        android:label="fragment_join_team_detalis"
+        tools:layout="@layout/fragment_join_team_detalis" >
+        <action
+            android:id="@+id/action_join_Team_Detalis_to_join_Team"
+            app:destination="@id/join_Team" />
+        <action
+            android:id="@+id/action_join_Team_Detalis_to_myteam"
+            app:destination="@id/myteam" />
+    </fragment>
 </navigation>

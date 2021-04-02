@@ -11,9 +11,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
+import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
 import com.romp.khel.R
 import com.romp.khel.adapters.TeamInvitationAdapter
+import com.romp.khel.dataclass.jteam
+import com.romp.khel.dataclass.team
+import com.romp.khel.jointeamdetails
 
 class Join_Team : Fragment() {
     var database = FirebaseDatabase.getInstance().getReference()
@@ -40,7 +44,7 @@ class Join_Team : Fragment() {
         var adapter= TeamInvitationAdapter()
         view.findViewById<RecyclerView>(R.id.jointeam_recyclerview).adapter=adapter
 
-        var details= mutableListOf<String>()
+      //  var details= mutableListOf<jteam>()
 
         val progressbar: ProgressBar =view.findViewById(R.id.jointeam_progressbar)
         progressbar.isIndeterminate
@@ -51,14 +55,20 @@ class Join_Team : Fragment() {
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
+                jointeamdetails= mutableListOf()
                 for (postSnapshot in dataSnapshot.children) {
-                    if (currentUser?.email==postSnapshot.child("iemail2").value || currentUser?.email==postSnapshot.child("iemail3").value
+                    if (postSnapshot.exists() && currentUser?.email==postSnapshot.child("iemail2").value || currentUser?.email==postSnapshot.child("iemail3").value
                         || currentUser?.email==postSnapshot.child("iemail4").value || currentUser?.email==postSnapshot.child("iemail5").value) {
-                        details.add(postSnapshot.child("teamname").value.toString())
+                            var num=0
+                        jointeamdetails.add(postSnapshot.getValue<jteam>()!!)
+                        if (jointeamdetails.isNotEmpty()){
+                            num=jointeamdetails.size
+                            jointeamdetails[num-1].key=postSnapshot.key
+                        }
                     }
 
                 }
-                adapter.data=details
+                adapter.data=jointeamdetails
                 progressbar.setVisibility(View.INVISIBLE)
             }
 
