@@ -4,6 +4,8 @@
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ProgressBar
@@ -157,8 +159,6 @@ class Myteam : Fragment() {
                 teamname.text=myteam.teamname
             }
         })
-
-
 
 
         var createteambutton:Button=view.findViewById(R.id.createteam_button)
