@@ -44,6 +44,5 @@ class venueviewholderval (textView: CardView): RecyclerView.ViewHolder(textView)
 
 class teaminvitations  (textView: CardView): RecyclerView.ViewHolder(textView) {
     var teamname:TextView=textView.findViewById(R.id.ticv_teamname)
-    var joinbutton:Button=textView.findViewById(R.id.ticv_joinbutton)
-    var cancelbutton:Button=textView.findViewById(R.id.ticv_cancelbutton)
+    var button:Button=textView.findViewById(R.id.ticv_button)
 }

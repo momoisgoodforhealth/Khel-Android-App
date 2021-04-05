@@ -21,36 +21,25 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:fontFamily="@font/yugothic_medium"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:text="TextView"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
-            app:layout_constraintEnd_toStartOf="@+id/ticv_joinbutton"
+            app:layout_constraintEnd_toStartOf="@+id/ticv_button"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/ticv_cancelbutton"
-            android:layout_width="40dp"
+            android:id="@+id/ticv_button"
+            android:layout_width="50dp"
             android:layout_height="40dp"
-            android:background="@android:drawable/ic_menu_close_clear_cancel"
-            app:layout_constraintBottom_toBottomOf="@+id/ticv_teamname"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/ticv_teamname" />
-
-        <Button
-            android:id="@+id/ticv_joinbutton"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
             android:layout_marginEnd="8dp"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/yugothic_light"
-            android:text="@string/join"
-            android:textColor="#FFFFFF"
-            app:layout_constraintBottom_toBottomOf="@+id/ticv_cancelbutton"
-            app:layout_constraintEnd_toStartOf="@+id/ticv_cancelbutton"
-            app:layout_constraintTop_toTopOf="@+id/ticv_cancelbutton" />
+            android:background="@android:drawable/ic_menu_send"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

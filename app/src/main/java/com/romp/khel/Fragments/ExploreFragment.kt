@@ -54,7 +54,7 @@ class ExploreFragment : Fragment() {
 
         val button2:Button=view.findViewById(R.id.explore_frag_ctvmbutton)
         button2.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_exploreFragment_to_comingsoon)
+            Navigation.findNavController(view).navigate(R.id.action_exploreFragment_to_challenge_other_team)
         }
 
         val button3:Button=view.findViewById(R.id.explore_frag_fibbutton)

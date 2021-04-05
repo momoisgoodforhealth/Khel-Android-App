@@ -130,4 +130,6 @@
     <string name="dontjoin">Dont Join</string>
     <string name="team_members">Team Members</string>
     <string name="leave_team">Leave Team</string>
+    <string name="challenge_teams">Challenge Other Teams</string>
+    <string name="call_phone">Call Mobile Number</string>
 </resources>

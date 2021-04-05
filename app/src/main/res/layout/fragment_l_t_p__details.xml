@@ -212,29 +212,38 @@
 
             <Button
                 android:id="@+id/whatsappbutton"
-                android:layout_width="40dp"
+                android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/whatsapp"
+                android:layout_marginEnd="40dp"
+                android:background="#53B343"
+                android:padding="5dp"
+                android:text="@string/whatsapp"
                 android:textAlignment="viewStart"
-                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ltpdetails_othercontact" />
 
             <Button
                 android:id="@+id/callbutton"
-                android:layout_width="40dp"
+                android:layout_width="0dp"
                 android:layout_height="40dp"
-                android:layout_marginStart="16dp"
-                android:background="@drawable/phonecal"
-                app:layout_constraintStart_toStartOf="@+id/guideline3"
-                app:layout_constraintTop_toBottomOf="@+id/ltpdetails_othercontact" />
+                android:layout_marginTop="2dp"
+                android:background="#7C7C7C"
+                android:text="@string/call_phone"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@+id/whatsappbutton"
+                app:layout_constraintStart_toStartOf="@+id/whatsappbutton"
+                app:layout_constraintTop_toBottomOf="@+id/whatsappbutton" />
 
             <TextView
                 android:id="@+id/additiionale"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="18dp"
                 android:layout_marginEnd="4dp"
                 android:fontFamily="@font/yugothic"
                 android:text="@string/ctfrag_add"
@@ -242,7 +251,7 @@
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/whatsappbutton" />
+                app:layout_constraintTop_toBottomOf="@+id/callbutton" />
 
             <TextView
                 android:id="@+id/ltpdetails_addinfo"
@@ -265,6 +274,25 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_constraintGuide_percent="0.5"/>
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#304C1F"
+                android:src="@drawable/whatsapp"
+                app:layout_constraintStart_toEndOf="@+id/whatsappbutton"
+                app:layout_constraintTop_toTopOf="@+id/whatsappbutton" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#555555"
+                android:src="@android:drawable/ic_menu_call"
+                app:layout_constraintBottom_toBottomOf="@+id/callbutton"
+                app:layout_constraintStart_toEndOf="@+id/callbutton"
+                app:layout_constraintTop_toTopOf="@+id/callbutton" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

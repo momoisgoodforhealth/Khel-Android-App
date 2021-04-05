@@ -44,6 +44,9 @@
             app:exitAnim="@anim/fragment_fade_exit"
             app:popEnterAnim="@anim/fragment_fade_enter"
             app:popExitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_exploreFragment_to_challenge_other_team"
+            app:destination="@id/challenge_other_team" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -307,4 +310,9 @@
             android:id="@+id/action_join_Team_Detalis_to_myteam"
             app:destination="@id/myteam" />
     </fragment>
+    <fragment
+        android:id="@+id/challenge_other_team"
+        android:name="com.romp.khel.Fragments.Challenge_other_team"
+        android:label="fragment_challenge_other_team"
+        tools:layout="@layout/fragment_challenge_other_team" />
 </navigation>

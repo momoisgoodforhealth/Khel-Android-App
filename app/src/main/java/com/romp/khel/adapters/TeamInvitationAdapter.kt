@@ -33,7 +33,7 @@ class TeamInvitationAdapter: RecyclerView.Adapter<teaminvitations>() {
         var ref: DatabaseReference = database.child("team").child(item.key.toString())
 
         holder.teamname.text=item.teamname
-        holder.cancelbutton.setOnClickListener {
+        holder.button.setOnClickListener {
             jtdposition=holder.adapterPosition
             Navigation.findNavController(it).navigate(R.id.action_join_Team_to_join_Team_Detalis)
             //    ref.removeValue()
