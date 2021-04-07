@@ -41,18 +41,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/field"
-                android:layout_width="match_parent"
-                android:layout_height="330dp"
-                android:layout_marginStart="8dp"
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/field"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/teamname" />
+                android:fontFamily="@font/bahnschrift"
+                android:text="@string/my_room"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+                app:layout_constraintTop_toBottomOf="@+id/myteam_text" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout2"
@@ -63,12 +62,12 @@
                 android:background="@drawable/selectdate_shape"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+                app:layout_constraintTop_toBottomOf="@+id/textView13">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/mycreatedLTP_recycleview"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -85,15 +84,40 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/createteam_button"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:orientation="vertical"
+                android:background="#78DBF3"
+                android:text="@string/create"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+            <Button
+                android:id="@+id/jointeam_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#F3DD78"
+                android:text="@string/join"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+            <ImageView
+                android:id="@+id/field"
+                android:layout_width="match_parent"
+                android:layout_height="330dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/field"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/myteam_text" />
+                app:layout_constraintTop_toBottomOf="@+id/teamname" />
 
             <ImageView
                 android:id="@+id/playericon1"
@@ -211,7 +235,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+                app:layout_constraintTop_toBottomOf="@+id/createteam_button" />
 
             <Button
                 android:id="@+id/teamnameedit"
@@ -223,17 +247,6 @@
                 app:layout_constraintStart_toEndOf="@+id/teamname"
                 app:layout_constraintTop_toTopOf="@+id/teamname" />
 
-            <Button
-                android:id="@+id/createteam_button"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="#78DBF3"
-                android:text="@string/create"
-                app:layout_constraintEnd_toStartOf="@+id/guideline2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/field" />
-
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline2"
                 android:layout_width="wrap_content"
@@ -241,16 +254,83 @@
                 android:orientation="vertical"
                 app:layout_constraintGuide_percent="0.5" />
 
-            <Button
-                android:id="@+id/jointeam_button"
-                android:layout_width="0dp"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout6"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:background="#F3DD78"
-                android:text="@string/join"
+                android:background="@drawable/selectdate_shape"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/guideline2"
-                app:layout_constraintTop_toBottomOf="@+id/field" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/field">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:text="W"
+                    android:textColor="#8AF878"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="L"
+                    android:textColor="#FA4040"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toStartOf="@+id/textView20"
+                    app:layout_constraintStart_toEndOf="@+id/textView15"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="32dp"
+                    android:text="D"
+                    android:textColor="#5698DD"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#8AF878"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView15"
+                    app:layout_constraintStart_toEndOf="@+id/textView15"
+                    app:layout_constraintStart_toStartOf="@+id/textView15"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#FA4040"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView16"
+                    app:layout_constraintStart_toStartOf="@+id/textView16"
+                    app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#5698DD"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView20"
+                    app:layout_constraintStart_toStartOf="@+id/textView20"
+                    app:layout_constraintTop_toBottomOf="@+id/textView20" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:id="@+id/textView11"
@@ -263,7 +343,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/createteam_button" />
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout6" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout3"
@@ -295,12 +375,12 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
                     android:fontFamily="@font/yugothic_medium"
-                    tools:text="@string/player1"
                     android:textColor="#FFFFFF"
                     android:textSize="22sp"
                     app:layout_constraintEnd_toStartOf="@+id/p1_upbutton"
                     app:layout_constraintStart_toEndOf="@+id/n1"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/player1" />
 
                 <TextView
                     android:id="@+id/n2"
@@ -320,11 +400,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    tools:text="@string/player2"
                     android:textSize="22sp"
                     app:layout_constraintEnd_toStartOf="@+id/p2_upbutton"
                     app:layout_constraintStart_toEndOf="@+id/n2"
-                    app:layout_constraintTop_toBottomOf="@+id/p1" />
+                    app:layout_constraintTop_toBottomOf="@+id/p1"
+                    tools:text="@string/player2" />
 
                 <TextView
                     android:id="@+id/n3"
@@ -344,11 +424,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    tools:text="@string/player3"
                     android:textSize="22sp"
                     app:layout_constraintEnd_toStartOf="@+id/p3_upbutton"
                     app:layout_constraintStart_toEndOf="@+id/n3"
-                    app:layout_constraintTop_toBottomOf="@+id/p2" />
+                    app:layout_constraintTop_toBottomOf="@+id/p2"
+                    tools:text="@string/player3" />
 
                 <TextView
                     android:id="@+id/n4"
@@ -368,11 +448,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    tools:text="@string/player4"
                     android:textSize="22sp"
                     app:layout_constraintEnd_toStartOf="@+id/p4_upbutton"
                     app:layout_constraintStart_toEndOf="@+id/n4"
-                    app:layout_constraintTop_toBottomOf="@+id/p3" />
+                    app:layout_constraintTop_toBottomOf="@+id/p3"
+                    tools:text="@string/player4" />
 
                 <TextView
                     android:id="@+id/p5"
@@ -381,11 +461,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    tools:text="@string/player5"
                     android:textSize="22sp"
                     app:layout_constraintEnd_toStartOf="@+id/p5_upbutton"
                     app:layout_constraintStart_toEndOf="@+id/n5"
-                    app:layout_constraintTop_toBottomOf="@+id/p4" />
+                    app:layout_constraintTop_toBottomOf="@+id/p4"
+                    tools:text="@string/player5" />
 
                 <TextView
                     android:id="@+id/n5"
@@ -504,13 +584,127 @@
                 android:id="@+id/leave_team"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="7dp"
                 android:background="#EA6A6A"
                 android:padding="10dp"
                 android:text="@string/leave_team"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/bahnschrift"
+                android:text="@string/Invitations"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/selectdate_shape"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView24">
+
+                <TextView
+                    android:id="@+id/invitation_email2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    tools:text="@string/example_email"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toStartOf="@+id/button4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/invitation_email3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/example_email"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toStartOf="@+id/button5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/invitation_email2" />
+
+                <TextView
+                    android:id="@+id/invitation_email4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    tools:text="@string/example_email"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toStartOf="@+id/button6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/invitation_email3" />
+
+                <TextView
+                    android:id="@+id/invitation_email5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    tools:text="@string/example_email"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toStartOf="@+id/button7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/invitation_email4" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/add_button"
+                    app:layout_constraintBottom_toBottomOf="@+id/invitation_email2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/invitation_email2" />
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/add_button"
+                    app:layout_constraintBottom_toBottomOf="@+id/invitation_email3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/invitation_email3" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/add_button"
+                    app:layout_constraintBottom_toBottomOf="@+id/invitation_email4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/invitation_email4" />
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/add_button"
+                    app:layout_constraintBottom_toBottomOf="@+id/invitation_email5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/invitation_email5" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

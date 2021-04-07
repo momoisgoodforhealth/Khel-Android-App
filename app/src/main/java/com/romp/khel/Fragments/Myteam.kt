@@ -55,6 +55,11 @@ class Myteam : Fragment() {
         var playericon3: TextView =view.findViewById(R.id.player3)
         var playericon4: TextView =view.findViewById(R.id.player4)
         var playericon5: TextView =view.findViewById(R.id.player5)
+        var invite2:TextView=view.findViewById(R.id.invitation_email2)
+        var invite3:TextView=view.findViewById(R.id.invitation_email3)
+        var invite4:TextView=view.findViewById(R.id.invitation_email4)
+        var invite5:TextView=view.findViewById(R.id.invitation_email5)
+
         var teamname:TextView=view.findViewById(R.id.teamname)
         var myteamkey:String?=null
         var myteam=team()
@@ -79,6 +84,14 @@ class Myteam : Fragment() {
                         myteam.email3=postSnapshot.child("email3").value.toString()
                         myteam.email4=postSnapshot.child("email4").value.toString()
                         myteam.email5=postSnapshot.child("email5").value.toString()
+                        myteam.iemail2=postSnapshot.child("iemail2").value.toString()
+                        myteam.iemail3=postSnapshot.child("iemail3").value.toString()
+                        myteam.iemail4=postSnapshot.child("iemail4").value.toString()
+                        myteam.iemail5=postSnapshot.child("iemail5").value.toString()
+                        invite2.text=myteam.iemail2
+                        invite3.text=myteam.iemail3
+                        invite4.text=myteam.iemail4
+                        invite5.text=myteam.iemail5
                     }
                     else if (currentUser?.email==postSnapshot.child("email2").value) {
                         myteamkey=postSnapshot.key
@@ -88,6 +101,14 @@ class Myteam : Fragment() {
                         myteam.email3=postSnapshot.child("email3").value.toString()
                         myteam.email4=postSnapshot.child("email4").value.toString()
                         myteam.email5=postSnapshot.child("email5").value.toString()
+                        myteam.iemail2=postSnapshot.child("iemail2").value.toString()
+                        myteam.iemail3=postSnapshot.child("iemail3").value.toString()
+                        myteam.iemail4=postSnapshot.child("iemail4").value.toString()
+                        myteam.iemail5=postSnapshot.child("iemail5").value.toString()
+                        invite2.text=myteam.iemail2
+                        invite3.text=myteam.iemail3
+                        invite4.text=myteam.iemail4
+                        invite5.text=myteam.iemail5
                     }
                     else if (currentUser?.email==postSnapshot.child("email3").value) {
                         myteamkey=postSnapshot.key
@@ -97,6 +118,14 @@ class Myteam : Fragment() {
                         myteam.email3=postSnapshot.child("email3").value.toString()
                         myteam.email4=postSnapshot.child("email4").value.toString()
                         myteam.email5=postSnapshot.child("email5").value.toString()
+                        myteam.iemail2=postSnapshot.child("iemail2").value.toString()
+                        myteam.iemail3=postSnapshot.child("iemail3").value.toString()
+                        myteam.iemail4=postSnapshot.child("iemail4").value.toString()
+                        myteam.iemail5=postSnapshot.child("iemail5").value.toString()
+                        invite2.text=myteam.iemail2
+                        invite3.text=myteam.iemail3
+                        invite4.text=myteam.iemail4
+                        invite5.text=myteam.iemail5
                     }
                     else if (currentUser?.email==postSnapshot.child("email4").value) {
                         myteamkey=postSnapshot.key
@@ -106,6 +135,14 @@ class Myteam : Fragment() {
                         myteam.email3=postSnapshot.child("email3").value.toString()
                         myteam.email4=postSnapshot.child("email4").value.toString()
                         myteam.email5=postSnapshot.child("email5").value.toString()
+                        myteam.iemail2=postSnapshot.child("iemail2").value.toString()
+                        myteam.iemail3=postSnapshot.child("iemail3").value.toString()
+                        myteam.iemail4=postSnapshot.child("iemail4").value.toString()
+                        myteam.iemail5=postSnapshot.child("iemail5").value.toString()
+                        invite2.text=myteam.iemail2
+                        invite3.text=myteam.iemail3
+                        invite4.text=myteam.iemail4
+                        invite5.text=myteam.iemail5
                     }
                     else if (currentUser?.email==postSnapshot.child("email5").value) {
                         myteamkey=postSnapshot.key
@@ -115,9 +152,18 @@ class Myteam : Fragment() {
                         myteam.email3=postSnapshot.child("email3").value.toString()
                         myteam.email4=postSnapshot.child("email4").value.toString()
                         myteam.email5=postSnapshot.child("email5").value.toString()
+                        myteam.iemail2=postSnapshot.child("iemail2").value.toString()
+                        myteam.iemail3=postSnapshot.child("iemail3").value.toString()
+                        myteam.iemail4=postSnapshot.child("iemail4").value.toString()
+                        myteam.iemail5=postSnapshot.child("iemail5").value.toString()
+                        invite2.text=myteam.iemail2
+                        invite3.text=myteam.iemail3
+                        invite4.text=myteam.iemail4
+                        invite5.text=myteam.iemail5
                     }
 
                 }
+
                 userref.addValueEventListener(object : ValueEventListener {
 
                     override fun onCancelled(error: DatabaseError) {
@@ -150,7 +196,7 @@ class Myteam : Fragment() {
                             if (postSnapshot.child("email").value==myteam.email5) {
                                 flag=true
                                 player5.text=postSnapshot.child("displayname").value.toString()
-                                playericon4.text=postSnapshot.child("displayname").value.toString()
+                                playericon5.text=postSnapshot.child("displayname").value.toString()
                             }
                         }
                     }

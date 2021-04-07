@@ -74,6 +74,7 @@ class After_Login : Fragment() {
                                 currentUser!!.email,
                                 currentUser!!.displayName,
                                 currentUser!!.uid
+                     //           currentUser!!.photoUrl.toString()
                             )
                             database.child("users").push().setValue(detail)
                         }
