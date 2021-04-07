@@ -10,5 +10,9 @@ data class team(
     var email2:String?="",
     var email3:String?="",
     var email4:String?="",
-    var email5:String?=""
+    var email5:String?="",
+    var win:Int?=0,
+    var loss:Int?=0,
+    var draw:Int?=0,
+    var memo:String?=""
 )

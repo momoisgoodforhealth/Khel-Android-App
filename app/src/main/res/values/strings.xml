@@ -134,4 +134,12 @@
     <string name="call_phone">Call Mobile Number</string>
     <string name="my_room">My Room</string>
     <string name="Invitations">Invitations</string>
+    <string name="Challenges">Challenges</string>
+    <string name="matching_op">Matching Opponents</string>
+    <string name="leaderboards">Leaderboards</string>
+    <string name="challenge">Challenge</string>
+    <string name="default_challenge_memo">We are looking to play a good and friendly game!</string>
+    <string name="W">W</string>
+    <string name="L">L</string>
+    <string name="D">D</string>
 </resources>

@@ -46,3 +46,8 @@ class teaminvitations  (textView: CardView): RecyclerView.ViewHolder(textView) {
     var teamname:TextView=textView.findViewById(R.id.ticv_teamname)
     var button:Button=textView.findViewById(R.id.ticv_button)
 }
+
+class teamchallenges (textView: CardView): RecyclerView.ViewHolder(textView){
+    var challengeteamname:TextView=textView.findViewById(R.id.tcc_teamname)
+    var challengebutton:Button=textView.findViewById(R.id.tcc_challengebutton)
+}
