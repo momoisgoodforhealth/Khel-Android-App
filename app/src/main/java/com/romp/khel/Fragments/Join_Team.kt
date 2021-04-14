@@ -31,7 +31,7 @@ class Join_Team : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View? {.3
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_join_team, container, false)
     }

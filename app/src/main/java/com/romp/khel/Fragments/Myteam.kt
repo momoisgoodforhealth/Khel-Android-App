@@ -7,10 +7,7 @@ import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ProgressBar
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
@@ -59,6 +56,11 @@ class Myteam : Fragment() {
         var invite3:TextView=view.findViewById(R.id.invitation_email3)
         var invite4:TextView=view.findViewById(R.id.invitation_email4)
         var invite5:TextView=view.findViewById(R.id.invitation_email5)
+        var editteambutton:Button=view.findViewById(R.id.teamnameedit)
+        var pl1icon:ImageView=view.findViewById(R.id.playericon1)
+        editteambutton.setOnClickListener {
+            pl1icon.setImageResource(R.drawable.jerseysmol_blue)
+        }
 
         var teamname:TextView=view.findViewById(R.id.teamname)
         var myteamkey:String?=null
