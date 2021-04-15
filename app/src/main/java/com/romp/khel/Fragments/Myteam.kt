@@ -1,6 +1,7 @@
     package com.romp.khel.Fragments
 
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -58,12 +59,14 @@ class Myteam : Fragment() {
         var invite5:TextView=view.findViewById(R.id.invitation_email5)
         var editteambutton:Button=view.findViewById(R.id.teamnameedit)
         var pl1icon:ImageView=view.findViewById(R.id.playericon1)
-        editteambutton.setOnClickListener {
-            pl1icon.setImageResource(R.drawable.jerseysmol_blue)
-        }
+        var pl2icon:ImageView=view.findViewById(R.id.playericon2)
+        var pl3icon:ImageView=view.findViewById(R.id.playericon3)
+        var pl4icon:ImageView=view.findViewById(R.id.playericon4)
+        var pl5icon:ImageView=view.findViewById(R.id.playericon5)
+
+
 
         var teamname:TextView=view.findViewById(R.id.teamname)
-        var myteamkey:String?=null
         var myteam=team()
         var flag=false
 
@@ -79,7 +82,7 @@ class Myteam : Fragment() {
                     //    player1.text=currentUser!!.displayName
                      //   teamname.text=postSnapshot.child("teamname").value.toString()
                     //    playericon1.text=player1.text
-                        myteamkey=postSnapshot.key
+                        myteam.key=postSnapshot.key
                         myteam.teamname=postSnapshot.child("teamname").value.toString()
                         myteam.email1=postSnapshot.child("email1").value.toString()
                         myteam.email2=postSnapshot.child("email2").value.toString()
@@ -90,13 +93,14 @@ class Myteam : Fragment() {
                         myteam.iemail3=postSnapshot.child("iemail3").value.toString()
                         myteam.iemail4=postSnapshot.child("iemail4").value.toString()
                         myteam.iemail5=postSnapshot.child("iemail5").value.toString()
+                        myteam.color=postSnapshot.child("color").value.toString()
                         invite2.text=myteam.iemail2
                         invite3.text=myteam.iemail3
                         invite4.text=myteam.iemail4
                         invite5.text=myteam.iemail5
                     }
                     else if (currentUser?.email==postSnapshot.child("email2").value) {
-                        myteamkey=postSnapshot.key
+                        myteam.key=postSnapshot.key
                         myteam.teamname=postSnapshot.child("teamname").value.toString()
                         myteam.email1=postSnapshot.child("email1").value.toString()
                         myteam.email2=postSnapshot.child("email2").value.toString()
@@ -107,13 +111,14 @@ class Myteam : Fragment() {
                         myteam.iemail3=postSnapshot.child("iemail3").value.toString()
                         myteam.iemail4=postSnapshot.child("iemail4").value.toString()
                         myteam.iemail5=postSnapshot.child("iemail5").value.toString()
+                        myteam.color=postSnapshot.child("color").value.toString()
                         invite2.text=myteam.iemail2
                         invite3.text=myteam.iemail3
                         invite4.text=myteam.iemail4
                         invite5.text=myteam.iemail5
                     }
                     else if (currentUser?.email==postSnapshot.child("email3").value) {
-                        myteamkey=postSnapshot.key
+                        myteam.key=postSnapshot.key
                         myteam.teamname=postSnapshot.child("teamname").value.toString()
                         myteam.email1=postSnapshot.child("email1").value.toString()
                         myteam.email2=postSnapshot.child("email2").value.toString()
@@ -124,13 +129,14 @@ class Myteam : Fragment() {
                         myteam.iemail3=postSnapshot.child("iemail3").value.toString()
                         myteam.iemail4=postSnapshot.child("iemail4").value.toString()
                         myteam.iemail5=postSnapshot.child("iemail5").value.toString()
+                        myteam.color=postSnapshot.child("color").value.toString()
                         invite2.text=myteam.iemail2
                         invite3.text=myteam.iemail3
                         invite4.text=myteam.iemail4
                         invite5.text=myteam.iemail5
                     }
                     else if (currentUser?.email==postSnapshot.child("email4").value) {
-                        myteamkey=postSnapshot.key
+                        myteam.key=postSnapshot.key
                         myteam.teamname=postSnapshot.child("teamname").value.toString()
                         myteam.email1=postSnapshot.child("email1").value.toString()
                         myteam.email2=postSnapshot.child("email2").value.toString()
@@ -141,13 +147,14 @@ class Myteam : Fragment() {
                         myteam.iemail3=postSnapshot.child("iemail3").value.toString()
                         myteam.iemail4=postSnapshot.child("iemail4").value.toString()
                         myteam.iemail5=postSnapshot.child("iemail5").value.toString()
+                        myteam.color=postSnapshot.child("color").value.toString()
                         invite2.text=myteam.iemail2
                         invite3.text=myteam.iemail3
                         invite4.text=myteam.iemail4
                         invite5.text=myteam.iemail5
                     }
                     else if (currentUser?.email==postSnapshot.child("email5").value) {
-                        myteamkey=postSnapshot.key
+                        myteam.key=postSnapshot.key
                         myteam.teamname=postSnapshot.child("teamname").value.toString()
                         myteam.email1=postSnapshot.child("email1").value.toString()
                         myteam.email2=postSnapshot.child("email2").value.toString()
@@ -158,6 +165,7 @@ class Myteam : Fragment() {
                         myteam.iemail3=postSnapshot.child("iemail3").value.toString()
                         myteam.iemail4=postSnapshot.child("iemail4").value.toString()
                         myteam.iemail5=postSnapshot.child("iemail5").value.toString()
+                        myteam.color=postSnapshot.child("color").value.toString()
                         invite2.text=myteam.iemail2
                         invite3.text=myteam.iemail3
                         invite4.text=myteam.iemail4
@@ -205,8 +213,109 @@ class Myteam : Fragment() {
 
                 })
                 teamname.text=myteam.teamname
+                if (myteam.color=="white") {
+                    pl1icon.setImageResource(R.drawable.jerseysmol)
+                    pl2icon.setImageResource(R.drawable.jerseysmol)
+                    pl3icon.setImageResource(R.drawable.jerseysmol)
+                    pl4icon.setImageResource(R.drawable.jerseysmol)
+                    pl5icon.setImageResource(R.drawable.jerseysmol)
+                }
+                if (myteam.color=="blue") {
+                    pl1icon.setImageResource(R.drawable.jerseysmol_blue)
+                    pl2icon.setImageResource(R.drawable.jerseysmol_blue)
+                    pl3icon.setImageResource(R.drawable.jerseysmol_blue)
+                    pl4icon.setImageResource(R.drawable.jerseysmol_blue)
+                    pl5icon.setImageResource(R.drawable.jerseysmol_blue)
+                }
+                if (myteam.color=="lightblue") {
+                    pl1icon.setImageResource(R.drawable.jerseysmol_lightblue)
+                    pl2icon.setImageResource(R.drawable.jerseysmol_lightblue)
+                    pl3icon.setImageResource(R.drawable.jerseysmol_lightblue)
+                    pl4icon.setImageResource(R.drawable.jerseysmol_lightblue)
+                    pl5icon.setImageResource(R.drawable.jerseysmol_lightblue)
+                }
+                if (myteam.color=="brightgreen") {
+                    pl1icon.setImageResource(R.drawable.jerseysmol_brightgreen)
+                    pl2icon.setImageResource(R.drawable.jerseysmol_brightgreen)
+                    pl3icon.setImageResource(R.drawable.jerseysmol_brightgreen)
+                    pl4icon.setImageResource(R.drawable.jerseysmol_brightgreen)
+                    pl5icon.setImageResource(R.drawable.jerseysmol_brightgreen)
+                }
+                if (myteam.color=="brown") {
+                    pl1icon.setImageResource(R.drawable.jerseysmol_brown)
+                    pl2icon.setImageResource(R.drawable.jerseysmol_brown)
+                    pl3icon.setImageResource(R.drawable.jerseysmol_brown)
+                    pl4icon.setImageResource(R.drawable.jerseysmol_brown)
+                    pl5icon.setImageResource(R.drawable.jerseysmol_brown)
+                }
+                if (myteam.color=="darkgreen") {
+                    pl1icon.setImageResource(R.drawable.jerseysmol_darkgreen)
+                    pl2icon.setImageResource(R.drawable.jerseysmol_darkgreen)
+                    pl3icon.setImageResource(R.drawable.jerseysmol_darkgreen)
+                    pl4icon.setImageResource(R.drawable.jerseysmol_darkgreen)
+                    pl5icon.setImageResource(R.drawable.jerseysmol_darkgreen)
+                }
+                if (myteam.color=="grey") {
+                    pl1icon.setImageResource(R.drawable.jerseysmol_grey)
+                    pl2icon.setImageResource(R.drawable.jerseysmol_grey)
+                    pl3icon.setImageResource(R.drawable.jerseysmol_grey)
+                    pl4icon.setImageResource(R.drawable.jerseysmol_grey)
+                    pl5icon.setImageResource(R.drawable.jerseysmol_grey)
+                }
+                if (myteam.color=="orange") {
+                    pl1icon.setImageResource(R.drawable.jerseysmol_orange)
+                    pl2icon.setImageResource(R.drawable.jerseysmol_orange)
+                    pl3icon.setImageResource(R.drawable.jerseysmol_orange)
+                    pl4icon.setImageResource(R.drawable.jerseysmol_orange)
+                    pl5icon.setImageResource(R.drawable.jerseysmol_orange)
+                }
+                if (myteam.color=="purple") {
+                    pl1icon.setImageResource(R.drawable.jerseysmol_purple)
+                    pl2icon.setImageResource(R.drawable.jerseysmol_purple)
+                    pl3icon.setImageResource(R.drawable.jerseysmol_purple)
+                    pl4icon.setImageResource(R.drawable.jerseysmol_purple)
+                    pl5icon.setImageResource(R.drawable.jerseysmol_purple)
+                }
+                if (myteam.color=="red") {
+                    pl1icon.setImageResource(R.drawable.jerseysmol_red)
+                    pl2icon.setImageResource(R.drawable.jerseysmol_red)
+                    pl3icon.setImageResource(R.drawable.jerseysmol_red)
+                    pl4icon.setImageResource(R.drawable.jerseysmol_red)
+                    pl5icon.setImageResource(R.drawable.jerseysmol_red)
+                }
+                if (myteam.color=="yellow") {
+                    pl1icon.setImageResource(R.drawable.jerseysmol_yellow)
+                    pl2icon.setImageResource(R.drawable.jerseysmol_yellow)
+                    pl3icon.setImageResource(R.drawable.jerseysmol_yellow)
+                    pl4icon.setImageResource(R.drawable.jerseysmol_yellow)
+                    pl5icon.setImageResource(R.drawable.jerseysmol_yellow)
+                }
             }
         })
+
+        editteambutton.setOnClickListener {
+            if (flag==true) {
+                val builder = AlertDialog.Builder(context)
+                builder.setTitle("Select Jersey Color")
+                val colorlist = arrayOf("White","Blue", "Green","Grey", "Light Blue","Orange","Purple","Red","Yellow","Dark Green")
+                builder.setItems(colorlist) { dialog, which ->
+                    when (which) {
+                        0 -> {ref.child(myteam.key.toString()).child("color").setValue("white")}
+                        1 -> { ref.child(myteam.key.toString()).child("color").setValue("blue") }
+                        2 -> {ref.child(myteam.key.toString()).child("color").setValue("brightgreen")}
+                        3 -> {ref.child(myteam.key.toString()).child("color").setValue("grey")}
+                        4 -> {ref.child(myteam.key.toString()).child("color").setValue("lightblue")}
+                        5 -> {ref.child(myteam.key.toString()).child("color").setValue("orange")}
+                        6 -> {ref.child(myteam.key.toString()).child("color").setValue("purple")}
+                        7 -> {ref.child(myteam.key.toString()).child("color").setValue("red")}
+                        8-> {ref.child(myteam.key.toString()).child("color").setValue("yellow")}
+                        9 -> {ref.child(myteam.key.toString()).child("color").setValue("darkgreen")}
+                    }
+                }
+                val dialog = builder.create()
+                dialog.show()
+            }
+        }
 
 
         var createteambutton:Button=view.findViewById(R.id.createteam_button)

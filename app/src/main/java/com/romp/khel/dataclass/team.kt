@@ -15,5 +15,6 @@ data class team(
     var loss:Int?=0,
     var draw:Int?=0,
     var memo:String?="",
-    var key:String?=""
+    var key:String?="",
+    var color:String?="white"
 )

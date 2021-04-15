@@ -200,56 +200,125 @@
                 app:layout_constraintEnd_toStartOf="@+id/cd_t2_p3icon"
                 app:layout_constraintStart_toEndOf="@+id/cd_t2_p2icon" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="#353535"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#353535"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView10">
 
-        <TextView
-            android:id="@+id/textView45"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="24dp"
-            android:fontFamily="@font/bahnschrift"
-            android:text="@string/winnerpays"
-            android:textColor="#4CA33D"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/textView45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/bahnschrift"
+                    android:text="@string/winnerpays"
+                    android:textColor="#4CA33D"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <SeekBar
-            android:id="@+id/cd_price_seekbar"
-            style="@style/Widget.AppCompat.SeekBar.Discrete"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:max="5"
-            android:progress="3"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView45" />
+                <SeekBar
+                    android:id="@+id/cd_price_seekbar"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:max="5"
+                    android:progress="3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView45" />
 
-        <TextView
-            android:id="@+id/winnerpays"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:textColor="#4CA33D"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView45"
-            app:layout_constraintStart_toEndOf="@+id/textView45"
-            app:layout_constraintTop_toTopOf="@+id/textView45"
-            tools:text="50" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/winnerpays"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:textColor="#4CA33D"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView45"
+                    app:layout_constraintStart_toEndOf="@+id/textView45"
+                    app:layout_constraintTop_toTopOf="@+id/textView45"
+                    tools:text="50" />
+
+                <TextView
+                    android:id="@+id/textView42"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/bahnschrift"
+                    android:text="@string/selectdate"
+                    android:textColor="#D6BD8A"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cd_price_seekbar" />
+
+                <DatePicker
+                    android:id="@+id/daaete"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#353535"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"
+                    android:fontFamily="sans-serif-thin"
+                    android:textColor="#D6BD8A"
+                    android:textColorHint="#D6BD8A"
+                    android:theme="@style/MyDatePicker"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView42" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/bahnschrift"
+                    android:text="@string/select_venue"
+                    android:textAllCaps="false"
+                    android:textColor="#7FB9EC"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/daaete" />
+
+                <TextView
+                    android:id="@+id/textView46"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bahnschrift"
+                    android:text="TextView"
+                    android:textColor="#7FB9EC"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="#DC2404"
+                    android:padding="10dp"
+                    android:text="@string/challenge"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView46" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:id="@+id/cd_t1_player1"
@@ -361,7 +430,6 @@
                 app:layout_constraintEnd_toEndOf="@+id/cd_t2_p1icon"
                 app:layout_constraintStart_toStartOf="@+id/cd_t2_p1icon"
                 tools:text="@string/player5" />
-
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
