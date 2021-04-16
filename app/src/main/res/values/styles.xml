@@ -40,6 +40,17 @@
         <item name="android:fontFamily">@font/yugothic_medium</item>
     </style>
 
+    <style name="maintitle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textSize">40sp</item>
+        <item name="android:fontFamily">@font/cafe_francoise</item>
+    </style>
+
+    <style name="general" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">@font/yugothic</item>
+    </style>
+
 
 
 

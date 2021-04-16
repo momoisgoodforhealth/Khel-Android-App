@@ -7,56 +7,92 @@
     android:background="#212121"
     tools:context=".Fragments.After_Login">
 
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#454545"
+        app:layout_constraintTop_toBottomOf="@+id/lookingtoplay_title"
+        tools:layout_editor_absoluteX="-42dp" />
+
     <TextView
         android:id="@+id/lookingtoplay_title"
-        android:layout_width="wrap_content"
+        style="@style/maintitle"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/bahnschrift"
-        android:gravity="center"
-        android:text="@string/hello"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/account_info"
+        android:textColor="#FF9800"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/hello"
-        android:layout_width="wrap_content"
+        android:id="@+id/display_name"
+        style="@style/general"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/bahnschrift"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="8dp"
         android:textColor="#FFFFFF"
-        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView47"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lookingtoplay_title"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView47"
+        app:layout_constraintTop_toTopOf="@+id/textView47"
+        app:layout_constraintVertical_bias="0.0"
         tools:text="@string/hello" />
 
     <TextView
-        android:id="@+id/hi"
-        android:layout_width="wrap_content"
+        android:id="@+id/account_info_email"
+        style="@style/general"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/bahnschrift"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="8dp"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView48"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hello"
+        app:layout_constraintStart_toEndOf="@+id/textView48"
+        app:layout_constraintTop_toTopOf="@+id/textView48"
         tools:text="BITCH LASANGNA" />
 
     <Button
         android:id="@+id/signout_button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
         android:text="@string/logout"
+        android:textColor="#FF9800"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hi" />
+        app:layout_constraintTop_toBottomOf="@+id/account_info_email" />
+
+    <TextView
+        android:id="@+id/textView47"
+        style="@style/general"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/yugothic"
+        android:text="@string/display_name"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/textView48"
+        style="@style/general"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/account_info_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView47" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -145,4 +145,7 @@
     <string name="challenge_team">Challenge Details</string>
     <string name="VS">VS</string>
     <string name="winnerpays">Winner Pays : </string>
+    <string name="account_info">Account Information</string>
+    <string name="display_name">Display Name :</string>
+    <string name="account_info_email">Email :</string>
 </resources>

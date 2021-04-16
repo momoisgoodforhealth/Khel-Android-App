@@ -15,7 +15,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
-import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
 import com.romp.khel.R
 import com.romp.khel.dataclass.users
@@ -41,8 +40,8 @@ class After_Login : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        name= view.findViewById(R.id.hello)
-        email=view.findViewById(R.id.hi)
+        name= view.findViewById(R.id.display_name)
+        email=view.findViewById(R.id.account_info_email)
 
         auth = Firebase.auth
         val currentUser = auth.currentUser

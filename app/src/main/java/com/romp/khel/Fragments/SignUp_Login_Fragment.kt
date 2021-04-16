@@ -33,10 +33,10 @@ class SignUp_Login_Fragment : Fragment() {
 
     fun updateUI(account: GoogleSignInAccount?) {
         if (account != null) {
-            Toast.makeText(activity, "You Signed In Successfully", Toast.LENGTH_LONG).show()
+        //    Toast.makeText(activity, "You Signed In Successfully", Toast.LENGTH_LONG).show()
             view?.let { Navigation.findNavController(it).navigate(R.id.action_signUp_Login_Fragment_to_after_Login) }
         } else {
-            Toast.makeText(activity, "Sign In Unsuccessful", Toast.LENGTH_LONG).show()
+        //    Toast.makeText(activity, "Sign In Unsuccessful", Toast.LENGTH_LONG).show()
         }
     }
 

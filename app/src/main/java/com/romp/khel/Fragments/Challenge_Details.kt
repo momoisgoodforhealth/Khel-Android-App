@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.SeekBar
 import android.widget.TextView
 import android.widget.Toast
@@ -34,6 +35,7 @@ class Challenge_Details : Fragment() {
         var team2name:TextView=view.findViewById(R.id.cd_team2)
         var team1=team()
         var team2=team()
+
         var t1_p1:TextView=view.findViewById(R.id.cd_t1_player1)
         var t1_p2:TextView=view.findViewById(R.id.cd_t1_player2)
         var t1_p3:TextView=view.findViewById(R.id.cd_t1_player3)
@@ -45,6 +47,18 @@ class Challenge_Details : Fragment() {
         var t2_p4:TextView=view.findViewById(R.id.cd_t2_player4)
         var t2_p5:TextView=view.findViewById(R.id.cd_t2_player5)
 
+        var t1_p1icon:ImageView=view.findViewById(R.id.cd_t1_p1icon)
+        var t1_p2icon:ImageView=view.findViewById(R.id.cd_t1_p2icon)
+        var t1_p3icon:ImageView=view.findViewById(R.id.cd_t1_p3icon)
+        var t1_p4icon:ImageView=view.findViewById(R.id.cd_t1_p4icon)
+        var t1_p5icon:ImageView=view.findViewById(R.id.cd_t1_p5icon)
+        var t2_p1icon:ImageView=view.findViewById(R.id.cd_t2_p1icon)
+        var t2_p2icon:ImageView=view.findViewById(R.id.cd_t2_p2icon)
+        var t2_p3icon:ImageView=view.findViewById(R.id.cd_t2_p3icon)
+        var t2_p4icon:ImageView=view.findViewById(R.id.cd_t2_p4icon)
+        var t2_p5icon:ImageView=view.findViewById(R.id.cd_t2_p5icon)
+
+
 
         conditionref.addValueEventListener(object : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
@@ -54,6 +68,7 @@ class Challenge_Details : Fragment() {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 for (postSnapshot in dataSnapshot.children) {
                     if (postSnapshot.key== myteamkey) {
+                        team1.color=postSnapshot.child("color").value.toString()
                         team1name.text=postSnapshot.child("teamname").value.toString()
                         team1.email1=postSnapshot.child("email1").value.toString()
                         team1.email2=postSnapshot.child("email2").value.toString()
@@ -61,8 +76,11 @@ class Challenge_Details : Fragment() {
                         team1.email4=postSnapshot.child("email4").value.toString()
                         team1.email5=postSnapshot.child("email5").value.toString()
 
+
+
                     }
                     if (postSnapshot.key == challengeteamdetails[challengeposition].key) {
+                        team2.color=postSnapshot.child("color").value.toString()
                         team2name.text=postSnapshot.child("teamname").value.toString()
                         team2.email1=postSnapshot.child("email1").value.toString()
                         team2.email2=postSnapshot.child("email2").value.toString()
@@ -70,6 +88,164 @@ class Challenge_Details : Fragment() {
                         team2.email4=postSnapshot.child("email4").value.toString()
                         team2.email5=postSnapshot.child("email5").value.toString()
                     }
+                }
+
+                if (team1.color=="white") {
+                    t1_p1icon.setImageResource(R.drawable.jerseysmol)
+                    t1_p2icon.setImageResource(R.drawable.jerseysmol)
+                    t1_p3icon.setImageResource(R.drawable.jerseysmol)
+                    t1_p4icon.setImageResource(R.drawable.jerseysmol)
+                    t1_p5icon.setImageResource(R.drawable.jerseysmol)
+                }
+                if (team2.color=="white") {
+                    t2_p1icon.setImageResource(R.drawable.jerseysmol)
+                    t2_p2icon.setImageResource(R.drawable.jerseysmol)
+                    t2_p3icon.setImageResource(R.drawable.jerseysmol)
+                    t2_p4icon.setImageResource(R.drawable.jerseysmol)
+                    t2_p5icon.setImageResource(R.drawable.jerseysmol)
+                }
+                if (team1.color=="blue") {
+                    t1_p1icon.setImageResource(R.drawable.jerseysmol_blue)
+                    t1_p2icon.setImageResource(R.drawable.jerseysmol_blue)
+                    t1_p3icon.setImageResource(R.drawable.jerseysmol_blue)
+                    t1_p4icon.setImageResource(R.drawable.jerseysmol_blue)
+                    t1_p5icon.setImageResource(R.drawable.jerseysmol_blue)
+                }
+
+                if (team2.color=="blue") {
+                    t2_p1icon.setImageResource(R.drawable.jerseysmol_blue)
+                    t2_p2icon.setImageResource(R.drawable.jerseysmol_blue)
+                    t2_p3icon.setImageResource(R.drawable.jerseysmol_blue)
+                    t2_p4icon.setImageResource(R.drawable.jerseysmol_blue)
+                    t2_p5icon.setImageResource(R.drawable.jerseysmol_blue)
+                }
+
+                if (team1.color=="lightblue") {
+                    t1_p1icon.setImageResource(R.drawable.jerseysmol_lightblue)
+                    t1_p2icon.setImageResource(R.drawable.jerseysmol_lightblue)
+                    t1_p3icon.setImageResource(R.drawable.jerseysmol_lightblue)
+                    t1_p4icon.setImageResource(R.drawable.jerseysmol_lightblue)
+                    t1_p5icon.setImageResource(R.drawable.jerseysmol_lightblue)
+                }
+                if (team2.color=="lightblue") {
+                    t2_p1icon.setImageResource(R.drawable.jerseysmol_lightblue)
+                    t2_p2icon.setImageResource(R.drawable.jerseysmol_lightblue)
+                    t2_p3icon.setImageResource(R.drawable.jerseysmol_lightblue)
+                    t2_p4icon.setImageResource(R.drawable.jerseysmol_lightblue)
+                    t2_p5icon.setImageResource(R.drawable.jerseysmol_lightblue)
+                }
+
+                if (team1.color=="brightgreen") {
+                    t1_p1icon.setImageResource(R.drawable.jerseysmol_brightgreen)
+                    t1_p2icon.setImageResource(R.drawable.jerseysmol_brightgreen)
+                    t1_p3icon.setImageResource(R.drawable.jerseysmol_brightgreen)
+                    t1_p4icon.setImageResource(R.drawable.jerseysmol_brightgreen)
+                    t1_p5icon.setImageResource(R.drawable.jerseysmol_brightgreen)
+                }
+                if (team2.color=="brightgreen") {
+                    t2_p1icon.setImageResource(R.drawable.jerseysmol_brightgreen)
+                    t2_p2icon.setImageResource(R.drawable.jerseysmol_brightgreen)
+                    t2_p3icon.setImageResource(R.drawable.jerseysmol_brightgreen)
+                    t2_p4icon.setImageResource(R.drawable.jerseysmol_brightgreen)
+                    t2_p5icon.setImageResource(R.drawable.jerseysmol_brightgreen)
+                }
+                if (team1.color=="brown") {
+                    t1_p1icon.setImageResource(R.drawable.jerseysmol_brown)
+                    t1_p2icon.setImageResource(R.drawable.jerseysmol_brown)
+                    t1_p3icon.setImageResource(R.drawable.jerseysmol_brown)
+                    t1_p4icon.setImageResource(R.drawable.jerseysmol_brown)
+                    t1_p5icon.setImageResource(R.drawable.jerseysmol_brown)
+                }
+                if (team2.color=="brown") {
+                    t2_p1icon.setImageResource(R.drawable.jerseysmol_brown)
+                    t2_p2icon.setImageResource(R.drawable.jerseysmol_brown)
+                    t2_p3icon.setImageResource(R.drawable.jerseysmol_brown)
+                    t2_p4icon.setImageResource(R.drawable.jerseysmol_brown)
+                    t2_p5icon.setImageResource(R.drawable.jerseysmol_brown)
+                }
+                if (team1.color=="darkgreen") {
+                    t1_p1icon.setImageResource(R.drawable.jerseysmol_darkgreen)
+                    t1_p2icon.setImageResource(R.drawable.jerseysmol_darkgreen)
+                    t1_p3icon.setImageResource(R.drawable.jerseysmol_darkgreen)
+                    t1_p4icon.setImageResource(R.drawable.jerseysmol_darkgreen)
+                    t1_p5icon.setImageResource(R.drawable.jerseysmol_darkgreen)
+                }
+                if (team2.color=="darkgreen") {
+                    t2_p1icon.setImageResource(R.drawable.jerseysmol_darkgreen)
+                    t2_p2icon.setImageResource(R.drawable.jerseysmol_darkgreen)
+                    t2_p3icon.setImageResource(R.drawable.jerseysmol_darkgreen)
+                    t2_p4icon.setImageResource(R.drawable.jerseysmol_darkgreen)
+                    t2_p5icon.setImageResource(R.drawable.jerseysmol_darkgreen)
+                }
+                if (team1.color=="grey") {
+                    t1_p1icon.setImageResource(R.drawable.jerseysmol_grey)
+                    t1_p2icon.setImageResource(R.drawable.jerseysmol_grey)
+                    t1_p3icon.setImageResource(R.drawable.jerseysmol_grey)
+                    t1_p4icon.setImageResource(R.drawable.jerseysmol_grey)
+                    t1_p5icon.setImageResource(R.drawable.jerseysmol_grey)
+                }
+                if (team2.color=="grey") {
+                    t2_p1icon.setImageResource(R.drawable.jerseysmol_grey)
+                    t2_p2icon.setImageResource(R.drawable.jerseysmol_grey)
+                    t2_p3icon.setImageResource(R.drawable.jerseysmol_grey)
+                    t2_p4icon.setImageResource(R.drawable.jerseysmol_grey)
+                    t2_p5icon.setImageResource(R.drawable.jerseysmol_grey)
+                }
+                if (team1.color=="orange") {
+                    t1_p1icon.setImageResource(R.drawable.jerseysmol_orange)
+                    t1_p2icon.setImageResource(R.drawable.jerseysmol_orange)
+                    t1_p3icon.setImageResource(R.drawable.jerseysmol_orange)
+                    t1_p4icon.setImageResource(R.drawable.jerseysmol_orange)
+                    t1_p5icon.setImageResource(R.drawable.jerseysmol_orange)
+                }
+                if (team2.color=="orange") {
+                    t2_p1icon.setImageResource(R.drawable.jerseysmol_orange)
+                    t2_p2icon.setImageResource(R.drawable.jerseysmol_orange)
+                    t2_p3icon.setImageResource(R.drawable.jerseysmol_orange)
+                    t2_p4icon.setImageResource(R.drawable.jerseysmol_orange)
+                    t2_p5icon.setImageResource(R.drawable.jerseysmol_orange)
+                }
+                if (team1.color=="purple") {
+                    t1_p1icon.setImageResource(R.drawable.jerseysmol_purple)
+                    t1_p2icon.setImageResource(R.drawable.jerseysmol_purple)
+                    t1_p3icon.setImageResource(R.drawable.jerseysmol_purple)
+                    t1_p4icon.setImageResource(R.drawable.jerseysmol_purple)
+                    t1_p5icon.setImageResource(R.drawable.jerseysmol_purple)
+                }
+                if (team2.color=="purple") {
+                    t2_p1icon.setImageResource(R.drawable.jerseysmol_purple)
+                    t2_p2icon.setImageResource(R.drawable.jerseysmol_purple)
+                    t2_p3icon.setImageResource(R.drawable.jerseysmol_purple)
+                    t2_p4icon.setImageResource(R.drawable.jerseysmol_purple)
+                    t2_p5icon.setImageResource(R.drawable.jerseysmol_purple)
+                }
+                if (team1.color=="red") {
+                    t1_p1icon.setImageResource(R.drawable.jerseysmol_red)
+                    t1_p2icon.setImageResource(R.drawable.jerseysmol_red)
+                    t1_p3icon.setImageResource(R.drawable.jerseysmol_red)
+                    t1_p4icon.setImageResource(R.drawable.jerseysmol_red)
+                    t1_p5icon.setImageResource(R.drawable.jerseysmol_red)
+                }
+                if (team2.color=="red") {
+                    t2_p1icon.setImageResource(R.drawable.jerseysmol_red)
+                    t2_p2icon.setImageResource(R.drawable.jerseysmol_red)
+                    t2_p3icon.setImageResource(R.drawable.jerseysmol_red)
+                    t2_p4icon.setImageResource(R.drawable.jerseysmol_red)
+                    t2_p5icon.setImageResource(R.drawable.jerseysmol_red)
+                }
+                if (team1.color=="yellow") {
+                    t1_p1icon.setImageResource(R.drawable.jerseysmol_yellow)
+                    t1_p2icon.setImageResource(R.drawable.jerseysmol_yellow)
+                    t1_p3icon.setImageResource(R.drawable.jerseysmol_yellow)
+                    t1_p4icon.setImageResource(R.drawable.jerseysmol_yellow)
+                    t1_p5icon.setImageResource(R.drawable.jerseysmol_yellow)
+                }
+                if (team2.color=="yellow") {
+                    t2_p1icon.setImageResource(R.drawable.jerseysmol_yellow)
+                    t2_p2icon.setImageResource(R.drawable.jerseysmol_yellow)
+                    t2_p3icon.setImageResource(R.drawable.jerseysmol_yellow)
+                    t2_p4icon.setImageResource(R.drawable.jerseysmol_yellow)
+                    t2_p5icon.setImageResource(R.drawable.jerseysmol_yellow)
                 }
             }
 
