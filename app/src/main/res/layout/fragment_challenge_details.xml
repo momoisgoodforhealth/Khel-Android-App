@@ -204,22 +204,22 @@
                 android:id="@+id/constraintLayout11"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:background="#353535"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/tournament_holder_shape"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView10">
 
                 <TextView
                     android:id="@+id/textView45"
+                    style="@style/heading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="24dp"
-                    android:fontFamily="@font/bahnschrift"
                     android:text="@string/winnerpays"
-                    android:textColor="#4CA33D"
-                    android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -240,10 +240,9 @@
 
                 <TextView
                     android:id="@+id/winnerpays"
+                    style="@style/heading"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
-                    android:textColor="#4CA33D"
-                    android:textSize="24sp"
                     app:layout_constraintBottom_toBottomOf="@+id/textView45"
                     app:layout_constraintStart_toEndOf="@+id/textView45"
                     app:layout_constraintTop_toTopOf="@+id/textView45"
@@ -251,22 +250,42 @@
 
                 <TextView
                     android:id="@+id/textView42"
+                    style="@style/heading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:fontFamily="@font/bahnschrift"
                     android:text="@string/selectdate"
-                    android:textColor="#D6BD8A"
-                    android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/cd_price_seekbar" />
+
+                <TimePicker
+                    android:id="@+id/cd_timepicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#212121"
+                    android:theme="@style/MyDatePicker"
+                    android:timePickerMode="spinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView52" />
+
+                <TimePicker
+                    android:id="@+id/cd_endtimepicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#212121"
+                    android:theme="@style/MyDatePicker"
+                    android:timePickerMode="spinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView53" />
 
                 <DatePicker
                     android:id="@+id/daaete"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:background="#353535"
+                    android:background="#212121"
                     android:calendarViewShown="false"
                     android:datePickerMode="spinner"
                     android:fontFamily="sans-serif-thin"
@@ -279,27 +298,22 @@
 
                 <Button
                     android:id="@+id/button3"
+                    style="@style/heading"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:background="@android:color/transparent"
-                    android:fontFamily="@font/bahnschrift"
-                    android:text="@string/select_venue"
+                    android:text="@string/select_district"
                     android:textAllCaps="false"
-                    android:textColor="#7FB9EC"
-                    android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/daaete" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView51" />
 
                 <TextView
                     android:id="@+id/textView46"
-                    android:layout_width="wrap_content"
+                    style="@style/edittext"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/bahnschrift"
-                    android:text="TextView"
-                    android:textColor="#7FB9EC"
-                    android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/button3" />
@@ -311,12 +325,62 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
                     android:background="#DC2404"
+                    android:elevation="15dp"
                     android:padding="10dp"
                     android:text="@string/challenge"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView46" />
+
+                <TextView
+                    android:id="@+id/textView49"
+                    style="@style/edittext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/daaete" />
+
+                <TextView
+                    android:id="@+id/textView50"
+                    style="@style/edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cd_timepicker" />
+
+                <TextView
+                    android:id="@+id/textView51"
+                    style="@style/edittext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cd_endtimepicker" />
+
+                <TextView
+                    android:id="@+id/textView52"
+                    style="@style/heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/Start_time"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView49" />
+
+                <TextView
+                    android:id="@+id/textView53"
+                    style="@style/heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/LTP_endtime"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView50" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -221,12 +221,15 @@
 
             <Button
                 android:id="@+id/tour_callbutton"
-                android:layout_width="40dp"
+                android:layout_width="0dp"
                 android:layout_height="40dp"
-                android:layout_marginStart="16dp"
-                android:background="@drawable/phonecal"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/tdconc" />
+                android:layout_marginTop="2dp"
+                android:background="#7C7C7C"
+                android:text="@string/call_phone"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@+id/tour_whatsappbutton"
+                app:layout_constraintStart_toStartOf="@+id/tour_whatsappbutton"
+                app:layout_constraintTop_toBottomOf="@+id/tour_whatsappbutton" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline4"
@@ -237,12 +240,40 @@
 
             <Button
                 android:id="@+id/tour_whatsappbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginEnd="40dp"
+                android:background="#53B343"
+                android:padding="5dp"
+                android:text="@string/whatsapp"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tdconc" />
+
+            <ImageView
+                android:id="@+id/gggg1"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/whatsapp"
-                app:layout_constraintEnd_toStartOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/tdconc" />
+                android:background="#304C1F"
+                android:src="@drawable/whatsapp"
+                app:layout_constraintBottom_toTopOf="@+id/tour_callbutton"
+                app:layout_constraintStart_toEndOf="@+id/tour_whatsappbutton"
+                app:layout_constraintTop_toTopOf="@+id/tour_whatsappbutton" />
+
+            <ImageView
+                android:id="@+id/gggg2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#555555"
+                android:src="@android:drawable/ic_menu_call"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tour_callbutton"
+                app:layout_constraintTop_toTopOf="@+id/tour_callbutton" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
