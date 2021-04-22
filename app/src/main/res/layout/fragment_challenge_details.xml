@@ -200,6 +200,117 @@
                 app:layout_constraintEnd_toStartOf="@+id/cd_t2_p3icon"
                 app:layout_constraintStart_toEndOf="@+id/cd_t2_p2icon" />
 
+            <TextView
+                android:id="@+id/cd_t1_player5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/cd_t1_p5icon"
+                app:layout_constraintStart_toStartOf="@+id/cd_t1_p5icon"
+                app:layout_constraintTop_toBottomOf="@+id/cd_t1_p5icon"
+                tools:text="@string/player5" />
+
+            <TextView
+                android:id="@+id/cd_t2_player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/cd_t2_p5icon"
+                app:layout_constraintStart_toStartOf="@+id/cd_t2_p5icon"
+                app:layout_constraintTop_toBottomOf="@+id/cd_t2_p5icon"
+                tools:text="@string/player5" />
+
+            <TextView
+                android:id="@+id/cd_t2_player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/cd_t2_p2icon"
+                app:layout_constraintStart_toStartOf="@+id/cd_t2_p2icon"
+                app:layout_constraintTop_toBottomOf="@+id/cd_t2_p2icon"
+                tools:text="@string/player5" />
+
+            <TextView
+                android:id="@+id/cd_t2_player4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/cd_t2_p3icon"
+                app:layout_constraintStart_toStartOf="@+id/cd_t2_p3icon"
+                app:layout_constraintTop_toBottomOf="@+id/cd_t2_p3icon"
+                tools:text="@string/player5" />
+
+            <TextView
+                android:id="@+id/cd_t1_player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/cd_t1_p2icon"
+                app:layout_constraintStart_toStartOf="@+id/cd_t1_p2icon"
+                app:layout_constraintTop_toBottomOf="@+id/cd_t1_p2icon"
+                tools:text="@string/player2" />
+
+            <TextView
+                android:id="@+id/cd_t1_player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/cd_t1_p1icon"
+                app:layout_constraintStart_toStartOf="@+id/cd_t1_p1icon"
+                app:layout_constraintTop_toBottomOf="@+id/cd_t1_p1icon"
+                tools:text="@string/player1" />
+
+            <TextView
+                android:id="@+id/cd_t1_player3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/cd_t1_p4icon"
+                app:layout_constraintStart_toStartOf="@+id/cd_t1_p4icon"
+                app:layout_constraintTop_toBottomOf="@+id/cd_t1_p4icon"
+                tools:text="@string/player3" />
+
+            <TextView
+                android:id="@+id/cd_t2_player3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/cd_t2_p4icon"
+                app:layout_constraintStart_toStartOf="@+id/cd_t2_p4icon"
+                app:layout_constraintTop_toBottomOf="@+id/cd_t2_p4icon"
+                tools:text="@string/player5" />
+
+            <TextView
+                android:id="@+id/cd_t1_player4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/cd_t1_p3icon"
+                app:layout_constraintStart_toStartOf="@+id/cd_t1_p3icon"
+                app:layout_constraintTop_toBottomOf="@+id/cd_t1_p3icon"
+                tools:text="@string/player4" />
+
+            <TextView
+                android:id="@+id/cd_t2_player5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/bahnschrift"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+                app:layout_constraintEnd_toEndOf="@+id/cd_t2_p1icon"
+                app:layout_constraintStart_toStartOf="@+id/cd_t2_p1icon"
+                tools:text="@string/player5" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout11"
                 android:layout_width="0dp"
@@ -218,7 +329,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="24dp"
+                    android:layout_marginEnd="28dp"
                     android:text="@string/winnerpays"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -297,44 +408,28 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView42" />
 
                 <Button
-                    android:id="@+id/button3"
-                    style="@style/heading"
+                    android:id="@+id/select_district_button"
+                    style="@style/edittext"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:background="@android:color/transparent"
                     android:text="@string/select_district"
                     android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView51" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView54" />
 
                 <TextView
-                    android:id="@+id/textView46"
+                    android:id="@+id/cd_district"
                     style="@style/edittext"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/button3" />
-
-                <Button
-                    android:id="@+id/button8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="#DC2404"
-                    android:elevation="15dp"
-                    android:padding="10dp"
-                    android:text="@string/challenge"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView46" />
+                    app:layout_constraintTop_toBottomOf="@+id/select_district_button" />
 
                 <TextView
-                    android:id="@+id/textView49"
+                    android:id="@+id/cd_date"
                     style="@style/edittext"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -343,7 +438,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/daaete" />
 
                 <TextView
-                    android:id="@+id/textView50"
+                    android:id="@+id/cd_starttime"
                     style="@style/edittext"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -352,7 +447,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/cd_timepicker" />
 
                 <TextView
-                    android:id="@+id/textView51"
+                    android:id="@+id/cd_endtime"
                     style="@style/edittext"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -369,7 +464,7 @@
                     android:text="@string/Start_time"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView49" />
+                    app:layout_constraintTop_toBottomOf="@+id/cd_date" />
 
                 <TextView
                     android:id="@+id/textView53"
@@ -380,120 +475,80 @@
                     android:text="@string/LTP_endtime"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView50" />
+                    app:layout_constraintTop_toBottomOf="@+id/cd_starttime" />
+
+                <TextView
+                    android:id="@+id/textView54"
+                    style="@style/heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/futsal_venue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cd_endtime" />
+
+                <Button
+                    android:id="@+id/cd_select_venue_button"
+                    style="@style/edittext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_venue"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cd_district" />
+
+                <TextView
+                    android:id="@+id/cd_venue"
+                    style="@style/edittext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cd_select_venue_button" />
+
+                <TextView
+                    android:id="@+id/textView46"
+                    style="@style/heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="@string/shortmessage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cd_venue" />
+
+                <EditText
+                    android:id="@+id/cd_shortmessage"
+                    style="@style/edittext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView46" />
+
+                <Button
+                    android:id="@+id/cd_challenge_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="#DC2404"
+                    android:elevation="15dp"
+                    android:padding="10dp"
+                    android:text="@string/challenge"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cd_shortmessage"
+                    app:layout_constraintVertical_bias="1.0" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:id="@+id/cd_t1_player1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/bahnschrift"
-                tools:text="@string/player1"
-                android:textColor="#FFFFFF"
-                app:layout_constraintEnd_toEndOf="@+id/cd_t1_p1icon"
-                app:layout_constraintStart_toStartOf="@+id/cd_t1_p1icon"
-                app:layout_constraintTop_toBottomOf="@+id/cd_t1_p1icon" />
-
-            <TextView
-                android:id="@+id/cd_t1_player2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/bahnschrift"
-                android:textColor="#FFFFFF"
-                app:layout_constraintEnd_toEndOf="@+id/cd_t1_p2icon"
-                app:layout_constraintStart_toStartOf="@+id/cd_t1_p2icon"
-                app:layout_constraintTop_toBottomOf="@+id/cd_t1_p2icon"
-                tools:text="@string/player2" />
-
-            <TextView
-                android:id="@+id/cd_t1_player3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/bahnschrift"
-                android:textColor="#FFFFFF"
-                app:layout_constraintEnd_toEndOf="@+id/cd_t1_p4icon"
-                app:layout_constraintStart_toStartOf="@+id/cd_t1_p4icon"
-                app:layout_constraintTop_toBottomOf="@+id/cd_t1_p4icon"
-                tools:text="@string/player3" />
-
-            <TextView
-                android:id="@+id/cd_t1_player4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/bahnschrift"
-                android:textColor="#FFFFFF"
-                app:layout_constraintEnd_toEndOf="@+id/cd_t1_p3icon"
-                app:layout_constraintStart_toStartOf="@+id/cd_t1_p3icon"
-                app:layout_constraintTop_toBottomOf="@+id/cd_t1_p3icon"
-                tools:text="@string/player4" />
-
-            <TextView
-                android:id="@+id/cd_t1_player5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/bahnschrift"
-                android:textColor="#FFFFFF"
-                app:layout_constraintEnd_toEndOf="@+id/cd_t1_p5icon"
-                app:layout_constraintStart_toStartOf="@+id/cd_t1_p5icon"
-                app:layout_constraintTop_toBottomOf="@+id/cd_t1_p5icon"
-                tools:text="@string/player5" />
-
-            <TextView
-                android:id="@+id/cd_t2_player1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/bahnschrift"
-                android:textColor="#FFFFFF"
-                app:layout_constraintEnd_toEndOf="@+id/cd_t2_p5icon"
-                app:layout_constraintStart_toStartOf="@+id/cd_t2_p5icon"
-                app:layout_constraintTop_toBottomOf="@+id/cd_t2_p5icon"
-                tools:text="@string/player5" />
-
-            <TextView
-                android:id="@+id/cd_t2_player2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/bahnschrift"
-                android:textColor="#FFFFFF"
-                app:layout_constraintEnd_toEndOf="@+id/cd_t2_p2icon"
-                app:layout_constraintStart_toStartOf="@+id/cd_t2_p2icon"
-                app:layout_constraintTop_toBottomOf="@+id/cd_t2_p2icon"
-                tools:text="@string/player5" />
-
-            <TextView
-                android:id="@+id/cd_t2_player3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/bahnschrift"
-                android:textColor="#FFFFFF"
-                app:layout_constraintEnd_toEndOf="@+id/cd_t2_p4icon"
-                app:layout_constraintStart_toStartOf="@+id/cd_t2_p4icon"
-                app:layout_constraintTop_toBottomOf="@+id/cd_t2_p4icon"
-                tools:text="@string/player5" />
-
-            <TextView
-                android:id="@+id/cd_t2_player4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/bahnschrift"
-                android:textColor="#FFFFFF"
-                app:layout_constraintEnd_toEndOf="@+id/cd_t2_p3icon"
-                app:layout_constraintStart_toStartOf="@+id/cd_t2_p3icon"
-                app:layout_constraintTop_toBottomOf="@+id/cd_t2_p3icon"
-                tools:text="@string/player5" />
-
-            <TextView
-                android:id="@+id/cd_t2_player5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:fontFamily="@font/bahnschrift"
-                android:textColor="#FFFFFF"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView10"
-                app:layout_constraintEnd_toEndOf="@+id/cd_t2_p1icon"
-                app:layout_constraintStart_toStartOf="@+id/cd_t2_p1icon"
-                tools:text="@string/player5" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

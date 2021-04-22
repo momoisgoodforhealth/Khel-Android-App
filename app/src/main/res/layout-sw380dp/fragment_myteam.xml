@@ -101,8 +101,9 @@
                 android:id="@+id/createteam_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="#78DBF3"
+                android:background="@android:color/transparent"
                 android:text="@string/create"
+                android:textColor="#6F9C9A"
                 app:layout_constraintEnd_toStartOf="@+id/guideline2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/moiteam" />
@@ -111,8 +112,9 @@
                 android:id="@+id/jointeam_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="#F3DD78"
+                android:background="@android:color/transparent"
                 android:text="@string/join"
+                android:textColor="#938567"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
                 app:layout_constraintTop_toBottomOf="@+id/moiteam" />

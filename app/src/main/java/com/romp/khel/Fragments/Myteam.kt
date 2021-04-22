@@ -63,6 +63,7 @@ class Myteam : Fragment() {
         var pl3icon:ImageView=view.findViewById(R.id.playericon3)
         var pl4icon:ImageView=view.findViewById(R.id.playericon4)
         var pl5icon:ImageView=view.findViewById(R.id.playericon5)
+        var challengesbutton:Button=view.findViewById(R.id.challenges_button)
 
 
 
@@ -345,6 +346,10 @@ class Myteam : Fragment() {
 
         val radapter= MyCreatedLTPadapter()
         view.findViewById<RecyclerView>(R.id.mycreatedLTP_recycleview).adapter=radapter
+
+        challengesbutton.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_myteam_to_myTeam_Challenges)
+        }
 
         val progressbar: ProgressBar =view.findViewById(R.id.mycreatedLTP_progressbar)
         progressbar.isIndeterminate

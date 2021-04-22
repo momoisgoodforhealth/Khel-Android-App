@@ -1,24 +1,28 @@
 package com.romp.khel.Fragments
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.SeekBar
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
+import androidx.navigation.Navigation
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.getValue
 import com.romp.khel.*
 import com.romp.khel.R
+import com.romp.khel.dataclass.TeamChallengeDetails
 import com.romp.khel.dataclass.team
+import java.sql.Time
+import java.util.*
 
 class Challenge_Details : Fragment() {
     var database = FirebaseDatabase.getInstance().getReference()
     var conditionref: DatabaseReference = database.child("teams")
     var userref: DatabaseReference = database.child("users")
+    var ref: DatabaseReference = database.child("potentialchallenges")
 
     override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanceState) }
 
@@ -58,6 +62,104 @@ class Challenge_Details : Fragment() {
         var t2_p4icon:ImageView=view.findViewById(R.id.cd_t2_p4icon)
         var t2_p5icon:ImageView=view.findViewById(R.id.cd_t2_p5icon)
 
+        var datepick:DatePicker=view.findViewById(R.id.daaete)
+        var cd_date:TextView=view.findViewById(R.id.cd_date)
+        var starttime:TimePicker=view.findViewById(R.id.cd_timepicker)
+        var cd_starttime:TextView=view.findViewById(R.id.cd_starttime)
+        var endtime:TimePicker=view.findViewById(R.id.cd_endtimepicker)
+        var cd_endtime:TextView=view.findViewById(R.id.cd_endtime)
+        var selectdistrict:Button=view.findViewById(R.id.select_district_button)
+        var district:TextView=view.findViewById(R.id.cd_district)
+        district.text="All"
+        var selectvenue:Button=view.findViewById(R.id.cd_select_venue_button)
+        var venue:TextView=view.findViewById(R.id.cd_venue)
+        var addinfo:TextView=view.findViewById(R.id.cd_shortmessage)
+        val today = Calendar.getInstance()
+        var challengebutton:Button=view.findViewById(R.id.cd_challenge_button)
+
+        datepick.init(today.get(Calendar.YEAR), today.get(Calendar.MONTH),
+            today.get(Calendar.DAY_OF_MONTH)) { v, i, i2, i3 ->
+            var ii3=i3.toString()
+            var ie2=i2+1
+            var ii2=ie2.toString()
+            if (i3<10) { ii3="0"+i3 }
+            if (ie2<10) { ii2="0"+ie2}
+            cd_date.text="$ii3/$ii2/$i"
+        }
+
+        starttime.setOnTimeChangedListener { timePicker, i, i2 ->
+            var ii2=i2.toString()
+            if (i2<10) { ii2="0"+i2}
+            cd_starttime.text="$i:$ii2"
+        }
+        endtime.setOnTimeChangedListener { timePicker, i, i2 ->
+            var ii2=i2.toString()
+            if (i2<10) { ii2="0"+i2}
+            cd_endtime.text="$i:$ii2"
+        }
+
+        val districtbuilder = AlertDialog.Builder(activity)
+        districtbuilder.setTitle("Select Location")
+        val districtarray = arrayOf("Kathmandu","Lalitpur", "Bhaktapur","Banepa Dhulikhel", "Pokhara", "All")
+        val venuebuilder = AlertDialog.Builder(activity)
+        venuebuilder.setTitle("Select Venue")
+        var venue_all= arrayOf("Kick Futsal Lalitpur","Shankhamul Futsal","Royal Futsal","Shantinagar Futsal","Prismatic Futsal and Recreation Center","Dhobighat Futsal","Maa Banglamukhi Futsal")
+        var venue_ktm= arrayOf("Royal Futsal","Shantinagar Futsal","Maa Banglamukhi Futsal")
+        var venue_lal= arrayOf("Kick Futsal Lalitpur","Shankhamul Futsal","Prismatic Futsal and Recreation Center","Dhobighat Futsal")
+        districtbuilder.setItems(districtarray) { dialog, which ->
+            when (which) {
+                0 ->  {district.text="Kathmandu" ; venuebuilder.setItems(venue_ktm) { dialog, which ->
+                    when (which) {
+                        0 -> venue.text="Royal Futsal"
+                        1 ->venue.text="Shantinagar Futsal"
+                        2 -> venue.text="Maa Banglamukhi Futsal"
+                    }
+                }}
+                1 -> {district.text="Lalitpur" ; venuebuilder.setItems(venue_lal) { dialog, which ->
+                    when (which) {
+                        0 -> venue.text="Kick Futsal Lalitpur"
+                        1 -> venue.text="Shankhamul Futsal"
+                        2 -> venue.text="Prismatic Futsal and Recreation Center"
+                        3 -> venue.text="Dhobighat Futsal"
+                    }
+                } }
+                2 -> district.text="Bhaktapur"
+                3 -> district.text="Banepa Dhulikhel"
+                4 -> district.text="Pokhara"
+                5 -> { district.text="All" ; venuebuilder.setItems(venue_all) { dialog, which ->
+                    when (which) {
+                        0 -> venue.text="Kick Futsal Lalitpur"
+                        1 -> venue.text="Shankhamul Futsal"
+                        2 -> venue.text="Royal Futsal"
+                        3 -> venue.text="Shantinagar Futsal"
+                        4 -> venue.text="Prismatic Futsal and Recreation Center"
+                        5 -> venue.text="Dhobighat Futsal"
+                        6 -> venue.text="Maa Banglamukhi Futsal"
+                    }
+                } }
+            }
+        }
+        selectdistrict.setOnClickListener {
+            val dialog = districtbuilder.create()
+            dialog.show()
+        }
+
+
+     /*   if (district.text=="All") { }
+        if (district.text=="Kathmandu") {  }
+        if (district.text=="Lalitpur") { }
+        if (district.text=="Bhaktapur") { venuebuilder.setItems(null) { dialog, which ->
+        } }
+        if (district.text=="Banepa Dhulikhel") { venuebuilder.setItems(null) { dialog, which ->
+
+        } }
+        if (district.text=="Pohkara") { venuebuilder.setItems(null) { dialog, which ->
+
+        } } */
+        selectvenue.setOnClickListener {
+            val dialog = venuebuilder.create()
+            dialog.show()
+        }
 
 
         conditionref.addValueEventListener(object : ValueEventListener {
@@ -308,6 +410,51 @@ class Challenge_Details : Fragment() {
                 winnerpays.text="${seekBar.progress}0%"
             }
         })
+
+        val submitalert = AlertDialog.Builder(context)
+
+
+        fun challenge(teamm1:String, teamm2:String, winnerpay:String, date:String, time1:String, time2:String, addinfo:String, venu:String) {
+            val chal=TeamChallengeDetails(teamm1,teamm2,winnerpay,date,time1,time2,addinfo,venu)
+            ref.push().setValue(chal).addOnSuccessListener {
+                Navigation.findNavController(view).navigate(R.id.action_challenge_Details_to_tournamentSuccess)
+            }
+                .addOnFailureListener {
+                    Toast.makeText(activity,"ERROR: $it", Toast.LENGTH_LONG).show()
+                }
+        }
+
+        challengebutton.setOnClickListener {
+            if (winnerpays.text.trim().toString().isBlank() || cd_date.text.trim().toString().isBlank() || cd_starttime.text.trim().toString().isBlank() ||
+                cd_endtime.text.trim().toString().isBlank() || district.text.trim().toString().isBlank() || venue.text.trim().toString().isBlank() || addinfo.text.trim().toString().isBlank()) {
+                Toast.makeText(activity, "Complete All Fields", Toast.LENGTH_LONG).show()
+            }
+            else {
+                submitalert.setTitle("Is The Information Correct?"+ "\n" + "${team1name.text} VS ${team2name.text}")
+                submitalert.setMessage("Winner Pays : ${winnerpays.text}" + "\n" +
+                "Date : ${cd_date.text}" + "\n" +
+                "Start Time : ${cd_starttime.text}" + "\n" +
+                "End Time : ${cd_endtime.text}" + "\n" +
+                "Venue : ${venue.text}" + "\n" +
+                "Additional Info: ${addinfo.text}")
+                submitalert.apply {
+                    setPositiveButton("Submit",
+                        DialogInterface.OnClickListener { dialog, id ->
+                            challenge(team1name.text.toString(), team2name.text.toString(), winnerpays.text.toString(),cd_date.text.toString(),cd_starttime.text.toString(),
+                                cd_endtime.text.trim().toString(),  addinfo.text.trim().toString(), venue.text.toString())
+                        })
+                    setNegativeButton("Cancel",
+                        DialogInterface.OnClickListener { dialog, id -> })
+                }
+                val alerto=submitalert.create()
+                alerto.show()
+            }
+
+        }
+
+
+
+
 
     }
 }

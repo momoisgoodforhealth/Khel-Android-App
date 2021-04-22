@@ -135,6 +135,7 @@
     <string name="my_room">My Room</string>
     <string name="Invitations">Invitations</string>
     <string name="Challenges">Challenges</string>
+    <string name="Challengesnum">Challenges (0)</string>
     <string name="matching_op">Matching Opponents</string>
     <string name="leaderboards">Leaderboards</string>
     <string name="challenge">Challenge</string>
@@ -150,4 +151,5 @@
     <string name="account_info_email">Email :</string>
     <string name="Start_time">Start Time</string>
     <string name="select_district">Select District</string>
+    <string name="shortmessage">Short Message/Additional Information</string>
 </resources>

@@ -51,3 +51,10 @@ class teamchallenges (textView: CardView): RecyclerView.ViewHolder(textView){
     var challengeteamname:TextView=textView.findViewById(R.id.tcc_teamname)
     var challengebutton:Button=textView.findViewById(R.id.tcc_challengebutton)
 }
+
+class myteamchallenges  (textView: CardView): RecyclerView.ViewHolder(textView){
+    var mtc_teamname:TextView=textView.findViewById(R.id.mtc_cv_teamname)
+    var mtc_memo:TextView=textView.findViewById(R.id.mtc_cv_memo)
+    var mtc_date:TextView=textView.findViewById(R.id.mtc_cv_date)
+    var mtc_time:TextView=textView.findViewById(R.id.mtc_cv_time)
+}

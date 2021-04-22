@@ -103,6 +103,9 @@
         <action
             android:id="@+id/action_myteam_to_join_Team"
             app:destination="@id/join_Team" />
+        <action
+            android:id="@+id/action_myteam_to_myTeam_Challenges"
+            app:destination="@id/myTeam_Challenges" />
     </fragment>
     <fragment
         android:id="@+id/settingFragment"
@@ -323,5 +326,14 @@
         android:id="@+id/challenge_Details"
         android:name="com.romp.khel.Fragments.Challenge_Details"
         android:label="fragment_challenge_details"
-        tools:layout="@layout/fragment_challenge_details" />
+        tools:layout="@layout/fragment_challenge_details" >
+        <action
+            android:id="@+id/action_challenge_Details_to_tournamentSuccess"
+            app:destination="@id/tournamentSuccess" />
+    </fragment>
+    <fragment
+        android:id="@+id/myTeam_Challenges"
+        android:name="com.romp.khel.Fragments.MyTeam_Challenges"
+        android:label="fragment_myteam_challenges"
+        tools:layout="@layout/fragment_myteam_challenges" />
 </navigation>
