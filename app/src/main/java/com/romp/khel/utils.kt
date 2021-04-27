@@ -50,6 +50,9 @@ class teaminvitations  (textView: CardView): RecyclerView.ViewHolder(textView) {
 class teamchallenges (textView: CardView): RecyclerView.ViewHolder(textView){
     var challengeteamname:TextView=textView.findViewById(R.id.tcc_teamname)
     var challengebutton:Button=textView.findViewById(R.id.tcc_challengebutton)
+    var challengeswin:TextView=textView.findViewById(R.id.tcc_win)
+    var challengesloss:TextView=textView.findViewById(R.id.tcc_loss)
+    var challengesdraw:TextView=textView.findViewById(R.id.tcc_draw)
 }
 
 class myteamchallenges  (textView: CardView): RecyclerView.ViewHolder(textView){
@@ -57,4 +60,12 @@ class myteamchallenges  (textView: CardView): RecyclerView.ViewHolder(textView){
     var mtc_memo:TextView=textView.findViewById(R.id.mtc_cv_memo)
     var mtc_date:TextView=textView.findViewById(R.id.mtc_cv_date)
     var mtc_time:TextView=textView.findViewById(R.id.mtc_cv_time)
+    var mtc_win:TextView=textView.findViewById(R.id.mtc_cv_win)
+    var mtc_loss:TextView=textView.findViewById(R.id.mtc_cv_loss)
+    var mtc_draw:TextView=textView.findViewById(R.id.mtc_cv_draw)
+}
+
+class pendinginvitation (textView: CardView): RecyclerView.ViewHolder(textView){
+    var pendingemail:TextView=textView.findViewById(R.id.pending_email)
+    var editbutton:TextView=textView.findViewById(R.id.pending_editbutton)
 }

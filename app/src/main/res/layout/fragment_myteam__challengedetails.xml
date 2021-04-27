@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212121"
+    tools:context=".Fragments.MyTeam_ChallengeDetails">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/cafe_francoise"
+        android:text="@string/challenge_team"
+        android:textColor="#C31D08"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mtcd_team1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView37"
+                tools:text="Good Game FC" />
+
+            <TextView
+                android:id="@+id/mtcd_vs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:text="@string/VS"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mtcd_team1" />
+
+            <TextView
+                android:id="@+id/mt_cd_team2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mtcd_vs"
+                tools:text="Boomshakalaka Futsal Club" />
+
+            <ImageView
+                android:id="@+id/mtcd_fld1"
+                android:layout_width="match_parent"
+                android:layout_height="330dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/field"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mt_cd_team2" />
+
+            <ImageView
+                android:id="@+id/mtcd_fld2"
+                android:layout_width="match_parent"
+                android:layout_height="330dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:scaleY="-1"
+                android:src="@drawable/field"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mtcd_fld1" />
+
+            <ImageView
+                android:id="@+id/mtcd_t1_p1icon"
+                android:layout_width="57dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/jerseysmol"
+                app:layout_constraintEnd_toEndOf="@+id/mtcd_fld1"
+                app:layout_constraintStart_toStartOf="@+id/mtcd_fld1"
+                app:layout_constraintTop_toTopOf="@+id/mtcd_fld1" />
+
+            <ImageView
+                android:id="@+id/mtcd_t1_p2icon"
+                android:layout_width="57dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="89dp"
+                android:src="@drawable/jerseysmol"
+                app:layout_constraintStart_toStartOf="@+id/mtcd_fld1"
+                app:layout_constraintTop_toBottomOf="@+id/mtcd_t1_p1icon" />
+
+            <ImageView
+                android:id="@+id/mtcd_t1_p3icon"
+                android:layout_width="57dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="89dp"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/jerseysmol"
+                app:layout_constraintEnd_toEndOf="@+id/mtcd_fld1"
+                app:layout_constraintTop_toBottomOf="@+id/mtcd_t1_p1icon" />
+
+            <ImageView
+                android:id="@+id/mtcd_t1_p4icon"
+                android:layout_width="57dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="89dp"
+                android:src="@drawable/jerseysmol"
+                app:layout_constraintEnd_toStartOf="@+id/mtcd_t1_p3icon"
+                app:layout_constraintStart_toEndOf="@+id/mtcd_t1_p2icon"
+                app:layout_constraintTop_toBottomOf="@+id/mtcd_t1_p1icon" />
+
+            <ImageView
+                android:id="@+id/mtcd_t1_p5icon"
+                android:layout_width="57dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="89dp"
+                android:src="@drawable/jerseysmol"
+                app:layout_constraintEnd_toStartOf="@+id/mtcd_t1_p3icon"
+                app:layout_constraintStart_toEndOf="@+id/mtcd_t1_p2icon"
+                app:layout_constraintTop_toBottomOf="@+id/mtcd_t1_p4icon" />
+
+            <ImageView
+                android:id="@+id/mtcd_t2_p1icon"
+                android:layout_width="57dp"
+                android:layout_height="38dp"
+                android:src="@drawable/jerseysmol"
+                app:layout_constraintBottom_toTopOf="@+id/mtcd_t2_player5"
+                app:layout_constraintEnd_toEndOf="@+id/mtcd_fld2"
+                app:layout_constraintStart_toStartOf="@+id/mtcd_fld2" />
+
+            <ImageView
+                android:id="@+id/mtcd_t2_p2icon"
+                android:layout_width="57dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="89dp"
+                android:src="@drawable/jerseysmol"
+                app:layout_constraintBottom_toTopOf="@+id/mtcd_t2_p1icon"
+                app:layout_constraintStart_toStartOf="@+id/mtcd_fld2" />
+
+            <ImageView
+                android:id="@+id/mtcd_t2_p3icon"
+                android:layout_width="57dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="89dp"
+                android:src="@drawable/jerseysmol"
+                app:layout_constraintBottom_toTopOf="@+id/mtcd_t2_p1icon"
+                app:layout_constraintEnd_toEndOf="@+id/mtcd_fld2" />
+
+            <ImageView
+                android:id="@+id/mtcd_t2_p4icon"
+                android:layout_width="57dp"
+                android:layout_height="38dp"
+                android:layout_marginBottom="89dp"
+                android:src="@drawable/jerseysmol"
+                app:layout_constraintBottom_toTopOf="@+id/mtcd_t2_p1icon"
+                app:layout_constraintEnd_toStartOf="@+id/mtcd_t2_p3icon"
+                app:layout_constraintStart_toEndOf="@+id/mtcd_t2_p2icon" />
+
+            <ImageView
+                android:id="@+id/mtcd_t2_p5icon"
+                android:layout_width="57dp"
+                android:layout_height="38dp"
+                android:layout_marginBottom="89dp"
+                android:src="@drawable/jerseysmol"
+                app:layout_constraintBottom_toTopOf="@+id/mtcd_t2_p4icon"
+                app:layout_constraintEnd_toStartOf="@+id/mtcd_t2_p3icon"
+                app:layout_constraintStart_toEndOf="@+id/mtcd_t2_p2icon" />
+
+            <TextView
+                android:id="@+id/mtcd_t1_player5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/mtcd_t1_p5icon"
+                app:layout_constraintStart_toStartOf="@+id/mtcd_t1_p5icon"
+                app:layout_constraintTop_toBottomOf="@+id/mtcd_t1_p5icon"
+                tools:text="@string/player5" />
+
+            <TextView
+                android:id="@+id/mtcd_t2_player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/mtcd_t2_p5icon"
+                app:layout_constraintStart_toStartOf="@+id/mtcd_t2_p5icon"
+                app:layout_constraintTop_toBottomOf="@+id/mtcd_t2_p5icon"
+                tools:text="@string/player5" />
+
+            <TextView
+                android:id="@+id/mtcd_t2_player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/mtcd_t2_p2icon"
+                app:layout_constraintStart_toStartOf="@+id/mtcd_t2_p2icon"
+                app:layout_constraintTop_toBottomOf="@+id/mtcd_t2_p2icon"
+                tools:text="@string/player5" />
+
+            <TextView
+                android:id="@+id/mtcd_t2_player4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/mtcd_t2_p3icon"
+                app:layout_constraintStart_toStartOf="@+id/mtcd_t2_p3icon"
+                app:layout_constraintTop_toBottomOf="@+id/mtcd_t2_p3icon"
+                tools:text="@string/player5" />
+
+            <TextView
+                android:id="@+id/mtcd_t1_player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/mtcd_t1_p2icon"
+                app:layout_constraintStart_toStartOf="@+id/mtcd_t1_p2icon"
+                app:layout_constraintTop_toBottomOf="@+id/mtcd_t1_p2icon"
+                tools:text="@string/player2" />
+
+            <TextView
+                android:id="@+id/mtcd_t1_player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/mtcd_t1_p1icon"
+                app:layout_constraintStart_toStartOf="@+id/mtcd_t1_p1icon"
+                app:layout_constraintTop_toBottomOf="@+id/mtcd_t1_p1icon"
+                tools:text="@string/player1" />
+
+            <TextView
+                android:id="@+id/mtcd_t1_player3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/mtcd_t1_p4icon"
+                app:layout_constraintStart_toStartOf="@+id/mtcd_t1_p4icon"
+                app:layout_constraintTop_toBottomOf="@+id/mtcd_t1_p4icon"
+                tools:text="@string/player3" />
+
+            <TextView
+                android:id="@+id/mtcd_t2_player3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/mtcd_t2_p4icon"
+                app:layout_constraintStart_toStartOf="@+id/mtcd_t2_p4icon"
+                app:layout_constraintTop_toBottomOf="@+id/mtcd_t2_p4icon"
+                tools:text="@string/player5" />
+
+            <TextView
+                android:id="@+id/mtcd_t1_player4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bahnschrift"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/mtcd_t1_p3icon"
+                app:layout_constraintStart_toStartOf="@+id/mtcd_t1_p3icon"
+                app:layout_constraintTop_toBottomOf="@+id/mtcd_t1_p3icon"
+                tools:text="@string/player4" />
+
+            <TextView
+                android:id="@+id/mtcd_t2_player5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/bahnschrift"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@+id/mtcd_fld2"
+                app:layout_constraintEnd_toEndOf="@+id/mtcd_t2_p1icon"
+                app:layout_constraintStart_toStartOf="@+id/mtcd_t2_p1icon"
+                tools:text="@string/player5" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/selectdate_shape"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mtcd_fld2">
+
+                <TextView
+                    android:id="@+id/mtcd_venue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/bahnschrift"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="UN Park Futsal" />
+
+                <TextView
+                    android:id="@+id/mtcd_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yugothic"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mtcd_venue"
+                    tools:text="Kathmandu" />
+
+                <TextView
+                    android:id="@+id/mtcd_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yugothic_light"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mtcd_location"
+                    tools:text="1/1/2021" />
+
+                <TextView
+                    android:id="@+id/mtcd_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/digital_7"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="36sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mtcd_date"
+                    tools:text="19:11-20:11" />
+
+                <TextView
+                    android:id="@+id/mtcd_winnerpaystext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/yugothic_light"
+                    android:text="@string/winnerpays"
+                    android:textColor="#57A4E6"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/mtcd_winnerpays"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/mtcd_winnerpays" />
+                <TextView
+                    android:id="@+id/mtcd_winnerpays"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/yugothic_light"
+                    android:textColor="#57A4E6"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toEndOf="@+id/mtcd_winnerpaystext"
+                    app:layout_constraintTop_toBottomOf="@+id/mtcd_time"
+                    tools:text="500" />
+
+                <TextView
+                    android:id="@+id/mtcd_con"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/yugothic"
+                    android:text="@string/ltpdetails_contact"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mtcd_winnerpaystext" />
+
+                <TextView
+                    android:id="@+id/mtcd_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/yugothic_light"
+                    android:gravity="left"
+                    android:textColor="#E6E6E6"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mtcd_con"
+                    tools:text="9812121212" />
+
+                <TextView
+                    android:id="@+id/mtcd_addinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/yugothic_light"
+                    android:gravity="left"
+                    android:textColor="#E6E6E6"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mtcd_contact" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.3" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.7" />
+
+                <Button
+                    android:id="@+id/mtcd_appealbutton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="#D0DDDD"
+                    android:text="@string/appeal"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline6"
+                    app:layout_constraintStart_toStartOf="@+id/guideline5"
+                    app:layout_constraintTop_toBottomOf="@+id/mtcd_addinfo" />
+
+                <Button
+                    android:id="@+id/mtcd_acceptbutton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="#429F31"
+                    android:text="@string/Accept"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mtcd_addinfo" />
+
+                <Button
+                    android:id="@+id/mtcd_rejectbutton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="#BA2121"
+                    android:text="@string/Reject"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline6"
+                    app:layout_constraintTop_toBottomOf="@+id/mtcd_addinfo" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

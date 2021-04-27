@@ -63,7 +63,7 @@
                     android:fontFamily="@font/yugothic_light"
                     android:text="TextView"
                     android:textColor="#FFFFFF"
-                    android:textSize="14sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
         </HorizontalScrollView>
 
@@ -153,6 +153,42 @@
             app:layout_constraintEnd_toStartOf="@+id/view4"
             app:layout_constraintStart_toEndOf="@+id/textView58"
             app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+        <TextView
+            android:id="@+id/mtc_cv_win"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothic_medium"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView51"
+            app:layout_constraintStart_toStartOf="@+id/textView51"
+            app:layout_constraintTop_toBottomOf="@+id/textView51"
+            tools:text="10" />
+
+        <TextView
+            android:id="@+id/mtc_cv_loss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothic_medium"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView58"
+            app:layout_constraintStart_toStartOf="@+id/textView58"
+            app:layout_constraintTop_toBottomOf="@+id/textView58"
+            tools:text="10" />
+
+        <TextView
+            android:id="@+id/mtc_cv_draw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yugothic_medium"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView59"
+            app:layout_constraintStart_toStartOf="@+id/textView59"
+            app:layout_constraintTop_toBottomOf="@+id/textView59"
+            tools:text="10" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

@@ -19,6 +19,7 @@ import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
 import com.romp.khel.R
 import com.romp.khel.adapters.MyCreatedLTPadapter
+import com.romp.khel.adapters.PendingInvitationAdapter
 import com.romp.khel.dataclass.LookingtoPlayRoom
 import com.romp.khel.dataclass.team
 import com.romp.khel.keyy
@@ -70,7 +71,10 @@ class Myteam : Fragment() {
         var teamname:TextView=view.findViewById(R.id.teamname)
         var myteam=team()
         var flag=false
+        var pendingemail_list= mutableListOf<String?>()
 
+        var pendingrecycler=PendingInvitationAdapter()
+        view.findViewById<RecyclerView>(R.id.pendinginvitation_recyclerview).adapter=pendingrecycler
 
         ref.addValueEventListener(object : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
@@ -79,6 +83,7 @@ class Myteam : Fragment() {
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 for (postSnapshot in dataSnapshot.children) {
+                    pendingemail_list= mutableListOf()
                     if (currentUser?.email==postSnapshot.child("email1").value) {
                     //    player1.text=currentUser!!.displayName
                      //   teamname.text=postSnapshot.child("teamname").value.toString()
@@ -95,6 +100,8 @@ class Myteam : Fragment() {
                         myteam.iemail4=postSnapshot.child("iemail4").value.toString()
                         myteam.iemail5=postSnapshot.child("iemail5").value.toString()
                         myteam.color=postSnapshot.child("color").value.toString()
+                        pendingemail_list= mutableListOf(myteam.iemail2,myteam.iemail3,myteam.iemail4,myteam.iemail5)
+                        pendingrecycler.data=pendingemail_list
                         invite2.text=myteam.iemail2
                         invite3.text=myteam.iemail3
                         invite4.text=myteam.iemail4
@@ -113,6 +120,8 @@ class Myteam : Fragment() {
                         myteam.iemail4=postSnapshot.child("iemail4").value.toString()
                         myteam.iemail5=postSnapshot.child("iemail5").value.toString()
                         myteam.color=postSnapshot.child("color").value.toString()
+                        pendingemail_list= mutableListOf(myteam.iemail2,myteam.iemail3,myteam.iemail4,myteam.iemail5)
+                        pendingrecycler.data=pendingemail_list
                         invite2.text=myteam.iemail2
                         invite3.text=myteam.iemail3
                         invite4.text=myteam.iemail4
@@ -131,6 +140,8 @@ class Myteam : Fragment() {
                         myteam.iemail4=postSnapshot.child("iemail4").value.toString()
                         myteam.iemail5=postSnapshot.child("iemail5").value.toString()
                         myteam.color=postSnapshot.child("color").value.toString()
+                        pendingemail_list= mutableListOf(myteam.iemail2,myteam.iemail3,myteam.iemail4,myteam.iemail5)
+                        pendingrecycler.data=pendingemail_list
                         invite2.text=myteam.iemail2
                         invite3.text=myteam.iemail3
                         invite4.text=myteam.iemail4
@@ -149,6 +160,8 @@ class Myteam : Fragment() {
                         myteam.iemail4=postSnapshot.child("iemail4").value.toString()
                         myteam.iemail5=postSnapshot.child("iemail5").value.toString()
                         myteam.color=postSnapshot.child("color").value.toString()
+                        pendingemail_list= mutableListOf(myteam.iemail2,myteam.iemail3,myteam.iemail4,myteam.iemail5)
+                        pendingrecycler.data=pendingemail_list
                         invite2.text=myteam.iemail2
                         invite3.text=myteam.iemail3
                         invite4.text=myteam.iemail4
@@ -167,6 +180,8 @@ class Myteam : Fragment() {
                         myteam.iemail4=postSnapshot.child("iemail4").value.toString()
                         myteam.iemail5=postSnapshot.child("iemail5").value.toString()
                         myteam.color=postSnapshot.child("color").value.toString()
+                        pendingemail_list= mutableListOf(myteam.iemail2,myteam.iemail3,myteam.iemail4,myteam.iemail5)
+                        pendingrecycler.data=pendingemail_list
                         invite2.text=myteam.iemail2
                         invite3.text=myteam.iemail3
                         invite4.text=myteam.iemail4
@@ -293,6 +308,7 @@ class Myteam : Fragment() {
                 }
             }
         })
+
 
         editteambutton.setOnClickListener {
             if (flag==true) {

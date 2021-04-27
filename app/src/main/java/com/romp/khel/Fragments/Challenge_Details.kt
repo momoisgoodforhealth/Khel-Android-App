@@ -74,6 +74,7 @@ class Challenge_Details : Fragment() {
         var selectvenue:Button=view.findViewById(R.id.cd_select_venue_button)
         var venue:TextView=view.findViewById(R.id.cd_venue)
         var addinfo:TextView=view.findViewById(R.id.cd_shortmessage)
+        var contact:TextView=view.findViewById(R.id.cd_phonenumber)
         val today = Calendar.getInstance()
         var challengebutton:Button=view.findViewById(R.id.cd_challenge_button)
 
@@ -414,8 +415,8 @@ class Challenge_Details : Fragment() {
         val submitalert = AlertDialog.Builder(context)
 
 
-        fun challenge(teamm1:String, teamm2:String, winnerpay:String, date:String, time1:String, time2:String, addinfo:String, venu:String) {
-            val chal=TeamChallengeDetails(teamm1,teamm2,winnerpay,date,time1,time2,addinfo,venu)
+        fun challenge(teamm1:String, teamm2:String, winnerpay:String, date:String, time1:String, time2:String, addinfo:String, venu:String, contact:String) {
+            val chal=TeamChallengeDetails(teamm1,teamm2,winnerpay,date,time1,time2,addinfo,venu,contact)
             ref.push().setValue(chal).addOnSuccessListener {
                 Navigation.findNavController(view).navigate(R.id.action_challenge_Details_to_tournamentSuccess)
             }
@@ -425,7 +426,7 @@ class Challenge_Details : Fragment() {
         }
 
         challengebutton.setOnClickListener {
-            if (winnerpays.text.trim().toString().isBlank() || cd_date.text.trim().toString().isBlank() || cd_starttime.text.trim().toString().isBlank() ||
+            if (winnerpays.text.trim().toString().isBlank() || cd_date.text.trim().toString().isBlank() || cd_starttime.text.trim().toString().isBlank() || contact.text.trim().toString().isBlank() ||
                 cd_endtime.text.trim().toString().isBlank() || district.text.trim().toString().isBlank() || venue.text.trim().toString().isBlank() || addinfo.text.trim().toString().isBlank()) {
                 Toast.makeText(activity, "Complete All Fields", Toast.LENGTH_LONG).show()
             }
@@ -436,12 +437,13 @@ class Challenge_Details : Fragment() {
                 "Start Time : ${cd_starttime.text}" + "\n" +
                 "End Time : ${cd_endtime.text}" + "\n" +
                 "Venue : ${venue.text}" + "\n" +
-                "Additional Info: ${addinfo.text}")
+                "Additional Info: ${addinfo.text}" + "\n" +
+                "Contact Number: ${contact.text}")
                 submitalert.apply {
                     setPositiveButton("Submit",
                         DialogInterface.OnClickListener { dialog, id ->
                             challenge(team1name.text.toString(), team2name.text.toString(), winnerpays.text.toString(),cd_date.text.toString(),cd_starttime.text.toString(),
-                                cd_endtime.text.trim().toString(),  addinfo.text.trim().toString(), venue.text.toString())
+                                cd_endtime.text.trim().toString(),  addinfo.text.trim().toString(), venue.text.toString(), contact.text.toString())
                         })
                     setNegativeButton("Cancel",
                         DialogInterface.OnClickListener { dialog, id -> })

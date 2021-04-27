@@ -335,5 +335,21 @@
         android:id="@+id/myTeam_Challenges"
         android:name="com.romp.khel.Fragments.MyTeam_Challenges"
         android:label="fragment_myteam_challenges"
-        tools:layout="@layout/fragment_myteam_challenges" />
+        tools:layout="@layout/fragment_myteam_challenges" >
+        <action
+            android:id="@+id/action_myTeam_Challenges_to_myTeam_ChallengeDetails"
+            app:destination="@id/myTeam_ChallengeDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/myTeam_ChallengeDetails"
+        android:name="com.romp.khel.Fragments.MyTeam_ChallengeDetails"
+        android:label="fragment_myteam__challengedetails"
+        tools:layout="@layout/fragment_myteam__challengedetails" >
+        <action
+            android:id="@+id/action_myTeam_ChallengeDetails_to_myteam"
+            app:destination="@id/myteam" />
+        <action
+            android:id="@+id/action_myTeam_ChallengeDetails_to_myTeam_Challenges"
+            app:destination="@id/myTeam_Challenges" />
+    </fragment>
 </navigation>

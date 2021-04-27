@@ -3,9 +3,12 @@ package com.romp.khel.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.cardview.widget.CardView
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.romp.khel.R
+import com.romp.khel.challengeposition
 import com.romp.khel.dataclass.TeamChallengeDetails
+import com.romp.khel.myteam_challengeposition
 import com.romp.khel.myteamchallenges
 
 
@@ -28,6 +31,11 @@ class Myteam_ChallengesAdapter: RecyclerView.Adapter<myteamchallenges>() {
         holder.mtc_memo.text=item.addinfo
         holder.mtc_date.text=item.date
         holder.mtc_time.text=item.starttime+"-"+item.endtime
+        myteam_challengeposition=holder.adapterPosition
+
+        holder.itemView.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_myTeam_Challenges_to_myTeam_ChallengeDetails)
+        }
     }
 
     override fun getItemCount()=data.size

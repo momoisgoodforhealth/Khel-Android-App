@@ -103,7 +103,7 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:text="@string/create"
-                android:textColor="#6F9C9A"
+                android:textColor="#65FFF9"
                 app:layout_constraintEnd_toStartOf="@+id/guideline2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/moiteam" />
@@ -114,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:text="@string/join"
-                android:textColor="#938567"
+                android:textColor="#FBD079"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
                 app:layout_constraintTop_toBottomOf="@+id/moiteam" />
@@ -597,13 +597,14 @@
                 android:id="@+id/leave_team"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
-                android:background="#EA6A6A"
+                android:layout_marginTop="8dp"
+                android:background="#AC0B0B"
                 android:padding="10dp"
                 android:text="@string/leave_team"
+                android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
+                app:layout_constraintTop_toBottomOf="@+id/pendinginvitation_recyclerview" />
 
             <TextView
                 android:id="@+id/textView24"
@@ -723,16 +724,33 @@
                 android:id="@+id/challenges_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+
                 android:background="#403535"
                 android:fontFamily="@font/bahnschrift"
-
-                android:text="@string/Challenges"
+                android:padding="10dp"
+                android:text="@string/Challengesnum"
+                android:textAlignment="viewStart"
                 android:textColor="#FBFBFB"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout6" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pendinginvitation_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/selectdate_shape"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

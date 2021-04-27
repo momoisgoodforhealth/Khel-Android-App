@@ -25,6 +25,9 @@ class ChallengeTeamAdapter: RecyclerView.Adapter<teamchallenges>() {
     override fun onBindViewHolder(holder: teamchallenges, position: Int) {
         val item=data[position]
         holder.challengeteamname.text=item.teamname
+        holder.challengeswin.text= item.win.toString()
+        holder.challengesloss.text=item.loss.toString()
+        holder.challengesdraw.text=item.draw.toString()
         holder.challengebutton.setOnClickListener {
             challengeposition=holder.adapterPosition
             Navigation.findNavController(it).navigate(R.id.action_challenge_other_team_to_challenge_Details)

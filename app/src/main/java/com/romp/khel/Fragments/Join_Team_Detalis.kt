@@ -42,6 +42,8 @@ class Join_Team_Detalis : Fragment() {
         var jtd_jb:Button=view.findViewById(R.id.jtd_joinbutton)
         conditionref.addValueEventListener(object : ValueEventListener {
 
+
+
             override fun onCancelled(error: DatabaseError) {
                 Toast.makeText(activity,"onCancelled called", Toast.LENGTH_LONG).show()
             }

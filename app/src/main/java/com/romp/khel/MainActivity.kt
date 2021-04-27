@@ -10,6 +10,7 @@ import com.google.android.play.core.appupdate.AppUpdateManagerFactory
 import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.UpdateAvailability
 import com.romp.khel.Fragments.*
+import com.romp.khel.dataclass.TeamChallengeDetails
 import com.romp.khel.dataclass.jteam
 import com.romp.khel.dataclass.team
 
@@ -45,6 +46,8 @@ var jtdposition:Int=0
 var challengeteamdetails= mutableListOf<team>()
 var challengeposition:Int=0
 var myteamkey:String?=""
+var myteam_challengeteamdetails= mutableListOf<TeamChallengeDetails>()
+var myteam_challengeposition:Int=0
 
 
 class MainActivity : AppCompatActivity() {
