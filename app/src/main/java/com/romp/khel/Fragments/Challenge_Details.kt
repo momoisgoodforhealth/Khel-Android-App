@@ -161,14 +161,14 @@ class Challenge_Details : Fragment() {
             val dialog = venuebuilder.create()
             dialog.show()
         }
-
+        Toast.makeText(activity,"$myteamkey",Toast.LENGTH_LONG).show()
 
         conditionref.addValueEventListener(object : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
                 Toast.makeText(activity,"onCancelled called", Toast.LENGTH_LONG).show()
             }
-
             override fun onDataChange(dataSnapshot: DataSnapshot) {
+
                 for (postSnapshot in dataSnapshot.children) {
                     if (postSnapshot.key== myteamkey) {
                         team1.color=postSnapshot.child("color").value.toString()

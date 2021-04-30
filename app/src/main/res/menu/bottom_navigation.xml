@@ -9,7 +9,7 @@
         android:icon="@drawable/explore"
         android:title="@string/explore"/>
     <item
-        android:id="@+id/myteam"
+        android:id="@+id/myteamcfmt_recyclerview"
         android:icon="@drawable/my_team"
         android:title="@string/my_team"/>
     <item

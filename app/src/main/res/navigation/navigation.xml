@@ -83,7 +83,7 @@
             app:popExitAnim="@anim/fragment_fade_exit" />
     </fragment>
     <fragment
-        android:id="@+id/myteam"
+        android:id="@+id/myteamcfmt_recyclerview"
         android:name="com.romp.khel.Fragments.Myteam"
         android:label="fragment_myteam"
         tools:layout="@layout/fragment_myteam" >
@@ -272,7 +272,7 @@
         tools:layout="@layout/my_created_ltp_details" >
         <action
             android:id="@+id/action_myCreated_LTP_Details_to_myteam"
-            app:destination="@id/myteam"
+            app:destination="@id/myteamcfmt_recyclerview"
             app:enterAnim="@anim/fragment_fade_enter"
             app:exitAnim="@anim/fragment_fade_exit"
             app:popEnterAnim="@anim/fragment_fade_enter"
@@ -311,7 +311,7 @@
             app:destination="@id/join_Team" />
         <action
             android:id="@+id/action_join_Team_Detalis_to_myteam"
-            app:destination="@id/myteam" />
+            app:destination="@id/myteamcfmt_recyclerview" />
     </fragment>
     <fragment
         android:id="@+id/challenge_other_team"
@@ -347,7 +347,7 @@
         tools:layout="@layout/fragment_myteam__challengedetails" >
         <action
             android:id="@+id/action_myTeam_ChallengeDetails_to_myteam"
-            app:destination="@id/myteam" />
+            app:destination="@id/myteamcfmt_recyclerview" />
         <action
             android:id="@+id/action_myTeam_ChallengeDetails_to_myTeam_Challenges"
             app:destination="@id/myTeam_Challenges" />

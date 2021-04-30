@@ -20,6 +20,7 @@ class MyTeam_Challenges : Fragment() {
 
     var database = FirebaseDatabase.getInstance().getReference()
     var conditionref: DatabaseReference = database.child("potentialchallenges")
+    var acceptedref: DatabaseReference = database.child("acceptedchallenges")
 
     override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanceState) }
 

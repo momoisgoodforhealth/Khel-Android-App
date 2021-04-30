@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.Navigation
@@ -47,6 +48,10 @@ class After_Login : Fragment() {
         val currentUser = auth.currentUser
         var flag=false
 
+        val progressbar: ProgressBar =view.findViewById(R.id.afterlogin_progressbar)
+        progressbar.isIndeterminate
+        progressbar.setVisibility(View.VISIBLE)
+
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestIdToken(getString(R.string.default_web_client_id)).requestEmail().build()
         var mGoogleSignInClient = GoogleSignIn.getClient(requireContext(), gso)
         signoutbutton=view.findViewById(R.id.signout_button2)
@@ -65,6 +70,7 @@ class After_Login : Fragment() {
                     for (postSnapshot in dataSnapshot.children) {
                         if (postSnapshot.exists() && currentUser?.email==postSnapshot.child("email").value) {
                             flag=true
+                            progressbar.setVisibility(View.INVISIBLE)
                         }
                     }
                     if (flag==false) {
@@ -75,7 +81,9 @@ class After_Login : Fragment() {
                                 currentUser!!.uid
                      //           currentUser!!.photoUrl.toString()
                             )
-                            database.child("users").push().setValue(detail)
+                            database.child("users").push().setValue(detail).addOnSuccessListener {
+                                progressbar.setVisibility(View.INVISIBLE)
+                            }
                         }
                     }
                 }

@@ -27,7 +27,7 @@ class Myteam_ChallengesAdapter: RecyclerView.Adapter<myteamchallenges>() {
 
     override fun onBindViewHolder(holder: myteamchallenges, position: Int) {
         val item=data[position]
-        holder.mtc_teamname.text=item.team1
+        holder.mtc_teamname.text=item.team2
         holder.mtc_memo.text=item.addinfo
         holder.mtc_date.text=item.date
         holder.mtc_time.text=item.starttime+"-"+item.endtime
