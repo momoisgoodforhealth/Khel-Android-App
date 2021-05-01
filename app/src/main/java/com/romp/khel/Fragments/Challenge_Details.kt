@@ -161,7 +161,6 @@ class Challenge_Details : Fragment() {
             val dialog = venuebuilder.create()
             dialog.show()
         }
-        Toast.makeText(activity,"$myteamkey",Toast.LENGTH_LONG).show()
 
         conditionref.addValueEventListener(object : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {

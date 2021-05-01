@@ -342,9 +342,9 @@
     </fragment>
     <fragment
         android:id="@+id/myTeam_ChallengeDetails"
-        android:name="com.romp.khel.Fragments.MyTeam_ChallengeDetails"
+        android:name="com.romp.khel.Fragments.ChallengesAgainstMyTeam"
         android:label="fragment_myteam__challengedetails"
-        tools:layout="@layout/fragment_myteam__challengedetails" >
+        tools:layout="@layout/fragment_challenges_against_my_team" >
         <action
             android:id="@+id/action_myTeam_ChallengeDetails_to_myteam"
             app:destination="@id/myteamcfmt_recyclerview" />

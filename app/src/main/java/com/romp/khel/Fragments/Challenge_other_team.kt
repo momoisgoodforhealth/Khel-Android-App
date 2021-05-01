@@ -64,19 +64,20 @@ class Challenge_other_team : Fragment() {
                 myteamkey=""
                 for (postSnapshot in dataSnapshot.children) {
                     var num=0
-                    challengeteamdetails.add(postSnapshot.getValue<team>()!!)
-                    details.add(postSnapshot.getValue<team>()!!)
-                    if (challengeteamdetails.isNotEmpty()) {
-                        num= challengeteamdetails.size
-                        challengeteamdetails[num-1].key=postSnapshot.key
-                    }
-
                     if (currentUser!!.email==postSnapshot.child("email1").value || currentUser!!.email==postSnapshot.child("email2").value ||
                         currentUser!!.email==postSnapshot.child("email3").value || currentUser!!.email==postSnapshot.child("email4").value ||
                         currentUser!!.email==postSnapshot.child("email5").value) {
                         myteamkey=postSnapshot.key
-                        Toast.makeText(activity,"$myteamkey",Toast.LENGTH_LONG).show()
                     }
+                    else {
+                        challengeteamdetails.add(postSnapshot.getValue<team>()!!)
+                        details.add(postSnapshot.getValue<team>()!!)
+                        if (challengeteamdetails.isNotEmpty()) {
+                            num = challengeteamdetails.size
+                            challengeteamdetails[num - 1].key = postSnapshot.key
+                        }
+                    }
+
 
                 }
                 adapter.data= details

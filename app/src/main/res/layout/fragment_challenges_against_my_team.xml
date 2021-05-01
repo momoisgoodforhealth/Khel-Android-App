@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#212121"
-    tools:context=".Fragments.MyTeam_ChallengeDetails">
+    tools:context=".Fragments.ChallengesAgainstMyTeam">
 
     <ScrollView
         android:layout_width="match_parent"

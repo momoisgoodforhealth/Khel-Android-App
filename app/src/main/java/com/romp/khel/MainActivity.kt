@@ -46,8 +46,15 @@ var jtdposition:Int=0
 var challengeteamdetails= mutableListOf<team>()
 var challengeposition:Int=0
 var myteamkey:String?=""
+
 var myteam_challengeteamdetails= mutableListOf<TeamChallengeDetails>()
 var myteam_challengeposition:Int=0
+var myteam_accepted= mutableListOf<TeamChallengeDetails>()
+var myteam_acceptedchallengeposition:Int=0
+var myteam_cfmtdetails= mutableListOf<TeamChallengeDetails>()
+var myteam_cfmtposition:Int=0
+
+var myteamname:String?=""
 
 
 class MainActivity : AppCompatActivity() {

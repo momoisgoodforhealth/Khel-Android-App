@@ -24,9 +24,10 @@ import com.romp.khel.dataclass.LookingtoPlayRoom
 import com.romp.khel.dataclass.team
 import com.romp.khel.keyy
 import com.romp.khel.keyyy
+import com.romp.khel.myteamname
 
 
-class Myteam : Fragment() {
+    class Myteam : Fragment() {
     var database = FirebaseDatabase.getInstance().getReference()
     var conditionref: DatabaseReference = database.child("lookingtoplay")
     var ref: DatabaseReference = database.child("teams")
@@ -229,6 +230,7 @@ class Myteam : Fragment() {
 
                 })
                 teamname.text=myteam.teamname
+                myteamname=myteam.teamname
                 if (myteam.color=="white") {
                     pl1icon.setImageResource(R.drawable.jerseysmol)
                     pl2icon.setImageResource(R.drawable.jerseysmol)

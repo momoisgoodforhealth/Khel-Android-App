@@ -20,11 +20,10 @@ import com.google.firebase.database.ktx.getValue
 import com.romp.khel.*
 import com.romp.khel.R
 import com.romp.khel.dataclass.TeamChallengeDetails
-import com.romp.khel.dataclass.TournamentDetails
 import com.romp.khel.dataclass.team
 
 
-class MyTeam_ChallengeDetails : Fragment() {
+class ChallengesAgainstMyTeam : Fragment() {
     var database = FirebaseDatabase.getInstance().getReference()
     var conditionref: DatabaseReference = database.child("potentialchallenges").child(
         myteam_challengeteamdetails[myteam_challengeposition].key.toString())
@@ -42,7 +41,7 @@ class MyTeam_ChallengeDetails : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_myteam__challengedetails, container, false)
+        return inflater.inflate(R.layout.fragment_challenges_against_my_team, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -76,7 +75,7 @@ class MyTeam_ChallengeDetails : Fragment() {
         var venuloc:TextView=view.findViewById(R.id.mtcd_location)
         var date:TextView=view.findViewById(R.id.mtcd_date)
         var time:TextView=view.findViewById(R.id.mtcd_time)
-        var winnerpays:TextView=view.findViewById(R.id.mtcd_winnerpaystext)
+        var winnerpays:TextView=view.findViewById(R.id.mtcd_winnerpays)
         var phonenum:TextView=view.findViewById(R.id.mtcd_contact)
         var addinfo:TextView=view.findViewById(R.id.mtcd_addinfo)
 
