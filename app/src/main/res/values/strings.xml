@@ -158,4 +158,5 @@
     <string name="challenges_against_myteam">Challenges Against My Team</string>
     <string name="accepted_challenges">Accepted Challenges</string>
     <string name="challenges_from">Challenges From My Team</string>
+    <string name="venueinfo">Venue Information</string>
 </resources>

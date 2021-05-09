@@ -1,6 +1,7 @@
 package com.romp.khel
 
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
@@ -88,4 +89,5 @@ class myteamcfmt (textView: CardView): RecyclerView.ViewHolder(textView) {
 class pendinginvitation (textView: CardView): RecyclerView.ViewHolder(textView){
     var pendingemail:TextView=textView.findViewById(R.id.pending_email)
     var editbutton:TextView=textView.findViewById(R.id.pending_editbutton)
+    var pendingemailedit:EditText=textView.findViewById(R.id.pendig_email_edit)
 }

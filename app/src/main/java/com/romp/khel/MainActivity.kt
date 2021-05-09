@@ -55,6 +55,7 @@ var myteam_cfmtdetails= mutableListOf<TeamChallengeDetails>()
 var myteam_cfmtposition:Int=0
 
 var myteamname:String?=""
+var invitationkey:String?=""
 
 
 class MainActivity : AppCompatActivity() {

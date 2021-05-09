@@ -14,11 +14,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:fontFamily="@font/cafe_francoise"
         android:text="@string/venue_name"
         android:textColor="#306700"
         android:textSize="36sp"
-        app:layout_constraintEnd_toStartOf="@+id/venuedetails_datepicker"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,37 +53,60 @@
                 android:gravity="center"
                 android:textColor="#FFFFFF"
                 android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:layout_editor_absoluteX="41dp"
                 tools:text="Futsal Name" />
+
+            <TextView
+                android:id="@+id/textView61"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:fontFamily="@font/yugothic"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/venue_name" />
 
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_marginStart="4dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="4dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/kick"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/venue_name" />
+                app:layout_constraintTop_toBottomOf="@+id/textView61" />
 
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/yugothic"
                 android:text="@string/availabletimings"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                app:layout_constraintTop_toBottomOf="@+id/venue_message_body" />
+
+            <Button
+                android:id="@+id/venuedetails_datepicker"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:background="@android:drawable/ic_menu_today"
+                app:layout_constraintBottom_toBottomOf="@+id/textView7"
+                app:layout_constraintStart_toEndOf="@+id/textView7"
+                app:layout_constraintTop_toTopOf="@+id/textView7" />
 
             <HorizontalScrollView
+                android:id="@+id/horizontalScrollView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#212121"
@@ -233,16 +257,114 @@
                 </LinearLayout>
             </HorizontalScrollView>
 
+            <TextView
+                android:id="@+id/textView50"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/yugothic"
+                android:text="@string/venueinfo"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+            <TextView
+                android:id="@+id/venue_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yugothic_light"
+                android:gravity="left"
+                android:textColor="#E6E6E6"
+                android:textSize="18sp"
+                tools:text="In alteration insipidity impression by travelling reasonable up motionless. Water would still if to. Position boy required law moderate was may."
+                app:layout_constraintEnd_toEndOf="@+id/textView50"
+                app:layout_constraintStart_toStartOf="@+id/textView50"
+                app:layout_constraintTop_toBottomOf="@+id/textView50" />
+
+            <TextView
+                android:id="@+id/venue_message_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/yugothic"
+                tools:text="Message from the Venue"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/venue_info" />
+
+
+            <TextView
+                android:id="@+id/venue_message_body"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/yugothic_light"
+                android:gravity="left"
+                android:textColor="#E6E6E6"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/venue_message_title"
+                tools:text="In alteration insipidity impression by travelling reasonable up motionless. Water would still if to. Position boy required law moderate was may." />
+
+            <Button
+                android:id="@+id/venuedetails_whatsappbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="40dp"
+                android:background="#53B343"
+                android:padding="5dp"
+                android:text="@string/whatsapp"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2" />
+
+            <Button
+                android:id="@+id/venuedetails_callbutton"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:background="#7C7C7C"
+                android:text="@string/call_phone"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@+id/venuedetails_whatsappbutton"
+                app:layout_constraintStart_toStartOf="@+id/venuedetails_whatsappbutton"
+                app:layout_constraintTop_toBottomOf="@+id/venuedetails_whatsappbutton" />
+
+            <ImageView
+                android:id="@+id/boobbb"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#304C1F"
+                android:src="@drawable/whatsapp"
+                app:layout_constraintStart_toEndOf="@+id/venuedetails_whatsappbutton"
+                app:layout_constraintTop_toTopOf="@+id/venuedetails_whatsappbutton" />
+
+            <ImageView
+                android:id="@+id/bob"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="#555555"
+                android:src="@android:drawable/ic_menu_call"
+                app:layout_constraintBottom_toBottomOf="@+id/venuedetails_callbutton"
+                app:layout_constraintStart_toEndOf="@+id/venuedetails_callbutton"
+                app:layout_constraintTop_toTopOf="@+id/venuedetails_callbutton" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-    <Button
-        android:id="@+id/venuedetails_datepicker"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
-        android:background="@android:drawable/ic_menu_today"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
