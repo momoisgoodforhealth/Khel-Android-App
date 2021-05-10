@@ -33,6 +33,16 @@ class PendingInvitationAdapter: RecyclerView.Adapter<pendinginvitation>() {
         ref.addValueEventListener(object : ValueEventListener {
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
+                if (item==dataSnapshot.child("iemail1").value) {
+                    dude="iemail1"
+                    holder.editbutton.setOnClickListener { v ->
+                        //  Toast.makeText(v.context,dude,Toast.LENGTH_SHORT).show()
+                        editemail=holder.pendingemailedit.text
+                        ref.child(dude).setValue(editemail.toString()).addOnSuccessListener {
+                            Toast.makeText(v.context,"Edit Success",Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                }
                 if (item==dataSnapshot.child("iemail2").value) {
                     dude="iemail2"
                     holder.editbutton.setOnClickListener { v ->

@@ -2,6 +2,7 @@
 
 
 import android.app.AlertDialog
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -53,10 +54,6 @@ import com.romp.khel.dataclass.team
         var playericon3: TextView =view.findViewById(R.id.player3)
         var playericon4: TextView =view.findViewById(R.id.player4)
         var playericon5: TextView =view.findViewById(R.id.player5)
-     //   var invite2:TextView=view.findViewById(R.id.invitation_email2)
-     //   var invite3:TextView=view.findViewById(R.id.invitation_email3)
-      //  var invite4:TextView=view.findViewById(R.id.invitation_email4)
-      //  var invite5:TextView=view.findViewById(R.id.invitation_email5)
         var editteambutton:Button=view.findViewById(R.id.teamnameedit)
         var pl1icon:ImageView=view.findViewById(R.id.playericon1)
         var pl2icon:ImageView=view.findViewById(R.id.playericon2)
@@ -64,6 +61,7 @@ import com.romp.khel.dataclass.team
         var pl4icon:ImageView=view.findViewById(R.id.playericon4)
         var pl5icon:ImageView=view.findViewById(R.id.playericon5)
         var challengesbutton:Button=view.findViewById(R.id.challenges_button)
+        var leaveteambutton:Button=view.findViewById(R.id.leave_team)
 
 
 
@@ -71,6 +69,8 @@ import com.romp.khel.dataclass.team
         var myteam=team()
         var flag=false
         var pendingemail_list= mutableListOf<String?>()
+        val leavealert = AlertDialog.Builder(context)
+        leavealert.setTitle("Are you sure you want to leave your team?")
 
         var pendingrecycler=PendingInvitationAdapter()
         view.findViewById<RecyclerView>(R.id.pendinginvitation_recyclerview).adapter=pendingrecycler
@@ -96,6 +96,7 @@ import com.romp.khel.dataclass.team
                         myteam.email3 = postSnapshot.child("email3").value.toString()
                         myteam.email4 = postSnapshot.child("email4").value.toString()
                         myteam.email5 = postSnapshot.child("email5").value.toString()
+                        myteam.iemail1 = postSnapshot.child("iemail1").value.toString()
                         myteam.iemail2 = postSnapshot.child("iemail2").value.toString()
                         myteam.iemail3 = postSnapshot.child("iemail3").value.toString()
                         myteam.iemail4 = postSnapshot.child("iemail4").value.toString()
@@ -113,12 +114,20 @@ import com.romp.khel.dataclass.team
                         if (myteam.iemail5!!.isNotEmpty() || myteam.iemail5!!.isNotBlank()) {
                             pendingemail_list.add(myteam.iemail5)
                         }
-                        //  pendingemail_list= mutableListOf(myteam.iemail2,myteam.iemail3,myteam.iemail4,myteam.iemail5)
+
                         pendingrecycler.data = pendingemail_list
-                   //     invite2.text = myteam.iemail2
-                   //     invite3.text = myteam.iemail3
-                    //    invite4.text = myteam.iemail4
-                    //   invite5.text = myteam.iemail5
+                        leaveteambutton.setOnClickListener {
+                            leavealert.apply {
+                                setPositiveButton("Yes", DialogInterface.OnClickListener { dialog, id ->
+                                        ref.child(invitationkey.toString()).child("email1").setValue("")
+                                        ref.child(invitationkey.toString()).child("iemail1").setValue("empty")
+                                })
+                                setNegativeButton("No", DialogInterface.OnClickListener { dialog, id -> })
+                            }
+                            val alerto=leavealert.create()
+                            alerto.show()
+                        }
+
                     } else if (currentUser?.email == postSnapshot.child("email2").value) {
                         myteam.key = postSnapshot.key
                         invitationkey = postSnapshot.key
@@ -128,13 +137,14 @@ import com.romp.khel.dataclass.team
                         myteam.email3 = postSnapshot.child("email3").value.toString()
                         myteam.email4 = postSnapshot.child("email4").value.toString()
                         myteam.email5 = postSnapshot.child("email5").value.toString()
+                        myteam.iemail1=postSnapshot.child("iemail1").value.toString()
                         myteam.iemail2 = postSnapshot.child("iemail2").value.toString()
                         myteam.iemail3 = postSnapshot.child("iemail3").value.toString()
                         myteam.iemail4 = postSnapshot.child("iemail4").value.toString()
                         myteam.iemail5 = postSnapshot.child("iemail5").value.toString()
                         myteam.color = postSnapshot.child("color").value.toString()
-                        if (myteam.iemail2!!.isNotEmpty() || myteam.iemail2!!.isNotBlank()) {
-                            pendingemail_list.add(myteam.iemail2)
+                        if (myteam.iemail1!!.isNotEmpty() || myteam.iemail1!!.isNotBlank()) {
+                            pendingemail_list.add(myteam.iemail1)
                         }
                         if (myteam.iemail3!!.isNotEmpty() || myteam.iemail3!!.isNotBlank()) {
                             pendingemail_list.add(myteam.iemail3)
@@ -145,12 +155,20 @@ import com.romp.khel.dataclass.team
                         if (myteam.iemail5!!.isNotEmpty() || myteam.iemail5!!.isNotBlank()) {
                             pendingemail_list.add(myteam.iemail5)
                         }
-                        //   pendingemail_list= mutableListOf(myteam.iemail2,myteam.iemail3,myteam.iemail4,myteam.iemail5)
+
                         pendingrecycler.data = pendingemail_list
-                  //      invite2.text = myteam.iemail2
-                   //     invite3.text = myteam.iemail3
-                    //    invite4.text = myteam.iemail4
-                    //    invite5.text = myteam.iemail5
+                        leaveteambutton.setOnClickListener {
+                            leavealert.apply {
+                                setPositiveButton("Yes", DialogInterface.OnClickListener { dialog, id ->
+                                    ref.child(invitationkey.toString()).child("email2").setValue("")
+                                    ref.child(invitationkey.toString()).child("iemail2").setValue("empty")
+                                })
+                                setNegativeButton("No", DialogInterface.OnClickListener { dialog, id -> })
+                            }
+                            val alerto=leavealert.create()
+                            alerto.show()
+                        }
+
                     } else if (currentUser?.email == postSnapshot.child("email3").value) {
                         myteam.key = postSnapshot.key
                         invitationkey = postSnapshot.key
@@ -160,6 +178,7 @@ import com.romp.khel.dataclass.team
                         myteam.email3 = postSnapshot.child("email3").value.toString()
                         myteam.email4 = postSnapshot.child("email4").value.toString()
                         myteam.email5 = postSnapshot.child("email5").value.toString()
+                        myteam.iemail1=postSnapshot.child("iemail1").value.toString()
                         myteam.iemail2 = postSnapshot.child("iemail2").value.toString()
                         myteam.iemail3 = postSnapshot.child("iemail3").value.toString()
                         myteam.iemail4 = postSnapshot.child("iemail4").value.toString()
@@ -168,8 +187,8 @@ import com.romp.khel.dataclass.team
                         if (myteam.iemail2!!.isNotEmpty() || myteam.iemail2!!.isNotBlank()) {
                             pendingemail_list.add(myteam.iemail2)
                         }
-                        if (myteam.iemail3!!.isNotEmpty() || myteam.iemail3!!.isNotBlank()) {
-                            pendingemail_list.add(myteam.iemail3)
+                        if (myteam.iemail1!!.isNotEmpty() || myteam.iemail1!!.isNotBlank()) {
+                            pendingemail_list.add(myteam.iemail1)
                         }
                         if (myteam.iemail4!!.isNotEmpty() || myteam.iemail4!!.isNotBlank()) {
                             pendingemail_list.add(myteam.iemail4)
@@ -177,12 +196,19 @@ import com.romp.khel.dataclass.team
                         if (myteam.iemail5!!.isNotEmpty() || myteam.iemail5!!.isNotBlank()) {
                             pendingemail_list.add(myteam.iemail5)
                         }
-                        //    pendingemail_list= mutableListOf(myteam.iemail2,myteam.iemail3,myteam.iemail4,myteam.iemail5)
+
                         pendingrecycler.data = pendingemail_list
-                 //       invite2.text = myteam.iemail2
-                 //       invite3.text = myteam.iemail3
-                 //       invite4.text = myteam.iemail4
-                  //      invite5.text = myteam.iemail5
+                        leaveteambutton.setOnClickListener {
+                            leavealert.apply {
+                                setPositiveButton("Yes", DialogInterface.OnClickListener { dialog, id ->
+                                    ref.child(invitationkey.toString()).child("email3").setValue("")
+                                    ref.child(invitationkey.toString()).child("iemail3").setValue("empty")
+                                })
+                                setNegativeButton("No", DialogInterface.OnClickListener { dialog, id -> })
+                            }
+                            val alerto=leavealert.create()
+                            alerto.show()
+                        }
                     } else if (currentUser?.email == postSnapshot.child("email4").value) {
                         myteam.key = postSnapshot.key
                         invitationkey = postSnapshot.key
@@ -192,6 +218,7 @@ import com.romp.khel.dataclass.team
                         myteam.email3 = postSnapshot.child("email3").value.toString()
                         myteam.email4 = postSnapshot.child("email4").value.toString()
                         myteam.email5 = postSnapshot.child("email5").value.toString()
+                        myteam.iemail1=postSnapshot.child("iemail1").value.toString()
                         myteam.iemail2 = postSnapshot.child("iemail2").value.toString()
                         myteam.iemail3 = postSnapshot.child("iemail3").value.toString()
                         myteam.iemail4 = postSnapshot.child("iemail4").value.toString()
@@ -203,18 +230,25 @@ import com.romp.khel.dataclass.team
                         if (myteam.iemail3!!.isNotEmpty() || myteam.iemail3!!.isNotBlank()) {
                             pendingemail_list.add(myteam.iemail3)
                         }
-                        if (myteam.iemail4!!.isNotEmpty() || myteam.iemail4!!.isNotBlank()) {
-                            pendingemail_list.add(myteam.iemail4)
+                        if (myteam.iemail1!!.isNotEmpty() || myteam.iemail1!!.isNotBlank()) {
+                            pendingemail_list.add(myteam.iemail1)
                         }
                         if (myteam.iemail5!!.isNotEmpty() || myteam.iemail5!!.isNotBlank()) {
                             pendingemail_list.add(myteam.iemail5)
                         }
-                        //   pendingemail_list= mutableListOf(myteam.iemail2,myteam.iemail3,myteam.iemail4,myteam.iemail5)
+
                         pendingrecycler.data = pendingemail_list
-                    //    invite2.text = myteam.iemail2
-                    //    invite3.text = myteam.iemail3
-                    //    invite4.text = myteam.iemail4
-                    //    invite5.text = myteam.iemail5
+                        leaveteambutton.setOnClickListener {
+                            leavealert.apply {
+                                setPositiveButton("Yes", DialogInterface.OnClickListener { dialog, id ->
+                                    ref.child(invitationkey.toString()).child("email4").setValue("")
+                                    ref.child(invitationkey.toString()).child("iemail4").setValue("empty")
+                                })
+                                setNegativeButton("No", DialogInterface.OnClickListener { dialog, id -> })
+                            }
+                            val alerto=leavealert.create()
+                            alerto.show()
+                        }
                     } else if (currentUser?.email == postSnapshot.child("email5").value) {
                         myteam.key = postSnapshot.key
                         invitationkey = postSnapshot.key
@@ -224,6 +258,7 @@ import com.romp.khel.dataclass.team
                         myteam.email3 = postSnapshot.child("email3").value.toString()
                         myteam.email4 = postSnapshot.child("email4").value.toString()
                         myteam.email5 = postSnapshot.child("email5").value.toString()
+                        myteam.iemail1=postSnapshot.child("iemail1").value.toString()
                         myteam.iemail2 = postSnapshot.child("iemail2").value.toString()
                         myteam.iemail3 = postSnapshot.child("iemail3").value.toString()
                         myteam.iemail4 = postSnapshot.child("iemail4").value.toString()
@@ -238,15 +273,22 @@ import com.romp.khel.dataclass.team
                         if (myteam.iemail4!!.isNotEmpty() || myteam.iemail4!!.isNotBlank()) {
                             pendingemail_list.add(myteam.iemail4)
                         }
-                        if (myteam.iemail5!!.isNotEmpty() || myteam.iemail5!!.isNotBlank()) {
-                            pendingemail_list.add(myteam.iemail5)
+                        if (myteam.iemail1!!.isNotEmpty() || myteam.iemail1!!.isNotBlank()) {
+                            pendingemail_list.add(myteam.iemail1)
                         }
-                        //   pendingemail_list= mutableListOf(myteam.iemail2,myteam.iemail3,myteam.iemail4,myteam.iemail5)
+
                         pendingrecycler.data = pendingemail_list
-                     //   invite2.text = myteam.iemail2
-                     //   invite3.text = myteam.iemail3
-                   //     invite4.text = myteam.iemail4
-                      //  invite5.text = myteam.iemail5
+                        leaveteambutton.setOnClickListener {
+                            leavealert.apply {
+                                setPositiveButton("Yes", DialogInterface.OnClickListener { dialog, id ->
+                                    ref.child(invitationkey.toString()).child("email5").setValue("")
+                                    ref.child(invitationkey.toString()).child("iemail5").setValue("empty")
+                                })
+                                setNegativeButton("No", DialogInterface.OnClickListener { dialog, id -> })
+                            }
+                            val alerto=leavealert.create()
+                            alerto.show()
+                        }
                     }
                 }
                 }

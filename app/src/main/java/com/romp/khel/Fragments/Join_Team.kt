@@ -31,8 +31,7 @@ class Join_Team : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {.3
-        // Inflate the layout for this fragment
+    ): View? {
         return inflater.inflate(R.layout.fragment_join_team, container, false)
     }
 
@@ -43,8 +42,6 @@ class Join_Team : Fragment() {
 
         var adapter= TeamInvitationAdapter()
         view.findViewById<RecyclerView>(R.id.jointeam_recyclerview).adapter=adapter
-
-      //  var details= mutableListOf<jteam>()
 
         val progressbar: ProgressBar =view.findViewById(R.id.jointeam_progressbar)
         progressbar.isIndeterminate
@@ -57,7 +54,7 @@ class Join_Team : Fragment() {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 jointeamdetails= mutableListOf()
                 for (postSnapshot in dataSnapshot.children) {
-                    if (postSnapshot.exists() && currentUser?.email==postSnapshot.child("iemail2").value || currentUser?.email==postSnapshot.child("iemail3").value
+                    if (postSnapshot.exists() && currentUser?.email==postSnapshot.child("iemail1").value || currentUser?.email==postSnapshot.child("iemail2").value || currentUser?.email==postSnapshot.child("iemail3").value
                         || currentUser?.email==postSnapshot.child("iemail4").value || currentUser?.email==postSnapshot.child("iemail5").value) {
                             var num=0
                         jointeamdetails.add(postSnapshot.getValue<jteam>()!!)

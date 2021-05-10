@@ -169,20 +169,6 @@ class FormFragment_LTP : Fragment() {
              }
              val alerto=submitalert.create()
              alerto.show()
-              /*  createroom(
-                    venuename.text.toString().trim(),
-                    venuelocation.text.toString().trim(),
-                    timepickerval.text.toString().trim(),
-                    endtimepickerval.text.toString().trim(),
-                    datepickval.text.toString(),
-                    pricepp.text.toString().trim(),
-                    phone.text.toString().trim(),
-                    contacttext.text.toString().trim(),
-                    totalplayers.text.toString().trim(),
-                    joinedplayers.text.toString().trim(),
-                    currentUser?.uid.toString(),
-                    addinfo.text.toString()
-                )   */
             }
         }
     }

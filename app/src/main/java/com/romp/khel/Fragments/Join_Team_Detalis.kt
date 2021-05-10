@@ -52,6 +52,9 @@ class Join_Team_Detalis : Fragment() {
                 email=null
                 if (dataSnapshot.exists()) {
                     jtd.text= dataSnapshot.child("teamname").value.toString()
+                    if (dataSnapshot.child("iemail1").value.toString()==currentUser!!.email) {
+                        email="iemail1"
+                    }
                     if (dataSnapshot.child("iemail2").value.toString()==currentUser!!.email) {
                         email="iemail2"
                     }
@@ -76,6 +79,10 @@ class Join_Team_Detalis : Fragment() {
 
         jtd_jb.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_join_Team_Detalis_to_myteam)
+            if (email=="iemail1"){
+                conditionref.child("email1").setValue(currentUser!!.email)
+                conditionref.child(email.toString()).setValue("")
+            }
             if (email=="iemail2"){
                 conditionref.child("email2").setValue(currentUser!!.email)
                 conditionref.child(email.toString()).setValue("")
