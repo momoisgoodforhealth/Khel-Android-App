@@ -207,55 +207,55 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/bahnschrift"
-                tools:text="@string/player1"
                 android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="@+id/playericon1"
                 app:layout_constraintStart_toStartOf="@+id/playericon1"
-                app:layout_constraintTop_toBottomOf="@+id/playericon1" />
+                app:layout_constraintTop_toBottomOf="@+id/playericon1"
+                tools:text="@string/player1" />
 
             <TextView
                 android:id="@+id/player2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/bahnschrift"
-                tools:text="@string/player2"
                 android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="@+id/playericon2"
                 app:layout_constraintStart_toStartOf="@+id/playericon2"
-                app:layout_constraintTop_toBottomOf="@+id/playericon2" />
+                app:layout_constraintTop_toBottomOf="@+id/playericon2"
+                tools:text="@string/player2" />
 
             <TextView
                 android:id="@+id/player3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/bahnschrift"
-                tools:text="@string/player3"
                 android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="@+id/playericon4"
                 app:layout_constraintStart_toStartOf="@+id/playericon4"
-                app:layout_constraintTop_toBottomOf="@+id/playericon4" />
+                app:layout_constraintTop_toBottomOf="@+id/playericon4"
+                tools:text="@string/player3" />
 
             <TextView
                 android:id="@+id/player4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/bahnschrift"
-                tools:text="@string/player4"
                 android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="@+id/playericon3"
                 app:layout_constraintStart_toStartOf="@+id/playericon3"
-                app:layout_constraintTop_toBottomOf="@+id/playericon3" />
+                app:layout_constraintTop_toBottomOf="@+id/playericon3"
+                tools:text="@string/player4" />
 
             <TextView
                 android:id="@+id/player5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/bahnschrift"
-                tools:text="@string/player5"
                 android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="@+id/playericon5"
                 app:layout_constraintStart_toStartOf="@+id/playericon5"
-                app:layout_constraintTop_toBottomOf="@+id/playericon5" />
+                app:layout_constraintTop_toBottomOf="@+id/playericon5"
+                tools:text="@string/player5" />
 
             <TextView
                 android:id="@+id/teamname"
@@ -513,100 +513,100 @@
 
                 <Button
                     android:id="@+id/p1_downbutton"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:layout_marginEnd="4dp"
-                    android:background="@drawable/arrowdown"
+                    android:background="@drawable/down"
                     app:layout_constraintBottom_toBottomOf="@+id/p1_upbutton"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/p1_upbutton" />
 
                 <Button
                     android:id="@+id/p1_upbutton"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:layout_marginEnd="4dp"
-                    android:background="@drawable/arrowup"
+                    android:background="@drawable/up"
                     app:layout_constraintBottom_toBottomOf="@+id/p1"
                     app:layout_constraintEnd_toStartOf="@+id/p1_downbutton"
                     app:layout_constraintTop_toTopOf="@+id/p1" />
 
                 <Button
                     android:id="@+id/p2_upbutton"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:layout_marginEnd="4dp"
-                    android:background="@drawable/arrowup"
+                    android:background="@drawable/up"
                     app:layout_constraintBottom_toBottomOf="@+id/p2"
                     app:layout_constraintEnd_toStartOf="@+id/p2_downbutton"
                     app:layout_constraintTop_toTopOf="@+id/p2" />
 
                 <Button
                     android:id="@+id/p2_downbutton"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:layout_marginEnd="4dp"
-                    android:background="@drawable/arrowdown"
+                    android:background="@drawable/down"
                     app:layout_constraintBottom_toBottomOf="@+id/p2_upbutton"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/p2_upbutton" />
 
                 <Button
                     android:id="@+id/p3_upbutton"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:layout_marginEnd="4dp"
-                    android:background="@drawable/arrowup"
+                    android:background="@drawable/up"
                     app:layout_constraintBottom_toBottomOf="@+id/p3"
                     app:layout_constraintEnd_toStartOf="@+id/p3_downbutton"
                     app:layout_constraintTop_toTopOf="@+id/p3" />
 
                 <Button
                     android:id="@+id/p3_downbutton"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:layout_marginEnd="4dp"
-                    android:background="@drawable/arrowdown"
+                    android:background="@drawable/down"
                     app:layout_constraintBottom_toBottomOf="@+id/p3_upbutton"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/p3_upbutton" />
 
                 <Button
                     android:id="@+id/p4_upbutton"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:layout_marginEnd="4dp"
-                    android:background="@drawable/arrowup"
+                    android:background="@drawable/up"
                     app:layout_constraintBottom_toBottomOf="@+id/p4"
                     app:layout_constraintEnd_toStartOf="@+id/p4_downbutton"
                     app:layout_constraintTop_toTopOf="@+id/p4" />
 
                 <Button
                     android:id="@+id/p4_downbutton"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:layout_marginEnd="4dp"
-                    android:background="@drawable/arrowdown"
+                    android:background="@drawable/down"
                     app:layout_constraintBottom_toBottomOf="@+id/p4_upbutton"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/p4_upbutton" />
 
                 <Button
                     android:id="@+id/p5_upbutton"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:layout_marginEnd="4dp"
-                    android:background="@drawable/arrowup"
+                    android:background="@drawable/up"
                     app:layout_constraintBottom_toBottomOf="@+id/p5"
                     app:layout_constraintEnd_toStartOf="@+id/p5_downbutton"
                     app:layout_constraintTop_toTopOf="@+id/p5" />
 
                 <Button
                     android:id="@+id/p5_downbutton"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:layout_marginEnd="4dp"
-                    android:background="@drawable/arrowdown"
+                    android:background="@drawable/down"
                     app:layout_constraintBottom_toBottomOf="@+id/p5_upbutton"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/p5_upbutton" />

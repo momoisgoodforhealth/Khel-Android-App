@@ -59,7 +59,7 @@
                 tools:text="Futsal Name" />
 
             <TextView
-                android:id="@+id/textView61"
+                android:id="@+id/venue_location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Location"
@@ -81,7 +81,7 @@
                 android:src="@drawable/kick"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView61" />
+                app:layout_constraintTop_toBottomOf="@+id/venue_location" />
 
             <TextView
                 android:id="@+id/textView7"

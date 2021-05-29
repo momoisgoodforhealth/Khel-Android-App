@@ -2,14 +2,13 @@ package com.romp.khel.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
-import com.romp.khel.MyViewHolder
-import com.romp.khel.R
+import com.bumptech.glide.Glide
+import com.romp.khel.*
 import com.romp.khel.dataclass.Venue
-import com.romp.khel.venueviewholderval
-import com.romp.khel.vname
 
 class VenueRecycleViewAdapter: RecyclerView.Adapter<venueviewholderval>()  {
     var data= listOf<Venue>()
@@ -28,22 +27,14 @@ class VenueRecycleViewAdapter: RecyclerView.Adapter<venueviewholderval>()  {
 
     override fun onBindViewHolder(holder: venueviewholderval, position: Int) {
         val item=data[position]
-        holder.venuename.text=item.VenueName.toString()
-     //   holder.text2.text=item.Contact.toString()
-        holder.venueloc.text=item.Location.toString()
-        if (holder.venuename.text=="Kick Futsal Lalitpur") {holder.venueimg.setImageResource(R.drawable.kick)}
-        if (holder.venuename.text=="Shankhamul Futsal") {holder.venueimg.setImageResource(R.drawable.sankhamul)}
-        if (holder.venuename.text=="Royal Futsal") {holder.venueimg.setImageResource(R.drawable.royak)}
-        if (holder.venuename.text=="Shantinagar Futsal") {holder.venueimg.setImageResource(R.drawable.shantinaga)}
-        if (holder.venuename.text=="Prismatic Futsal and Recreation Center") {holder.venueimg.setImageResource(R.drawable.prismatic)}
-        if (holder.venuename.text=="Dhobighat Futsal") {holder.venueimg.setImageResource(R.drawable.dhobighat)}
-        if (holder.venuename.text=="Maa Banglamukhi Futsal") {holder.venueimg.setImageResource(R.drawable.ma_bangala)}
-     //   holder.text4.text=item.datev.toString()
+        holder.venuename.text=item.futsalname.toString()
+        holder.venueloc.text=item.location.toString()
+        Glide.with(holder.itemView).load(item.picurl).centerCrop().into(holder.venueimg)
 
         holder.itemView.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_booking_to_venueDetails)
-            vname =item.VenueName
-
+            vname =item.futsalname
+            venuekey=item.key
         }
     }
 

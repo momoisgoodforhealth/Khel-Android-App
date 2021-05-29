@@ -22,6 +22,7 @@ var taward:String? = null
 var tconc:String? = null
 var tloc:String? = null
 var vname:String?=null
+var venuekey:String?=null
 
 var ltpfutsalname:String?=null
 var ltplocation:String?=null

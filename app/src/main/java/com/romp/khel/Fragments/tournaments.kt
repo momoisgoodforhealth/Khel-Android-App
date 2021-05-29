@@ -49,16 +49,11 @@ class tournaments : Fragment() {
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                //      num = 0
                 for (postSnapshot in dataSnapshot.children) {
-                    //           testdata[num].text = postSnapshot.child("tournamentName").getValue<String>()
                     details.add(postSnapshot.getValue<TournamentDetails>()!!)
-                    //          num++
                 }
-                //  Toast.makeText(activity,"size: ${details.size}", Toast.LENGTH_LONG).show()
                 radapter.data=details
                 progressbar.setVisibility(View.INVISIBLE)
-
             }
 
         })

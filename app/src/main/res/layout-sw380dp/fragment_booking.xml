@@ -13,49 +13,78 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:fontFamily="@font/cafe_francoise"
         android:text="@string/booking_title"
         android:textColor="#227123"
         android:textSize="36sp"
-        app:layout_constraintEnd_toStartOf="@+id/alert"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/selectdate_shape"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/booking_title">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/venue_recycle"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/alert"
         android:layout_width="37dp"
         android:layout_height="31dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginEnd="16dp"
         android:background="@android:drawable/ic_menu_sort_by_size"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/search_editext" />
+
+    <EditText
+        android:id="@+id/search_editext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:fontFamily="@font/yugothic_light"
+        android:gravity="start|top"
+        android:hint="@string/searchHint"
+        android:inputType="text"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#C3C3C3"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/alert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/booking_title" />
+
+    <TextView
+        android:id="@+id/textView57"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/yugothic_light"
+        android:text="@string/sortbylocation"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/alert"
+        app:layout_constraintStart_toStartOf="@+id/alert"
+        app:layout_constraintTop_toBottomOf="@+id/alert" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/venues_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/selectdate_shape"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView57" />
+
+    <ProgressBar
+        android:id="@+id/bookings_progressbar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/venues_recyclerview"
+        app:layout_constraintEnd_toEndOf="@+id/venues_recyclerview"
+        app:layout_constraintStart_toStartOf="@+id/venues_recyclerview"
+        app:layout_constraintTop_toTopOf="@+id/venues_recyclerview" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

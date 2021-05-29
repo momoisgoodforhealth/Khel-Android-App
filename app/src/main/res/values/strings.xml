@@ -159,4 +159,7 @@
     <string name="accepted_challenges">Accepted Challenges</string>
     <string name="challenges_from">Challenges From My Team</string>
     <string name="venueinfo">Venue Information</string>
+    <string name="scrollright">Scroll Right</string>
+    <string name="searchHint">Enter futsal venue name</string>
+    <string name="sortbylocation">Sort By Location</string>
 </resources>

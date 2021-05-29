@@ -9,14 +9,19 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import com.google.firebase.database.*
+import com.google.firebase.database.ktx.getValue
 import com.romp.khel.R
+import com.romp.khel.dataclass.TournamentDetails
+import com.romp.khel.venuekey
 import com.romp.khel.vname
 
 class VenueDetails : Fragment() {
 
     var database = FirebaseDatabase.getInstance().getReference()
-    var conditionref: DatabaseReference = database.child("bookingstracking")
+    var conditionref: DatabaseReference = database.child("bookingstracking").child(venuekey.toString()).child("1").child("check")
+    var ref:DatabaseReference = database.child("futsal").child(venuekey.toString())
 
     lateinit var datepicker:Button
 
@@ -32,16 +37,17 @@ class VenueDetails : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         val venue_name=view.findViewById<TextView>(R.id.venue_name)
          datepicker=view.findViewById(R.id.venuedetails_datepicker)
         venue_name.text= vname
-        if (vname =="Kick Futsal Lalitpur") { conditionref=database.child("bookingstracking").child("mahalaxmistan").child("1").child("check") }
+      /*  if (vname =="Kick Futsal Lalitpur") { conditionref=database.child("bookingstracking").child("mahalaxmistan").child("1").child("check") }
         if (vname =="Shankhamul Futsal") {conditionref=database.child("bookingstracking").child("mahalaxmistan").child("1").child("check")}
         if (vname =="Royal Futsal") {conditionref=database.child("bookingstracking").child("mahalaxmistan").child("1").child("check")}
         if (vname =="Shantinagar Futsal") {conditionref=database.child("bookingstracking").child("mahalaxmistan").child("1").child("check")}
         if (vname =="Prismatic Futsal and Recreation Center") {conditionref=database.child("bookingstracking").child("mahalaxmistan").child("1").child("check")}
         if (vname =="Dhobighat Futsal") {conditionref=database.child("bookingstracking").child("mahalaxmistan").child("1").child("check")}
-        if (vname =="Maa Banglamukhi Futsal") {conditionref=database.child("bookingstracking").child("mahalaxmistan").child("1").child("check")}
+        if (vname =="Maa Banglamukhi Futsal") {conditionref=database.child("bookingstracking").child("mahalaxmistan").child("1").child("check")}    */
 
         val time_six=view.findViewById<TextView>(R.id.time_six)
         val time_seven=view.findViewById<TextView>(R.id.time_seven)
@@ -56,6 +62,27 @@ class VenueDetails : Fragment() {
         val time_sixteen=view.findViewById<TextView>(R.id.time_sixteen)
         val time_seventeen=view.findViewById<TextView>(R.id.time_seventeen)
         val time_eightteen=view.findViewById<TextView>(R.id.time_eighteen)
+
+        val venue_location=view.findViewById<TextView>(R.id.venue_location)
+        val venue_info=view.findViewById<TextView>(R.id.venue_info)
+
+        val specialtitle:TextView=view.findViewById(R.id.venue_message_title)
+        val specialbody:TextView=view.findViewById(R.id.venue_message_body)
+
+        ref.addValueEventListener(object : ValueEventListener {
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(activity,"onCancelled called", Toast.LENGTH_LONG).show()
+            }
+
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                for (postSnapshot in dataSnapshot.children) {
+                    if (postSnapshot.key=="location") {venue_location.text=postSnapshot.value.toString()}
+                    if (postSnapshot.key=="info") {venue_info.text=postSnapshot.value.toString()}
+                    if (postSnapshot.key=="special") {specialbody.text=postSnapshot.child("body").value.toString() ; specialtitle.text=postSnapshot.child("title").value.toString() }
+                }
+            }
+
+        })
 
         fun dataupdate () {
             conditionref.addValueEventListener(object : ValueEventListener {
@@ -254,14 +281,14 @@ class VenueDetails : Fragment() {
         val day = arrayOf("Today","Tommorrow", "2 Days Later","3 Days Later", "4 Days Later", "5 Days Later", "6 Days Later", "7 Days Later")
         builder.setItems(day) { dialog, which ->
             when (which) {
-                0 -> {conditionref=database.child("bookingstracking").child("mahalaxmistan").child("1").child("check") ; dataupdate()}
-                1 -> {conditionref=database.child("bookingstracking").child("mahalaxmistan").child("2").child("check") ; dataupdate()}
-                2 -> {conditionref=database.child("bookingstracking").child("mahalaxmistan").child("3").child("check") ; dataupdate()}
-                3 -> {conditionref=database.child("bookingstracking").child("mahalaxmistan").child("4").child("check") ;dataupdate()}
-                4 -> {conditionref=database.child("bookingstracking").child("mahalaxmistan").child("5").child("check") ; dataupdate()}
-                5 -> {conditionref=database.child("bookingstracking").child("mahalaxmistan").child("6").child("check") ; dataupdate()}
-                6 -> {conditionref=database.child("bookingstracking").child("mahalaxmistan").child("7").child("check"); dataupdate()}
-                7 -> {conditionref=database.child("bookingstracking").child("mahalaxmistan").child("8").child("check") ; dataupdate()}
+                0 -> {conditionref=database.child("bookingstracking").child(venuekey.toString()).child("1").child("check") ; dataupdate()}
+                1 -> {conditionref=database.child("bookingstracking").child(venuekey.toString()).child("2").child("check") ; dataupdate()}
+                2 -> {conditionref=database.child("bookingstracking").child(venuekey.toString()).child("3").child("check") ; dataupdate()}
+                3 -> {conditionref=database.child("bookingstracking").child(venuekey.toString()).child("4").child("check") ;dataupdate()}
+                4 -> {conditionref=database.child("bookingstracking").child(venuekey.toString()).child("5").child("check") ; dataupdate()}
+                5 -> {conditionref=database.child("bookingstracking").child(venuekey.toString()).child("6").child("check") ; dataupdate()}
+                6 -> {conditionref=database.child("bookingstracking").child(venuekey.toString()).child("7").child("check"); dataupdate()}
+                7 -> {conditionref=database.child("bookingstracking").child(venuekey.toString()).child("8").child("check") ; dataupdate()}
             }
         }
         datepicker.setOnClickListener {
