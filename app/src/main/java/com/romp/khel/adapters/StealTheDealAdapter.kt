@@ -75,19 +75,19 @@ class StealTheDealAdapter: RecyclerView.Adapter<stealthedeal>()  {
             date="Day After Tommorrow"
         }
         else if (item.date=="4") {
-            date="3 Days from Today"
+            date="3 Days Later"
         }
         else if (item.date=="5") {
-            date="4 Days from Today"
+            date="4 Days Later"
         }
         else if (item.date=="6") {
-            date="5 Days from Today"
+            date="5 Days Later"
         }
         else if (item.date=="7") {
-            date="5 Days from Today"
+            date="6 Days Later"
         }
         else if (item.date=="8") {
-            date="6 Days from Today"
+            date="7 Days Later"
         }
         holder.datetime.text=time+"@"+date
         holder.price.text="Rs"+item.price
