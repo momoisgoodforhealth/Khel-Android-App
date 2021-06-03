@@ -6,7 +6,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import org.w3c.dom.Text
 
 class MyViewHolder(val textView: CardView): RecyclerView.ViewHolder(textView) {
     var text:TextView=textView.findViewById(R.id.cvTitle)
@@ -28,7 +27,10 @@ class datecardview(textView: CardView): RecyclerView.ViewHolder(textView) {
 }
 
 class stealthedeal(textView: CardView): RecyclerView.ViewHolder(textView)  {
-    var venuename:TextView=textView.findViewById(R.id.stdcv_time)
+    var venuename:TextView=textView.findViewById(R.id.stdcv_name)
+    var datetime:TextView=textView.findViewById(R.id.stdcv_datetime)
+    var price:TextView=textView.findViewById(R.id.stdcv_price)
+    var image:ImageView=textView.findViewById(R.id.std_imageview)
 }
 
 class newsviewholder(textView: CardView): RecyclerView.ViewHolder(textView) {

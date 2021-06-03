@@ -21,6 +21,7 @@ import com.romp.khel.adapters.dateLTPadapter
 import com.romp.khel.dataclass.TournamentDetails
 import com.romp.khel.adapters.homeadaptertournaments
 import com.romp.khel.adapters.newsadapter
+import com.romp.khel.dataclass.DealSteal
 import com.romp.khel.dataclass.news
 
 
@@ -28,6 +29,7 @@ class HomeFragment : Fragment() {
     var database = FirebaseDatabase.getInstance().getReference()
     var conditionref: DatabaseReference = database.child("tournaments")
     var newsref:DatabaseReference = database.child("news")
+    var dealref:DatabaseReference = database.child("bookingstracking")
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -99,7 +101,6 @@ class HomeFragment : Fragment() {
               //  Toast.makeText(activity,"size: ${details.size}", Toast.LENGTH_LONG).show()
                 radapter.data=details
                 progressbar.setVisibility(View.INVISIBLE)
-
             }
 
         })
@@ -112,8 +113,59 @@ class HomeFragment : Fragment() {
         val stdadapter= StealTheDealAdapter()
         view.findViewById<RecyclerView>(R.id.stealthedeal_recycleview).adapter=stdadapter
 
-        val teststd= mutableListOf<String>("UN Park Futsal", "Boom Futsal", "Good Futsal", "Lood Futsal", "OK Futsal", "NotOK Futsal", "Bad Bad Futsal", "AHAHAH Futsal")
-        stdadapter.data=teststd
+        var std= mutableListOf<DealSteal>()
+
+        val progressbar3:ProgressBar=view.findViewById(R.id.progressBar2)
+        progressbar3.isIndeterminate
+        progressbar3.setVisibility(View.VISIBLE);
+
+        dealref.addValueEventListener(object : ValueEventListener {
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(activity,"onCancelled called",Toast.LENGTH_LONG).show()
+            }
+
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                for (postSnapshot in dataSnapshot.children) {
+                //    var ssa=DealSteal()
+                //    ssa.price=postSnapshot.child("1").child("price").child("price1").value.toString()
+                 //   ssa.time="6am"
+                //    ssa.date="Today"
+                //    ssa.name=postSnapshot.key
+                 //   std.add(ssa)
+                    for (post2Snapshot in postSnapshot.children) {
+                        for (post3Snapshot in post2Snapshot.children) {
+                            if (post3Snapshot.key=="price") {
+                                for (post4Snapshot in post3Snapshot.children) {
+                                    var stdsingle=DealSteal()
+                                    stdsingle.price=post4Snapshot.value.toString()
+                                    stdsingle.time=post4Snapshot.key
+                                    stdsingle.date=post2Snapshot.key
+                                    stdsingle.name=postSnapshot.key
+                                        if (post4Snapshot.value!=" ") { std.add(stdsingle) }
+                                }
+                            }
+                        }
+                    }
+                }
+                var bi=std.count()-1
+                for (ci in 0..std.count()-1) {
+                    for (j in 0..bi-1) {
+                        if (std[j].price!!.toInt() > std[j+1].price!!.toInt()) {
+                            var temp=std[j]
+                            std[j]=std[j+1]
+                            std[j+1]=temp
+                        }
+                    }
+                    bi=bi-1
+                }
+                stdadapter.data=std
+                progressbar3.setVisibility(View.INVISIBLE)
+            }
+
+        })
+
+      //  val teststd= mutableListOf<String>("UN Park Futsal", "Boom Futsal", "Good Futsal", "Lood Futsal", "OK Futsal", "NotOK Futsal", "Bad Bad Futsal", "AHAHAH Futsal")
+      //  stdadapter.data=teststd
 
     }
     }

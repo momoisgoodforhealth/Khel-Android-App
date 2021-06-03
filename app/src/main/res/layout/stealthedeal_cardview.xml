@@ -18,7 +18,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/std_imageview"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:scaleType="centerCrop"
@@ -28,21 +28,21 @@
             app:srcCompat="@drawable/futsalinnepalsmol" />
 
         <TextView
-            android:id="@+id/stdcv_time"
+            android:id="@+id/stdcv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="10dp"
             android:fontFamily="@font/bahnschrift"
-            android:text="UN Park Futsal"
+            tools:text="UN Park Futsal"
             android:textColor="#FFFFFF"
             android:textSize="19sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+            app:layout_constraintTop_toBottomOf="@+id/std_imageview" />
 
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/stdcv_datetime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="3dp"
@@ -50,11 +50,11 @@
             android:layout_marginEnd="3dp"
             android:layout_marginRight="3dp"
             android:fontFamily="@font/yugothic_light"
-            android:text="7pm @ March 21"
+            tools:text="7pm @ March 21"
             android:textColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/stdcv_time" />
+            app:layout_constraintTop_toBottomOf="@+id/stdcv_name" />
 
         <TextView
             android:id="@+id/stdcv_price"
@@ -65,10 +65,10 @@
             android:layout_marginEnd="3dp"
             android:layout_marginRight="3dp"
             android:fontFamily="@font/yugothic_medium"
-            android:text="Rs.1200"
+            tools:text="Rs.1200"
             android:textColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+            app:layout_constraintTop_toBottomOf="@+id/stdcv_datetime" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
